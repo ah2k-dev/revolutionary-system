@@ -1,0 +1,186 @@
+{"date":"2023-03-18T11:55:21.390Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs"}
+{"date":"2023-03-18T11:55:21.465Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T11:55:21.630Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T11:55:21.633Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T11:55:21.640Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T11:55:21.644Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T11:55:23.331Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T11:56:28.283Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T11:56:28.376Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T11:56:28.382Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T11:56:28.386Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T11:56:28.398Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T11:56:28.964Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:02:10.800Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:02:10.885Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:02:10.889Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:02:10.903Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:02:10.906Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:02:11.324Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:04:34.661Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:04:34.744Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:04:34.759Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:04:34.770Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:04:34.773Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:04:35.172Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:04:48.524Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:04:48.581Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:04:48.591Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:04:48.604Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:04:48.609Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:04:49.064Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:05:49.706Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:05:49.785Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:05:49.802Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:05:49.816Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:05:49.825Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:05:50.213Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:07:05.429Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:07:05.494Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:07:05.501Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:07:05.514Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:07:05.520Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:07:05.974Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:09:27.137Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:09:27.200Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:09:27.204Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:09:27.213Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:09:27.231Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:09:27.598Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:10:43.626Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:10:43.728Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:10:43.735Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:10:43.741Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:10:43.755Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:10:44.968Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:11:20.372Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:11:20.452Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:11:20.471Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:11:20.475Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:11:20.480Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:11:21.001Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:12:15.984Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:12:16.073Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:12:16.085Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:12:16.101Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:12:16.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:12:16.472Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:13:28.892Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:13:28.921Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:13:29.107Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:13:29.117Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:13:29.121Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:13:29.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:13:32.976Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:13:33.029Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:13:33.040Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:13:33.049Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:13:33.056Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:13:33.422Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:13:56.838Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:13:56.912Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:13:56.930Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:13:56.937Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:13:56.942Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:13:57.288Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:14:06.576Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:14:06.625Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:14:06.631Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:14:06.646Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:14:06.657Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:14:06.947Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:14:40.464Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-03-18T12:14:40.572Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-03-18T12:14:40.578Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-03-18T12:14:40.586Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-03-18T12:14:40.609Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-03-18T12:14:41.266Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-03-18T12:29:00.797Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/"}
+{"date":"2023-03-18T12:30:38.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/"}
+{"date":"2023-03-18T12:38:23.451Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-10T16:41:18.679Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/api/auth/register"}
+{"date":"2023-08-10T16:41:56.902Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T16:45:28.378Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T16:45:28.601Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T16:47:08.095Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T16:47:08.317Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T16:50:20.876Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T16:50:20.886Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T16:51:13.188Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T16:51:13.407Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T16:54:20.303Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:06:17.470Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:06:17.495Z","level":"error","message":"user validation failed: email: Invalid Email","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T17:06:33.567Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:06:33.574Z","level":"error","message":"user validation failed: email: Invalid Email","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T17:06:40.684Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:06:55.628Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:06:55.708Z","level":"error","message":"user validation failed: email: Invalid Email","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T17:07:10.565Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:07:10.590Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T17:07:38.484Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T17:07:38.544Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-10T17:17:44.347Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T17:17:44.587Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T17:35:00.493Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T17:35:00.828Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T17:36:36.099Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:36:36.110Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T17:37:30.675Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs"}
+{"date":"2023-08-10T17:37:30.719Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-10T17:37:30.795Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-10T17:37:30.828Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-10T17:37:30.855Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-10T17:37:30.857Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-10T17:37:32.025Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-10T17:38:59.474Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-10T17:39:00.559Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-10T17:39:59.866Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:39:59.874Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T17:40:01.506Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:40:01.512Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T17:40:14.640Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:40:14.659Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T17:40:55.356Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:40:55.361Z","level":"error","message":"secretOrPrivateKey must have a value","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T17:42:24.901Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T17:42:32.878Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T17:44:17.861Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T18:39:23.653Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T18:48:28.824Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T18:49:00.348Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info"}
+{"date":"2023-08-10T18:49:00.364Z","level":"error","message":"Cast to ObjectId failed for value \"{\n  firstName: 'mm',\n  lastName: 'mm',\n  phoneNumber: '328787532',\n  userDesc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',\n  country: 'Pakistan123',\n  timeZone: 'UTC -8:00 / -7:00',\n  websiteLink: 'https://www.lipsum.com/'\n}\" (type Object) at path \"_id\" for model \"user\"","method":"PUT","service":"user-service","url":"/update-info"}
+{"date":"2023-08-10T18:49:42.498Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info"}
+{"date":"2023-08-10T18:49:42.511Z","level":"error","message":"Cast to ObjectId failed for value \"{\n  firstName: 'mm',\n  lastName: 'mm',\n  phoneNumber: '328787532',\n  userDesc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',\n  country: 'Pakistan123',\n  timeZone: 'UTC -8:00 / -7:00',\n  websiteLink: 'https://www.lipsum.com/'\n}\" (type Object) at path \"_id\" for model \"user\"","method":"PUT","service":"user-service","url":"/update-info"}
+{"date":"2023-08-10T18:53:33.442Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info"}
+{"date":"2023-08-10T18:53:33.449Z","level":"error","message":"Cannot read properties of undefined (reading '_id')","method":"PUT","service":"user-service","url":"/update-info"}
+{"date":"2023-08-10T18:57:50.037Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T18:58:38.756Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:01:29.445Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:04:17.116Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:04:54.056Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:05:56.865Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:07:13.204Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:09:30.774Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:16:34.312Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:16:34.346Z","level":"error","message":"User does not exist","service":"user-service"}
+{"date":"2023-08-10T19:16:34.358Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/update-info/64d5192036d0e5f9364213c5',\n  method: 'PUT',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/auth',\n  originalUrl: '/auth/update-info/64d5192036d0e5f9364213c5',\n  _parsedUrl: [Url],\n  params: [Object],\n  query: {},\n  res: [ServerResponse],\n  body: [Object],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 18,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"PUT","service":"user-service","url":"/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:18:22.354Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:18:22.395Z","level":"error","message":"User does not exist","service":"user-service"}
+{"date":"2023-08-10T19:18:22.404Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/update-info/64d5192036d0e5f9364213c5',\n  method: 'PUT',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/auth',\n  originalUrl: '/auth/update-info/64d5192036d0e5f9364213c5',\n  _parsedUrl: [Url],\n  params: [Object],\n  query: {},\n  res: [ServerResponse],\n  body: [Object],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 18,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"PUT","service":"user-service","url":"/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:18:50.976Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info?id=64d5192036d0e5f9364213c5?id"}
+{"date":"2023-08-10T19:19:56.283Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:19:56.292Z","level":"error","message":"User does not exist","service":"user-service"}
+{"date":"2023-08-10T19:19:56.296Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/update-info/64d5192036d0e5f9364213c5',\n  method: 'PUT',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/auth',\n  originalUrl: '/auth/update-info/64d5192036d0e5f9364213c5',\n  _parsedUrl: [Url],\n  params: [Object],\n  query: {},\n  res: [ServerResponse],\n  body: [Object],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 18,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"PUT","service":"user-service","url":"/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:21:08.290Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:21:08.328Z","level":"error","message":"User does not exist","service":"user-service"}
+{"date":"2023-08-10T19:21:08.334Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/update-info/64d5192036d0e5f9364213c5',\n  method: 'PUT',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/auth',\n  originalUrl: '/auth/update-info/64d5192036d0e5f9364213c5',\n  _parsedUrl: [Url],\n  params: [Object],\n  query: {},\n  res: [ServerResponse],\n  body: [Object],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 18,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"PUT","service":"user-service","url":"/update-info/64d5192036d0e5f9364213c5"}
+{"date":"2023-08-10T19:23:54.581Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-10T19:23:54.750Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-10T19:24:00.378Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-10T19:24:00.388Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-10T19:26:13.476Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-10T19:26:14.514Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-10T19:26:34.157Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-10T19:27:13.142Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d539ea5d8446f74d3f0263"}
+{"date":"2023-08-10T19:27:48.489Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d539ea5d8446f74d3f0263"}
