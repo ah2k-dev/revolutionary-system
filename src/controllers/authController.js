@@ -231,12 +231,8 @@ const updatePassword = async (req, res) => {
 //update Customer Info
 const updateCustomerInfo = async (req, res) => {
   // #swagger.tags = ['auth']
-
   try {
     const { firstName, lastName, phoneNumber, userDesc, country, timeZone, websiteLink } = req.body;
-    // let obj = { firstName, lastName, phoneNumber, userDesc, country, timeZone, websiteLink }
-    // console.log(obj);
-
     const user = await User.findByIdAndUpdate(req.params.id, {firstName, lastName, phoneNumber, userDesc, country, timeZone, websiteLink},{
       new: true,
       runValidators: true,

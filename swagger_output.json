@@ -40,13 +40,31 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
                 "password": {
+                  "example": "any"
+                },
+                "phoneNumber": {
+                  "example": "any"
+                },
+                "userDesc": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                },
+                "timeZone": {
+                  "example": "any"
+                },
+                "websiteLink": {
                   "example": "any"
                 }
               }
@@ -209,6 +227,59 @@
                   "example": "any"
                 },
                 "newPassword": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "phoneNumber": {
+                  "example": "any"
+                },
+                "userDesc": {
+                  "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                },
+                "timeZone": {
+                  "example": "any"
+                },
+                "websiteLink": {
                   "example": "any"
                 }
               }

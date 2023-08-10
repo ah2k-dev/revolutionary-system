@@ -7,6 +7,7 @@ const router = require("./router");
 const loggerMiddleware = require("./middleware/loggerMiddleware");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json"); // Generated Swagger file
+const fileUpload = require("express-fileupload");
 
 // Middlewares
 app.use(express.json());
@@ -15,6 +16,8 @@ app.options("*", cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(loggerMiddleware);
+app.use(fileUpload());
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // router index
 app.use("/", router);
