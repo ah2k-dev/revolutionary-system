@@ -15,6 +15,8 @@ const userSchema = new Schema({
     required: true,
   },
 
+  username: {type: String, unique: true},
+
   email: {
     type: String,
     required: true,
@@ -33,7 +35,6 @@ const userSchema = new Schema({
 
   phoneNumber: {
     type: String,
-    required: true,
   },
 
   role: {
@@ -76,15 +77,20 @@ const userSchema = new Schema({
 
   // optional: thinking about to get username from email : umer123@gmail.com as username: umer123
   // username: {type: String, default: 'No username required for now'},
-  userDesc: {type: String, required: true},
-  country: {type: String, required: true},
-  timeZone: {type: String, required: true},
-  websiteLink: {type: String, required: true},
+  userDesc: {type: String},
+  country: {type: String},
+  timeZone: {type: String},
+  websiteLink: {type: String},
 
   // bookmark 
   bookMark: [{
-    title: {type: String, default: 'TODO'}
+    title: {type: String, default: 'TODO'},
+    category: {type: String, default: 'TODO'},
+    url: {type: String, default: 'TODO'},
+    desc: {type: String, default: 'TODO'},
+    dateAdded: {type: Date, default: Date.now()},
   }]
+
 
 
 

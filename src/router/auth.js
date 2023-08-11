@@ -1,7 +1,7 @@
 const express = require("express");
+const router = express.Router();
 const auth = require("../controllers/authController");
 const isAuthenticated = require("../middleware/auth");
-const router = express.Router();
 
 //get
 router.route("/logout").get(auth.logout);
@@ -14,7 +14,7 @@ router.route("/forgotPassword").post(auth.forgotPassword);
 //put
 router.route("/resetPassword").put(auth.resetPassword);
 router.route("/updatePassword").put(isAuthenticated, auth.updatePassword);
-// router.route("/update-info/:id").put(auth.updateCustomerInfo);
+router.route("/update-personal-info").put(isAuthenticated, auth.updatePersonalInfo);
 
 
 
