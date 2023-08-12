@@ -2,11 +2,13 @@ const User = require("../models/User/user");
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
+const path = require("path");
+
 //register
 const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email, password, phoneNumber, userDesc, country, timeZone, websiteLink } = req.body;
+    const { firstName, lastName, email, password} = req.body;
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -23,16 +25,13 @@ const register = async (req, res) => {
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
+    const uniqueId = String(Date.now()).slice(-3)
     const newUser = await User.create({
       firstName,
       lastName,
       email,
       password,
-      phoneNumber,
-      userDesc,
-      country,
-      timeZone,
-      websiteLink
+      username: `${firstName}${uniqueId}`
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
@@ -228,23 +227,48 @@ const updatePassword = async (req, res) => {
 
 
 
-//update Customer Info
-const updateCustomerInfo = async (req, res) => {
+//update Personal Info
+const updatePersonalInfo = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, phoneNumber, userDesc, country, timeZone, websiteLink } = req.body;
-    const user = await User.findByIdAndUpdate(req.params.id, {firstName, lastName, phoneNumber, userDesc, country, timeZone, websiteLink},{
+    const { firstName, lastName, email } = req.body;
+    const { avatar } = req.files;
+    if (!avatar) {
+        return ErrorHandler("Please upload an image", req, 400, res);
+    }
+    if (!avatar.mimetype.startsWith("image")) {
+        return ErrorHandler("Please upload an image file", req, 400, res);
+    }
+
+    const fileName = `${req.user._id}-${Date.now()}${path.parse(avatar.name).ext}`;
+
+    avatar.mv(path.join(__dirname, `../../uploads/${fileName}`), (err) => {
+        if (err) {
+            return ErrorHandler(err.message, req, 500, res);
+        }
+    });
+
+    const user = await User.findByIdAndUpdate(
+      req.user._id,
+      {
+      firstName,
+      lastName,
+      email,
+      avatar: `/uploads/${fileName}`,
+    },{
       new: true,
       runValidators: true,
     })
     if (!user) {
       return ErrorHandler("User does not exist", req, 400, res);
     }
-    return SuccessHandler({message: "Update Info successfully", user}, 200, res);
+    return SuccessHandler({message: "Updated Personal Info successfully", user}, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+
+
 
 module.exports = {
   register,
@@ -255,5 +279,5 @@ module.exports = {
   forgotPassword,
   resetPassword,
   updatePassword,
-  updateCustomerInfo,
+  updatePersonalInfo,
 };

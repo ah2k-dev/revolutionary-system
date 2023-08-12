@@ -184,3 +184,350 @@
 {"date":"2023-08-10T19:26:34.157Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
 {"date":"2023-08-10T19:27:13.142Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d539ea5d8446f74d3f0263"}
 {"date":"2023-08-10T19:27:48.489Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/update-info/64d539ea5d8446f74d3f0263"}
+{"date":"2023-08-11T07:42:02.822Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T07:42:02.892Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-11T07:42:19.750Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T10:23:32.800Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T10:23:52.931Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T10:25:17.467Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T10:25:17.689Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-11T10:27:53.407Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T10:27:54.730Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T11:15:26.218Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:15:26.321Z","level":"error","message":"user validation failed: websiteLink: Path `websiteLink` is required., timeZone: Path `timeZone` is required., country: Path `country` is required., userDesc: Path `userDesc` is required., phoneNumber: Path `phoneNumber` is required.","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-11T11:16:53.297Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:16:53.374Z","level":"error","message":"user validation failed: phoneNumber: Path `phoneNumber` is required.","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-11T11:17:21.793Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:18:00.562Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:26:06.374Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:26:06.433Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-11T11:26:11.801Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:31:27.926Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:34:02.804Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-11T11:43:36.354Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T11:43:37.684Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T11:44:28.805Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T11:44:29.769Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T11:45:22.930Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-11T11:45:30.059Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-11T11:45:47.119Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T11:51:19.313Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T11:51:20.347Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T11:51:52.247Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-11T11:52:00.870Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T11:52:09.381Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T11:52:17.240Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T11:52:39.482Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T11:52:40.737Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T11:53:30.709Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T11:55:06.766Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T11:55:28.568Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T11:58:33.563Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T11:59:01.790Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:00:07.267Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:00:45.126Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:01:10.917Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:01:29.159Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:02:38.111Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:02:39.789Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:03:31.340Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:03:45.163Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getusers"}
+{"date":"2023-08-11T12:04:18.464Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T12:05:46.421Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-info"}
+{"date":"2023-08-11T12:06:17.258Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-info"}
+{"date":"2023-08-11T13:12:12.524Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:20:28.336Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:20:41.504Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:21:50.788Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T14:22:58.473Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T14:22:59.493Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T14:23:23.136Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-11T14:23:27.642Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T14:23:34.013Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:23:35.249Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:24:17.774Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-11T14:24:18.559Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-11T14:24:39.145Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-11T14:26:10.149Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T14:28:25.137Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:28:25.157Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:28:25.168Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/newAccomodation',\n  method: 'POST',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/host',\n  originalUrl: '/host/newAccomodation',\n  _parsedUrl: [Url],\n  params: {},\n  query: {},\n  res: [ServerResponse],\n  body: [Array],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  user: [Object],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 20,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:29:31.211Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-info"}
+{"date":"2023-08-11T14:30:23.660Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:30:23.690Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:30:23.702Z","level":"error","message":"Invalid status code: IncomingMessage {\n  _readableState: [ReadableState],\n  _events: [Object: null prototype] {},\n  _eventsCount: 0,\n  _maxListeners: undefined,\n  socket: [Socket],\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  httpVersion: '1.1',\n  complete: true,\n  rawHeaders: [Array],\n  rawTrailers: [],\n  joinDuplicateHeaders: undefined,\n  aborted: false,\n  upgrade: false,\n  url: '/newAccomodation',\n  method: 'POST',\n  statusCode: null,\n  statusMessage: null,\n  client: [Socket],\n  _consuming: true,\n  _dumped: false,\n  next: [Function: next],\n  baseUrl: '/host',\n  originalUrl: '/host/newAccomodation',\n  _parsedUrl: [Url],\n  params: {},\n  query: {},\n  res: [ServerResponse],\n  body: [Array],\n  _body: true,\n  length: undefined,\n  route: [Route],\n  user: [Object],\n  [Symbol(kCapture)]: false,\n  [Symbol(kHeaders)]: [Object],\n  [Symbol(kHeadersCount)]: 20,\n  [Symbol(kTrailers)]: null,\n  [Symbol(kTrailersCount)]: 0\n}","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:42:35.257Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:42:35.328Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:42:50.440Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T14:43:06.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:43:06.932Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:43:21.635Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:43:30.905Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:43:43.459Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:43:43.474Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:48:29.719Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:48:29.734Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:50:58.179Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:50:58.280Z","level":"error","message":"Accomodation already exist","service":"user-service"}
+{"date":"2023-08-11T14:53:20.198Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:53:20.276Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:53:21.854Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:53:21.916Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:53:24.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:53:24.552Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:31.131Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:31.211Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:32.778Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:32.797Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:34.122Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:34.141Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:35.793Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:35.813Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:37.088Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:37.106Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:54:38.365Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:54:38.381Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:55:17.230Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:55:17.252Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:55:18.758Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:55:18.773Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:56:42.133Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:56:42.149Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:56:45.603Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:56:45.621Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:56:51.009Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T14:56:56.351Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:56:56.363Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:56:59.157Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:56:59.165Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:58:34.850Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:58:35.007Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:17.296Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:17.370Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:19.431Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:19.449Z","level":"error","message":"host validation failed: accomodations.0.title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:26.681Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:26.730Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got ","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:28.089Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:28.105Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got ","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:29.251Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:29.263Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got ","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:34.697Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:34.743Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got [object Object]","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:36.216Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:36.227Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got [object Object]","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T14:59:37.263Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T14:59:37.273Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got [object Object]","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:04:16.790Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:04:16.895Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:04:18.852Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:04:18.871Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:05:18.077Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:05:18.190Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:06:21.075Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:06:21.148Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:08:21.638Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:08:21.707Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:08:59.391Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:08:59.504Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:09:44.824Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:09:44.876Z","level":"error","message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","service":"user-service"}
+{"date":"2023-08-11T15:10:05.102Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:10:05.201Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:10:06.727Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:10:06.781Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:11:15.054Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:11:15.083Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:11:22.601Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:11:22.642Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:11:42.825Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:11:42.869Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:13:28.758Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:13:28.839Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:17:40.240Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:17:40.343Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:20:07.304Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:20:07.395Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:23:39.363Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:23:39.737Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:28:20.131Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:28:20.479Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:34:55.324Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:34:55.616Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:35:46.528Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:35:46.870Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:37:44.359Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:37:44.668Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:38:27.563Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:38:29.146Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:38:30.367Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:38:56.178Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:38:56.263Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:39:40.922Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:39:41.002Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:40:50.125Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:40:50.143Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:40:56.287Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:40:56.298Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:41:29.955Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:41:29.989Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:42:22.952Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:42:23.030Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:42:48.293Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:42:48.307Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:42:58.948Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:42:58.964Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:44:14.620Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:44:14.632Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:45:00.429Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:45:00.475Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:45:01.887Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:45:01.894Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:48:40.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:48:40.598Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:50:56.905Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:50:56.976Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:54:44.746Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-11T15:54:58.765Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:55:45.724Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:55:45.737Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:56:06.075Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:56:06.087Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:57:09.964Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:57:09.977Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:57:44.628Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:57:44.640Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:58:26.458Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:58:26.511Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:58:28.443Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:58:28.465Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:58:30.433Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:58:30.449Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:59:10.422Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:59:10.483Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:59:11.919Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:59:11.943Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T15:59:20.807Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:59:37.370Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T15:59:37.393Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:02:27.875Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:02:27.936Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:02:50.221Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:02:52.711Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:02:52.728Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:03:17.323Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:03:17.337Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:05:43.851Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:05:43.894Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:06:09.371Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:06:09.426Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:06:49.464Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:06:49.516Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:07:23.830Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:07:26.510Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:07:26.526Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:07:31.469Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:07:31.490Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:08:08.520Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:08:08.586Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:08:25.448Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:08:25.508Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:09:15.018Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:09:15.075Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:09:17.488Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:09:17.507Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:10:01.779Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:10:01.800Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:10:51.359Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:10:54.433Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:10:54.441Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:11:02.596Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:11:02.611Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:11:53.575Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:11:53.648Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:12:01.726Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:12:01.750Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:12:15.384Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:12:15.408Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:13:29.064Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:13:29.122Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:13:30.485Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:13:30.500Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:14:15.438Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:14:15.504Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:14:33.374Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:14:33.397Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:16:14.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:16:14.609Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:16:16.768Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:16:16.782Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:16:26.249Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:16:37.489Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:16:37.508Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:16:58.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:16:58.390Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got ABCD","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:08.419Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:08.481Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:09.996Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:10.012Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:34.850Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:34.888Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got [object Object]","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:36.163Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:36.170Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got [object Object]","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:47.073Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:47.144Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:17:48.686Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:17:48.706Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:04.102Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:04.144Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:06.016Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:06.029Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:27.138Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:27.178Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:32.400Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:32.408Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:35.447Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:35.455Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:18:40.181Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:18:40.194Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:19:13.773Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:19:13.834Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:19:15.248Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:19:15.260Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:22:41.310Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:22:41.339Z","level":"error","message":"_id is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:23:15.871Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:23:15.901Z","level":"error","message":"id is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:23:16.044Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:23:16.058Z","level":"error","message":"id is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:23:18.273Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:23:18.282Z","level":"error","message":"id is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:23:27.139Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:23:27.167Z","level":"error","message":"id is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:32:09.101Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:32:11.296Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:32:11.312Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:32:14.154Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:32:14.165Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:32:20.335Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:32:20.351Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:34:21.282Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:34:23.072Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:34:23.086Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:34:27.947Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:34:27.962Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:35:07.214Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:35:07.269Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:35:08.445Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:35:08.486Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:35:11.287Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:35:11.299Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:35:19.667Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:35:19.682Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:35:21.137Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:35:21.151Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:37:26.778Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:37:29.114Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:37:29.130Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-11T16:37:34.319Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-11T16:37:34.335Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}

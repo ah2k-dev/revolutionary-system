@@ -8,6 +8,7 @@ const loggerMiddleware = require("./middleware/loggerMiddleware");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json"); // Generated Swagger file
 const fileUpload = require("express-fileupload");
+const path = require('path')
 
 // Middlewares
 app.use(express.json());
