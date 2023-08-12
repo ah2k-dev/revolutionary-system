@@ -7,10 +7,16 @@ const accomodationSchema = new Schema({
   title: { type: String, required: true },
   desc: { type: String, required: true },
   capacity: { type: Number, required: true },
+  // location: {
+  //   latitude: {type: Number, required: true},
+  //   longitude: {type: Number, required: true},
+  // },
+
   location: {
-    latitude: {type: String, required: true},
-    longitude: {type: String, required: true},
+    type: { type: String, default: 'Point' },
+    coordinates: [Number]
   },
+  
   createdBy: { type: String },
   services: {type: [String]},
   reviewsId: {type: [String]},
@@ -19,6 +25,8 @@ const accomodationSchema = new Schema({
   // isDeleted: { type: Boolean, default: false },
 
 }, {timestamps: true});
+
+accomodationSchema.index({ location: '2dsphere' });
 
 const accomodation = mongoose.model("accomodation", accomodationSchema);
 

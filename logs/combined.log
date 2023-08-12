@@ -662,3 +662,18 @@
 {"date":"2023-08-12T11:39:31.983Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76f28e5bea8a1acd1970c"}
 {"date":"2023-08-12T11:39:43.560Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76f28e5bea8a1acd1970c"}
 {"date":"2023-08-12T11:39:53.963Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:26:03.018Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:27:15.132Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:27:15.150Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T12:27:23.271Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:08.014Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:08.026Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T12:28:13.248Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:23.896Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:31:56.909Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:32:41.905Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:32:49.310Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:33:57.564Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:34:33.884Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:37:25.101Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:37:25.159Z","level":"error","message":"error processing query: ns=testDB.accomodationsTree: $and\n    isActive $eq true\n    GEONEAR  field=location maxdist=10000 isNearSphere=0\nSort: {}\nProj: {}\n planner returned error :: caused by :: unable to find index for $geoNear query","method":"POST","service":"user-service","url":"/getAccomodations"}
