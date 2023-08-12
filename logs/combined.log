@@ -531,3 +531,149 @@
 {"date":"2023-08-11T16:37:29.130Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
 {"date":"2023-08-11T16:37:34.319Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
 {"date":"2023-08-11T16:37:34.335Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:42:24.298Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-12T08:42:25.292Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-12T08:43:16.920Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T08:45:52.367Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-12T08:45:52.393Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:46:58.577Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-12T08:46:58.661Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:48:47.696Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs"}
+{"date":"2023-08-12T08:48:47.728Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T08:48:47.838Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T08:48:47.843Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T08:48:47.856Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T08:48:47.860Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T08:49:23.591Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-12T08:49:48.340Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T08:49:58.061Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-12T08:50:15.919Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/newAccomodation"}
+{"date":"2023-08-12T08:50:15.961Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:11:39.642Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:11:39.732Z","level":"error","message":"accomodation validation failed: location.latitude: Path `location.latitude` is required., title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:11:55.111Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:11:55.176Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:11:55.185Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:11:55.195Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:11:55.199Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:11:56.115Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:12:15.835Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:12:15.889Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:12:15.906Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:12:15.911Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:12:15.919Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:12:16.329Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:12:17.402Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:12:17.440Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:12:17.445Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:12:17.452Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:12:17.458Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:12:17.766Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:12:17.842Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:12:17.868Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:12:17.871Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:12:17.876Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:12:17.878Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:12:18.153Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:12:23.895Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:12:23.939Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:12:23.960Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:12:23.965Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:12:23.968Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:12:42.805Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:12:55.617Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T10:13:09.744Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:13:25.839Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:13:55.976Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:14:01.210Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:14:01.268Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:14:01.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:14:01.295Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:14:01.305Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:14:01.857Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:14:05.707Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T10:14:33.013Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:14:33.085Z","level":"error","message":"accomodation validation failed: location.latitude: Path `location.latitude` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:34:53.425Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:34:53.484Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:34:53.502Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:34:53.510Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:34:53.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:34:54.169Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:39:12.140Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:39:12.208Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:39:12.214Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:39:12.220Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:39:12.223Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:39:13.057Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:43:54.475Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:44:05.535Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T10:44:20.939Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:45:39.401Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:45:39.421Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:45:53.159Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:46:09.946Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:46:09.965Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:46:45.971Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T10:53:17.865Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-12T10:53:17.913Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-12T10:53:17.929Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-12T10:53:17.932Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-12T10:53:17.935Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-12T10:53:18.436Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-12T10:55:37.714Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T11:02:50.435Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76284335f73d02f5101db"}
+{"date":"2023-08-12T11:03:57.031Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T11:04:07.524Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76284335f73d02f5101db"}
+{"date":"2023-08-12T11:21:57.349Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-12T11:22:41.593Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:23:11.179Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:23:11.196Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T11:24:00.961Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:25:10.002Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:25:29.122Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:25:38.085Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64sd76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:25:38.099Z","level":"error","message":"Cast to ObjectId failed for value \"64sd76b810470ecce4ce29e6f\" (type string) at path \"_id\" for model \"accomodation\"","method":"PUT","service":"user-service","url":"/updateAccomodation/64sd76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:06.375Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:33.120Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:34.421Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:36.173Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:36.801Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:37.216Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:37.567Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:37.922Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:38.224Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:38.742Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:39.213Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:56.281Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:26:56.997Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:27:48.753Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:34:28.964Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/allAccomodation"}
+{"date":"2023-08-12T11:34:46.117Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T11:35:22.245Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T11:35:55.203Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T11:35:55.240Z","level":"error","message":"isActive is not defined","method":"GET","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-12T11:36:30.092Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T11:38:16.185Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:38:34.985Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:38:39.466Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T11:39:17.428Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:39:17.460Z","level":"error","message":"Accomodation does not exist","method":"PUT","service":"user-service","url":"/updateAccomodation/64d76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:39:31.983Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/accomodation/updateAccomodation/64d76f28e5bea8a1acd1970c"}
+{"date":"2023-08-12T11:39:43.560Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/deleteAccomodation/64d76f28e5bea8a1acd1970c"}
+{"date":"2023-08-12T11:39:53.963Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:26:03.018Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:27:15.132Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:27:15.150Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T12:27:23.271Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:08.014Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:08.026Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T12:28:13.248Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-12T12:28:23.896Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:31:56.909Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:32:41.905Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:32:49.310Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:33:57.564Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:34:33.884Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:37:25.101Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-12T12:37:25.159Z","level":"error","message":"error processing query: ns=testDB.accomodationsTree: $and\n    isActive $eq true\n    GEONEAR  field=location maxdist=10000 isNearSphere=0\nSort: {}\nProj: {}\n planner returned error :: caused by :: unable to find index for $geoNear query","method":"POST","service":"user-service","url":"/getAccomodations"}
