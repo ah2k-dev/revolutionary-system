@@ -173,3 +173,14 @@
 {"date":"2023-08-11T16:35:21.151Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
 {"date":"2023-08-11T16:37:29.130Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
 {"date":"2023-08-11T16:37:34.335Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:42:25.292Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-12T08:45:52.393Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:46:58.661Z","level":"error","message":"host validation failed: title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T08:50:15.961Z","level":"error","message":"E11000 duplicate key error collection: testDB.hosts index: accomodations.title_1 dup key: { accomodations.title: null }","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:11:39.732Z","level":"error","message":"accomodation validation failed: location.latitude: Path `location.latitude` is required., title: Path `title` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:14:33.085Z","level":"error","message":"accomodation validation failed: location.latitude: Path `location.latitude` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:45:39.421Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T10:46:09.965Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T11:23:11.196Z","level":"error","message":"Accomodation already exist","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-12T11:25:38.099Z","level":"error","message":"Cast to ObjectId failed for value \"64sd76b810470ecce4ce29e6f\" (type string) at path \"_id\" for model \"accomodation\"","method":"PUT","service":"user-service","url":"/updateAccomodation/64sd76b810470ecce4ce29e6f"}
+{"date":"2023-08-12T11:35:55.240Z","level":"error","message":"isActive is not defined","method":"GET","service":"user-service","url":"/getAccomodations"}
