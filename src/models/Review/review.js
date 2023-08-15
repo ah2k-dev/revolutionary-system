@@ -18,7 +18,7 @@ const reviewsSchema = new Schema(
         message: "Ratings must be between 0 and 5.",
       },
     },
-    comments: { type: String, required: true },
+    comment: { type: String, required: true },
   },
   { timestamps: true }
 );
