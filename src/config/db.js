@@ -5,7 +5,6 @@ dotenv.config({
   path: "./src/config/config.env",
 });
 
-// const mongoUri = `mongodb://127.0.0.1:27017/testDB`
 
 const connectDB = async () => {
   try {
