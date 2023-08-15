@@ -25,7 +25,7 @@ const createAccomodations = async (req, res) => {
       desc,
       location: {
         type: "Point",
-        cordinates: [latitude, longitude],
+        coordinates: [latitude, longitude],
       },
       capacity,
       services,

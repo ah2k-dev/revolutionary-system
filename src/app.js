@@ -17,7 +17,9 @@ app.options("*", cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(loggerMiddleware);
-app.use(fileUpload());
+app.use(fileUpload({
+limits: {fileSize: 1024 * 1024}
+})),   // 1 MB
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // router index
