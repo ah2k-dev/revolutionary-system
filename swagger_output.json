@@ -366,13 +366,57 @@
                 "desc": {
                   "example": "any"
                 },
-                "location": {
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
                   "example": "any"
                 },
                 "capacity": {
                   "example": "any"
                 },
                 "services": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/accomodation/getAccomodations": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "capacity": {
+                  "example": "any"
+                },
+                "coordinates": {
                   "example": "any"
                 }
               }
@@ -422,7 +466,10 @@
                 "desc": {
                   "example": "any"
                 },
-                "location": {
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
                   "example": "any"
                 },
                 "capacity": {
@@ -449,7 +496,7 @@
       }
     },
     "/accomodation/deleteAccomodation/{id}": {
-      "put": {
+      "delete": {
         "tags": [
           "user"
         ],
@@ -473,6 +520,82 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/review/{id}/newReview": {
+      "post": {
+        "tags": [
+          "review"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rating": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/review/{id}/getReviews": {
+      "get": {
+        "tags": [
+          "review"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"

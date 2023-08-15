@@ -8,6 +8,7 @@ const validator = require('validator');
 
 const reviewsSchema = new Schema(
   {
+    // userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     userId: {
       type: String
     },
@@ -24,6 +25,6 @@ const reviewsSchema = new Schema(
   { timestamps: true }
 );
 
-const reviews = mongoose.model("reviews", reviewsSchema);
+const Review = mongoose.model("Review", reviewsSchema);
 
-module.exports = reviews;
+module.exports = Review;

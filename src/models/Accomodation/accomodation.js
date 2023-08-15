@@ -4,6 +4,15 @@ const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
 
 const accomodationSchema = new Schema({
+
+  // review: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Review'
+  // },
+
+  reviewsId: [{ type: Schema.Types.ObjectId, ref: 'Review' }], // Array of review references
+
+
   title: { type: String, required: true },
   desc: { type: String, required: true },
   capacity: { type: Number, required: true },
@@ -24,10 +33,11 @@ const accomodationSchema = new Schema({
   isActive: { type: Boolean, default: true },
 
   // reviews id Ref
-  reviewsId: [{
-    type: Schema.Types.ObjectId,
-    ref: 'review',
-  }],
+
+  // reviewsId: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Review',
+  // }],
 
 
 
@@ -37,6 +47,6 @@ const accomodationSchema = new Schema({
 
 accomodationSchema.index({ location: '2dsphere' });
 
-const accomodation = mongoose.model("accomodation", accomodationSchema);
+const Accomodation = mongoose.model("Accomodation", accomodationSchema);
 
-module.exports = accomodation;
+module.exports = Accomodation;
