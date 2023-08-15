@@ -3,11 +3,11 @@ const review = require("../controllers/reviewController");
 const isAuthenticated = require("../middleware/auth");
 
 //post
-router.route("/:id/newReview").post(isAuthenticated, review.addReviews);
+router.route("/newReview/:id").post(isAuthenticated, review.addReviews);
 //put
 //delete
 //get
-router.route("/:id/getReviews").get(isAuthenticated, review.gettingReviews);
+router.route("/getReviews/:id").get(isAuthenticated, review.gettingReviews);
 
 
 module.exports = router;

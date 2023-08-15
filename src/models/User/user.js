@@ -72,8 +72,8 @@ const userSchema = new Schema({
 
 
   // fields for host and cooker
-  avatar: {type: String, default: 'TODO'},
-  coverImg: {type: String, default: 'TODO'},
+  avatar: {type: String, required: true},
+  coverImg: {type: String, requried: true},
 
   // optional: thinking about to get username from email : umer123@gmail.com as username: umer123
   // username: {type: String, default: 'No username required for now'},
@@ -89,6 +89,11 @@ const userSchema = new Schema({
     url: {type: String, default: 'TODO'},
     desc: {type: String, default: 'TODO'},
     dateAdded: {type: Date, default: Date.now()},
+  }],
+
+  savedAccomodation: [{
+    type: Schema.Types.ObjectId, ref: 'Review'
+
   }]
 
 

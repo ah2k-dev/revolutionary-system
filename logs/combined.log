@@ -1566,3 +1566,5 @@
 {"date":"2023-08-15T12:56:34.514Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/review/64db68dbd833eee34077874a/getReviews"}
 {"date":"2023-08-15T12:57:21.211Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/review/64db68dbd833eee34077874a/getReviews"}
 {"date":"2023-08-15T12:58:07.092Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/review/64db68dbd833eee34077874a/getReviews"}
+{"date":"2023-08-15T13:23:24.337Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/review/64db68dbd833eee34077874a/getReviews"}
+{"date":"2023-08-15T13:24:28.822Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/review/getReviews/64db68dbd833eee34077874a"}

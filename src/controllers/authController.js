@@ -9,6 +9,8 @@ const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
     const { firstName, lastName, email, password} = req.body;
+    const {avatar,coverImg} = req.files;
+
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -21,6 +23,29 @@ const register = async (req, res) => {
         res
       );
     }
+
+    if (!req.files || !avatar || !coverImg) {
+      return ErrorHandler("Please upload Avatar and Cover Image", 400, req, res);
+    }
+
+    const avatarUrl = './uploads/' + avatar.name
+    const coverImgUrl = './uploads/' + coverImg.name
+    //move photo to uploads directory
+    avatar.mv(avatarUrl);
+    coverImg.mv(coverImgUrl);
+    
+  //   let images = []
+  //   _.forEach(_.keysIn(req.files.photos), (key) => {
+  //     let photo = req.files.photos[key];
+  //   //push file details
+  //     data.push({
+  //         name: photo.name,
+  //         mimetype: photo.mimetype,
+  //         size: photo.size
+  //     });
+  // });
+
+
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
@@ -31,7 +56,9 @@ const register = async (req, res) => {
       lastName,
       email,
       password,
-      username: `${firstName}${uniqueId}`
+      username: `${firstName}${uniqueId}`,
+      avatar: avatarUrl,
+      coverImg: coverImgUrl,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
