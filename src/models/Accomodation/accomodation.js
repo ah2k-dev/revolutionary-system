@@ -19,10 +19,19 @@ const accomodationSchema = new Schema({
   
   createdBy: { type: String },
   services: {type: [String]},
-  reviewsId: {type: [String]},
+  // reviewsId: {type: [String]},
   images: {type: [String]},
   isActive: { type: Boolean, default: true },
-  // isDeleted: { type: Boolean, default: false },
+
+  // reviews id Ref
+  reviewsId: [{
+    type: Schema.Types.ObjectId,
+    ref: 'review',
+  }],
+
+
+
+
 
 }, {timestamps: true});
 
