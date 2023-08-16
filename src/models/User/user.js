@@ -72,11 +72,9 @@ const userSchema = new Schema({
 
 
   // fields for host and cooker
-  avatar: {type: String,   default: "No URL",},
-  coverImg: {type: String, default: "No URL",},
+  avatar: {type: String},
+  coverImg: {type: String},
 
-  // optional: thinking about to get username from email : umer123@gmail.com as username: umer123
-  // username: {type: String, default: 'No username required for now'},
   userDesc: {type: String},
   country: {type: String, requried: true,},
   timeZone: {type: String},
@@ -91,9 +89,7 @@ const userSchema = new Schema({
     dateAdded: {type: Date, default: Date.now()},
   }],
 
-  // savedAccomodation: [{
-  //   type: Schema.Types.ObjectId, ref: 'Review',
-  // }]
+  savedAccomodation: [{type: String}]
 
 
 
