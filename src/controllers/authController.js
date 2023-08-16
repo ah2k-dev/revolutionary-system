@@ -3,12 +3,22 @@ const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-
+const fs = require("fs");
 //register
 const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email, password} = req.body;
+    const { firstName, lastName, email, password, country } = req.body;
+
+    if (firstName.length < 1 || lastName.length < 1) {
+      return ErrorHandler(
+        "Please, ensure names have at least 2 characters.",
+        400,
+        req,
+        res
+      );
+    }
+
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -21,17 +31,61 @@ const register = async (req, res) => {
         res
       );
     }
+
+    let avatarFileName = null;
+    let coverImgfileName = null;
+
+    if (req.files) {
+      const { avatar, coverImg } = req.files;
+
+      if (avatar) {
+        // It should be image
+        if (!avatar.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image file", 400, req, res);
+        }
+        avatarFileName = `${Date.now()}${avatar.name}`;
+        avatar.mv(
+          path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+          (err) => {
+            if (err) {
+              return ErrorHandler(err.message, 400, req, res);
+            }
+          }
+        );
+      }
+      if (coverImg) {
+        // It should be image
+        if (!coverImg.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image file", 400, req, res);
+        }
+
+        coverImgfileName = `${Date.now()}${coverImg.name}`;
+        // Cover Img
+        coverImg.mv(
+          path.join(__dirname, `../../uploads/avatar/${coverImgfileName}`),
+          (err) => {
+            if (err) {
+              return ErrorHandler(err.message, 400, req, res);
+            }
+          }
+        );
+      }
+    }
+
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
-    const uniqueId = String(Date.now()).slice(-3)
+    const uniqueId = String(Date.now()).slice(-3);
     const newUser = await User.create({
       firstName,
       lastName,
       email,
       password,
-      username: `${firstName}${uniqueId}`
+      country,
+      username: `${firstName}${uniqueId}`,
+      avatar: avatarFileName || null,
+      coverImg: coverImgfileName || null,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
@@ -101,12 +155,15 @@ const verifyEmail = async (req, res) => {
 //login
 const login = async (req, res) => {
   // #swagger.tags = ['auth']
-
   try {
     const { email, password } = req.body;
+    if (!email || !password) {
+      return ErrorHandler("Please provide email and password", 400, req, res);
+    }
     const user = await User.findOne({ email }).select("+password");
+    console.log(user);
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("Please, provide correct credentials", 400, req, res);
     }
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
@@ -116,7 +173,11 @@ const login = async (req, res) => {
       return ErrorHandler("Email not verified", 400, req, res);
     }
     jwtToken = user.getJWTToken();
-    return SuccessHandler({message: "Logged in successfully", jwtToken, user}, 200, res);
+    return SuccessHandler(
+      { message: "Logged in successfully", jwtToken, user },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -149,7 +210,7 @@ const forgotPassword = async (req, res) => {
     user.passwordResetToken = passwordResetToken;
     user.passwordResetTokenExpires = passwordResetTokenExpires;
     await user.save();
-    const message = `Your password reset token is ${resetPasswordToken} and it expires in 10 minutes`;
+    const message = `Your password reset token is ${passwordResetToken} and it expires in 10 minutes`;
     const subject = `Password reset token`;
     await sendMail(email, subject, message);
     return SuccessHandler(`Password reset token sent to ${email}`, 200, res);
@@ -224,51 +285,87 @@ const updatePassword = async (req, res) => {
   }
 };
 
-
-
+// if not req.files.avatar: previousFileName
+// if  req.files.avatar: avatar
 
 //update Personal Info
 const updatePersonalInfo = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email } = req.body;
-    const { avatar } = req.files;
-    if (!avatar) {
-        return ErrorHandler("Please upload an image", req, 400, res);
-    }
-    if (!avatar.mimetype.startsWith("image")) {
-        return ErrorHandler("Please upload an image file", req, 400, res);
-    }
+    const { firstName, lastName } = req.body;
+    // Get the previous avatar filename
+    const checkUser = await User.findById(req.user._id); 
+    console.log(checkUser);
+    const previousAvatarFileName = checkUser.avatar;
+    console.log(previousAvatarFileName);
+  
 
-    const fileName = `${req.user._id}-${Date.now()}${path.parse(avatar.name).ext}`;
+    let avatarFileName = null;
+    if (req.files) {
+      const { avatar } = req.files;
+      // Delete the previous avatar file (if it exists)
+      if (previousAvatarFileName !== null) {
+        const previousAvatarPath = path.join(
+          __dirname,
+          `../../uploads/avatar/${previousAvatarFileName}`
+          );
+          console.log(previousAvatarPath);
 
-    avatar.mv(path.join(__dirname, `../../uploads/${fileName}`), (err) => {
-        if (err) {
-            return ErrorHandler(err.message, req, 500, res);
+          fs.unlink(previousAvatarPath, (err) => {
+            if (err) {
+              console.error(err);
+              return;
+            }
+            console.log('File deleted successfully');
+          });
+        const filedDelted =  fs.unlink(()=> previousAvatarPath);
+        console.log("filedDelted: ", filedDelted);
+      }
+
+      avatarFileName = `${Date.now()}${avatar.name}`;
+
+      avatar.mv(
+        path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+        (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
         }
-    });
+      );
+    } else {
+      avatarFileName = previousAvatarFileName;
+    }
+
+    //     // check avatarFileName should not saved null in DB
+        let updateAvatarFileName = ''
+     if (avatarFileName !==null) {
+
+     }
 
     const user = await User.findByIdAndUpdate(
       req.user._id,
       {
-      firstName,
-      lastName,
-      email,
-      avatar: `/uploads/${fileName}`,
-    },{
-      new: true,
-      runValidators: true,
-    })
+        firstName,
+        lastName,
+        avatar: avatarFileName,
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("User does not exist", 400, req, res);
     }
-    return SuccessHandler({message: "Updated Personal Info successfully", user}, 200, res);
+    return SuccessHandler(
+      { message: "Updated Personal Info successfully", user },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
 
 module.exports = {
   register,

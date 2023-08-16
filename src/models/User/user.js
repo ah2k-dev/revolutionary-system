@@ -72,24 +72,18 @@ const userSchema = new Schema({
 
 
   // fields for host and cooker
-  avatar: {type: String, default: 'TODO'},
-  coverImg: {type: String, default: 'TODO'},
+  avatar: {type: String},
+  coverImg: {type: String},
 
-  // optional: thinking about to get username from email : umer123@gmail.com as username: umer123
-  // username: {type: String, default: 'No username required for now'},
   userDesc: {type: String},
-  country: {type: String},
+  country: {type: String, requried: true,},
   timeZone: {type: String},
   websiteLink: {type: String},
 
-  // bookmark 
-  bookMark: [{
-    title: {type: String, default: 'TODO'},
-    category: {type: String, default: 'TODO'},
-    url: {type: String, default: 'TODO'},
-    desc: {type: String, default: 'TODO'},
-    dateAdded: {type: Date, default: Date.now()},
-  }]
+
+  // savedAccomodation: [{type: String}]
+
+  savedAccomodation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Accomodation' }] 
 
 
 
@@ -127,6 +121,6 @@ userSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-const user = mongoose.model("user", userSchema);
+const user = mongoose.model("User", userSchema);
 
 module.exports = user;
