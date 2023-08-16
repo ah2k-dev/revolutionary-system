@@ -2166,3 +2166,76 @@
 {"date":"2023-08-16T14:49:20.191Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
 {"date":"2023-08-16T14:49:24.982Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedAccomodation/64dba16b81e4fb7981e03706"}
 {"date":"2023-08-16T14:49:27.891Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-16T17:23:04.536Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-16T17:23:04.566Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-16T17:23:04.569Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-16T17:23:04.578Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-16T17:23:04.582Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-16T17:23:05.446Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-16T17:33:17.981Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:33:18.237Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T17:33:27.067Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:34:05.192Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:34:05.419Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T17:34:10.311Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:34:10.875Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-16T17:34:12.337Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-16T17:34:24.815Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:34:25.425Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-16T17:34:26.760Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-16T17:41:31.860Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:41:32.093Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T17:41:43.217Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:41:43.445Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T17:43:40.537Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T17:43:41.967Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T17:45:21.435Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T17:45:22.651Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T17:51:45.551Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T17:51:47.062Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T17:52:42.346Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T17:52:43.676Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T17:52:49.338Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T17:52:50.632Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T17:53:14.869Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/resetPassword"}
+{"date":"2023-08-16T17:53:15.097Z","level":"error","message":"Invalid token","method":"PUT","service":"user-service","url":"/resetPassword"}
+{"date":"2023-08-16T17:58:01.689Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:58:01.694Z","level":"error","message":"Password must contain atleast one uppercase letter, one special character and one number","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T17:58:09.146Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T17:58:09.975Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-16T17:58:11.437Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-16T18:04:53.822Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:04:54.059Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:05:17.435Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:05:17.663Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:20:57.829Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:20:58.101Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:24:55.313Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/forgotPassword"}
+{"date":"2023-08-16T18:24:56.851Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/forgotPassword"}
+{"date":"2023-08-16T18:32:55.413Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-16T18:32:55.451Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-16T18:32:55.453Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-16T18:32:55.463Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-16T18:32:55.468Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-16T18:32:55.688Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-16T18:41:19.443Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:41:19.454Z","level":"error","message":"Password must contain atleast one uppercase letter, one special character and one number","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:41:24.210Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:41:24.213Z","level":"error","message":"Password must contain atleast one uppercase letter, one special character and one number","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:41:34.566Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:41:35.603Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-16T18:41:37.704Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-16T18:41:42.195Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:41:42.404Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:43:39.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:43:40.311Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:44:00.775Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-16T18:44:01.306Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-16T18:45:05.866Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-16T18:45:06.319Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-16T18:46:25.275Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-16T18:46:25.591Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-16T18:47:30.085Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-16T18:47:30.395Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-16T18:47:30.518Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-16T18:47:31.909Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}

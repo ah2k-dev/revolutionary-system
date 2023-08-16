@@ -15,7 +15,7 @@ const userSchema = new Schema({
     required: true,
   },
 
-  username: {type: String, unique: true},
+  username: { type: String, unique: true },
 
   email: {
     type: String,
@@ -70,37 +70,19 @@ const userSchema = new Schema({
     default: true,
   },
 
+  avatar: { type: String },
+  coverImg: { type: String },
 
-  // fields for host and cooker
-  avatar: {type: String},
-  coverImg: {type: String},
-
-  userDesc: {type: String},
-  country: {type: String, requried: true,},
-  timeZone: {type: String},
-  websiteLink: {type: String},
-
+  userDesc: { type: String },
+  country: { type: String, requried: true },
+  timeZone: { type: String },
+  websiteLink: { type: String },
 
   // savedAccomodation: [{type: String}]
 
-  savedAccomodation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Accomodation' }] 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  savedAccomodation: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
+  ],
 });
 
 //hash password before saving

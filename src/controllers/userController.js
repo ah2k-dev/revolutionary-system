@@ -26,11 +26,13 @@ const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const {
+      firstName,
+      lastName,
       username,
       websiteLink,
       userDesc,
       country,
-      timeZone,
+      // timeZone,
     } = req.body;
 
   
@@ -42,7 +44,7 @@ const updateUser = async (req, res) => {
         websiteLink,
         userDesc,
         country,
-        timeZone,
+        // timeZone,
       },
       {
         new: true,

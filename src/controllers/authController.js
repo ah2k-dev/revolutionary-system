@@ -8,7 +8,7 @@ const fs = require("fs");
 const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email, password, country } = req.body;
+    const { firstName, lastName, email, password, country, role } = req.body;
 
     if (firstName.length < 1 || lastName.length < 1) {
       return ErrorHandler(
@@ -86,6 +86,7 @@ const register = async (req, res) => {
       username: `${firstName}${uniqueId}`,
       avatar: avatarFileName || null,
       coverImg: coverImgfileName || null,
+      role: role,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
@@ -294,11 +295,10 @@ const updatePersonalInfo = async (req, res) => {
   try {
     const { firstName, lastName } = req.body;
     // Get the previous avatar filename
-    const checkUser = await User.findById(req.user._id); 
+    const checkUser = await User.findById(req.user._id);
     console.log(checkUser);
     const previousAvatarFileName = checkUser.avatar;
     console.log(previousAvatarFileName);
-  
 
     let avatarFileName = null;
     if (req.files) {
@@ -308,17 +308,17 @@ const updatePersonalInfo = async (req, res) => {
         const previousAvatarPath = path.join(
           __dirname,
           `../../uploads/avatar/${previousAvatarFileName}`
-          );
-          console.log(previousAvatarPath);
+        );
+        console.log(previousAvatarPath);
 
-          fs.unlink(previousAvatarPath, (err) => {
-            if (err) {
-              console.error(err);
-              return;
-            }
-            console.log('File deleted successfully');
-          });
-        const filedDelted =  fs.unlink(()=> previousAvatarPath);
+        fs.unlink(previousAvatarPath, (err) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          console.log("File deleted successfully");
+        });
+        const filedDelted = fs.unlink(() => previousAvatarPath);
         console.log("filedDelted: ", filedDelted);
       }
 
@@ -337,10 +337,9 @@ const updatePersonalInfo = async (req, res) => {
     }
 
     //     // check avatarFileName should not saved null in DB
-        let updateAvatarFileName = ''
-     if (avatarFileName !==null) {
-
-     }
+    let updateAvatarFileName = "";
+    if (avatarFileName !== null) {
+    }
 
     const user = await User.findByIdAndUpdate(
       req.user._id,
