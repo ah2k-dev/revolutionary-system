@@ -6,6 +6,7 @@ const path = require("path");
 
 //Add a new Review
 const addReviews = async (req, res) => {
+  const currentUser = req.user._id
   // #swagger.tags = ['review']
   try {
     const accomodationId = req.params.id;
@@ -17,6 +18,10 @@ const addReviews = async (req, res) => {
       if (!accommodation) {
         return ErrorHandler("Accommodation Does not exist", 400, req, res);
       }
+
+      // let isReviewed = accommodation.reviewsId.find(
+      //   (review)=>( review.toString === currentUser.toString()
+      //     ))
 
       const review = new Review({
         rating,

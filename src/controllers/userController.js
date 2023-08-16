@@ -12,7 +12,7 @@ const getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id)
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("User does not exist", 400, req, res);
     }
     return SuccessHandler({message: "Here you go", user}, 200, res);
   } catch (error) {
@@ -51,7 +51,7 @@ const updateUser = async (req, res) => {
       }
     );
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("User does not exist", 400, req, res);
     }
     return SuccessHandler(
       { message: "Update Info successfully", user },
@@ -71,7 +71,7 @@ const getAllUsers = async (req, res) => {
   try {
     const user = await User.find()
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("User does not exist", 400, req, res);
     }
     return SuccessHandler({message: "Here you go", user}, 200, res);
   } catch (error) {

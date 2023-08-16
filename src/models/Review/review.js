@@ -8,10 +8,7 @@ const validator = require('validator');
 
 const reviewsSchema = new Schema(
   {
-    // userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    userId: {
-      type: String
-    },
+    userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     rating: {
       type: Number,
       required: true,

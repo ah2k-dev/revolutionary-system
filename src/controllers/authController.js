@@ -9,12 +9,12 @@ const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
     const { firstName, lastName, email, password, country} = req.body;
-    // const {avatar,coverImg} = req.files;
-  // console.log(req.body);
-  // console.log(req.files);
-  if (firstName.length < 1 || lastName.length < 1) {
-    return ErrorHandler("Please, ensure names have at least 2 characters.", 400, req, res);
-  }
+    const {avatar,coverImg} = req.files;
+  console.log(req.body);
+  console.log(req.files);
+  // if (firstName.value.length < 1 || lastName.value.length < 1) {
+  //   return ErrorHandler("Please, ensure names have at least 2 characters.", 400, req, res);
+  // }
 
     if (
       !password.match(
@@ -29,34 +29,35 @@ const register = async (req, res) => {
       );
     }
 
-//     if (!req.files || !avatar || !coverImg) {
-//       return ErrorHandler("Please upload Avatar and Cover Image", 400, req, res);
-//     }
+    if (!req.files || !avatar || !coverImg) {
+      return ErrorHandler("Please upload Avatar and Cover Image", 400, req, res);
+    }
 
-//     if (!avatar.mimetype.startsWith("image") || !coverImg.mimetype.startsWith("image")) {
-//       return ErrorHandler("Please upload an image file", req, 400, res);
-//   }
+    if (!avatar.mimetype.startsWith("image") || !coverImg.mimetype.startsWith("image")) {
+      return ErrorHandler("Please upload an image file", 400, req, res);
+  }
 
-//   const avatarFileName = `${req.user._id}-${Date.now()}${avatar.name}`;
-//   const coverImgfileName = `${req.user._id}-${Date.now()}${coverImg.name}`;
+  // const coverImgfileName = `${firstName}-${Date.now()}${coverImg.name}`;
+  const avatarFileName = `${Date.now()}${avatar.name}`;
+  const coverImgfileName = `${Date.now()}${coverImg.name}`;
 
-//   avatar.mv(path.join(__dirname, `../../uploads/${avatarFileName}`), (err) => {
-//       if (err) {
-//           return ErrorHandler(err.message, req, 500, res);
-//       }
-//   });
-// // Cover Img
-//   coverImg.mv(path.join(__dirname, `../../uploads/${coverImgfileName}`), (err) => {
-//     if (err) {
-//         return ErrorHandler(err.message, req, 500, res);
-//     }
-// });
+  avatar.mv(path.join(__dirname, `../../uploads/${avatarFileName}`), (err) => {
+      if (err) {
+          return ErrorHandler(err.message, 400, req, res);
+      }
+  });
+// Cover Img
+  coverImg.mv(path.join(__dirname, `../../uploads/${coverImgfileName}`), (err) => {
+    if (err) {
+        return ErrorHandler(err.message, 400, req, res);
+    }
+});
 
-    // const avatarUrl = './uploads/' + avatar.name
-    // const coverImgUrl = './uploads/' + coverImg.name
-    // //move photo to uploads directory
-    // avatar.mv(avatarUrl);
-    // coverImg.mv(coverImgUrl);
+    const avatarUrl = './uploads/' + avatar.name
+    const coverImgUrl = './uploads/' + coverImg.name
+    //move photo to uploads directory
+    avatar.mv(avatarUrl);
+    coverImg.mv(coverImgUrl);
     
 
     const user = await User.findOne({ email });
@@ -71,8 +72,8 @@ const register = async (req, res) => {
       password,
       country,
       username: `${firstName}${uniqueId}`,
-      // avatar: `/uploads/${avatarFileName}`,
-      // coverImg: `/uploads/${coverImgfileName}`,
+      avatar: `/uploads/${avatarFileName}`,
+      coverImg: `/uploads/${coverImgfileName}`,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
@@ -142,17 +143,15 @@ const verifyEmail = async (req, res) => {
 //login
 const login = async (req, res) => {
   // #swagger.tags = ['auth']
-
   try {
     const { email, password } = req.body;
     if (!email || !password) {
-      return ErrorHandler("Please provide email and password", req, 400, res);
+      return ErrorHandler("Please provide email and password", 400, req, res);
     }
-
     const user = await User.findOne({ email }).select("+password");;
     console.log(user);
     if (!user) {
-      return ErrorHandler("Please, provide correct credentials", req, 400, res);
+      return ErrorHandler("Please, provide correct credentials", 400, req, res);
     }
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
