@@ -8,6 +8,7 @@ router.route("/update-info").put(isAuthenticated, user.updateUser);
 
 //get
 router.route("/getusers").get(isAuthenticated, authorizedHost, user.getAllUsers);
+router.route("/userProfile").get(isAuthenticated, user.getUserProfile);
 
 
 module.exports = router;

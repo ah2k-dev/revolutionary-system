@@ -3,6 +3,25 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 
+
+
+
+// get all users 
+const getUserProfile = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const user = await User.findById(req.user._id)
+    if (!user) {
+      return ErrorHandler("User does not exist", req, 400, res);
+    }
+    return SuccessHandler({message: "Here you go", user}, 200, res);
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
 //update user
 const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
@@ -64,4 +83,5 @@ const getAllUsers = async (req, res) => {
 module.exports = {
   updateUser,
   getAllUsers,
+  getUserProfile,
 };

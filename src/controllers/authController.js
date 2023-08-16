@@ -8,10 +8,14 @@ const path = require("path");
 const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email, password} = req.body;
+    const { firstName, lastName, email, password, country} = req.body;
     // const {avatar,coverImg} = req.files;
   // console.log(req.body);
   // console.log(req.files);
+  if (firstName.length < 1 || lastName.length < 1) {
+    return ErrorHandler("Please, ensure names have at least 2 characters.", 400, req, res);
+  }
+
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -65,6 +69,7 @@ const register = async (req, res) => {
       lastName,
       email,
       password,
+      country,
       username: `${firstName}${uniqueId}`,
       // avatar: `/uploads/${avatarFileName}`,
       // coverImg: `/uploads/${coverImgfileName}`,
@@ -140,9 +145,14 @@ const login = async (req, res) => {
 
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email }).select("+password");
+    if (!email || !password) {
+      return ErrorHandler("Please provide email and password", req, 400, res);
+    }
+
+    const user = await User.findOne({ email }).select("+password");;
+    console.log(user);
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("Please, provide correct credentials", req, 400, res);
     }
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {

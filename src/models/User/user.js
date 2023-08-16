@@ -72,13 +72,13 @@ const userSchema = new Schema({
 
 
   // fields for host and cooker
-  avatar: {type: String, required: true, default: "true",},
-  coverImg: {type: String, requried: true, default: "true",},
+  avatar: {type: String,   default: "No URL",},
+  coverImg: {type: String, default: "No URL",},
 
   // optional: thinking about to get username from email : umer123@gmail.com as username: umer123
   // username: {type: String, default: 'No username required for now'},
   userDesc: {type: String},
-  country: {type: String},
+  country: {type: String, requried: true,},
   timeZone: {type: String},
   websiteLink: {type: String},
 
