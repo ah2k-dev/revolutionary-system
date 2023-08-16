@@ -777,3 +777,4 @@
 {"date":"2023-08-16T13:12:25.102Z","level":"error","message":"The \"cb\" argument must be of type function. Received undefined","method":"PUT","service":"user-service","url":"/update-personal-info"}
 {"date":"2023-08-16T13:16:04.782Z","level":"error","message":"The \"cb\" argument must be of type function. Received undefined","method":"PUT","service":"user-service","url":"/update-personal-info"}
 {"date":"2023-08-16T13:20:47.698Z","level":"error","message":"The \"cb\" argument must be of type function. Received undefined","method":"PUT","service":"user-service","url":"/update-personal-info"}
+{"date":"2023-08-16T14:05:03.724Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}

@@ -80,16 +80,10 @@ const userSchema = new Schema({
   timeZone: {type: String},
   websiteLink: {type: String},
 
-  // bookmark 
-  bookMark: [{
-    title: {type: String, default: 'TODO'},
-    category: {type: String, default: 'TODO'},
-    url: {type: String, default: 'TODO'},
-    desc: {type: String, default: 'TODO'},
-    dateAdded: {type: Date, default: Date.now()},
-  }],
 
-  savedAccomodation: [{type: String}]
+  // savedAccomodation: [{type: String}]
+
+  savedAccomodation: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Accomodation' }] 
 
 
 
