@@ -35,50 +35,102 @@ const updatePersonalInfo = async (req, res) => {
     const checkUser = await User.findById(req.user._id); 
     console.log(checkUser);
     const previousAvatarFileName = checkUser.avatar;
+    const previousCoverImgFileName = checkUser.coverImg;
     console.log(previousAvatarFileName);
   
 
     let avatarFileName = null;
+    let coverImgFileName = null;
     if (req.files) {
-      const { avatar } = req.files;
-      // Delete the previous avatar file (if it exists)
-      if (previousAvatarFileName !== null) {
-        const previousAvatarPath = path.join(
-          __dirname,
-          `../../uploads/avatar/${previousAvatarFileName}`
-          );
-          console.log(previousAvatarPath);
-
-          fs.unlink(previousAvatarPath, (err) => {
-            if (err) {
-              console.error(err);
-              return;
-            }
-            console.log('File deleted successfully');
-          });
-        const filedDelted =  fs.unlink(()=> previousAvatarPath);
-        console.log("filedDelted: ", filedDelted);
-      }
-
-      avatarFileName = `${Date.now()}${avatar.name}`;
-
-      avatar.mv(
-        path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
-        (err) => {
-          if (err) {
-            return ErrorHandler(err.message, 400, req, res);
+      const { avatar, coverImg } = req.files;
+        if (avatar) {
+          // It should be image
+          if (!avatar.mimetype.startsWith("image")) {
+            return ErrorHandler("Please upload an image file", 400, req, res);
           }
+          avatarFileName = `${Date.now()}${avatar.name}`;
+          avatar.mv(
+            path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+            (err) => {
+              if (err) {
+                return ErrorHandler(err.message, 400, req, res);
+              }
+            }
+          );
         }
-      );
+        if (coverImg) {
+          // It should be image
+          if (!coverImg.mimetype.startsWith("image")) {
+            return ErrorHandler("Please upload an image file", 400, req, res);
+          }
+  
+          coverImgFileName = `${Date.now()}${coverImg.name}`;
+          // Cover Img
+          coverImg.mv(
+            path.join(__dirname, `../../uploads/avatar/${coverImgFileName}`),
+            (err) => {
+              if (err) {
+                return ErrorHandler(err.message, 400, req, res);
+              }
+            }
+          );
+        }
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      
+      // Delete the previous avatar file (if it exists)
+      // if (previousAvatarFileName !== null) {
+      //   const previousAvatarPath = path.join(
+      //     __dirname,
+      //     `../../uploads/avatar/${previousAvatarFileName}`
+      //     );
+      //     console.log(previousAvatarPath);
+
+      //     fs.unlink(previousAvatarPath, (err) => {
+      //       if (err) {
+      //         console.error(err);
+      //         return;
+      //       }
+      //       console.log('File deleted successfully');
+      //     });
+      //   const filedDelted =  fs.unlink(()=> previousAvatarPath);
+      //   console.log("filedDelted: ", filedDelted);
+      // }
+
+      // avatarFileName = `${Date.now()}${avatar.name}`;
+
+      // avatar.mv(
+      //   path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+      //   (err) => {
+      //     if (err) {
+      //       return ErrorHandler(err.message, 400, req, res);
+      //     }
+      //   }
+      // );
+
+
     } else {
       avatarFileName = previousAvatarFileName;
+      coverImgFileName = previousCoverImgFileName;
     }
 
     //     // check avatarFileName should not saved null in DB
-        let updateAvatarFileName = ''
-     if (avatarFileName !==null) {
+    //     let updateAvatarFileName = ''
+    //  if (avatarFileName !==null) {
 
-     }
+    //  }
 
     const user = await User.findByIdAndUpdate(
       req.user._id,
@@ -86,6 +138,7 @@ const updatePersonalInfo = async (req, res) => {
         firstName,
         lastName,
         avatar: avatarFileName,
+        coverImg: coverImgFileName,
       },
       {
         new: true,

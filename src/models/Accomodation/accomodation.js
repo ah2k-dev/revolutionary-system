@@ -9,9 +9,10 @@ const accomodationSchema = new Schema({
   //   type: Schema.Types.ObjectId,
   //   ref: 'Review'
   // },
-
+  
   reviewsId: [{ type: Schema.Types.ObjectId, ref: 'Review' }], // Array of review references
-
+  
+  rent: { type: Number, required: true },
 
   title: { type: String, required: true },
   desc: { type: String, required: true },

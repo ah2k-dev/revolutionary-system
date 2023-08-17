@@ -54,7 +54,7 @@ const gettingReviews = async (req, res) => {
     const accomodationId = req.params.id;
     if (req.user.role === "user") {
       // console.log(accomodationId);
-      const accomodation = await Accomodation.findById(accomodationId).populate(
+      const accomodation = await Book.findById(accomodationId).populate(
         "reviewsId"
       );
       const reviews = accomodation.reviewsId;

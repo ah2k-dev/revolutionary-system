@@ -778,3 +778,12 @@
 {"date":"2023-08-16T13:16:04.782Z","level":"error","message":"The \"cb\" argument must be of type function. Received undefined","method":"PUT","service":"user-service","url":"/update-personal-info"}
 {"date":"2023-08-16T13:20:47.698Z","level":"error","message":"The \"cb\" argument must be of type function. Received undefined","method":"PUT","service":"user-service","url":"/update-personal-info"}
 {"date":"2023-08-16T14:05:03.724Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-17T12:00:36.396Z","level":"error","message":"createBooking is not defined","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
+{"date":"2023-08-17T12:01:52.117Z","level":"error","message":"createBooking is not defined","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
+{"date":"2023-08-17T12:03:02.165Z","level":"error","message":"BookingAccomodation validation failed: bookingDate.0.startDate: Cast to date failed for value \"20-5-2023\" (type string) at path \"startDate\", bookingDate.0.endDate: Cast to date failed for value \"20-5-2023\" (type string) at path \"endDate\"","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
+{"date":"2023-08-17T12:05:17.937Z","level":"error","message":"BookingAccomodation validation failed: bookingDate.0.startDate: Cast to date failed for value \"20-5-2023\" (type string) at path \"startDate\", bookingDate.0.endDate: Cast to date failed for value \"20-5-2023\" (type string) at path \"endDate\"","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
+{"date":"2023-08-17T12:31:10.257Z","level":"error","message":"No Such Booking exist","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-17T12:31:11.691Z","level":"error","message":"No Such Booking exist","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-17T12:33:04.148Z","level":"error","message":"No Such Booking exist","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-17T12:36:36.888Z","level":"error","message":"totalAmount is not defined","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
+{"date":"2023-08-17T12:38:10.785Z","level":"error","message":"totalAmount is not defined","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}
