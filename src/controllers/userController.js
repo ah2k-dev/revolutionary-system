@@ -21,6 +21,93 @@ const getUserProfile = async (req, res) => {
 
 
 
+
+
+// if not req.files.avatar: previousFileName
+// if  req.files.avatar: avatar
+
+//update Personal Info
+const updatePersonalInfo = async (req, res) => {
+  // #swagger.tags = ['auth']
+  try {
+    const { firstName, lastName } = req.body;
+    // Get the previous avatar filename
+    const checkUser = await User.findById(req.user._id); 
+    console.log(checkUser);
+    const previousAvatarFileName = checkUser.avatar;
+    console.log(previousAvatarFileName);
+  
+
+    let avatarFileName = null;
+    if (req.files) {
+      const { avatar } = req.files;
+      // Delete the previous avatar file (if it exists)
+      if (previousAvatarFileName !== null) {
+        const previousAvatarPath = path.join(
+          __dirname,
+          `../../uploads/avatar/${previousAvatarFileName}`
+          );
+          console.log(previousAvatarPath);
+
+          fs.unlink(previousAvatarPath, (err) => {
+            if (err) {
+              console.error(err);
+              return;
+            }
+            console.log('File deleted successfully');
+          });
+        const filedDelted =  fs.unlink(()=> previousAvatarPath);
+        console.log("filedDelted: ", filedDelted);
+      }
+
+      avatarFileName = `${Date.now()}${avatar.name}`;
+
+      avatar.mv(
+        path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+        (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        }
+      );
+    } else {
+      avatarFileName = previousAvatarFileName;
+    }
+
+    //     // check avatarFileName should not saved null in DB
+        let updateAvatarFileName = ''
+     if (avatarFileName !==null) {
+
+     }
+
+    const user = await User.findByIdAndUpdate(
+      req.user._id,
+      {
+        firstName,
+        lastName,
+        avatar: avatarFileName,
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+    if (!user) {
+      return ErrorHandler("User does not exist", 400, req, res);
+    }
+    return SuccessHandler(
+      { message: "Updated Personal Info successfully", user },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
 //update user
 const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
@@ -126,7 +213,7 @@ const savedOrUnsavedAccomodation = async (req, res) => {
 
 
 
-// get Current user
+// get Saved Accomodations
 const getSavedAccomodations = async (req, res) => {
   // #swagger.tags = ['user']
     try {
@@ -165,4 +252,5 @@ module.exports = {
   getUserProfile,
   savedOrUnsavedAccomodation,
   getSavedAccomodations,
+  updatePersonalInfo,
 };

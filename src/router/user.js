@@ -4,6 +4,7 @@ const isAuthenticated = require("../middleware/auth");
 const {authorizedCook, authorizedHost} = require('../middleware/role.js')
 
 //put
+router.route("/update-personal-info").put(isAuthenticated, user.updatePersonalInfo);
 router.route("/update-info").put(isAuthenticated, user.updateUser);
 router.route("/savedOrUnsavedAccomodation/:id").put(isAuthenticated, user.savedOrUnsavedAccomodation);
 
