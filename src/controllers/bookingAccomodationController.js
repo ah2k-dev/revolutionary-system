@@ -18,7 +18,6 @@ const bookNewAccomm = async (req, res) => {
      
     if (req.user.role === "user") {
       const currentAccommodation = await Accomodation.findById(accomodationId); 
-      console.log(currentAccommodation);
 
       if (!currentAccommodation) {
         return ErrorHandler("Accommodation Does not exist", 400, req, res);
@@ -28,8 +27,13 @@ const bookNewAccomm = async (req, res) => {
     // let stripeChargesAmount = stripeChargesInPercent*100
     // let totalAmount = (stripeChargesAmount)+  subTotal
     
-    const isBooked =  await bookAccomm.find()
-    isBooked.accomodationsId.includes(accodID)
+    const isBooked =  await bookAccomm.findOne({
+            accomodationsId: accomodationId
+    })
+    if (isBooked) {
+        return ErrorHandler("Already Booked", 400, req, res);
+    }
+    // isBooked.accomodationsId.includes(accodID)
 
     const newBooking = await bookAccomm.create({
         user: currentUser,
@@ -64,11 +68,11 @@ const getUserBookings = async (req, res) => {
       if (req.user.role === "user") {
   
           
-          const bookings =  await bookAccomm.findById(currentUser)
+          const bookings =  await bookAccomm.findOne({user: currentUser})
           console.log(bookings);
-          if (!bookings) {
-            return ErrorHandler("No Such Booking exist", 400, req, res);
-          }
+        //   if (!bookings) {
+        //     return ErrorHandler("No Such Booking exist", 400, req, res);
+        //   }
           
    
         return SuccessHandler(
