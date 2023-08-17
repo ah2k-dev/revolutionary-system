@@ -2234,3 +2234,4 @@
 {"date":"2023-08-17T13:20:10.127Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"BookingAccomodation\"","method":"GET","service":"user-service","url":"/userBookings"}
 {"date":"2023-08-17T13:20:11.028Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
 {"date":"2023-08-17T13:20:11.252Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"BookingAccomodation\"","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-17T13:21:28.777Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
