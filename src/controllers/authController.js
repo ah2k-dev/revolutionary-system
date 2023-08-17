@@ -286,9 +286,8 @@ const updatePassword = async (req, res) => {
   }
 };
 
-// if not req.files.avatar: previousFileName
-// if  req.files.avatar: avatar
 
+<<<<<<< HEAD
 //update Personal Info
 const updatePersonalInfo = async (req, res) => {
   // #swagger.tags = ['auth']
@@ -365,6 +364,8 @@ const updatePersonalInfo = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+=======
+>>>>>>> umer/rs
 
 module.exports = {
   register,
@@ -375,5 +376,4 @@ module.exports = {
   forgotPassword,
   resetPassword,
   updatePassword,
-  updatePersonalInfo,
 };
