@@ -17,10 +17,6 @@ const accomodationSchema = new Schema({
   title: { type: String, required: true },
   desc: { type: String, required: true },
   capacity: { type: Number, required: true },
-  // location: {
-  //   latitude: {type: Number, required: true},
-  //   longitude: {type: Number, required: true},
-  // },
 
   location: {
     type: { type: String, default: 'Point' },
@@ -29,16 +25,10 @@ const accomodationSchema = new Schema({
   
   createdBy: { type: String },
   services: {type: [String]},
-  // reviewsId: {type: [String]},
-  images: {type: [String]},
+  backgoundImages: {type: [String]},
+  // backgoundImages: [{type: String}],
   isActive: { type: Boolean, default: true },
 
-  // reviews id Ref
-
-  // reviewsId: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Review',
-  // }],
 
 
 
