@@ -8,18 +8,8 @@ const createAccomodations = async (req, res) => {
   // #swagger.tags = ['user']
   // TODO: image array
   try {
-    const {
-      title,
-      desc,
-      latitude,
-      longitude,
-      capacity,
-      services,
-      rent,
-      } = req.body;
-      let currentUser = req.user
-      // console.log(currentUser);
-
+    const { title, desc, latitude, longitude, capacity, services } = req.body;
+    console.log(req.body);
     const getUserId = req.user._id;
     const isAccomodationsExist = await Accomodation.findOne({
       title,
@@ -29,67 +19,6 @@ const createAccomodations = async (req, res) => {
     if (isAccomodationsExist) {
       return ErrorHandler("Accomodation already exist", 400, req, res);
     }
-    // images upload
-    let imagesFileName = [];
-
-    // if (req.file) {
-    //   const { backgoundImages} = req.file;
-
-    //   if (backgoundImages) {
-    //     // It should be image
-    //     if (!backgoundImages.mimetype.startsWith("image")) {
-    //       return ErrorHandler("Please upload an image file", 400, req, res);
-    //     }
-    //     backgoundImages = `${Date.now()}${backgoundImages.name}`;
-    //     backgoundImages.mv(
-    //       path.join(__dirname, `../../uploads/accomodationImages/${backgoundImages}`),
-    //       (err) => {
-    //         if (err) {
-    //           return ErrorHandler(err.message, 400, req, res);
-    //         }
-    //       }
-    //     );
-    //   }
-      
-    // }
-
-
-
-    if (req.files) {
-      const backgroundImages = req.files;
-    
-      console.log(backgroundImages);
-      
-      
-      // if (Array.isArray(backgroundImages)) {
-      // if (backgroundImages) {
-      //   // console.log(backgroundImages);
-        
-      // for (const image of backgroundImages) {
-      //   if (!image.mimetype.startsWith("image")) {
-      //     return ErrorHandler("Please upload only image files", 400, req, res);
-      //   }
-  
-      //   const imagesName = `${Date.now()}_${image.name}`;
-      //   console.log(imagesName);
-      //   imagesFileName.push(imagesName)
-      //   image.mv(
-      //     path.join(__dirname, `../../uploads/accomodationImages/${imagesFileName}`),
-      //     (err) => {
-      //       if (err) {
-      //         return ErrorHandler(err.message, 400, req, res);
-      //       }
-      //     }
-      //   );
-      // }
-
-      // }
-
-
-
-
-
-    
 
     const newAccomodations = await Accomodation.create({
       title,
@@ -100,9 +29,7 @@ const createAccomodations = async (req, res) => {
       },
       capacity,
       services,
-      rent,
       createdBy: getUserId,
-      // backgoundImages: [imagesFileName],
     });
 
     // newAccomodations.save();
@@ -112,9 +39,7 @@ const createAccomodations = async (req, res) => {
       200,
       res
     );
- } 
- } 
- catch (error) {
+  } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
@@ -133,7 +58,7 @@ const updateAccomodations = async (req, res) => {
         desc,
         location: {
           type: "Point",
-          coordinates: [latitude, longitude],
+          cordinates: [latitude, longitude],
         },
 
         capacity,
@@ -203,7 +128,7 @@ const getAllAccomodations = async (req, res) => {
                   type: "Point",
                   coordinates: req.body.coordinates,
                 },
-                $maxDistance: 50 * 1000,
+                $maxDistance: 10 * 1000,
               },
             },
           }
@@ -228,7 +153,7 @@ const getAllAccomodations = async (req, res) => {
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
-    });
+    }).populate("reviewsId");
     const totalAccomodation = getAccomodations.length
 
     if (!getAccomodations) {
@@ -236,7 +161,7 @@ const getAllAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Fetched successfully", totalAccomodation, getAccomodations},
+      { message: "Fetched successfully", getAccomodations, totalAccomodation },
       200,
       res
     );
@@ -253,7 +178,7 @@ const getAllAccomodations = async (req, res) => {
 //     const { title, desc, latitude, longitude, capacity, services } = req.body;
 //     console.log(req.body);
 //     const getUserId = req.user._id;
-//     const isAccomodationsExist = await Accomodation.findOne({
+//     const isAccomodationsExist = await Accomodation.findOne({  
 //       title,
 //       createdBy: getUserId,
 //     });

@@ -287,7 +287,6 @@ const updatePassword = async (req, res) => {
 };
 
 
-<<<<<<< HEAD
 //update Personal Info
 const updatePersonalInfo = async (req, res) => {
   // #swagger.tags = ['auth']
@@ -364,8 +363,46 @@ const updatePersonalInfo = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-=======
->>>>>>> umer/rs
+
+const googleAuth = async (req, res) => {
+ // #swagger.tags = ['auth']
+ try {
+  const {
+    email,
+    firstName,
+    lastName,
+    profilePic,
+    phoneNumber,
+    role,
+  } = req.body;
+
+  console.log(req.body);
+
+  const exUser = await User.findOne({ email });
+  if (exUser && exUser.provider === "google") {
+    const token = await exUser.getJWTToken();
+    return SuccessHandler({ token, user: exUser }, 200, res);
+  } else if (exUser && exUser.provider !== "google") {
+    return ErrorHandler("User exists with different provider. Use the one you used before", 400, req, res);
+  } else {
+    const user = await User.create({
+      email,
+      firstName,
+      lastName,
+      profilePic,
+      phoneNumber,
+      role,
+      provider: "google",
+      username: email.split("@")[0],
+    });
+    const token = await user.getJWTToken();
+    return SuccessHandler({ token, user }, 200, res);
+  }
+
+ } catch (error) {
+  return ErrorHandler(error.message, 500, req, res);
+ }
+};
 
 module.exports = {
   register,
@@ -376,4 +413,6 @@ module.exports = {
   forgotPassword,
   resetPassword,
   updatePassword,
+  updatePersonalInfo,
+  googleAuth
 };
