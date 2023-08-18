@@ -63,9 +63,75 @@ const getMeals = async (req, res) => {
     // #swagger.tags = ['meal']
     // TODO: image array
     try {
-  
-      const cookId = req.user._id;
-      const meals = await Meal.find();
+
+
+       // Price Filter
+     
+       const priceFilter = req.body.price ? 
+       {
+        price: {$lte: Number(req.body.price), $gte: Number(req.body.price)} 
+
+       }:{}
+
+
+
+
+      // Dish Filter
+      const dishFilter = req.body.dishName
+      ? {
+        dishName: {
+            $regex: new RegExp(req.body.dishName, 'i'), // Case-insensitive search
+          },
+        }
+      : {};
+
+      // servingCapacityFilter
+      const servingCapacityFilter = req.body.maxServingCapacity
+      ? {
+        maxServingCapacity: Number(req.body.maxServingCapacity),
+        }
+      : {};
+
+
+         // Spice Status Filter
+         const spiceStatusFilter = req.body.spiceStatus
+         ? {
+          spiceStatus: {$eq: req.body.spiceStatus},
+           }
+         : {};
+
+
+            // Gram Filter
+      const gramFilter = req.body.gram
+      ? {
+        gram: {$lte: Number(req.body.gram)},
+        }
+      : {};
+
+
+                  // Calories Filter
+                  const caloriesFilter = req.body.calories
+                  ? {
+                    calories: {$lte: Number(req.body.calories)},
+                    }
+                  : {};
+
+
+
+
+
+
+
+
+      const meals = await Meal.find({
+        isActive: true,
+        ...dishFilter,
+        ...priceFilter,
+        ...servingCapacityFilter,
+        ...spiceStatusFilter,
+        ...gramFilter,
+        ...caloriesFilter,
+      });
   
       if (!meals) {
         return ErrorHandler("Meals Does not exist", 400, req, res);
