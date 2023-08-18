@@ -2,7 +2,7 @@ const User = require("../models/User/user");
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
-const { v4: uuidv4 } = require('uuid');
+const uuid = require('uuid');
 const path = require("path");
 const fs = require("fs");
 //register
@@ -73,29 +73,58 @@ const register = async (req, res) => {
       }
     }
 
-    let username = firstName.uuidv4()
+    let uniqueUserName = `firstName${uuid.v1()}`
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
-   
-    const newUser = await User.create({
+
+
+    let newUserFields = {
       firstName,
       lastName,
       email,
       password,
       country,
-      username,
+      username: uniqueUserName,
       avatar: avatarFileName || null,
       coverImg: coverImgfileName || null,
-      role: role,
-    });
-    newUser.save();
-    return SuccessHandler("User created successfully", 200, res);
+      role,
+    };
+
+
+
+// for cook
+if(role==='cook'){
+  const {latitude, longitude} = req.body
+  if (!(latitude|| longitude)) {
+    return ErrorHandler("Latitude or Longitude is missing", 400, req, res);
+      }
+      let parselatitude = Number(latitude)
+      let parselongitude = Number(longitude)
+      newUserFields = {
+        ...newUserFields,
+        location: {
+          type: "Point",
+          coordinates: [parselatitude, parselongitude],
+        },
+      }
+      }
+      
+      // saved user
+      const newUser = await User.create(newUserFields)
+      newUser.save()
+      return SuccessHandler(`${role} created successfully`, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+
+
+
+
+
+
 
 //request email verification token
 const requestEmailToken = async (req, res) => {

@@ -5,14 +5,9 @@ dotenv.config({ path: ".././src/config/config.env" });
 
 const accomodationSchema = new Schema({
 
-  // review: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Review'
-  // },
+  reviewsId: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
   
-  reviewsId: [{ type: Schema.Types.ObjectId, ref: 'Review' }], // Array of review references
-  
-  rent: { type: Number, required: true },
+  price: { type: Number, required: true },
 
   title: { type: String, required: true },
   desc: { type: String, required: true },
@@ -25,8 +20,7 @@ const accomodationSchema = new Schema({
   
   createdBy: { type: String },
   services: {type: [String]},
-  backgoundImages: {type: [String], default: "https://images.pexels.com/photos/1697076/pexels-photo-1697076.jpeg?auto=compress&cs=tinysrgb&w=600"},
-  // backgoundImages: [{type: String}],
+  images: {type: [String], default: "https://images.pexels.com/photos/1697076/pexels-photo-1697076.jpeg?auto=compress&cs=tinysrgb&w=600"},
   isActive: { type: Boolean, default: true },
 
 

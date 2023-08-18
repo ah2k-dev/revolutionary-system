@@ -33,14 +33,12 @@ const updatePersonalInfo = async (req, res) => {
     const { firstName, lastName } = req.body;
     // Get the previous avatar filename
     const checkUser = await User.findById(req.user._id); 
-    console.log(checkUser);
-    const previousAvatarFileName = checkUser.avatar;
-    const previousCoverImgFileName = checkUser.coverImg;
-    console.log(previousAvatarFileName);
+    let previousAvatarFileName = checkUser.avatar;
+    let previousCoverImgFileName = checkUser.coverImg;
   
 
-    let avatarFileName = null;
-    let coverImgFileName = null;
+    // let avatarFileName = null;
+    // let coverImgFileName = null;
     if (req.files) {
       const { avatar, coverImg } = req.files;
         if (avatar) {
@@ -48,9 +46,9 @@ const updatePersonalInfo = async (req, res) => {
           if (!avatar.mimetype.startsWith("image")) {
             return ErrorHandler("Please upload an image file", 400, req, res);
           }
-          avatarFileName = `${Date.now()}${avatar.name}`;
+          previousAvatarFileName = `${Date.now()}${avatar.name}`;
           avatar.mv(
-            path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+            path.join(__dirname, `../../uploads/avatar/${previousAvatarFileName}`),
             (err) => {
               if (err) {
                 return ErrorHandler(err.message, 400, req, res);
@@ -64,10 +62,10 @@ const updatePersonalInfo = async (req, res) => {
             return ErrorHandler("Please upload an image file", 400, req, res);
           }
   
-          coverImgFileName = `${Date.now()}${coverImg.name}`;
+          previousCoverImgFileName = `${Date.now()}${coverImg.name}`;
           // Cover Img
           coverImg.mv(
-            path.join(__dirname, `../../uploads/avatar/${coverImgFileName}`),
+            path.join(__dirname, `../../uploads/avatar/${previousCoverImgFileName}`),
             (err) => {
               if (err) {
                 return ErrorHandler(err.message, 400, req, res);
@@ -121,10 +119,7 @@ const updatePersonalInfo = async (req, res) => {
       // );
 
 
-    } else {
-      avatarFileName = previousAvatarFileName;
-      coverImgFileName = previousCoverImgFileName;
-    }
+    } 
 
     //     // check avatarFileName should not saved null in DB
     //     let updateAvatarFileName = ''
@@ -137,8 +132,8 @@ const updatePersonalInfo = async (req, res) => {
       {
         firstName,
         lastName,
-        avatar: avatarFileName,
-        coverImg: coverImgFileName,
+        avatar: previousAvatarFileName,
+        coverImg: previousCoverImgFileName,
       },
       {
         new: true,
