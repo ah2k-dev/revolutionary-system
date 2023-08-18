@@ -51,6 +51,12 @@
                 },
                 "password": {
                   "example": "any"
+                },
+                "country": {
+                  "example": "any"
+                },
+                "role": {
+                  "example": "any"
                 }
               }
             }
@@ -161,6 +167,44 @@
         "responses": {}
       }
     },
+    "/auth/google-auth": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "profilePic": {
+                  "example": "any"
+                },
+                "phoneNumber": {
+                  "example": "any"
+                },
+                "role": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
     "/auth/resetPassword": {
       "put": {
         "tags": [
@@ -251,9 +295,6 @@
                 },
                 "lastName": {
                   "example": "any"
-                },
-                "email": {
-                  "example": "any"
                 }
               }
             }
@@ -287,6 +328,12 @@
             "schema": {
               "type": "object",
               "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
                 "username": {
                   "example": "any"
                 },
@@ -298,12 +345,38 @@
                 },
                 "country": {
                   "example": "any"
-                },
-                "timeZone": {
-                  "example": "any"
                 }
               }
             }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/savedOrUnsavedAccomodation/{id}": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
           }
         ],
         "responses": {
@@ -333,6 +406,52 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/userProfile": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/savedAccomodations": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
           "401": {
             "description": "Unauthorized"
           },
@@ -527,7 +646,7 @@
         }
       }
     },
-    "/review/{id}/newReview": {
+    "/review/newReview/{id}": {
       "post": {
         "tags": [
           "review"
@@ -571,7 +690,7 @@
         }
       }
     },
-    "/review/{id}/getReviews": {
+    "/review/getReviews/{id}": {
       "get": {
         "tags": [
           "review"

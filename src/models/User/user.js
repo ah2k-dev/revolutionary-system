@@ -12,7 +12,7 @@ const userSchema = new Schema({
   },
   lastName: {
     type: String,
-    required: true,
+    // required: true,
   },
 
   username: { type: String, unique: true },
@@ -29,7 +29,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
+    // required: true,
     //validation will be before saving to db
   },
 
@@ -83,6 +83,14 @@ const userSchema = new Schema({
   savedAccomodation: [
     { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
   ],
+
+
+  provider: {
+    type: String,
+    default: "local",
+    enum: ["google", "facebook", "local"],
+  },
+
 });
 
 //hash password before saving
