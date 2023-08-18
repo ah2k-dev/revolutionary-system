@@ -2341,3 +2341,5 @@
 {"date":"2023-08-18T18:49:30.041Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
 {"date":"2023-08-18T18:52:38.325Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-08-18T18:52:38.696Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-18T18:55:12.885Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-18T18:56:03.736Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
