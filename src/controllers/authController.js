@@ -2,6 +2,7 @@ const User = require("../models/User/user");
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
+const { v4: uuidv4 } = require('uuid');
 const path = require("path");
 const fs = require("fs");
 //register
@@ -72,18 +73,19 @@ const register = async (req, res) => {
       }
     }
 
+    let username = firstName.uuidv4()
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
-    const uniqueId = String(Date.now()).slice(-3);
+   
     const newUser = await User.create({
       firstName,
       lastName,
       email,
       password,
       country,
-      username: `${firstName}${uniqueId}`,
+      username,
       avatar: avatarFileName || null,
       coverImg: coverImgfileName || null,
       role: role,

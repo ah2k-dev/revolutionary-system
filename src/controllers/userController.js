@@ -166,7 +166,6 @@ const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const {
-      username,
       websiteLink,
       userDesc,
       country,
@@ -178,7 +177,6 @@ const updateUser = async (req, res) => {
     const user = await User.findByIdAndUpdate(
       req.user._id,
       {
-        username,
         websiteLink,
         userDesc,
         country,
@@ -284,10 +282,46 @@ const getSavedAccomodations = async (req, res) => {
 
 
 
+
+
+
+const getRegisteredCooks = async (req, res) => {
+  // #swagger.tags = ['user']
+    try {
+  const currentUser = req.user._id
+  if (req.user.role === "user") {
+    const user = await User.findById(currentUser).populate('savedAccomodation');
+
+    let sAccomodations = user.savedAccomodation
+
+    // const accomodation = await Accomodation.findById(req.params.id)
+    // console.log("user: ", user);
+    // console.log("accommodation: ", accomodation);
+
+    if (!sAccomodations) {
+      return ErrorHandler("Saved Accommodation does not exist", 400, req, res);
+    }
+    
+    return SuccessHandler({message: "Fetched Saved Accomodation", sAccomodations}, 200, res);
+  }
+
+  else{
+    return ErrorHandler("Unauthorized User", 400, req, res);
+  }
+
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
 module.exports = {
   updateUser,
   getUserProfile,
   savedOrUnsavedAccomodation,
   getSavedAccomodations,
   updatePersonalInfo,
+  getRegisteredCooks,
 };

@@ -34,6 +34,7 @@
     "socket.io": "^4.6.1",
     "swagger-autogen": "^2.23.5",
     "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.0",
     "validator": "^13.7.0",
     "winston": "^3.8.2"
   },
