@@ -166,8 +166,6 @@ const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const {
-      firstName,
-      lastName,
       username,
       websiteLink,
       userDesc,
