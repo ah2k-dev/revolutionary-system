@@ -288,26 +288,15 @@ const getSavedAccomodations = async (req, res) => {
 const getRegisteredCooks = async (req, res) => {
   // #swagger.tags = ['user']
     try {
-  const currentUser = req.user._id
-  if (req.user.role === "user") {
-    const user = await User.findById(currentUser).populate('savedAccomodation');
+    const getCook = await User.find();
 
-    let sAccomodations = user.savedAccomodation
-
-    // const accomodation = await Accomodation.findById(req.params.id)
-    // console.log("user: ", user);
-    // console.log("accommodation: ", accomodation);
-
-    if (!sAccomodations) {
-      return ErrorHandler("Saved Accommodation does not exist", 400, req, res);
+    if (!getCook) {
+      return ErrorHandler("No Cook exist", 400, req, res);
     }
     
-    return SuccessHandler({message: "Fetched Saved Accomodation", sAccomodations}, 200, res);
-  }
+    return SuccessHandler({message: "Fetched Cooks", getCook}, 200, res);
+  
 
-  else{
-    return ErrorHandler("Unauthorized User", 400, req, res);
-  }
 
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);

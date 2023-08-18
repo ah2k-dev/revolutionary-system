@@ -12,6 +12,7 @@ router.route("/savedOrUnsavedAccomodation/:id").put(isAuthenticated, user.savedO
 
 router.route("/userProfile").get(isAuthenticated, user.getUserProfile);
 router.route("/savedAccomodations").get(isAuthenticated, user.getSavedAccomodations);
+router.route("/getCook").get(isAuthenticated, user.getRegisteredCooks);
 
 
 module.exports = router;

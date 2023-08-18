@@ -783,3 +783,9 @@
 {"date":"2023-08-18T15:14:54.686Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-08-18T15:21:22.538Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-08-18T15:22:17.831Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-18T16:52:26.568Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-18T16:52:28.347Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-18T16:52:49.895Z","level":"error","message":"Unauthorized User","method":"GET","service":"user-service","url":"/getCook"}
+{"date":"2023-08-18T16:52:51.680Z","level":"error","message":"Unauthorized User","method":"GET","service":"user-service","url":"/getCook"}
+{"date":"2023-08-18T16:52:53.342Z","level":"error","message":"Unauthorized User","method":"GET","service":"user-service","url":"/getCook"}
+{"date":"2023-08-18T16:57:10.126Z","level":"error","message":"Already Booked","method":"POST","service":"user-service","url":"/new/64dba16b81e4fb7981e03706"}

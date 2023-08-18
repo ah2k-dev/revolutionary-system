@@ -9,13 +9,14 @@ const createMeal = async (req, res) => {
   // TODO: image array
   try {
     const {
-        dishName,
+      dishName,
       desc,
       price,
-      quantity,
       gram,
       calories,
       maxServingCapacity,
+      latitude,
+      longitude,
       } = req.body;
 
     const cookId = req.user._id;
@@ -25,18 +26,21 @@ const createMeal = async (req, res) => {
     });
 
     if (isMealExist) {
-      return ErrorHandler("Meal already exist", 400, req, res);
+      return ErrorHandler("Meal already exist, Please add new meals", 400, req, res);
     }
 
     const newMeal = await Meal.create({
         createdBy: cookId,
-      dishName,
-      desc,
-      price,
-      quantity,
-      gram,
-      calories,
-      maxServingCapacity,
+        dishName,
+        desc,
+        price,
+        gram,
+        calories,
+        maxServingCapacity,
+        location: {
+          type: "Point",
+          coordinates: [latitude, longitude],
+        },
     });
 
 
