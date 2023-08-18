@@ -205,21 +205,6 @@ const updateUser = async (req, res) => {
 };
 
 
-// random end point to test authorized middleware
-// get all users 
-const getAllUsers = async (req, res) => {
-  // #swagger.tags = ['user']
-  try {
-    const user = await User.find()
-    if (!user) {
-      return ErrorHandler("User does not exist", 400, req, res);
-    }
-    return SuccessHandler({message: "Here you go", user}, 200, res);
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
-
 
 
 // Saved or Unsaved Accomodation
@@ -303,7 +288,6 @@ const getSavedAccomodations = async (req, res) => {
 
 module.exports = {
   updateUser,
-  getAllUsers,
   getUserProfile,
   savedOrUnsavedAccomodation,
   getSavedAccomodations,
