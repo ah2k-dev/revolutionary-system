@@ -25,7 +25,7 @@ const accomodationSchema = new Schema({
   
   createdBy: { type: String },
   services: {type: [String]},
-  backgoundImages: {type: [String]},
+  backgoundImages: {type: [String], default: "https://images.pexels.com/photos/1697076/pexels-photo-1697076.jpeg?auto=compress&cs=tinysrgb&w=600"},
   // backgoundImages: [{type: String}],
   isActive: { type: Boolean, default: true },
 
