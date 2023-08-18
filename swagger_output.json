@@ -60,6 +60,12 @@
                 },
                 "role": {
                   "example": "any"
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
                 }
               }
             }
@@ -355,15 +361,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "username": {
-                  "example": "any"
-                },
                 "websiteLink": {
                   "example": "any"
                 },
@@ -440,6 +437,29 @@
       }
     },
     "/user/savedAccomodations": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/getCook": {
       "get": {
         "tags": [
           "user"
@@ -762,6 +782,85 @@
       "get": {
         "tags": [
           "booking"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/new": {
+      "post": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dishName": {
+                  "example": "any"
+                },
+                "desc": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "gram": {
+                  "example": "any"
+                },
+                "calories": {
+                  "example": "any"
+                },
+                "maxServingCapacity": {
+                  "example": "any"
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/getMeals": {
+      "get": {
+        "tags": [
+          "meal"
         ],
         "description": "",
         "parameters": [
