@@ -39,7 +39,7 @@ const userSchema = new Schema({
 
   role: {
     type: String,
-    enum: ["user", "host", "cooker"],
+    enum: ["user", "host", "cook"],
     default: "user",
   },
   createdAt: {
@@ -83,6 +83,7 @@ const userSchema = new Schema({
   savedAccomodation: [
     { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
   ],
+
 
   provider: {
     type: String,

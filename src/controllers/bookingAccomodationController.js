@@ -63,7 +63,7 @@ const bookNewAccomm = async (req, res) => {
 
 const getUserBookings = async (req, res) => {
     const currentUser = req.user._id
-    // #swagger.tags = ['review']
+    // #swagger.tags = ['booking']
     try {
       if (req.user.role === "user") {
   
@@ -90,7 +90,7 @@ const getUserBookings = async (req, res) => {
 
 
 // const gettingReviews = async (req, res) => {
-//   // #swagger.tags = ['review']
+//   // #swagger.tags = ['booking']
 //   try {
 //     const accomodationId = req.params.id;
 //     if (req.user.role === "user") {

@@ -1,21 +1,20 @@
-
-
+const ErrorHandler = require('../utils/ErrorHandler')
 
 const authorizedHost = (req, res, next)=>{
 
     // if not of 'host'
     if (req.user.role !== 'host') {
-        return res.status(400).send(`Role: ${req.user.role} is not allowed to access resource`)
+        return ErrorHandler(`Role: ${req.user.role} is not allowed to access resource`, 400, req, res)
     }
-
+    
     next()
 }
 
 const authorizedCook = (req, res, next)=>{
-
-  // if not of 'cooker'
-  if (req.user.role !== 'cooker') {
-      return res.status(400).send(`Role: ${req.user.role} is not allowed to access resource`)
+    
+    // if not of 'cook'
+    if (req.user.role !== 'cook') {
+        return ErrorHandler(`Role: ${req.user.role} is not allowed to access resource`, 400, req, res)
   }
 
   next()
