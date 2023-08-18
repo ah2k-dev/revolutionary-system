@@ -247,44 +247,44 @@ const getAllAccomodations = async (req, res) => {
 
 
 //Saved  Accomodations
-const savedOrUnsavedAccomodations = async (req, res) => {
-  // #swagger.tags = ['user']
-  try {
-    const { title, desc, latitude, longitude, capacity, services } = req.body;
-    console.log(req.body);
-    const getUserId = req.user._id;
-    const isAccomodationsExist = await Accomodation.findOne({
-      title,
-      createdBy: getUserId,
-    });
+// const savedOrUnsavedAccomodations = async (req, res) => {
+//   // #swagger.tags = ['user']
+//   try {
+//     const { title, desc, latitude, longitude, capacity, services } = req.body;
+//     console.log(req.body);
+//     const getUserId = req.user._id;
+//     const isAccomodationsExist = await Accomodation.findOne({
+//       title,
+//       createdBy: getUserId,
+//     });
 
-    if (isAccomodationsExist) {
-      return ErrorHandler("Accomodation already exist", 400, req, res);
-    }
+//     if (isAccomodationsExist) {
+//       return ErrorHandler("Accomodation already exist", 400, req, res);
+//     }
 
-    const newAccomodations = await Accomodation.create({
-      title,
-      desc,
-      location: {
-        type: "Point",
-        cordinates: [latitude, longitude],
-      },
-      capacity,
-      services,
-      createdBy: getUserId,
-    });
+//     const newAccomodations = await Accomodation.create({
+//       title,
+//       desc,
+//       location: {
+//         type: "Point",
+//         cordinates: [latitude, longitude],
+//       },
+//       capacity,
+//       services,
+//       createdBy: getUserId,
+//     });
 
-    // newAccomodations.save();
+//     // newAccomodations.save();
 
-    return SuccessHandler(
-      { message: "Added successfully", newAccomodations },
-      200,
-      res
-    );
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
+//     return SuccessHandler(
+//       { message: "Added successfully", newAccomodations },
+//       200,
+//       res
+//     );
+//   } catch (error) {
+//     return ErrorHandler(error.message, 500, req, res);
+//   }
+// };
 
 
 

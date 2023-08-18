@@ -8,7 +8,7 @@ const fs = require("fs");
 const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
-    const { firstName, lastName, email, password, country } = req.body;
+    const { firstName, lastName, email, password, country, role } = req.body;
 
     if (firstName.length < 1 || lastName.length < 1) {
       return ErrorHandler(
@@ -86,6 +86,7 @@ const register = async (req, res) => {
       username: `${firstName}${uniqueId}`,
       avatar: avatarFileName || null,
       coverImg: coverImgfileName || null,
+      role: role,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
