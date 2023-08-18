@@ -5,7 +5,7 @@ const path = require("path");
 
 //Create Accomodations
 const createAccomodations = async (req, res) => {
-  // #swagger.tags = ['user']
+  // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
     const {
@@ -17,8 +17,6 @@ const createAccomodations = async (req, res) => {
       services,
       rent,
       } = req.body;
-      let currentUser = req.user
-      // console.log(currentUser);
 
     const getUserId = req.user._id;
     const isAccomodationsExist = await Accomodation.findOne({
@@ -120,7 +118,7 @@ const createAccomodations = async (req, res) => {
 };
 
 const updateAccomodations = async (req, res) => {
-  // #swagger.tags = ['user']
+  // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
@@ -161,7 +159,7 @@ const updateAccomodations = async (req, res) => {
 };
 
 const deleteAccomodations = async (req, res) => {
-  // #swagger.tags = ['user']
+  // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
     console.log(req.body);
@@ -185,7 +183,7 @@ const deleteAccomodations = async (req, res) => {
 };
 
 const getAllAccomodations = async (req, res) => {
-  // #swagger.tags = ['user']
+  // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
     const capacityFilter = req.body.capacity
@@ -248,7 +246,7 @@ const getAllAccomodations = async (req, res) => {
 
 //Saved  Accomodations
 // const savedOrUnsavedAccomodations = async (req, res) => {
-//   // #swagger.tags = ['user']
+//   // #swagger.tags = ['accomodation']
 //   try {
 //     const { title, desc, latitude, longitude, capacity, services } = req.body;
 //     console.log(req.body);

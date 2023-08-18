@@ -28,7 +28,7 @@ const getUserProfile = async (req, res) => {
 
 //update Personal Info
 const updatePersonalInfo = async (req, res) => {
-  // #swagger.tags = ['auth']
+  // #swagger.tags = ['user']
   try {
     const { firstName, lastName } = req.body;
     // Get the previous avatar filename
