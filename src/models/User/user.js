@@ -16,7 +16,6 @@ const userSchema = new Schema({
   },
 
   username: { type: String, unique: true },
-   shopName: { type: String, required: true, unique: true },
 
   email: {
     type: String,
@@ -96,6 +95,16 @@ const userSchema = new Schema({
     default: "local",
     enum: ["google", "facebook", "local"],
   },
+
+  // Shop Related Fields
+  shopName: { type: String, required: true, unique: true },
+  cookDesc: { type: String, required: true },
+  shopBanner: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
+  },
+  shopRating: { type: Number, required: true },
 });
 
 //hash password before saving
