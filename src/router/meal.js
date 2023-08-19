@@ -7,6 +7,7 @@ const { authorizedCook } = require("../middleware/role");
 router.route("/new").post(isAuthenticated, authorizedCook, meal.createMeal);
 //get
 router.route("/getMeals").get(isAuthenticated, meal.getMeals);
+router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 
 
 module.exports = router;

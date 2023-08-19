@@ -26,14 +26,9 @@ const mealSchema = new Schema(
 
     isActive: { type: Boolean, default: true },
 
-    location: {
-      type: { type: String, default: "Point" },
-      coordinates: [Number],
-    },
   },
   { timestamps: true }
 );
-mealSchema.index({ location: "2dsphere" });
 const meal = mongoose.model("Meal", mealSchema);
 
 module.exports = meal;

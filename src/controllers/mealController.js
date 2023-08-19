@@ -15,14 +15,12 @@ const createMeal = async (req, res) => {
       gram,
       calories,
       maxServingCapacity,
-      latitude,
-      longitude,
     } = req.body;
 
     const cookId = req.user._id;
     const isMealExist = await Meal.findOne({
       dishName,
-      createdBy: cookId,
+      cook: cookId,
     });
 
     if (isMealExist) {
@@ -35,17 +33,13 @@ const createMeal = async (req, res) => {
     }
 
     const newMeal = await Meal.create({
-      createdBy: cookId,
+      cook: cookId,
       dishName,
       desc,
       price,
       gram,
       calories,
       maxServingCapacity,
-      location: {
-        type: "Point",
-        coordinates: [latitude, longitude],
-      },
     });
 
     return SuccessHandler(
@@ -135,7 +129,37 @@ const getMeals = async (req, res) => {
   }
 };
 
+
+
+
+// get Meals by Cook ID
+const getMealsByCookId = async(req, res)=>{
+  // #swagger.tags = ['meal']
+  try {
+    const meals = await Meal.find({cook:req.params.id})
+    if (!meals) {
+      return ErrorHandler(
+        "Sorry, The Cook's Meal doesn't exist",
+        400,
+        req,
+        res
+      );
+    }
+    const totalMeals = meals.length
+    return SuccessHandler(
+      { message: "Fetched Cook Meals successfully",totalMeals, meals },
+      200,
+      res
+    );
+    
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res)
+  }
+
+}
+
 module.exports = {
   createMeal,
   getMeals,
+  getMealsByCookId,
 };
