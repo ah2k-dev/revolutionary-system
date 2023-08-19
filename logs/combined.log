@@ -2283,4 +2283,9 @@
 {"date":"2023-08-18T15:22:48.081Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-18T15:23:11.526Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-18T15:24:18.856Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
-{"date":"2023-08-18T15:29:52.806Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-18T15:29:52.806Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}{"date":"2023-08-19T08:20:29.909Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T08:20:50.575Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-19T08:22:15.841Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-19T08:22:54.422Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-19T08:25:03.647Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-19T08:25:19.288Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
