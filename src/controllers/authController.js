@@ -46,7 +46,7 @@ const register = async (req, res) => {
         }
         avatarFileName = `${Date.now()}${avatar.name}`;
         avatar.mv(
-          path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+          path.join(__dirname, `../../uploads/${avatarFileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -63,7 +63,7 @@ const register = async (req, res) => {
         coverImgfileName = `${Date.now()}${coverImg.name}`;
         // Cover Img
         coverImg.mv(
-          path.join(__dirname, `../../uploads/avatar/${coverImgfileName}`),
+          path.join(__dirname, `../../uploads/${coverImgfileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -327,7 +327,7 @@ const updatePersonalInfo = async (req, res) => {
       if (previousAvatarFileName !== null) {
         const previousAvatarPath = path.join(
           __dirname,
-          `../../uploads/avatar/${previousAvatarFileName}`
+          `../../uploads/${previousAvatarFileName}`
         );
         console.log(previousAvatarPath);
 
@@ -345,7 +345,7 @@ const updatePersonalInfo = async (req, res) => {
       avatarFileName = `${Date.now()}${avatar.name}`;
 
       avatar.mv(
-        path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+        path.join(__dirname, `../../uploads/${avatarFileName}`),
         (err) => {
           if (err) {
             return ErrorHandler(err.message, 400, req, res);

@@ -2373,3 +2373,59 @@
 {"date":"2023-08-19T10:19:00.623Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-08-19T10:19:00.626Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-08-19T10:19:01.517Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-19T11:01:26.105Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T11:01:40.387Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:41:05.724Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:43:07.036Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:43:57.824Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:43:58.926Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:44:27.929Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:44:28.194Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"OrderMeal\"","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:44:29.436Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:44:29.671Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"OrderMeal\"","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:45:22.669Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:45:22.919Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"OrderMeal\"","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:46:13.244Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:46:13.467Z","level":"error","message":"Cast to ObjectId failed for value \"{ user: new ObjectId(\"64dcd76e0edab204ad32180d\") }\" (type Object) at path \"_id\" for model \"OrderMeal\"","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:46:45.194Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:46:47.133Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:46:50.693Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:47:19.517Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T11:47:49.117Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:48:03.819Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:49:34.977Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:50:15.556Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:50:17.049Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:50:19.374Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:50:20.760Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:51:13.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:52:21.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:52:21.472Z","level":"error","message":"isMealExit.meals.populate is not a function","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:52:23.516Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:52:23.945Z","level":"error","message":"isMealExit.meals.populate is not a function","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:53:02.035Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:53:02.457Z","level":"error","message":"isMealExit.meals.populate is not a function","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:53:52.818Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:53:54.176Z","level":"error","message":"Cannot read properties of undefined (reading 'populate')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:53:56.362Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:53:56.593Z","level":"error","message":"Cannot read properties of undefined (reading 'populate')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:54:55.103Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:54:55.323Z","level":"error","message":"Cannot read properties of undefined (reading 'populate')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T11:55:17.949Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:55:20.494Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T11:55:49.016Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:08:23.418Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:08:23.957Z","level":"error","message":"Cannot populate path `Meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T12:08:28.455Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:08:28.931Z","level":"error","message":"Cannot populate path `Meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T12:08:46.324Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:08:48.021Z","level":"error","message":"mealsArray is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-19T12:09:11.807Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:09:32.077Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:13:27.953Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:13:43.865Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T12:13:44.178Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-19T12:13:49.099Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T12:14:08.974Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:15:41.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-19T12:15:44.578Z","level":"error","message":"User's Meal does not exist","method":"GET","service":"user-service","url":"/userOrderedMeals"}

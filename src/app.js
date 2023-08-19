@@ -26,7 +26,6 @@ app.use(
   })
 ), // 1 MB
   app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
-
 // router index
 app.use("/", router);
 // api doc

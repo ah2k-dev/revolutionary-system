@@ -185,16 +185,13 @@ const getOrderedMeal = async (req, res) => {
   const currentUser = req.user._id;
   try {
     if (req.user.role === "user") {
-      const meals = await OrderMeal.create({
-        user: currentUser,
-        meals,
-        subTotal,
-      });
-
-      await order.save();
-
+      const userMeals = await OrderMeal.find({user: currentUser}).populate('meals.meal')
+      // if (userMeals.length===0) {
+      //   return ErrorHandler("User's Meal does not exist", 400, req, res);
+      // }
+      
       return SuccessHandler(
-        { message: "Meal's Order Created successfully", order },
+        { message: "Fetched user ordered meals successfully", userMeals },
         200,
         res
       );
