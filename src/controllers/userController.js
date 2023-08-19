@@ -44,7 +44,7 @@ const updatePersonalInfo = async (req, res) => {
         avatar.mv(
           path.join(
             __dirname,
-            `../../uploads/avatar/${previousAvatarFileName}`
+            `../../uploads/${previousAvatarFileName}`
           ),
           (err) => {
             if (err) {
@@ -64,7 +64,7 @@ const updatePersonalInfo = async (req, res) => {
         coverImg.mv(
           path.join(
             __dirname,
-            `../../uploads/avatar/${previousCoverImgFileName}`
+            `../../uploads/${previousCoverImgFileName}`
           ),
           (err) => {
             if (err) {
@@ -78,7 +78,7 @@ const updatePersonalInfo = async (req, res) => {
       // if (previousAvatarFileName !== null) {
       //   const previousAvatarPath = path.join(
       //     __dirname,
-      //     `../../uploads/avatar/${previousAvatarFileName}`
+      //     `../../uploads/${previousAvatarFileName}`
       //     );
       //     console.log(previousAvatarPath);
 
@@ -96,7 +96,7 @@ const updatePersonalInfo = async (req, res) => {
       // avatarFileName = `${Date.now()}${avatar.name}`;
 
       // avatar.mv(
-      //   path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+      //   path.join(__dirname, `../../uploads/${avatarFileName}`),
       //   (err) => {
       //     if (err) {
       //       return ErrorHandler(err.message, 400, req, res);
@@ -252,30 +252,19 @@ const getSavedAccomodations = async (req, res) => {
 const getCooks = async (req, res) => {
   // #swagger.tags = ['user']
   try {
-
     // filter cook by name
-    const cookNameFilter = req.body.search
+    const cookShopFilter = req.body.shopName
       ? {
-          $or: [
-            {
-              firstName: {
-                $regex: req.body.search,
-                $options: 'i'
-              },
-            },
-            {
-              lastName: {
-                $regex: req.body.search,
-                $options: 'i'
+        shopName: {
+                $regex: req.body.shopName,
+                $options: "i",
               }
+
             }
-          ],
-        }
       : {};
 
-
-      // Location filter
-      const locationFilter =
+    // Location filter
+    const locationFilter =
       req.body.coordinates && req.body.coordinates.length > 0
         ? {
             location: {
@@ -284,26 +273,29 @@ const getCooks = async (req, res) => {
                   type: "Point",
                   coordinates: req.body.coordinates,
                 },
-                $maxDistance: (10) * 1000,
+                $maxDistance: 10 * 1000,
               },
             },
           }
         : {};
 
-
     const getCook = await User.find({
       isActive: true,
-      role: 'cook',
-      ...cookNameFilter,
+      role: "cook",
+      ...cookShopFilter,
       ...locationFilter,
     });
-    const cookCount = getCook.length
+    const cookCount = getCook.length;
 
     if (!getCook) {
       return ErrorHandler("No Cook exist", 400, req, res);
     }
 
-    return SuccessHandler({ message: "Fetched Cooks", cookCount, getCook }, 200, res);
+    return SuccessHandler(
+      { message: "Fetched Cooks", cookCount, getCook },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }

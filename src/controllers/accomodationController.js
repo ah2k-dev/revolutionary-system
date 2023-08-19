@@ -8,15 +8,8 @@ const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    const {
-      title,
-      desc,
-      latitude,
-      longitude,
-      capacity,
-      services,
-      rent,
-      } = req.body;
+    const { title, desc, latitude, longitude, capacity, services, rent } =
+      req.body;
 
     const getUserId = req.user._id;
     const isAccomodationsExist = await Accomodation.findOne({
@@ -143,7 +136,7 @@ const getAllAccomodations = async (req, res) => {
           }
         : {};
 
-        console.log(locationFilter)
+    console.log(locationFilter);
 
     //   {
     //     <location field>: {
@@ -163,7 +156,7 @@ const getAllAccomodations = async (req, res) => {
       ...capacityFilter,
       ...locationFilter,
     }).populate("reviewsId");
-    const totalAccomodation = getAccomodations.length
+    const totalAccomodation = getAccomodations.length;
 
     if (!getAccomodations) {
       return ErrorHandler("Accomodation does not exist", 400, req, res);
@@ -178,7 +171,6 @@ const getAllAccomodations = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
 
 //Saved  Accomodations
 // const savedOrUnsavedAccomodations = async (req, res) => {
@@ -222,8 +214,6 @@ const getAllAccomodations = async (req, res) => {
 //     return ErrorHandler(error.message, 500, req, res);
 //   }
 // };
-
-
 
 module.exports = {
   createAccomodations,

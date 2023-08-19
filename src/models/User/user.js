@@ -84,16 +84,11 @@ const userSchema = new Schema({
     { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
   ],
 
-
-
   // location only for Cook
   location: {
-    type: { type: String, default: 'Point' },
-    coordinates: [Number]
+    type: { type: String, default: "Point" },
+    coordinates: [Number],
   },
-
-
-
 
   provider: {
     type: String,
@@ -101,6 +96,15 @@ const userSchema = new Schema({
     enum: ["google", "facebook", "local"],
   },
 
+  // Shop Related Fields
+  shopName: { type: String, required: true, unique: true },
+  cookDesc: { type: String, required: true },
+  shopBanner: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
+  },
+  shopRating: { type: Number, required: true },
 });
 
 //hash password before saving
@@ -120,8 +124,7 @@ userSchema.methods.getJWTToken = function () {
 userSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
-userSchema.index({ location: '2dsphere' });
-
+userSchema.index({ location: "2dsphere" });
 
 const user = mongoose.model("User", userSchema);
 module.exports = user;

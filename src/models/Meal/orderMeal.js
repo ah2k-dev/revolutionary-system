@@ -9,14 +9,14 @@ const orderMealSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
     meals: [
       {
-      meal: { type: Schema.Types.ObjectId, ref: 'Meal',  required: true},
-      quantity: { type: Number, required: true},
-      price: {type: Number, required: true}
-    }], 
+        meal: { type: Schema.Types.ObjectId, ref: "Meal", required: true },
+        quantity: { type: Number, required: true },
+        price: { type: Number, required: true },
+      },
+    ],
 
-    
-    subTotal: {type: Number, required: true},
-    totalAmount: {type: Number, default: 0},
+    subTotal: { type: Number, required: true },
+    totalAmount: { type: Number, default: 0 },
 
     status: {
       type: String,
@@ -25,8 +25,6 @@ const orderMealSchema = new Schema(
     },
 
     orderDate: { type: Date, default: Date.now },
-
-    
   },
   { timestamps: true }
 );
@@ -34,4 +32,3 @@ const orderMealSchema = new Schema(
 const orderMeal = mongoose.model("OrderMeal", orderMealSchema);
 
 module.exports = orderMeal;
-

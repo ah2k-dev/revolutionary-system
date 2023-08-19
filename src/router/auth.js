@@ -16,7 +16,4 @@ router.route("/google-auth").post(auth.googleAuth);
 router.route("/resetPassword").put(auth.resetPassword);
 router.route("/updatePassword").put(isAuthenticated, auth.updatePassword);
 
-
-
-
 module.exports = router;

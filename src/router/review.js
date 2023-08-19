@@ -9,5 +9,4 @@ router.route("/newReview/:id").post(isAuthenticated, review.addReviews);
 //get
 router.route("/getReviews/:id").get(isAuthenticated, review.gettingReviews);
 
-
 module.exports = router;

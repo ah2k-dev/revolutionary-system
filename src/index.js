@@ -7,7 +7,7 @@ const socket = require("socket.io");
 dotenv.config({ path: "./src/config/config.env" }); //load env vars
 
 //global vars
-global.io; 
+global.io;
 global.onlineUsers = [];
 
 //server setup

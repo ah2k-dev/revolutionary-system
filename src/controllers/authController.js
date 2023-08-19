@@ -2,7 +2,7 @@ const User = require("../models/User/user");
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
-const uuid = require('uuid');
+const uuid = require("uuid");
 const path = require("path");
 const fs = require("fs");
 //register
@@ -46,7 +46,7 @@ const register = async (req, res) => {
         }
         avatarFileName = `${Date.now()}${avatar.name}`;
         avatar.mv(
-          path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+          path.join(__dirname, `../../uploads/${avatarFileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -63,7 +63,7 @@ const register = async (req, res) => {
         coverImgfileName = `${Date.now()}${coverImg.name}`;
         // Cover Img
         coverImg.mv(
-          path.join(__dirname, `../../uploads/avatar/${coverImgfileName}`),
+          path.join(__dirname, `../../uploads/${coverImgfileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -73,12 +73,11 @@ const register = async (req, res) => {
       }
     }
 
-    let uniqueUserName = `firstName${uuid.v1()}`
+    let uniqueUserName = `firstName${uuid.v1()}`;
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
-
 
     let newUserFields = {
       firstName,
@@ -92,39 +91,32 @@ const register = async (req, res) => {
       role,
     };
 
-
-
-// for cook
-if(role==='cook'){
-  const {latitude, longitude} = req.body
-  if (!(latitude|| longitude)) {
-    return ErrorHandler("Latitude or Longitude is missing", 400, req, res);
+    // for cook
+    if (role === "cook") {
+      const { latitude, longitude, shopName } = req.body;
+      if (!(latitude || longitude || shopName)) {
+        return ErrorHandler("Latitude, Longitude or Shop name is missing", 400, req, res);
       }
-      let parselatitude = Number(latitude)
-      let parselongitude = Number(longitude)
+      let parselatitude = Number(latitude);
+      let parselongitude = Number(longitude);
       newUserFields = {
         ...newUserFields,
+        shopName,
         location: {
           type: "Point",
           coordinates: [parselatitude, parselongitude],
         },
-      }
-      }
-      
-      // saved user
-      const newUser = await User.create(newUserFields)
-      newUser.save()
-      return SuccessHandler(`${role} created successfully`, 200, res);
+      };
+    }
+
+    // saved user
+    const newUser = await User.create(newUserFields);
+    newUser.save();
+    return SuccessHandler(`${role} created successfully`, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
-
-
-
 
 //request email verification token
 const requestEmailToken = async (req, res) => {
@@ -317,7 +309,6 @@ const updatePassword = async (req, res) => {
   }
 };
 
-
 //update Personal Info
 const updatePersonalInfo = async (req, res) => {
   // #swagger.tags = ['auth']
@@ -336,7 +327,7 @@ const updatePersonalInfo = async (req, res) => {
       if (previousAvatarFileName !== null) {
         const previousAvatarPath = path.join(
           __dirname,
-          `../../uploads/avatar/${previousAvatarFileName}`
+          `../../uploads/${previousAvatarFileName}`
         );
         console.log(previousAvatarPath);
 
@@ -354,7 +345,7 @@ const updatePersonalInfo = async (req, res) => {
       avatarFileName = `${Date.now()}${avatar.name}`;
 
       avatar.mv(
-        path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
+        path.join(__dirname, `../../uploads/${avatarFileName}`),
         (err) => {
           if (err) {
             return ErrorHandler(err.message, 400, req, res);
@@ -396,43 +387,41 @@ const updatePersonalInfo = async (req, res) => {
 };
 
 const googleAuth = async (req, res) => {
- // #swagger.tags = ['auth']
- try {
-  const {
-    email,
-    firstName,
-    lastName,
-    profilePic,
-    phoneNumber,
-    role,
-  } = req.body;
+  // #swagger.tags = ['auth']
+  try {
+    const { email, firstName, lastName, profilePic, phoneNumber, role } =
+      req.body;
 
-  console.log(req.body);
+    console.log(req.body);
 
-  const exUser = await User.findOne({ email });
-  if (exUser && exUser.provider === "google") {
-    const token = await exUser.getJWTToken();
-    return SuccessHandler({ token, user: exUser }, 200, res);
-  } else if (exUser && exUser.provider !== "google") {
-    return ErrorHandler("User exists with different provider. Use the one you used before", 400, req, res);
-  } else {
-    const user = await User.create({
-      email,
-      firstName,
-      lastName,
-      profilePic,
-      phoneNumber,
-      role,
-      provider: "google",
-      username: email.split("@")[0],
-    });
-    const token = await user.getJWTToken();
-    return SuccessHandler({ token, user }, 200, res);
+    const exUser = await User.findOne({ email });
+    if (exUser && exUser.provider === "google") {
+      const token = await exUser.getJWTToken();
+      return SuccessHandler({ token, user: exUser }, 200, res);
+    } else if (exUser && exUser.provider !== "google") {
+      return ErrorHandler(
+        "User exists with different provider. Use the one you used before",
+        400,
+        req,
+        res
+      );
+    } else {
+      const user = await User.create({
+        email,
+        firstName,
+        lastName,
+        profilePic,
+        phoneNumber,
+        role,
+        provider: "google",
+        username: email.split("@")[0],
+      });
+      const token = await user.getJWTToken();
+      return SuccessHandler({ token, user }, 200, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
   }
-
- } catch (error) {
-  return ErrorHandler(error.message, 500, req, res);
- }
 };
 
 module.exports = {
@@ -445,5 +434,5 @@ module.exports = {
   resetPassword,
   updatePassword,
   updatePersonalInfo,
-  googleAuth
+  googleAuth,
 };

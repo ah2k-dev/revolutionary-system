@@ -2,21 +2,15 @@ const Meal = require("../models/Meal/meal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const OrderMeal = require('../models/Meal/orderMeal')
+const OrderMeal = require("../models/Meal/orderMeal");
 
 //Create Meal
 const createMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   // TODO: image array
   try {
-    const {
-      dishName,
-      desc,
-      price,
-      gram,
-      calories,
-      maxServingCapacity,
-    } = req.body;
+    const { dishName, desc, price, gram, calories, maxServingCapacity } =
+      req.body;
 
     const cookId = req.user._id;
     const isMealExist = await Meal.findOne({
@@ -70,10 +64,10 @@ const getMeals = async (req, res) => {
     // Dish Filter
     const dishFilter = req.body.dishName
       ? {
-         
           dishName: {
-            $regex: req.body.dishName, $options: 'i'
-          }
+            $regex: req.body.dishName,
+            $options: "i",
+          },
         }
       : {};
 
@@ -130,14 +124,11 @@ const getMeals = async (req, res) => {
   }
 };
 
-
-
-
 // get Meals by Cook ID
-const getMealsByCookId = async(req, res)=>{
+const getMealsByCookId = async (req, res) => {
   // #swagger.tags = ['meal']
   try {
-    const meals = await Meal.find({cook:req.params.id})
+    const meals = await Meal.find({ cook: req.params.id });
     if (!meals) {
       return ErrorHandler(
         "Sorry, The Cook's Meal doesn't exist",
@@ -146,24 +137,20 @@ const getMealsByCookId = async(req, res)=>{
         res
       );
     }
-    const totalMeals = meals.length
+    const totalMeals = meals.length;
     return SuccessHandler(
-      { message: "Fetched Cook Meals successfully",totalMeals, meals },
+      { message: "Fetched Cook Meals successfully", totalMeals, meals },
       200,
       res
     );
-    
   } catch (error) {
-    return ErrorHandler(error.message, 500, req, res)
+    return ErrorHandler(error.message, 500, req, res);
   }
-
-}
-
-
+};
 
 // Order the meal
 const orderTheMeal = async (req, res) => {
-   // #swagger.tags = ['meal']
+  // #swagger.tags = ['meal']
   const currentUser = req.user._id;
   try {
     const { meals, subTotal } = req.body;
@@ -192,10 +179,34 @@ const orderTheMeal = async (req, res) => {
   }
 };
 
+// Get Ordered the meal
+const getOrderedMeal = async (req, res) => {
+  // #swagger.tags = ['meal']
+  const currentUser = req.user._id;
+  try {
+    if (req.user.role === "user") {
+      const userMeals = await OrderMeal.find({user: currentUser}).populate('meals.meal')
+      // if (userMeals.length===0) {
+      //   return ErrorHandler("User's Meal does not exist", 400, req, res);
+      // }
+      
+      return SuccessHandler(
+        { message: "Fetched user ordered meals successfully", userMeals },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createMeal,
   getMeals,
   getMealsByCookId,
   orderTheMeal,
+  getOrderedMeal,
 };
