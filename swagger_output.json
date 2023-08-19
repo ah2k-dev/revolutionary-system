@@ -836,12 +836,6 @@
                 },
                 "maxServingCapacity": {
                   "example": "any"
-                },
-                "latitude": {
-                  "example": "any"
-                },
-                "longitude": {
-                  "example": "any"
                 }
               }
             }
@@ -864,6 +858,35 @@
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/mealsByCookId/{id}": {
+      "get": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "authorization",
             "in": "header",

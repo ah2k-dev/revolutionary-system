@@ -2365,3 +2365,5 @@
 {"date":"2023-08-19T09:03:10.061Z","level":"error","message":"Cast to ObjectId failed for value \"{ cook: '64db9b32d00febe165ba363a' }\" (type Object) at path \"_id\" for model \"Meal\"","method":"GET","service":"user-service","url":"/mealsByCookId/64db9b32d00febe165ba363a"}
 {"date":"2023-08-19T09:05:53.768Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64db9b32d00febe165ba363a"}
 {"date":"2023-08-19T09:07:03.541Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64db9b32d00febe165ba363a"}
+{"date":"2023-08-19T10:10:03.942Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-19T10:10:45.354Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
