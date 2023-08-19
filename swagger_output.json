@@ -66,6 +66,9 @@
                 },
                 "longitude": {
                   "example": "any"
+                },
+                "shopName": {
+                  "example": "any"
                 }
               }
             }

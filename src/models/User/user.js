@@ -16,6 +16,7 @@ const userSchema = new Schema({
   },
 
   username: { type: String, unique: true },
+  shopName: { type: String, required: true, unique: true },
 
   email: {
     type: String,
@@ -84,23 +85,17 @@ const userSchema = new Schema({
     { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
   ],
 
-
-
   // location only for Cook
   location: {
-    type: { type: String, default: 'Point' },
-    coordinates: [Number]
+    type: { type: String, default: "Point" },
+    coordinates: [Number],
   },
-
-
-
 
   provider: {
     type: String,
     default: "local",
     enum: ["google", "facebook", "local"],
   },
-
 });
 
 //hash password before saving
@@ -120,8 +115,7 @@ userSchema.methods.getJWTToken = function () {
 userSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
-userSchema.index({ location: '2dsphere' });
-
+userSchema.index({ location: "2dsphere" });
 
 const user = mongoose.model("User", userSchema);
 module.exports = user;

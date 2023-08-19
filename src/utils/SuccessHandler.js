@@ -4,6 +4,6 @@ const SuccessHandler = (data, statusCode, res) => {
     data: data,
   });
 };
-  // return next(new SuccessHandler("success", 200)); use it like this for success responses
-  
-  module.exports = SuccessHandler;
+// return next(new SuccessHandler("success", 200)); use it like this for success responses
+
+module.exports = SuccessHandler;

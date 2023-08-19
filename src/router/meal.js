@@ -9,11 +9,8 @@ router.route("/new").post(isAuthenticated, authorizedCook, meal.createMeal);
 router.route("/getMeals").get(isAuthenticated, meal.getMeals);
 router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 
-
 // order the Meal
 //post
 router.route("/orderMeal").post(isAuthenticated, meal.orderTheMeal);
-
-
 
 module.exports = router;

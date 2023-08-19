@@ -7,7 +7,9 @@ const validator = require("validator");
 const bookingAccomodationSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    accomodationsId: [{ type: Schema.Types.ObjectId, ref: 'Accomodation',  required: true}], 
+    accomodationsId: [
+      { type: Schema.Types.ObjectId, ref: "Accomodation", required: true },
+    ],
 
     status: {
       type: String,
@@ -15,23 +17,23 @@ const bookingAccomodationSchema = new Schema(
       default: "current",
     },
 
-    bookingDate: [{
-      startDate: {type: Date, required: true},
-      endDate: {type: Date, required: true},
-    }],
+    bookingDate: [
+      {
+        startDate: { type: Date, required: true },
+        endDate: { type: Date, required: true },
+      },
+    ],
 
-
-
-    stripeCharges: {type: Number, default: 0},
-    subTotal: {type: Number, default: 0},
-    totalAmount: {type: Number, default: 0},
-    
-
-
+    stripeCharges: { type: Number, default: 0 },
+    subTotal: { type: Number, default: 0 },
+    totalAmount: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
 
-const bookingAccomodation = mongoose.model("BookingAccomodation", bookingAccomodationSchema);
+const bookingAccomodation = mongoose.model(
+  "BookingAccomodation",
+  bookingAccomodationSchema
+);
 
 module.exports = bookingAccomodation;

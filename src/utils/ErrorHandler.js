@@ -12,11 +12,9 @@ const ErrorHandler = (message, statusCode, req, res) => {
   });
 };
 
-
 // const catchAsyncError = (handler) => (req, res)=>{
 //   Promise.resolve(handler(req, res)).catch((error)=>{
 //       return ErrorHandler(req, res)
 //   })}
-
 
 module.exports = ErrorHandler;
