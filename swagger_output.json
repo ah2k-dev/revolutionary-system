@@ -23,11 +23,8 @@
           "auth"
         ],
         "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "parameters": [],
+        "responses": {}
       }
     },
     "/auth/register": {
@@ -71,11 +68,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/login": {
@@ -101,11 +94,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/requestEmailToken": {
@@ -128,11 +117,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/verifyEmail": {
@@ -185,11 +170,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/google-auth": {
@@ -227,11 +208,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/resetPassword": {
@@ -260,11 +237,7 @@
             }
           }
         ],
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": {}
       }
     },
     "/auth/updatePassword": {
@@ -828,6 +801,8 @@
                 "price": {
                   "example": "any"
                 },
+
+
                 "gram": {
                   "example": "any"
                 },
@@ -836,12 +811,14 @@
                 },
                 "maxServingCapacity": {
                   "example": "any"
+
                 },
                 "latitude": {
                   "example": "any"
                 },
                 "longitude": {
                   "example": "any"
+
                 }
               }
             }
@@ -868,6 +845,44 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cart/add/{id}": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "quantity": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
