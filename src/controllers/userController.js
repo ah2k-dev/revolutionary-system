@@ -252,6 +252,8 @@ const getSavedAccomodations = async (req, res) => {
 const getCooks = async (req, res) => {
   // #swagger.tags = ['user']
   try {
+
+    // filter cook by name
     const cookNameFilter = req.body.search
       ? {
           $or: [
@@ -282,7 +284,7 @@ const getCooks = async (req, res) => {
                   type: "Point",
                   coordinates: req.body.coordinates,
                 },
-                $maxDistance: 10 * 1000,
+                $maxDistance: (10) * 1000,
               },
             },
           }
@@ -291,15 +293,17 @@ const getCooks = async (req, res) => {
 
     const getCook = await User.find({
       isActive: true,
+      role: 'cook',
       ...cookNameFilter,
       ...locationFilter,
     });
+    const cookCount = getCook.length
 
     if (!getCook) {
       return ErrorHandler("No Cook exist", 400, req, res);
     }
 
-    return SuccessHandler({ message: "Fetched Cooks", getCook }, 200, res);
+    return SuccessHandler({ message: "Fetched Cooks", cookCount, getCook }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }

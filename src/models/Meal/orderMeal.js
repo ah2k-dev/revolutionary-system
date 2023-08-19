@@ -7,9 +7,15 @@ const validator = require("validator");
 const orderMealSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    meal: [{ type: Schema.Types.ObjectId, ref: 'Meal',  required: true}], 
-    quantity: {type: Number, required: true },
-    subTotal: {type: Number, default: 0},
+    meals: [
+      {
+      meal: { type: Schema.Types.ObjectId, ref: 'Meal',  required: true},
+      quantity: { type: Number, required: true},
+      price: {type: Number, required: true}
+    }], 
+
+    
+    subTotal: {type: Number, required: true},
     totalAmount: {type: Number, default: 0},
 
     status: {
@@ -18,8 +24,7 @@ const orderMealSchema = new Schema(
       default: "current",
     },
 
-    bookingDate: { type: Date, required: true },
-    // bookingDate: { type: Date, required: true },
+    orderDate: { type: Date, default: Date.now },
 
     
   },
@@ -29,3 +34,4 @@ const orderMealSchema = new Schema(
 const orderMeal = mongoose.model("OrderMeal", orderMealSchema);
 
 module.exports = orderMeal;
+

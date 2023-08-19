@@ -23,8 +23,11 @@
           "auth"
         ],
         "description": "",
-        "parameters": [],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/register": {
@@ -68,7 +71,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/login": {
@@ -94,7 +101,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/requestEmailToken": {
@@ -117,7 +128,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/verifyEmail": {
@@ -170,7 +185,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/google-auth": {
@@ -208,7 +227,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/resetPassword": {
@@ -237,7 +260,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
       }
     },
     "/auth/updatePassword": {
@@ -801,8 +828,6 @@
                 "price": {
                   "example": "any"
                 },
-
-
                 "gram": {
                   "example": "any"
                 },
@@ -811,14 +836,6 @@
                 },
                 "maxServingCapacity": {
                   "example": "any"
-
-                },
-                "latitude": {
-                  "example": "any"
-                },
-                "longitude": {
-                  "example": "any"
-
                 }
               }
             }
@@ -857,8 +874,11 @@
         }
       }
     },
-    "/cart/add/{id}": {
-      "post": {
+    "/meal/mealsByCookId/{id}": {
+      "get": {
+        "tags": [
+          "meal"
+        ],
         "description": "",
         "parameters": [
           {
@@ -871,6 +891,29 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/orderMeal": {
+      "post": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
           },
           {
             "name": "body",
@@ -878,7 +921,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "quantity": {
+                "meals": {
+                  "example": "any"
+                },
+                "subTotal": {
                   "example": "any"
                 }
               }

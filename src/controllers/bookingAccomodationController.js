@@ -76,7 +76,7 @@ const getUserBookings = async (req, res) => {
           
    
         return SuccessHandler(
-          { message: "Booking Added successfully", bookings },
+          { message: "Booking Fetched successfully", bookings },
           200,
           res
         );
@@ -89,46 +89,6 @@ const getUserBookings = async (req, res) => {
   };
 
 
-// const gettingReviews = async (req, res) => {
-//   // #swagger.tags = ['booking']
-//   try {
-//     const accomodationId = req.params.id;
-//     if (req.user.role === "user") {
-//       // console.log(accomodationId);
-//       const accomodation = await Accomodation.findById(accomodationId).populate(
-//         "reviewsId"
-//       );
-//       const reviews = accomodation.reviewsId;
-
-//       let totalRating = 0;
-//       for (let rev of reviews) {
-//         totalRating += rev.rating;
-//       }
-
-//       const avgRating = (totalRating / reviews.length).toFixed(1);
-
-//       console.log(reviews);
-//       if (!accomodation) {
-//         return res.status(404).json({ message: "Accomodation not found" });
-//       }
-//       if (accomodation.length === 0) {
-//         return res
-//           .status(404)
-//           .json({ message: "No reviews found for this product" });
-//       }
-
-//       return SuccessHandler(
-//         { message: "Fetched Reviews successfully", avgRating, reviews },
-//         200,
-//         res
-//       );
-//     } else {
-//       return ErrorHandler("Unauthorized User", 400, req, res);
-//     }
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
 
 module.exports = {
     bookNewAccomm,
