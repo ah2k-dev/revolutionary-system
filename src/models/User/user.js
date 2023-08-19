@@ -85,6 +85,16 @@ const userSchema = new Schema({
   ],
 
 
+
+  // location only for Cook
+  location: {
+    type: { type: String, default: 'Point' },
+    coordinates: [Number]
+  },
+
+
+
+
   provider: {
     type: String,
     default: "local",
@@ -110,7 +120,8 @@ userSchema.methods.getJWTToken = function () {
 userSchema.methods.comparePassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
+userSchema.index({ location: '2dsphere' });
+
 
 const user = mongoose.model("User", userSchema);
-
 module.exports = user;

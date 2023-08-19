@@ -57,6 +57,12 @@
                 },
                 "role": {
                   "example": "any"
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
                 }
               }
             }
@@ -426,6 +432,29 @@
         }
       }
     },
+    "/user/getCook": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/accomodation/newAccomodation": {
       "post": {
         "tags": [
@@ -772,9 +801,8 @@
                 "price": {
                   "example": "any"
                 },
-                "quantity": {
-                  "example": "any"
-                },
+
+
                 "gram": {
                   "example": "any"
                 },
@@ -783,6 +811,14 @@
                 },
                 "maxServingCapacity": {
                   "example": "any"
+
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
+
                 }
               }
             }

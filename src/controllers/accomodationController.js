@@ -31,6 +31,7 @@ const createAccomodations = async (req, res) => {
     const newAccomodations = await Accomodation.create({
       title,
       desc,
+      rent,
       location: {
         type: "Point",
         coordinates: [latitude, longitude],

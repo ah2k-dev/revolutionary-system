@@ -4,24 +4,19 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const Accomodation = require("../models/Accomodation/accomodation");
 
-
 // get Current user
 const getUserProfile = async (req, res) => {
   // #swagger.tags = ['user']
   try {
-    const user = await User.findById(req.user._id)
+    const user = await User.findById(req.user._id);
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
-    return SuccessHandler({message: "Here you go", user}, 200, res);
+    return SuccessHandler({ message: "Here you go", user }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
-
 
 // if not req.files.avatar: previousFileName
 // if  req.files.avatar: avatar
@@ -32,64 +27,53 @@ const updatePersonalInfo = async (req, res) => {
   try {
     const { firstName, lastName } = req.body;
     // Get the previous avatar filename
-    const checkUser = await User.findById(req.user._id); 
-    console.log(checkUser);
-    const previousAvatarFileName = checkUser.avatar;
-    const previousCoverImgFileName = checkUser.coverImg;
-    console.log(previousAvatarFileName);
-  
+    const checkUser = await User.findById(req.user._id);
+    let previousAvatarFileName = checkUser.avatar;
+    let previousCoverImgFileName = checkUser.coverImg;
 
-    let avatarFileName = null;
-    let coverImgFileName = null;
+    // let avatarFileName = null;
+    // let coverImgFileName = null;
     if (req.files) {
       const { avatar, coverImg } = req.files;
-        if (avatar) {
-          // It should be image
-          if (!avatar.mimetype.startsWith("image")) {
-            return ErrorHandler("Please upload an image file", 400, req, res);
-          }
-          avatarFileName = `${Date.now()}${avatar.name}`;
-          avatar.mv(
-            path.join(__dirname, `../../uploads/avatar/${avatarFileName}`),
-            (err) => {
-              if (err) {
-                return ErrorHandler(err.message, 400, req, res);
-              }
-            }
-          );
+      if (avatar) {
+        // It should be image
+        if (!avatar.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image file", 400, req, res);
         }
-        if (coverImg) {
-          // It should be image
-          if (!coverImg.mimetype.startsWith("image")) {
-            return ErrorHandler("Please upload an image file", 400, req, res);
-          }
-  
-          coverImgFileName = `${Date.now()}${coverImg.name}`;
-          // Cover Img
-          coverImg.mv(
-            path.join(__dirname, `../../uploads/avatar/${coverImgFileName}`),
-            (err) => {
-              if (err) {
-                return ErrorHandler(err.message, 400, req, res);
-              }
+        previousAvatarFileName = `${Date.now()}${avatar.name}`;
+        avatar.mv(
+          path.join(
+            __dirname,
+            `../../uploads/avatar/${previousAvatarFileName}`
+          ),
+          (err) => {
+            if (err) {
+              return ErrorHandler(err.message, 400, req, res);
             }
-          );
+          }
+        );
+      }
+      if (coverImg) {
+        // It should be image
+        if (!coverImg.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image file", 400, req, res);
         }
-      
 
-      
+        previousCoverImgFileName = `${Date.now()}${coverImg.name}`;
+        // Cover Img
+        coverImg.mv(
+          path.join(
+            __dirname,
+            `../../uploads/avatar/${previousCoverImgFileName}`
+          ),
+          (err) => {
+            if (err) {
+              return ErrorHandler(err.message, 400, req, res);
+            }
+          }
+        );
+      }
 
-
-
-
-
-
-
-
-
-
-
-      
       // Delete the previous avatar file (if it exists)
       // if (previousAvatarFileName !== null) {
       //   const previousAvatarPath = path.join(
@@ -119,11 +103,6 @@ const updatePersonalInfo = async (req, res) => {
       //     }
       //   }
       // );
-
-
-    } else {
-      avatarFileName = previousAvatarFileName;
-      coverImgFileName = previousCoverImgFileName;
     }
 
     //     // check avatarFileName should not saved null in DB
@@ -137,8 +116,8 @@ const updatePersonalInfo = async (req, res) => {
       {
         firstName,
         lastName,
-        avatar: avatarFileName,
-        coverImg: coverImgFileName,
+        avatar: previousAvatarFileName,
+        coverImg: previousCoverImgFileName,
       },
       {
         new: true,
@@ -158,9 +137,6 @@ const updatePersonalInfo = async (req, res) => {
   }
 };
 
-
-
-
 //update user
 const updateUser = async (req, res) => {
   // #swagger.tags = ['user']
@@ -171,8 +147,6 @@ const updateUser = async (req, res) => {
       country,
       // timeZone,
     } = req.body;
-
-  
 
     const user = await User.findByIdAndUpdate(
       req.user._id,
@@ -200,122 +174,136 @@ const updateUser = async (req, res) => {
   }
 };
 
-
-
-
 // Saved or Unsaved Accomodation
 const savedOrUnsavedAccomodation = async (req, res) => {
   // #swagger.tags = ['user']
-    try {
-  const currentUser = req.user._id
-  if (req.user.role === "user") {
-    const accomodation = await Accomodation.findById(req.params.id)
-    const user = await User.findById(currentUser)
-    console.log("user: ", user);
-    console.log("accommodation: ", accomodation);
+  try {
+    const currentUser = req.user._id;
+    if (req.user.role === "user") {
+      const accomodation = await Accomodation.findById(req.params.id);
+      const user = await User.findById(currentUser);
+      console.log("user: ", user);
+      console.log("accommodation: ", accomodation);
 
-    if (!accomodation) {
-      return ErrorHandler("Accommodation does not exist", 400, req, res);
+      if (!accomodation) {
+        return ErrorHandler("Accommodation does not exist", 400, req, res);
+      }
+
+      // if saved => remove id from user model and mark as unsaved
+      if (user.savedAccomodation.includes(accomodation.id)) {
+        const index = user.savedAccomodation.indexOf(currentUser);
+        user.savedAccomodation.splice(index, 1);
+        await user.save();
+        return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
+      } else {
+        user.savedAccomodation.push(accomodation.id);
+        await user.save();
+        return SuccessHandler("Saved Accomodation", 200, res);
+      }
     }
 
-    // if saved => remove id from user model and mark as unsaved
-    if (user.savedAccomodation.includes(accomodation.id)) {
-      const index = user.savedAccomodation.indexOf(currentUser)
-      user.savedAccomodation.splice(index,1)
-      await user.save()
-      return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
-      
+    // if not user.role ==='user'
+    else {
+      return ErrorHandler("Unauthorized User", 500, req, res);
     }
-    
-    else{
-      user.savedAccomodation.push(accomodation.id)
-      await user.save()
-      return SuccessHandler("Saved Accomodation", 200, res);
-    }
-    
-  }
-
-
-  // if not user.role ==='user'
-  else{
-    return ErrorHandler("Unauthorized User", 500, req, res);
-  }
-
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
 
 // get Saved Accomodations
 const getSavedAccomodations = async (req, res) => {
   // #swagger.tags = ['user']
-    try {
-  const currentUser = req.user._id
-  if (req.user.role === "user") {
-    const user = await User.findById(currentUser).populate('savedAccomodation');
+  try {
+    const currentUser = req.user._id;
+    if (req.user.role === "user") {
+      const user = await User.findById(currentUser).populate(
+        "savedAccomodation"
+      );
 
-    let sAccomodations = user.savedAccomodation
+      let sAccomodations = user.savedAccomodation;
 
-    // const accomodation = await Accomodation.findById(req.params.id)
-    // console.log("user: ", user);
-    // console.log("accommodation: ", accomodation);
+      // const accomodation = await Accomodation.findById(req.params.id)
+      // console.log("user: ", user);
+      // console.log("accommodation: ", accomodation);
 
-    if (!sAccomodations) {
-      return ErrorHandler("Saved Accommodation does not exist", 400, req, res);
+      if (!sAccomodations) {
+        return ErrorHandler(
+          "Saved Accommodation does not exist",
+          400,
+          req,
+          res
+        );
+      }
+
+      return SuccessHandler(
+        { message: "Fetched Saved Accomodation", sAccomodations },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
     }
-    
-    return SuccessHandler({message: "Fetched Saved Accomodation", sAccomodations}, 200, res);
-  }
-
-  else{
-    return ErrorHandler("Unauthorized User", 400, req, res);
-  }
-
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
 
-
-
-
-
-
-
-const getRegisteredCooks = async (req, res) => {
+const getCooks = async (req, res) => {
   // #swagger.tags = ['user']
-    try {
-  const currentUser = req.user._id
-  if (req.user.role === "user") {
-    const user = await User.findById(currentUser).populate('savedAccomodation');
+  try {
+    const cookNameFilter = req.body.search
+      ? {
+          $or: [
+            {
+              firstName: {
+                $regex: req.body.search,
+                $options: 'i'
+              },
+            },
+            {
+              lastName: {
+                $regex: req.body.search,
+                $options: 'i'
+              }
+            }
+          ],
+        }
+      : {};
 
-    let sAccomodations = user.savedAccomodation
 
-    // const accomodation = await Accomodation.findById(req.params.id)
-    // console.log("user: ", user);
-    // console.log("accommodation: ", accomodation);
+      // Location filter
+      const locationFilter =
+      req.body.coordinates && req.body.coordinates.length > 0
+        ? {
+            location: {
+              $near: {
+                $geometry: {
+                  type: "Point",
+                  coordinates: req.body.coordinates,
+                },
+                $maxDistance: 10 * 1000,
+              },
+            },
+          }
+        : {};
 
-    if (!sAccomodations) {
-      return ErrorHandler("Saved Accommodation does not exist", 400, req, res);
+
+    const getCook = await User.find({
+      isActive: true,
+      ...cookNameFilter,
+      ...locationFilter,
+    });
+
+    if (!getCook) {
+      return ErrorHandler("No Cook exist", 400, req, res);
     }
-    
-    return SuccessHandler({message: "Fetched Saved Accomodation", sAccomodations}, 200, res);
-  }
 
-  else{
-    return ErrorHandler("Unauthorized User", 400, req, res);
-  }
-
+    return SuccessHandler({ message: "Fetched Cooks", getCook }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
 
 module.exports = {
   updateUser,
@@ -323,5 +311,5 @@ module.exports = {
   savedOrUnsavedAccomodation,
   getSavedAccomodations,
   updatePersonalInfo,
-  getRegisteredCooks,
+  getCooks,
 };

@@ -68,7 +68,7 @@ const getUserBookings = async (req, res) => {
       if (req.user.role === "user") {
   
           
-          const bookings =  await bookAccomm.findOne({user: currentUser})
+          const bookings =  await bookAccomm.find({user: currentUser})
           console.log(bookings);
         //   if (!bookings) {
         //     return ErrorHandler("No Such Booking exist", 400, req, res);
