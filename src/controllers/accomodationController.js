@@ -302,7 +302,12 @@ const deleteReview = async (req, res) => {
       console.log(review);
 
       if (!review) {
-        return ErrorHandler("Review not found or unauthorized", 404, req, res);
+        return ErrorHandler(
+          { success: false, message: "Review not found or unauthorized" },
+          404,
+          req,
+          res
+        );
       }
 
       await Accomodation.findByIdAndUpdate(accomodationId, {

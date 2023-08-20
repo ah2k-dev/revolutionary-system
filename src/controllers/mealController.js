@@ -293,6 +293,40 @@ const getReviews = async (req, res) => {
   }
 };
 
+const deleteReviews = async (req, res) => {
+  // #swagger.tags = ['meal']
+  try {
+    const { reviewId } = req.query;
+    const mealId = req.params.id;
+
+    if (req.user.role) {
+      const review = await Review.findByIdAndDelete({
+        _id: reviewId,
+      });
+      if (!review) {
+        return ErrorHandler(
+          { success: false, message: "Review not found or unauthorized" },
+          404,
+          req,
+          res
+        );
+      }
+      await Meal.findByIdAndUpdate(mealId, {
+        $pull: { reviewsId: reviewId },
+      });
+      return SuccessHandler(
+        { success: true, message: "Review has been Deleted" },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   createMeal,
   getMeals,
@@ -300,4 +334,5 @@ module.exports = {
   orderTheMeal,
   getOrderedMeal,
   addReviews,
+  deleteReviews,
 };
