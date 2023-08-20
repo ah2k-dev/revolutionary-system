@@ -3,6 +3,7 @@ const OrderMeal = require("../models/Meal/orderMeal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
+const Review = require("../models/Reviews/review");
 
 //Create Meal
 const createMeal = async (req, res) => {
@@ -188,10 +189,6 @@ const getOrderedMeal = async (req, res) => {
       const userMeals = await OrderMeal.find({ user: currentUser }).populate(
         "meals.meal"
       );
-      // if (userMeals.length===0) {
-      //   return ErrorHandler("User's Meal does not exist", 400, req, res);
-      // }
-
       return SuccessHandler(
         { message: "Fetched user ordered meals successfully", userMeals },
         200,
@@ -205,10 +202,77 @@ const getOrderedMeal = async (req, res) => {
   }
 };
 
+// add reviews on Meal
+const addReviews = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['meal']
+  try {
+    const mealId = req.params.id;
+    const { rating, comment } = req.body;
+    if (req.user.role === "user") {
+      const theMeal = await Meal.findById(mealId);
+      if (!theMeal) {
+        return ErrorHandler("The Meal doesn't exist", 400, req, res);
+      }
+
+      const existingReview = await Review.findOne({
+        user: currentUser,
+        meal: mealId,
+        comment,
+      });
+
+      if (existingReview) {
+        existingReview.rating = Number(rating);
+        existingReview.comment = comment;
+        await existingReview.save();
+        return SuccessHandler(
+          {
+            success: true,
+            message: "Review Updated successfully",
+            review: existingReview,
+          },
+          200,
+          res
+        );
+      } else {
+        const review = await Review.create({
+          rating: Number(rating),
+          comment,
+          user: currentUser,
+          meal: mealId,
+        });
+        await review.save();
+        await Meal.findByIdAndUpdate(mealId, {
+          $push: { reviewsId: review._id },
+        });
+        return SuccessHandler(
+          { success: true, message: "Review added successfully", review },
+          200,
+          res
+        );
+      }
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getReviews = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['meal']
+  try {
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   createMeal,
   getMeals,
   getMealsByCookId,
   orderTheMeal,
   getOrderedMeal,
+  addReviews,
 };
