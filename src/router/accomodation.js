@@ -28,5 +28,9 @@ router
 router.route("/addReview/:id").post(isAuthenticated, accomodation.addReview);
 //get
 router.route("/reviews/:id").get(isAuthenticated, accomodation.getReviews);
+// delete
+router
+  .route("/delReview/:id")
+  .delete(isAuthenticated, accomodation.deleteReview);
 
 module.exports = router;

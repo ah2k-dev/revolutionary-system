@@ -2491,3 +2491,85 @@
 {"date":"2023-08-20T13:57:07.190Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
 {"date":"2023-08-20T13:57:13.183Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
 {"date":"2023-08-20T13:57:13.514Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:12:33.393Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/reviews/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:12:54.643Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:12:55.973Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:13:25.087Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:14:43.184Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:14:43.811Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:15:13.440Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2169d2e56e66be7f03376"}
+{"date":"2023-08-20T14:15:14.442Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e2169d2e56e66be7f03376\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e2169d2e56e66be7f03376"}
+{"date":"2023-08-20T14:20:02.616Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:03.042Z","level":"error","message":"Cast to ObjectId failed for value \"true\" (type boolean) at path \"_id\" for model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:57.311Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:58.548Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e216922e56e66be7f0336c\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:21:55.507Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:22:02.504Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:22:13.994Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:22:44.380Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:22:45.578Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e216112e56e66be7f03356\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:29:14.666Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:29:19.292Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:29:39.540Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:29:40.127Z","level":"error","message":"Cannot read properties of null (reading 'reviewsId')","method":"GET","service":"user-service","url":"/reviews/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:34:41.805Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:34:43.616Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:34:59.050Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:00.346Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e2161f2e56e66be7f03360\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:22.669Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:23.474Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:37:51.624Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:37:55.084Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:00.150Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:05.626Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:21.253Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:32.485Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:34.483Z","level":"error","message":"Review validation failed: rating: Ratings must be between 0 and 5.","method":"POST","service":"user-service","url":"/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:41.458Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:40:30.452Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:40:31.338Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:04.637Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:05.511Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:31.794Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:32.655Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:33.953Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:34.909Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:15.804Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:16.753Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:28.311Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:29.282Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:09.304Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:15.414Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:39.383Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:48.851Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:47:03.864Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:47:18.025Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:47:19.575Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:48:09.231Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:48:15.836Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:49:39.342Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:49:42.058Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:08.011Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:08.768Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:51.484Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:52.278Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:26.274Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:26.937Z","level":"error","message":"Cannot read properties of null (reading 'save')","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:56.891Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:57.593Z","level":"error","message":"Cannot read properties of null (reading 'accomodation')","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:54:34.473Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:54:46.746Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:55:42.304Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:55:45.248Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:10.228Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:14.458Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:44.290Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:46.126Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:03:13.807Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T15:03:14.583Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T15:20:49.102Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:20:49.957Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:21:36.418Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:22:53.886Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:23:24.269Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254935749488d36af959"}
+{"date":"2023-08-20T15:24:35.218Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}

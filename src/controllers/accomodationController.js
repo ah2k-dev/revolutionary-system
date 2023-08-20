@@ -288,6 +288,36 @@ const getReviews = async (req, res) => {
   }
 };
 
+// Getting reviews
+const deleteReview = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const { reviewId } = req.query;
+    const accomodationId = req.params.id;
+    if (req.user.role === "user") {
+      // console.log(reviewId);
+      const review = await Review.findByIdAndDelete({
+        _id: reviewId,
+      });
+      console.log(review);
+
+      if (!review) {
+        return ErrorHandler("Review not found or unauthorized", 404, req, res);
+      }
+
+      await Accomodation.findByIdAndUpdate(accomodationId, {
+        $pull: { reviewsId: reviewId },
+      });
+
+      return SuccessHandler("Review has been Deleted", 200, res);
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   createAccomodations,
   updateAccomodations,
@@ -295,4 +325,5 @@ module.exports = {
   getAllAccomodations,
   addReview,
   getReviews,
+  deleteReview,
 };
