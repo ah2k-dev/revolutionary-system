@@ -1,4 +1,5 @@
 const Accomodation = require("../models/Accomodation/accomodation");
+const Review = require("../models/Accomodation/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
@@ -34,7 +35,7 @@ const createAccomodations = async (req, res) => {
       createdBy: getUserId,
     });
 
-    // newAccomodations.save();
+    await newAccomodations.save();
 
     return SuccessHandler(
       { message: "Added successfully", newAccomodations },
@@ -172,52 +173,93 @@ const getAllAccomodations = async (req, res) => {
   }
 };
 
-//Saved  Accomodations
-// const savedOrUnsavedAccomodations = async (req, res) => {
+//Add a new Review
+const addReview = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['accomodation']
+  try {
+    const accomodationId = req.params.id;
+    const { rating, comment } = req.body;
+    if (req.user.role === "user") {
+      const accommodation = await Accomodation.findById(accomodationId); // Use accomodationId here
+      console.log(accommodation);
 
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const { title, desc, latitude, longitude, capacity, services } = req.body;
-//     console.log(req.body);
-//     const getUserId = req.user._id;
+      if (!accommodation) {
+        return ErrorHandler("Accommodation Does not exist", 400, req, res);
+      }
+      const review = new Review({
+        rating,
+        comment,
+        userId: req.user._id,
+      });
 
-//     const isAccomodationsExist = await Accomodation.findOne({
+      await review.save();
 
-//       title,
-//       createdBy: getUserId,
-//     });
+      await Accomodation.findByIdAndUpdate(req.params.id, {
+        $push: { reviewsId: review._id },
+      });
 
-//     if (isAccomodationsExist) {
-//       return ErrorHandler("Accomodation already exist", 400, req, res);
-//     }
+      return SuccessHandler(
+        { message: "Reviews Added successfully", review },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
-//     const newAccomodations = await Accomodation.create({
-//       title,
-//       desc,
-//       location: {
-//         type: "Point",
-//         cordinates: [latitude, longitude],
-//       },
-//       capacity,
-//       services,
-//       createdBy: getUserId,
-//     });
+// Getting reviews
+const reviews = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const accomodationId = req.params.id;
+    if (req.user.role === "user") {
+      // console.log(accomodationId);
+      const accomodation = await Book.findById(accomodationId).populate(
+        "reviewsId"
+      );
 
-//     // newAccomodations.save();
+      const reviews = accomodation.reviewsId;
 
-//     return SuccessHandler(
-//       { message: "Added successfully", newAccomodations },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
+      let totalRating = 0;
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+
+      console.log(reviews);
+      if (!accomodation) {
+        return res.status(404).json({ message: "Accomodation not found" });
+      }
+      if (accomodation.length === 0) {
+        return res
+          .status(404)
+          .json({ message: "No reviews found for this product" });
+      }
+
+      return SuccessHandler(
+        { message: "Fetched Reviews successfully", avgRating, reviews },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createAccomodations,
   updateAccomodations,
   deleteAccomodations,
   getAllAccomodations,
+  addReview,
+  reviews,
 };

@@ -1,4 +1,4 @@
-const bookAccomm = require("../models/BookingAccomodation/bookingAccomodation");
+const bookAccomm = require("../models/Accomodation/bookingAccomodation");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const Accomodation = require("../models/Accomodation/accomodation");

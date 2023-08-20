@@ -3,6 +3,8 @@ const accomodation = require("../controllers/accomodationController");
 const isAuthenticated = require("../middleware/auth");
 const { authorizedHost } = require("../middleware/role");
 
+//Accomodations
+
 //post
 router
   .route("/newAccomodation")
@@ -19,5 +21,12 @@ router
   .route("/deleteAccomodation/:id")
   .delete(isAuthenticated, authorizedHost, accomodation.deleteAccomodations);
 //get
+
+// ✅Reviews
+
+//post
+router.route("/addReview/:id").post(isAuthenticated, accomodation.addReview);
+//get
+router.route("/getReviews/:id").get(isAuthenticated, accomodation.reviews);
 
 module.exports = router;

@@ -1,8 +1,8 @@
 const Meal = require("../models/Meal/meal");
+const OrderMeal = require("../models/Meal/orderMeal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const OrderMeal = require("../models/Meal/orderMeal");
 
 //Create Meal
 const createMeal = async (req, res) => {
@@ -185,11 +185,13 @@ const getOrderedMeal = async (req, res) => {
   const currentUser = req.user._id;
   try {
     if (req.user.role === "user") {
-      const userMeals = await OrderMeal.find({user: currentUser}).populate('meals.meal')
+      const userMeals = await OrderMeal.find({ user: currentUser }).populate(
+        "meals.meal"
+      );
       // if (userMeals.length===0) {
       //   return ErrorHandler("User's Meal does not exist", 400, req, res);
       // }
-      
+
       return SuccessHandler(
         { message: "Fetched user ordered meals successfully", userMeals },
         200,
