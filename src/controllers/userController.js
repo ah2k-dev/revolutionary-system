@@ -12,7 +12,7 @@ const getUserProfile = async (req, res) => {
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
-    return SuccessHandler({ message: "Here you go", user }, 200, res);
+    return SuccessHandler({ message: "Profile Updated", user }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }

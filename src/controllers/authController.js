@@ -177,7 +177,11 @@ const verifyEmail = async (req, res) => {
     user.emailVerificationTokenExpires = null;
     jwtToken = user.getJWTToken();
     await user.save();
-    return SuccessHandler("Email verified successfully", 200, res);
+    return SuccessHandler(
+      { success: true, message: "Email verified successfully" },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -205,7 +209,7 @@ const login = async (req, res) => {
     }
     jwtToken = user.getJWTToken();
     return SuccessHandler(
-      { message: "Logged in successfully", jwtToken, user },
+      { success: true, message: "Logged in successfully", jwtToken, user },
       200,
       res
     );

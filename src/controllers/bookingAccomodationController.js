@@ -43,7 +43,7 @@ const bookNewAccomm = async (req, res) => {
       await newBooking.save();
 
       return SuccessHandler(
-        { message: "Booking Added successfully", newBooking },
+        { success: true, message: "Booking Added successfully", newBooking },
         200,
         res
       );
@@ -67,7 +67,7 @@ const getUserBookings = async (req, res) => {
       //   }
 
       return SuccessHandler(
-        { message: "Booking Fetched successfully", bookings },
+        { success: true, message: "Booking Fetched successfully", bookings },
         200,
         res
       );

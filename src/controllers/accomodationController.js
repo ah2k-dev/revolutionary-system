@@ -1,9 +1,8 @@
 const Accomodation = require("../models/Accomodation/accomodation");
-const Review = require("../models/Accomodation/review");
+const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const mongoose = require("mongoose");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
@@ -38,7 +37,7 @@ const createAccomodations = async (req, res) => {
     await newAccomodations.save();
 
     return SuccessHandler(
-      { message: "Added successfully", newAccomodations },
+      { success: true, message: "Added successfully", newAccomodations },
       200,
       res
     );
@@ -79,7 +78,7 @@ const updateAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Updated successfully", updatedAccomodation },
+      { success: true, message: "Updated successfully", updatedAccomodation },
       200,
       res
     );
@@ -106,7 +105,11 @@ const deleteAccomodations = async (req, res) => {
       return ErrorHandler("Accomodation does not exist", 400, req, res);
     }
 
-    return SuccessHandler({ message: "Deleted successfully" }, 200, res);
+    return SuccessHandler(
+      { success: true, message: "Deleted successfully" },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -164,7 +167,12 @@ const getAllAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Fetched successfully", getAccomodations, totalAccomodation },
+      {
+        success: true,
+        message: "Fetched successfully",
+        getAccomodations,
+        totalAccomodation,
+      },
       200,
       res
     );
@@ -186,10 +194,10 @@ const addReview = async (req, res) => {
       const accomodation = await Accomodation.findById(accomodationId);
 
       if (!accomodation) {
-        return ErrorHandler("accomodation Does not exist", 400, req, res);
+        return ErrorHandler("The Accomodation doesn't exist", 400, req, res);
       }
 
-      // Check if a review with the same comment already exists for the user and accomodation
+      // Check if a review with the same comment already exists
       const existingReview = await Review.findOne({
         user: currentUser,
         accomodation: accomodationId,
@@ -203,13 +211,17 @@ const addReview = async (req, res) => {
         await existingReview.save();
 
         return SuccessHandler(
-          { message: "Review Updated successfully", review: existingReview },
+          {
+            success: true,
+            message: "Review Updated successfully",
+            review: existingReview,
+          },
           200,
           res
         );
       } else {
         // create a new review
-        const review = new Review({
+        const review = await Review.create({
           rating,
           comment,
           user: currentUser,
@@ -223,7 +235,7 @@ const addReview = async (req, res) => {
         });
 
         return SuccessHandler(
-          { message: "Review Added successfully", review },
+          { success: true, message: "Review Added successfully", review },
           200,
           res
         );
@@ -242,19 +254,9 @@ const getReviews = async (req, res) => {
   try {
     const accomodationId = req.params.id;
     if (req.user.role === "user") {
-      // console.log(accomodationId);
-      // const accomodationObjectId = mongoose.Types.ObjectId(accomodationId);
-      // const Isaccomodation = await Accomodation.findById(accomodationObjectId);
-      // if (!Isaccomodation) {
-      //   return ErrorHandler("accomodation Does not exist", 400, req, res);
-      // }
-
       const accomodation = await Accomodation.findById(accomodationId).populate(
         "reviewsId"
       );
-      // if (!Isaccomodation) {
-      //   return ErrorHandler("accomodation Does not exist", 400, req, res);
-      // }
 
       const reviews = accomodation.reviewsId;
 
@@ -265,18 +267,17 @@ const getReviews = async (req, res) => {
 
       const avgRating = (totalRating / reviews.length).toFixed(1);
 
-      console.log(reviews);
       if (!accomodation) {
         return res.status(404).json({ message: "Accomodation not found" });
       }
-      if (accomodation.length === 0) {
-        return res
-          .status(404)
-          .json({ message: "No reviews found for this product" });
-      }
 
       return SuccessHandler(
-        { message: "Fetched Reviews successfully", avgRating, reviews },
+        {
+          success: true,
+          message: "Fetched Reviews successfully",
+          avgRating,
+          reviews,
+        },
         200,
         res
       );
@@ -309,7 +310,11 @@ const deleteReview = async (req, res) => {
         $pull: { reviewsId: reviewId },
       });
 
-      return SuccessHandler("Review has been Deleted", 200, res);
+      return SuccessHandler(
+        { success: true, message: "Review has been Deleted" },
+        200,
+        res
+      );
     } else {
       return ErrorHandler("Unauthorized User", 400, req, res);
     }

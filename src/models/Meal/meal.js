@@ -5,6 +5,8 @@ dotenv.config({ path: ".././src/config/config.env" });
 
 const mealSchema = new Schema(
   {
+    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+
     cook: { type: String },
     dishName: { type: String, required: true },
     desc: { type: String, required: true },
