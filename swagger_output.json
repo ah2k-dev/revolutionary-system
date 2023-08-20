@@ -661,10 +661,10 @@
         }
       }
     },
-    "/review/newReview/{id}": {
+    "/accomodation/addReview/{id}": {
       "post": {
         "tags": [
-          "review"
+          "accomodation"
         ],
         "description": "",
         "parameters": [
@@ -705,10 +705,10 @@
         }
       }
     },
-    "/review/getReviews/{id}": {
+    "/accomodation/getReviews/{id}": {
       "get": {
         "tags": [
-          "review"
+          "accomodation"
         ],
         "description": "",
         "parameters": [
