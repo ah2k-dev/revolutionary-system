@@ -162,8 +162,8 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "Bad Request"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -705,7 +705,7 @@
         }
       }
     },
-    "/accomodation/getReviews/{id}": {
+    "/accomodation/reviews/{id}": {
       "get": {
         "tags": [
           "accomodation"
@@ -730,6 +730,40 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/accomodation/delReview/{id}": {
+      "delete": {
+        "tags": [
+          "accomodation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "reviewId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
