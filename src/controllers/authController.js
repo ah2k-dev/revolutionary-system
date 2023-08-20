@@ -95,7 +95,12 @@ const register = async (req, res) => {
     if (role === "cook") {
       const { latitude, longitude, shopName } = req.body;
       if (!(latitude || longitude || shopName)) {
-        return ErrorHandler("Latitude, Longitude or Shop name is missing", 400, req, res);
+        return ErrorHandler(
+          "Latitude, Longitude or Shop name is missing",
+          400,
+          req,
+          res
+        );
       }
       let parselatitude = Number(latitude);
       let parselongitude = Number(longitude);
@@ -154,10 +159,12 @@ const verifyEmail = async (req, res) => {
     const { email, emailVerificationToken } = req.body;
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "User does not exist",
-      });
+      return ErrorHandler(
+        { success: false, message: "User does not exist" },
+        400,
+        req,
+        res
+      );
     }
     if (
       user.emailVerificationToken !== emailVerificationToken ||

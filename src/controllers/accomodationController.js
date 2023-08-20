@@ -3,7 +3,7 @@ const Review = require("../models/Accomodation/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-
+const mongoose = require("mongoose");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
@@ -12,10 +12,10 @@ const createAccomodations = async (req, res) => {
     const { title, desc, latitude, longitude, capacity, services, rent } =
       req.body;
 
-    const getUserId = req.user._id;
+    const currentUser = req.user._id;
     const isAccomodationsExist = await Accomodation.findOne({
       title,
-      createdBy: getUserId,
+      createdBy: currentUser,
     });
 
     if (isAccomodationsExist) {
@@ -32,7 +32,7 @@ const createAccomodations = async (req, res) => {
       },
       capacity,
       services,
-      createdBy: getUserId,
+      createdBy: currentUser,
     });
 
     await newAccomodations.save();
@@ -53,7 +53,7 @@ const updateAccomodations = async (req, res) => {
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
     console.log(req.body);
-    const getUserId = req.user._id;
+    const currentUser = req.user._id;
     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
@@ -66,7 +66,7 @@ const updateAccomodations = async (req, res) => {
 
         capacity,
         services,
-        createdBy: getUserId,
+        createdBy: currentUser,
       },
       {
         new: true,
@@ -177,33 +177,57 @@ const getAllAccomodations = async (req, res) => {
 const addReview = async (req, res) => {
   const currentUser = req.user._id;
   // #swagger.tags = ['accomodation']
+
   try {
     const accomodationId = req.params.id;
     const { rating, comment } = req.body;
+
     if (req.user.role === "user") {
-      const accommodation = await Accomodation.findById(accomodationId); // Use accomodationId here
-      console.log(accommodation);
+      const accomodation = await Accomodation.findById(accomodationId);
 
-      if (!accommodation) {
-        return ErrorHandler("Accommodation Does not exist", 400, req, res);
+      if (!accomodation) {
+        return ErrorHandler("accomodation Does not exist", 400, req, res);
       }
-      const review = new Review({
-        rating,
+
+      // Check if a review with the same comment already exists for the user and accomodation
+      const existingReview = await Review.findOne({
+        user: currentUser,
+        accomodation: accomodationId,
         comment,
-        userId: req.user._id,
       });
 
-      await review.save();
+      if (existingReview) {
+        // update existing review
+        existingReview.rating = rating;
+        existingReview.comment = comment;
+        await existingReview.save();
 
-      await Accomodation.findByIdAndUpdate(req.params.id, {
-        $push: { reviewsId: review._id },
-      });
+        return SuccessHandler(
+          { message: "Review Updated successfully", review: existingReview },
+          200,
+          res
+        );
+      } else {
+        // create a new review
+        const review = new Review({
+          rating,
+          comment,
+          user: currentUser,
+          accomodation: accomodationId,
+        });
 
-      return SuccessHandler(
-        { message: "Reviews Added successfully", review },
-        200,
-        res
-      );
+        await review.save();
+
+        await Accomodation.findByIdAndUpdate(accomodationId, {
+          $push: { reviewsId: review._id },
+        });
+
+        return SuccessHandler(
+          { message: "Review Added successfully", review },
+          200,
+          res
+        );
+      }
     } else {
       return ErrorHandler("Unauthorized User", 400, req, res);
     }
@@ -213,15 +237,24 @@ const addReview = async (req, res) => {
 };
 
 // Getting reviews
-const reviews = async (req, res) => {
+const getReviews = async (req, res) => {
   // #swagger.tags = ['accomodation']
   try {
     const accomodationId = req.params.id;
     if (req.user.role === "user") {
       // console.log(accomodationId);
-      const accomodation = await Book.findById(accomodationId).populate(
+      // const accomodationObjectId = mongoose.Types.ObjectId(accomodationId);
+      // const Isaccomodation = await Accomodation.findById(accomodationObjectId);
+      // if (!Isaccomodation) {
+      //   return ErrorHandler("accomodation Does not exist", 400, req, res);
+      // }
+
+      const accomodation = await Accomodation.findById(accomodationId).populate(
         "reviewsId"
       );
+      // if (!Isaccomodation) {
+      //   return ErrorHandler("accomodation Does not exist", 400, req, res);
+      // }
 
       const reviews = accomodation.reviewsId;
 
@@ -261,5 +294,5 @@ module.exports = {
   deleteAccomodations,
   getAllAccomodations,
   addReview,
-  reviews,
+  getReviews,
 };

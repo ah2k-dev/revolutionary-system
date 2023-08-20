@@ -2429,3 +2429,65 @@
 {"date":"2023-08-19T12:14:08.974Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
 {"date":"2023-08-19T12:15:41.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
 {"date":"2023-08-19T12:15:44.578Z","level":"error","message":"User's Meal does not exist","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-20T09:58:03.756Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-20T09:58:03.865Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-20T09:58:03.881Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-20T09:58:03.891Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-20T09:58:03.894Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-20T09:58:04.742Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-20T13:07:33.671Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:07:34.577Z","level":"error","message":"Path \"accomodationId\" is not in schema, strict mode is `true`, and upsert is `true`.","method":"POST","service":"user-service","url":"/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:15:54.568Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:15:58.884Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:02.858Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:20.120Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:43.989Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:29:13.190Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:04.702Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:11.044Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:18.525Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:51.784Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T13:34:13.615Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:34:55.201Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T13:35:12.948Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:35:18.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:35:24.567Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:24.495Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:24.950Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:27.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:27.381Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:39:23.196Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:39:31.312Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:40:39.846Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:41:33.134Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:42:12.515Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:42:13.000Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:10.053Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:17.104Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:20.215Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:20.534Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:09.884Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:15.407Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:17.092Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:17.521Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:48.226Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:54.194Z","level":"error","message":"Parameter \"filter\" to find() must be an object, got 64de269e2d12b915b76df5ef1","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:49:07.702Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:49:13.026Z","level":"error","message":"Cast to ObjectId failed for value \"{ accomodation: '64de269e2d12b915b76df5ef1' }\" (type Object) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:50:30.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:50:34.361Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:39.615Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:45.461Z","level":"error","message":"mongoose is not defined","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:48.382Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:48.730Z","level":"error","message":"mongoose is not defined","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:53:14.323Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:53:20.768Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:54:58.595Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:54:58.955Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:55:07.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:55:12.407Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:55:12.733Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:06.831Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:07.190Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:13.183Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:13.514Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}

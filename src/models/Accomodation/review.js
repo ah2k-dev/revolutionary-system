@@ -6,7 +6,12 @@ const validator = require("validator");
 
 const reviewsSchema = new Schema(
   {
-    userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    user: { type: Schema.Types.ObjectId, ref: "User", required: true },
+
+    accomodation: { type: Schema.Types.ObjectId, ref: "Accomodation" },
+
+    meal: { type: Schema.Types.ObjectId, ref: "Meal" },
+
     rating: {
       type: Number,
       required: true,

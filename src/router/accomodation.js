@@ -27,6 +27,6 @@ router
 //post
 router.route("/addReview/:id").post(isAuthenticated, accomodation.addReview);
 //get
-router.route("/getReviews/:id").get(isAuthenticated, accomodation.reviews);
+router.route("/reviews/:id").get(isAuthenticated, accomodation.getReviews);
 
 module.exports = router;
