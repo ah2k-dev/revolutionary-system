@@ -293,7 +293,7 @@ const getReviews = async (req, res) => {
   }
 };
 
-const deleteReviews = async (req, res) => {
+const deleteReview = async (req, res) => {
   // #swagger.tags = ['meal']
   try {
     const { reviewId } = req.query;
@@ -334,5 +334,6 @@ module.exports = {
   orderTheMeal,
   getOrderedMeal,
   addReviews,
-  deleteReviews,
+  getReviews,
+  deleteReview,
 };

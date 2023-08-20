@@ -10,6 +10,15 @@ router.route("/new").post(isAuthenticated, authorizedCook, meal.createMeal);
 router.route("/getMeals").get(isAuthenticated, meal.getMeals);
 router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 
+// ✅Reviews
+
+//post
+router.route("/addReview/:id").post(isAuthenticated, meal.addReviews);
+//get
+router.route("/reviews/:id").get(isAuthenticated, meal.getReviews);
+// delete
+router.route("/delReview/:id").delete(isAuthenticated, meal.deleteReview);
+
 // ✅ ➡order the Meal
 //post
 router.route("/orderMeal").post(isAuthenticated, meal.orderTheMeal);
