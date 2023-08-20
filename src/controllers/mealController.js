@@ -263,6 +263,31 @@ const getReviews = async (req, res) => {
   const currentUser = req.user._id;
   // #swagger.tags = ['meal']
   try {
+    const mealId = req.params.id;
+    if (req.user.role === "user") {
+      const meal = await Meal.findById(mealId).populate("reviewsId");
+      if (!meal) {
+        return ErrorHandler("The Meal doesn't exist", 400, req, res);
+      }
+      const reviews = meal.reviewsId;
+      let totalRating = 0;
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Fetched Reviews successfully",
+          avgRating,
+          reviews,
+        },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }

@@ -257,6 +257,9 @@ const getReviews = async (req, res) => {
       const accomodation = await Accomodation.findById(accomodationId).populate(
         "reviewsId"
       );
+      if (!accomodation) {
+        return res.status(404).json({ message: "Accomodation not found" });
+      }
 
       const reviews = accomodation.reviewsId;
 
@@ -266,10 +269,6 @@ const getReviews = async (req, res) => {
       }
 
       const avgRating = (totalRating / reviews.length).toFixed(1);
-
-      if (!accomodation) {
-        return res.status(404).json({ message: "Accomodation not found" });
-      }
 
       return SuccessHandler(
         {
