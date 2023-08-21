@@ -56,8 +56,7 @@ const getUserBookings = async (req, res) => {
   // #swagger.tags = ['booking']
   try {
     if (req.user.role === "user") {
-      const bookings = await bookAccomm.find({ user: currentUser })
-      // .populate('accomodationsId.accomodations');
+      const bookings = await bookAccomm.find({ user: currentUser }).populate('accomodationsId')
       console.log(bookings);
         if (!bookings) {
           return ErrorHandler("No Such Booking exist", 400, req, res);

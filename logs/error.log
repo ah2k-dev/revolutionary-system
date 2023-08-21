@@ -943,3 +943,4 @@
 {"date":"2023-08-21T18:37:59.557Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/cookCoupons"}
 {"date":"2023-08-21T18:39:54.540Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
 {"date":"2023-08-21T18:40:11.749Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T19:55:50.962Z","level":"error","message":"Cannot populate path `accommodationsId` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
