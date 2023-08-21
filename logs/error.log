@@ -906,3 +906,7 @@
 {"date":"2023-08-20T14:56:46.126Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
 {"date":"2023-08-20T15:03:14.583Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef"}
 {"date":"2023-08-20T15:20:49.957Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-21T03:16:35.038Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals?minPrice=100"}
+{"date":"2023-08-21T03:16:42.975Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}
+{"date":"2023-08-21T03:16:44.479Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}
+{"date":"2023-08-21T03:16:46.220Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}

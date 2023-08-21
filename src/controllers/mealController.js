@@ -52,17 +52,25 @@ const createMeal = async (req, res) => {
 
 const getMeals = async (req, res) => {
   // #swagger.tags = ['meal']
-  // TODO: image array
   try {
-    // Price Filter
+    // const { minPrice } = req.query;
+    // const { maxPrice } = req.query;
+    // const priceFilter = {
+    //   price: { $lte: Number(maxPrice), $gte: Number(minPrice) },
+    // };
 
-    const priceFilter = req.body.price
-      ? {
-          price: { $lte: Number(req.body.price), $gte: Number(req.body.price) },
-        }
-      : {};
+    //✅ Price Filter
+    const priceFilter =
+      req.body.maxPrice && req.body.minPrice
+        ? {
+            price: {
+              $lte: Number(req.body.maxPrice),
+              $gte: Number(req.body.minPrice),
+            },
+          }
+        : {};
 
-    // Dish Filter
+    //✅ Dish Filter
     const dishFilter = req.body.dishName
       ? {
           dishName: {
@@ -72,28 +80,28 @@ const getMeals = async (req, res) => {
         }
       : {};
 
-    // servingCapacityFilter
+    // ✅ servingCapacityFilter
     const servingCapacityFilter = req.body.maxServingCapacity
       ? {
           maxServingCapacity: Number(req.body.maxServingCapacity),
         }
       : {};
 
-    // Spice Status Filter
+    // ✅ Spice Status Filter
     const spiceStatusFilter = req.body.spiceStatus
       ? {
           spiceStatus: { $eq: req.body.spiceStatus },
         }
       : {};
 
-    // Gram Filter
+    // ✅  Gram Filter
     const gramFilter = req.body.gram
       ? {
           gram: { $lte: Number(req.body.gram) },
         }
       : {};
 
-    // Calories Filter
+    //✅ Calories Filter
     const caloriesFilter = req.body.calories
       ? {
           calories: { $lte: Number(req.body.calories) },

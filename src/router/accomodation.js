@@ -3,7 +3,7 @@ const accomodation = require("../controllers/accomodationController");
 const isAuthenticated = require("../middleware/auth");
 const { authorizedHost } = require("../middleware/role");
 
-//Accomodations
+//✅Accomodations
 
 //post
 router
