@@ -10,7 +10,6 @@ const bookingAccomodationSchema = new Schema(
     accomodationsId: [
       { type: Schema.Types.ObjectId, ref: "Accomodation", required: true },
     ],
-
     status: {
       type: String,
       enum: ["current", "previous", "cancelled"],
