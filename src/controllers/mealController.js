@@ -406,6 +406,47 @@ const createCoupon = async (req, res) => {
 
 
 
+// verify meals and GIve Dicount
+const verifyCouponsAndGiveDiscount = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const { couponCode, selectedMeals } = req.body;
+    const coupon = await Coupon.findOne({ couponCode, isActive: true, expiryDate: { $gt: new Date() } });
+    if (!coupon) {
+      return ErrorHandler("Coupon is not valid.", 404, req, res);
+    }
+
+    const applicableMeals = selectedMeals.filter(mealId =>
+      coupon.meal && coupon.meal.toString() === mealId
+    );
+
+    if (applicableMeals.length === 0) {
+      return ErrorHandler({ success: false, message: 'Coupon is not applicable to any selected meals.' },404, req, res);
+    }
+     // Calculate the total discount for applicable meals
+     const totalDiscount = applicableMeals.reduce((acc, meal) => {
+      return acc + (meal.price * (coupon.discount / 100));
+    }, 0);
+
+
+    // Calculate the new total amount after applying the discount
+    const newTotalAmount = orderTotal - totalDiscount;
+
+
+
+    return SuccessHandler(
+      { success: true, message: "Coupon Applied successfully", newTotalAmount  },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
 module.exports = {
   createMeal,
   getMeals,
@@ -416,4 +457,5 @@ module.exports = {
   getReviews,
   deleteReview,
   createCoupon,
+  verifyCouponsAndGiveDiscount
 };
