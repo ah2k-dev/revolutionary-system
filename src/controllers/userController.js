@@ -3,6 +3,7 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const Accomodation = require("../models/Accomodation/accomodation");
+const Coupon = require("../models/Coupon/coupon");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -294,6 +295,61 @@ const getCooks = async (req, res) => {
   }
 };
 
+
+
+
+// get all coupons for cook
+//Get Coupons 
+const getCouponsForCook = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const currentUser = req.user._id;
+    const coupons = await Coupon.find({
+      createdBy: currentUser,
+    });
+  
+      if (!coupons) {
+        return ErrorHandler("Coupons not found", 404, req, res);
+      }
+
+
+    return SuccessHandler(
+      { success: true, message: "Coupon Fetched successfully", coupons },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+// get all coupons for cook
+//Get Coupons 
+const getCouponsForCook = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const currentUser = req.user._id;
+    const coupons = await Coupon.find({
+      createdBy: currentUser,
+    });
+  
+      if (!coupons) {
+        return ErrorHandler("Coupons not found", 404, req, res);
+      }
+
+
+    return SuccessHandler(
+      { success: true, message: "Coupon Fetched successfully", coupons },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
 module.exports = {
   updateUser,
   getUserProfile,
@@ -301,4 +357,5 @@ module.exports = {
   getSavedAccomodations,
   updatePersonalInfo,
   getCooks,
+  getCouponsForCook,
 };

@@ -9,7 +9,7 @@ const couponSchema = new Schema({
     user: [{ type: Schema.Types.ObjectId, ref: "User", required: true}],
     meal: {type: Schema.Types.ObjectId, ref: "Meal"},   
     accomodation: {type: Schema.Types.ObjectId, ref: "Accomodation"},   
-    couponTitle: {type: String, require: true, unique: true},
+    couponTitle: {type: String, require: true},
     maxCoupon: {type: Number, require: true},
     discount: {type: Number, require: true, 
     validate:{

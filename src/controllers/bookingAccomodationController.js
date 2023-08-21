@@ -57,11 +57,12 @@ const getUserBookings = async (req, res) => {
   try {
     if (req.user.role === "user") {
       const bookings = await bookAccomm.find({ user: currentUser })
-      // .populate('accomodationsId.accomodation');
+      // .populate('accomodationsId.accomodations');
       console.log(bookings);
         if (!bookings) {
           return ErrorHandler("No Such Booking exist", 400, req, res);
         }
+
 
       return SuccessHandler(
         { success: true, message: "Booking Fetched successfully", bookings },

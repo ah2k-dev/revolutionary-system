@@ -351,15 +351,18 @@ const createCoupon = async (req, res) => {
 
     const currentUser = req.user._id;
     const mealId = req.params.id;
-    const isMealExist = await Meal.findById(mealId);
+    const isMealExist = await Meal.find({
+      _id: mealId,
+      cook: currentUser
+    });
   
       if (!isMealExist) {
-        return ErrorHandler("Meal not found", 404, req, res);
+        return ErrorHandler("Your Meal not found", 404, req, res);
       }
 
-    const isCoupon = await Coupon.find({
+    const isCoupon = await Coupon.findOne({
       meal: mealId,
-      couponTitle,
+      couponCode,
       createdBy: currentUser,
     });
 
@@ -398,6 +401,8 @@ const createCoupon = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+
+
 
 
 

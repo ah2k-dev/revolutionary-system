@@ -19,4 +19,10 @@ router
   .get(isAuthenticated, user.getSavedAccomodations);
 router.route("/getCook").get(isAuthenticated, user.getCooks);
 
+
+// ✅ Coupon for the Cooks
+// get
+router.route("/cookCoupons").get(isAuthenticated, authorizedCook, user.getCouponsForCook);
+
+
 module.exports = router;
