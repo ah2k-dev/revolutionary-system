@@ -27,7 +27,7 @@ const createAccomodations = async (req, res) => {
       price: Number(price),
       location: {
         type: "Point",
-        coordinates: [latitude, longitude],
+        coordinates: [longitude, latitude],
       },
       capacity: Number(capacity),
       services,
@@ -60,7 +60,7 @@ const updateAccomodations = async (req, res) => {
         desc,
         location: {
           type: "Point",
-          cordinates: [latitude, longitude],
+          coordinates: [longitude, latitude],
         },
 
         capacity,
@@ -124,8 +124,9 @@ const getAllAccomodations = async (req, res) => {
         }
       : {};
 
+    // Location filter
     const locationFilter =
-      req.body.coordinates && req.body.coordinates.length > 0
+      req.body.coordinates && req.body.coordinates.length == 2
         ? {
             location: {
               $near: {
@@ -141,24 +142,12 @@ const getAllAccomodations = async (req, res) => {
 
     console.log(locationFilter);
 
-    //   {
-    //     <location field>: {
-    //       $near: {
-    //         $geometry: {
-    //            type: "Point" ,
-    //            coordinates: [ <longitude> , <latitude> ]
-    //         },
-    //         $maxDistance: <distance in meters>,
-    //         $minDistance: <distance in meters>
-    //       }
-    //     }
-    //  }
-
     const getAccomodations = await Accomodation.find({
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
     }).populate("reviewsId");
+
     const totalAccomodation = getAccomodations.length;
 
     if (!getAccomodations) {
@@ -180,7 +169,8 @@ const getAllAccomodations = async (req, res) => {
   }
 };
 
-//Add a new Review
+// Add a new Review
+
 const addReview = async (req, res) => {
   const currentUser = req.user._id;
   // #swagger.tags = ['accomodation']

@@ -1,5 +1,6 @@
 const hotels = [
   {
+    // saddar
     hotelName: "Luxury Resort",
     price: 250,
     description:
@@ -8,6 +9,7 @@ const hotels = [
     capacity: 2,
   },
   {
+    // garden west
     hotelName: "Cozy Inn",
     price: 100,
     description: "A charming inn perfect for a peaceful getaway.",

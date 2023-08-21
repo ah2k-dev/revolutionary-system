@@ -913,3 +913,5 @@
 {"date":"2023-08-21T03:45:59.674Z","level":"error","message":"Accomodation validation failed: price: Path `price` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
 {"date":"2023-08-21T03:46:18.047Z","level":"error","message":"Accomodation validation failed: price: Path `price` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
 {"date":"2023-08-21T03:47:33.305Z","level":"error","message":"price is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-21T05:21:54.318Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-21T05:21:56.679Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAccomodations"}

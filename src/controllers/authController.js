@@ -109,7 +109,7 @@ const register = async (req, res) => {
         shopName,
         location: {
           type: "Point",
-          coordinates: [parselatitude, parselongitude],
+          coordinates: [parselongitude, parselatitude],
         },
       };
     }
