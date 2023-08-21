@@ -8,7 +8,7 @@ const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    const { title, desc, latitude, longitude, capacity, services, rent } =
+    const { title, desc, latitude, longitude, capacity, services, price } =
       req.body;
 
     const currentUser = req.user._id;
@@ -24,12 +24,12 @@ const createAccomodations = async (req, res) => {
     const newAccomodations = await Accomodation.create({
       title,
       desc,
-      rent,
+      price: Number(price),
       location: {
         type: "Point",
         coordinates: [latitude, longitude],
       },
-      capacity,
+      capacity: Number(capacity),
       services,
       createdBy: currentUser,
     });
@@ -117,7 +117,6 @@ const deleteAccomodations = async (req, res) => {
 
 const getAllAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
-  // TODO: image array
   try {
     const capacityFilter = req.body.capacity
       ? {
@@ -170,8 +169,8 @@ const getAllAccomodations = async (req, res) => {
       {
         success: true,
         message: "Fetched successfully",
-        getAccomodations,
         totalAccomodation,
+        getAccomodations,
       },
       200,
       res

@@ -521,7 +521,7 @@
                 "services": {
                   "example": "any"
                 },
-                "rent": {
+                "price": {
                   "example": "any"
                 }
               }
