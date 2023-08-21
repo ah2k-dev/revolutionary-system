@@ -12,7 +12,7 @@ const getUserProfile = async (req, res) => {
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
-    return SuccessHandler({ message: "Here you go", user }, 200, res);
+    return SuccessHandler({ message: "Profile Updated", user }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -42,10 +42,7 @@ const updatePersonalInfo = async (req, res) => {
         }
         previousAvatarFileName = `${Date.now()}${avatar.name}`;
         avatar.mv(
-          path.join(
-            __dirname,
-            `../../uploads/${previousAvatarFileName}`
-          ),
+          path.join(__dirname, `../../uploads/${previousAvatarFileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -62,10 +59,7 @@ const updatePersonalInfo = async (req, res) => {
         previousCoverImgFileName = `${Date.now()}${coverImg.name}`;
         // Cover Img
         coverImg.mv(
-          path.join(
-            __dirname,
-            `../../uploads/${previousCoverImgFileName}`
-          ),
+          path.join(__dirname, `../../uploads/${previousCoverImgFileName}`),
           (err) => {
             if (err) {
               return ErrorHandler(err.message, 400, req, res);
@@ -255,12 +249,11 @@ const getCooks = async (req, res) => {
     // filter cook by name
     const cookShopFilter = req.body.shopName
       ? {
-        shopName: {
-                $regex: req.body.shopName,
-                $options: "i",
-              }
-
-            }
+          shopName: {
+            $regex: req.body.shopName,
+            $options: "i",
+          },
+        }
       : {};
 
     // Location filter

@@ -2429,3 +2429,243 @@
 {"date":"2023-08-19T12:14:08.974Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
 {"date":"2023-08-19T12:15:41.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
 {"date":"2023-08-19T12:15:44.578Z","level":"error","message":"User's Meal does not exist","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-20T09:58:03.756Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-20T09:58:03.865Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-20T09:58:03.881Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-20T09:58:03.891Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-20T09:58:03.894Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-20T09:58:04.742Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-20T13:07:33.671Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:07:34.577Z","level":"error","message":"Path \"accomodationId\" is not in schema, strict mode is `true`, and upsert is `true`.","method":"POST","service":"user-service","url":"/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:15:54.568Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:15:58.884Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:02.858Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:20.120Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:28:43.989Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:29:13.190Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:04.702Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:11.044Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:18.525Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:33:51.784Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T13:34:13.615Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:34:55.201Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T13:35:12.948Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:35:18.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:35:24.567Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:24.495Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:24.950Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:27.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:37:27.381Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:39:23.196Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:39:31.312Z","level":"error","message":"Cannot read properties of null (reading 'role')","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:40:39.846Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:41:33.134Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:42:12.515Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:42:13.000Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:10.053Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:17.104Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:20.215Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:43:20.534Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:09.884Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:15.407Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:17.092Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:17.521Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:48.226Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:44:54.194Z","level":"error","message":"Parameter \"filter\" to find() must be an object, got 64de269e2d12b915b76df5ef1","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:49:07.702Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:49:13.026Z","level":"error","message":"Cast to ObjectId failed for value \"{ accomodation: '64de269e2d12b915b76df5ef1' }\" (type Object) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:50:30.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:50:34.361Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:39.615Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:45.461Z","level":"error","message":"mongoose is not defined","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:48.382Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:52:48.730Z","level":"error","message":"mongoose is not defined","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:53:14.323Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:53:20.768Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:54:58.595Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:54:58.955Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:55:07.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T13:55:12.407Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:55:12.733Z","level":"error","message":"Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:06.831Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:07.190Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:13.183Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T13:57:13.514Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:12:33.393Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/reviews/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:12:54.643Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:12:55.973Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:13:25.087Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:14:43.184Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:14:43.811Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:15:13.440Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2169d2e56e66be7f03376"}
+{"date":"2023-08-20T14:15:14.442Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e2169d2e56e66be7f03376\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e2169d2e56e66be7f03376"}
+{"date":"2023-08-20T14:20:02.616Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:03.042Z","level":"error","message":"Cast to ObjectId failed for value \"true\" (type boolean) at path \"_id\" for model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:57.311Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:20:58.548Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e216922e56e66be7f0336c\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:21:55.507Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:22:02.504Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216922e56e66be7f0336c"}
+{"date":"2023-08-20T14:22:13.994Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:22:44.380Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:22:45.578Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e216112e56e66be7f03356\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:29:14.666Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:29:19.292Z","level":"error","message":"Cast to ObjectId failed for value \"64de269e2d12b915b76df5ef1\" (type string) at path \"_id\" for model \"Accomodation\"","method":"GET","service":"user-service","url":"/reviews/64de269e2d12b915b76df5ef1"}
+{"date":"2023-08-20T14:29:39.540Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:29:40.127Z","level":"error","message":"Cannot read properties of null (reading 'reviewsId')","method":"GET","service":"user-service","url":"/reviews/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:34:41.805Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:34:43.616Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e216112e56e66be7f03356"}
+{"date":"2023-08-20T14:34:59.050Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:00.346Z","level":"error","message":"No document found for query \"{ _id: new ObjectId(\"64e2161f2e56e66be7f03360\") }\" on model \"Review\"","method":"DELETE","service":"user-service","url":"/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:22.669Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:35:23.474Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2161f2e56e66be7f03360"}
+{"date":"2023-08-20T14:37:51.624Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:37:55.084Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:00.150Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:05.626Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:21.253Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:32.485Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:34.483Z","level":"error","message":"Review validation failed: rating: Ratings must be between 0 and 5.","method":"POST","service":"user-service","url":"/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:38:41.458Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T14:40:30.452Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:40:31.338Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:04.637Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:05.511Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:31.794Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:32.655Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:33.953Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:41:34.909Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:15.804Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:16.753Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:28.311Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:42:29.282Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:09.304Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:15.414Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:39.383Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:44:48.851Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:47:03.864Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-20T14:47:18.025Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:47:19.575Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:48:09.231Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:48:15.836Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:49:39.342Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:49:42.058Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:08.011Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:08.768Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:51.484Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:50:52.278Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:26.274Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:26.937Z","level":"error","message":"Cannot read properties of null (reading 'save')","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:56.891Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:51:57.593Z","level":"error","message":"Cannot read properties of null (reading 'accomodation')","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:54:34.473Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:54:46.746Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:55:42.304Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:55:45.248Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:10.228Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:14.458Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:44.290Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T14:56:46.126Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:03:13.807Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T15:03:14.583Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T15:20:49.102Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:20:49.957Z","level":"error","message":"Review not found or unauthorized","method":"DELETE","service":"user-service","url":"/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:21:36.418Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:22:53.886Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254135749488d36af94f"}
+{"date":"2023-08-20T15:23:24.269Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accomodation/delReview/64de269e2d12b915b76df5ef?reviewId=64e2254935749488d36af959"}
+{"date":"2023-08-20T15:24:35.218Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accomodation/reviews/64de269e2d12b915b76df5ef"}
+{"date":"2023-08-20T17:05:21.572Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-20T17:05:21.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-20T17:05:21.652Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-20T17:05:21.656Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-20T17:05:21.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-21T02:39:31.753Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:40:44.657Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:40:54.314Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:41:02.071Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:42:42.764Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:42:59.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:44:54.151Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:45:03.533Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:46:53.360Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:47:37.402Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:48:31.268Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:49:27.603Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T02:59:51.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:00:12.967Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=400"}
+{"date":"2023-08-21T03:01:15.440Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=400"}
+{"date":"2023-08-21T03:02:33.205Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=1000"}
+{"date":"2023-08-21T03:09:06.020Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=1000"}
+{"date":"2023-08-21T03:09:21.578Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=800"}
+{"date":"2023-08-21T03:10:26.702Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=500"}
+{"date":"2023-08-21T03:10:36.052Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=800"}
+{"date":"2023-08-21T03:12:27.397Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=0&maxPrice=1200"}
+{"date":"2023-08-21T03:13:33.097Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=1000&maxPrice=1200"}
+{"date":"2023-08-21T03:13:43.031Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=1100&maxPrice=1200"}
+{"date":"2023-08-21T03:13:56.522Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=1000&maxPrice=1200"}
+{"date":"2023-08-21T03:14:09.870Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=1000&maxPrice=2000"}
+{"date":"2023-08-21T03:14:43.719Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=100&maxPrice=700"}
+{"date":"2023-08-21T03:15:06.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=100&maxPrice=600"}
+{"date":"2023-08-21T03:15:20.063Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=100&maxPrice=800"}
+{"date":"2023-08-21T03:16:34.601Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals?minPrice=100"}
+{"date":"2023-08-21T03:16:35.038Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals?minPrice=100"}
+{"date":"2023-08-21T03:16:42.681Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:16:42.975Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}
+{"date":"2023-08-21T03:16:44.107Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:16:44.479Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}
+{"date":"2023-08-21T03:16:45.874Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:16:46.220Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"price\" for model \"Meal\"","method":"GET","service":"user-service","url":"/getMeals"}
+{"date":"2023-08-21T03:23:14.863Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:24:31.981Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:24:49.502Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:25:09.768Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:25:27.296Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:25:52.433Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:26:18.761Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:26:38.033Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-08-21T03:32:09.472Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-21T03:32:09.532Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-21T03:32:09.553Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-21T03:32:09.557Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-21T03:32:09.560Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-21T03:32:10.956Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-21T03:32:19.992Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs"}
+{"date":"2023-08-21T03:32:20.012Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-21T03:32:20.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-21T03:32:20.136Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-21T03:32:20.157Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-21T03:32:20.166Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-21T03:34:18.409Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-21T03:34:18.450Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-21T03:34:18.457Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-21T03:34:18.471Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-21T03:34:18.477Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-21T03:34:18.997Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-21T03:45:58.788Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:45:59.674Z","level":"error","message":"Accomodation validation failed: price: Path `price` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-21T03:46:17.429Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:46:18.047Z","level":"error","message":"Accomodation validation failed: price: Path `price` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-21T03:47:27.803Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:47:33.305Z","level":"error","message":"price is not defined","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-21T03:47:57.219Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:51:55.674Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:54:29.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T03:55:05.340Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T03:56:34.364Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T03:56:41.945Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T03:56:57.608Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T03:57:00.075Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T03:58:17.543Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T04:53:21.976Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T04:55:03.500Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-21T04:56:20.335Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:06:11.430Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:07:05.260Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:21:53.115Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:21:54.318Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-21T05:21:56.395Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:21:56.679Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-21T05:28:49.507Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:29:59.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:30:13.425Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:34:36.129Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T05:37:17.916Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}

@@ -1,20 +1,20 @@
 const Accomodation = require("../models/Accomodation/accomodation");
+const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    const { title, desc, latitude, longitude, capacity, services, rent } =
+    const { title, desc, latitude, longitude, capacity, services, price } =
       req.body;
 
-    const getUserId = req.user._id;
+    const currentUser = req.user._id;
     const isAccomodationsExist = await Accomodation.findOne({
       title,
-      createdBy: getUserId,
+      createdBy: currentUser,
     });
 
     if (isAccomodationsExist) {
@@ -24,20 +24,20 @@ const createAccomodations = async (req, res) => {
     const newAccomodations = await Accomodation.create({
       title,
       desc,
-      rent,
+      price: Number(price),
       location: {
         type: "Point",
-        coordinates: [latitude, longitude],
+        coordinates: [longitude, latitude],
       },
-      capacity,
+      capacity: Number(capacity),
       services,
-      createdBy: getUserId,
+      createdBy: currentUser,
     });
 
-    // newAccomodations.save();
+    await newAccomodations.save();
 
     return SuccessHandler(
-      { message: "Added successfully", newAccomodations },
+      { success: true, message: "Added successfully", newAccomodations },
       200,
       res
     );
@@ -52,7 +52,7 @@ const updateAccomodations = async (req, res) => {
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
     console.log(req.body);
-    const getUserId = req.user._id;
+    const currentUser = req.user._id;
     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
@@ -60,12 +60,12 @@ const updateAccomodations = async (req, res) => {
         desc,
         location: {
           type: "Point",
-          cordinates: [latitude, longitude],
+          coordinates: [longitude, latitude],
         },
 
         capacity,
         services,
-        createdBy: getUserId,
+        createdBy: currentUser,
       },
       {
         new: true,
@@ -78,7 +78,7 @@ const updateAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Updated successfully", updatedAccomodation },
+      { success: true, message: "Updated successfully", updatedAccomodation },
       200,
       res
     );
@@ -105,7 +105,11 @@ const deleteAccomodations = async (req, res) => {
       return ErrorHandler("Accomodation does not exist", 400, req, res);
     }
 
-    return SuccessHandler({ message: "Deleted successfully" }, 200, res);
+    return SuccessHandler(
+      { success: true, message: "Deleted successfully" },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -113,7 +117,6 @@ const deleteAccomodations = async (req, res) => {
 
 const getAllAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
-  // TODO: image array
   try {
     const capacityFilter = req.body.capacity
       ? {
@@ -121,8 +124,9 @@ const getAllAccomodations = async (req, res) => {
         }
       : {};
 
+    // Location filter
     const locationFilter =
-      req.body.coordinates && req.body.coordinates.length > 0
+      req.body.coordinates && req.body.coordinates.length == 2
         ? {
             location: {
               $near: {
@@ -138,24 +142,12 @@ const getAllAccomodations = async (req, res) => {
 
     console.log(locationFilter);
 
-    //   {
-    //     <location field>: {
-    //       $near: {
-    //         $geometry: {
-    //            type: "Point" ,
-    //            coordinates: [ <longitude> , <latitude> ]
-    //         },
-    //         $maxDistance: <distance in meters>,
-    //         $minDistance: <distance in meters>
-    //       }
-    //     }
-    //  }
-
     const getAccomodations = await Accomodation.find({
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
     }).populate("reviewsId");
+
     const totalAccomodation = getAccomodations.length;
 
     if (!getAccomodations) {
@@ -163,7 +155,12 @@ const getAllAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Fetched successfully", getAccomodations, totalAccomodation },
+      {
+        success: true,
+        message: "Fetched successfully",
+        totalAccomodation,
+        getAccomodations,
+      },
       200,
       res
     );
@@ -172,52 +169,159 @@ const getAllAccomodations = async (req, res) => {
   }
 };
 
-//Saved  Accomodations
-// const savedOrUnsavedAccomodations = async (req, res) => {
+// Add a new Review
 
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const { title, desc, latitude, longitude, capacity, services } = req.body;
-//     console.log(req.body);
-//     const getUserId = req.user._id;
+const addReview = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['accomodation']
 
-//     const isAccomodationsExist = await Accomodation.findOne({
+  try {
+    const accomodationId = req.params.id;
+    const { rating, comment } = req.body;
 
-//       title,
-//       createdBy: getUserId,
-//     });
+    if (req.user.role === "user") {
+      const accomodation = await Accomodation.findById(accomodationId);
 
-//     if (isAccomodationsExist) {
-//       return ErrorHandler("Accomodation already exist", 400, req, res);
-//     }
+      if (!accomodation) {
+        return ErrorHandler("The Accomodation doesn't exist", 400, req, res);
+      }
 
-//     const newAccomodations = await Accomodation.create({
-//       title,
-//       desc,
-//       location: {
-//         type: "Point",
-//         cordinates: [latitude, longitude],
-//       },
-//       capacity,
-//       services,
-//       createdBy: getUserId,
-//     });
+      // Check if a review with the same comment already exists
+      const existingReview = await Review.findOne({
+        user: currentUser,
+        accomodation: accomodationId,
+        comment,
+      });
 
-//     // newAccomodations.save();
+      if (existingReview) {
+        // update existing review
+        existingReview.rating = rating;
+        existingReview.comment = comment;
+        await existingReview.save();
 
-//     return SuccessHandler(
-//       { message: "Added successfully", newAccomodations },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
+        return SuccessHandler(
+          {
+            success: true,
+            message: "Review Updated successfully",
+            review: existingReview,
+          },
+          200,
+          res
+        );
+      } else {
+        // create a new review
+        const review = await Review.create({
+          rating,
+          comment,
+          user: currentUser,
+          accomodation: accomodationId,
+        });
+
+        await review.save();
+
+        await Accomodation.findByIdAndUpdate(accomodationId, {
+          $push: { reviewsId: review._id },
+        });
+
+        return SuccessHandler(
+          { success: true, message: "Review Added successfully", review },
+          200,
+          res
+        );
+      }
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+// Getting reviews
+const getReviews = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const accomodationId = req.params.id;
+    if (req.user.role === "user") {
+      const accomodation = await Accomodation.findById(accomodationId).populate(
+        "reviewsId"
+      );
+      if (!accomodation) {
+        return res.status(404).json({ message: "Accomodation not found" });
+      }
+
+      const reviews = accomodation.reviewsId;
+
+      let totalRating = 0;
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Fetched Reviews successfully",
+          avgRating,
+          reviews,
+        },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+// Getting reviews
+const deleteReview = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const { reviewId } = req.query;
+    const accomodationId = req.params.id;
+    if (req.user.role === "user") {
+      // console.log(reviewId);
+      const review = await Review.findByIdAndDelete({
+        _id: reviewId,
+      });
+      console.log(review);
+
+      if (!review) {
+        return ErrorHandler(
+          { success: false, message: "Review not found or unauthorized" },
+          404,
+          req,
+          res
+        );
+      }
+
+      await Accomodation.findByIdAndUpdate(accomodationId, {
+        $pull: { reviewsId: reviewId },
+      });
+
+      return SuccessHandler(
+        { success: true, message: "Review has been Deleted" },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createAccomodations,
   updateAccomodations,
   deleteAccomodations,
   getAllAccomodations,
+  addReview,
+  getReviews,
+  deleteReview,
 };

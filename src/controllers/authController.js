@@ -95,7 +95,12 @@ const register = async (req, res) => {
     if (role === "cook") {
       const { latitude, longitude, shopName } = req.body;
       if (!(latitude || longitude || shopName)) {
-        return ErrorHandler("Latitude, Longitude or Shop name is missing", 400, req, res);
+        return ErrorHandler(
+          "Latitude, Longitude or Shop name is missing",
+          400,
+          req,
+          res
+        );
       }
       let parselatitude = Number(latitude);
       let parselongitude = Number(longitude);
@@ -104,7 +109,7 @@ const register = async (req, res) => {
         shopName,
         location: {
           type: "Point",
-          coordinates: [parselatitude, parselongitude],
+          coordinates: [parselongitude, parselatitude],
         },
       };
     }
@@ -154,10 +159,12 @@ const verifyEmail = async (req, res) => {
     const { email, emailVerificationToken } = req.body;
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "User does not exist",
-      });
+      return ErrorHandler(
+        { success: false, message: "User does not exist" },
+        400,
+        req,
+        res
+      );
     }
     if (
       user.emailVerificationToken !== emailVerificationToken ||
@@ -170,7 +177,11 @@ const verifyEmail = async (req, res) => {
     user.emailVerificationTokenExpires = null;
     jwtToken = user.getJWTToken();
     await user.save();
-    return SuccessHandler("Email verified successfully", 200, res);
+    return SuccessHandler(
+      { success: true, message: "Email verified successfully" },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -198,7 +209,7 @@ const login = async (req, res) => {
     }
     jwtToken = user.getJWTToken();
     return SuccessHandler(
-      { message: "Logged in successfully", jwtToken, user },
+      { success: true, message: "Logged in successfully", jwtToken, user },
       200,
       res
     );

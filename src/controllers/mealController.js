@@ -1,8 +1,9 @@
 const Meal = require("../models/Meal/meal");
+const OrderMeal = require("../models/Meal/orderMeal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const OrderMeal = require("../models/Meal/orderMeal");
+const Review = require("../models/Reviews/review");
 
 //Create Meal
 const createMeal = async (req, res) => {
@@ -51,17 +52,25 @@ const createMeal = async (req, res) => {
 
 const getMeals = async (req, res) => {
   // #swagger.tags = ['meal']
-  // TODO: image array
   try {
-    // Price Filter
+    // const { minPrice } = req.query;
+    // const { maxPrice } = req.query;
+    // const priceFilter = {
+    //   price: { $lte: Number(maxPrice), $gte: Number(minPrice) },
+    // };
 
-    const priceFilter = req.body.price
-      ? {
-          price: { $lte: Number(req.body.price), $gte: Number(req.body.price) },
-        }
-      : {};
+    //✅ Price Filter
+    const priceFilter =
+      req.body.maxPrice && req.body.minPrice
+        ? {
+            price: {
+              $lte: Number(req.body.maxPrice),
+              $gte: Number(req.body.minPrice),
+            },
+          }
+        : {};
 
-    // Dish Filter
+    //✅ Dish Filter
     const dishFilter = req.body.dishName
       ? {
           dishName: {
@@ -71,28 +80,28 @@ const getMeals = async (req, res) => {
         }
       : {};
 
-    // servingCapacityFilter
+    // ✅ servingCapacityFilter
     const servingCapacityFilter = req.body.maxServingCapacity
       ? {
           maxServingCapacity: Number(req.body.maxServingCapacity),
         }
       : {};
 
-    // Spice Status Filter
+    // ✅ Spice Status Filter
     const spiceStatusFilter = req.body.spiceStatus
       ? {
           spiceStatus: { $eq: req.body.spiceStatus },
         }
       : {};
 
-    // Gram Filter
+    // ✅  Gram Filter
     const gramFilter = req.body.gram
       ? {
           gram: { $lte: Number(req.body.gram) },
         }
       : {};
 
-    // Calories Filter
+    //✅ Calories Filter
     const caloriesFilter = req.body.calories
       ? {
           calories: { $lte: Number(req.body.calories) },
@@ -185,13 +194,136 @@ const getOrderedMeal = async (req, res) => {
   const currentUser = req.user._id;
   try {
     if (req.user.role === "user") {
-      const userMeals = await OrderMeal.find({user: currentUser}).populate('meals.meal')
-      // if (userMeals.length===0) {
-      //   return ErrorHandler("User's Meal does not exist", 400, req, res);
-      // }
-      
+      const userMeals = await OrderMeal.find({ user: currentUser }).populate(
+        "meals.meal"
+      );
       return SuccessHandler(
         { message: "Fetched user ordered meals successfully", userMeals },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+// add reviews on Meal
+const addReviews = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['meal']
+  try {
+    const mealId = req.params.id;
+    const { rating, comment } = req.body;
+    if (req.user.role === "user") {
+      const theMeal = await Meal.findById(mealId);
+      if (!theMeal) {
+        return ErrorHandler("The Meal doesn't exist", 400, req, res);
+      }
+
+      const existingReview = await Review.findOne({
+        user: currentUser,
+        meal: mealId,
+        comment,
+      });
+
+      if (existingReview) {
+        existingReview.rating = Number(rating);
+        existingReview.comment = comment;
+        await existingReview.save();
+        return SuccessHandler(
+          {
+            success: true,
+            message: "Review Updated successfully",
+            review: existingReview,
+          },
+          200,
+          res
+        );
+      } else {
+        const review = await Review.create({
+          rating: Number(rating),
+          comment,
+          user: currentUser,
+          meal: mealId,
+        });
+        await review.save();
+        await Meal.findByIdAndUpdate(mealId, {
+          $push: { reviewsId: review._id },
+        });
+        return SuccessHandler(
+          { success: true, message: "Review added successfully", review },
+          200,
+          res
+        );
+      }
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getReviews = async (req, res) => {
+  const currentUser = req.user._id;
+  // #swagger.tags = ['meal']
+  try {
+    const mealId = req.params.id;
+    if (req.user.role === "user") {
+      const meal = await Meal.findById(mealId).populate("reviewsId");
+      if (!meal) {
+        return ErrorHandler("The Meal doesn't exist", 400, req, res);
+      }
+      const reviews = meal.reviewsId;
+      let totalRating = 0;
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Fetched Reviews successfully",
+          avgRating,
+          reviews,
+        },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 400, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const deleteReview = async (req, res) => {
+  // #swagger.tags = ['meal']
+  try {
+    const { reviewId } = req.query;
+    const mealId = req.params.id;
+
+    if (req.user.role) {
+      const review = await Review.findByIdAndDelete({
+        _id: reviewId,
+      });
+      if (!review) {
+        return ErrorHandler(
+          { success: false, message: "Review not found or unauthorized" },
+          404,
+          req,
+          res
+        );
+      }
+      await Meal.findByIdAndUpdate(mealId, {
+        $pull: { reviewsId: reviewId },
+      });
+      return SuccessHandler(
+        { success: true, message: "Review has been Deleted" },
         200,
         res
       );
@@ -209,4 +341,7 @@ module.exports = {
   getMealsByCookId,
   orderTheMeal,
   getOrderedMeal,
+  addReviews,
+  getReviews,
+  deleteReview,
 };
