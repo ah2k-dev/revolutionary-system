@@ -7,7 +7,7 @@ const mealSchema = new Schema(
   {
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
-    cook: { type: String },
+    cook: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String, required: true },
     desc: { type: String, required: true },
     price: { type: Number, required: true },
