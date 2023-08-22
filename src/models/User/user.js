@@ -78,10 +78,13 @@ const userSchema = new Schema({
   timeZone: { type: String },
   websiteLink: { type: String },
 
-  // savedAccomodation: [{type: String}]
 
   savedAccomodation: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Accomodation" },
+    { type: Schema.Types.ObjectId, ref: "Accomodation" },
+  ],
+
+  savedMeal:[
+    {type: Schema.Types.ObjectId, ref: "Meal"}
   ],
 
   // location only for Cook
@@ -98,7 +101,7 @@ const userSchema = new Schema({
 
   // Shop Related Fields
   shopName: { type: String, required: true, unique: true },
-  cookDesc: { type: String },
+  shopDesc: { type: String },
   shopBanner: {
     type: String,
     default:

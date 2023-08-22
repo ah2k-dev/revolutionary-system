@@ -4,6 +4,7 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const Accomodation = require("../models/Accomodation/accomodation");
 const Coupon = require("../models/Coupon/coupon");
+const Meal =  require('../models/Meal/meal')
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -326,6 +327,84 @@ const getCouponsForCook = async (req, res) => {
 
 
 
+
+// Saved or Unsaved Meal
+const savedOrUnsavedMeal = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const currentUser = req.user._id;
+    if (req.user.role === "user") {
+      const meal = await Meal.findById(req.params.id);
+      const user = await User.findById(currentUser);
+
+      if (!meal) {
+        return ErrorHandler("Meal does not exist", 400, req, res);
+      }
+
+      if(user.savedMeal.includes(meal.id)){
+        const index = user.savedMeal.indexOf(currentUser)
+        user.savedMeal.splice(index,1)
+        await user.save()
+        return SuccessHandler("UnSaved Meal Successfully", 200, res)
+      }
+      else{
+        user.savedMeal.push(meal.id)
+        await user.save()
+        return SuccessHandler("Saved Meal", 200, res)
+      }
+
+
+    }
+
+    // if not user.role ==='user'
+    else {
+      return ErrorHandler("Unauthorized User", 500, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
+// get Saved Meals
+const getSavedMeals = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    const currentUser = req.user._id;
+    if (req.user.role === "user") {
+      const user = await User.findById(currentUser).populate(
+        "savedMeal"
+      );
+
+      let savedMeals = user.savedAccomodation;
+      if (!savedMeals) {
+        return ErrorHandler(
+          "Saved Meal does not exist",
+          404,
+          req,
+          res
+        );
+      }
+
+      return SuccessHandler(
+        { message: "Fetched Saved Meal", savedMeals },
+        200,
+        res
+      );
+    } else {
+      return ErrorHandler("Unauthorized User", 401, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
+
 module.exports = {
   updateUser,
   getUserProfile,
@@ -334,4 +413,6 @@ module.exports = {
   updatePersonalInfo,
   getCooks,
   getCouponsForCook,
+  savedOrUnsavedMeal,
+  getSavedMeals,
 };

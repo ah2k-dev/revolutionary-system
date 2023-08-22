@@ -8,17 +8,25 @@ router
   .route("/update-personal-info")
   .put(isAuthenticated, user.updatePersonalInfo);
 router.route("/update-info").put(isAuthenticated, user.updateUser);
+// Saved and Unsaved Accomodation
 router
   .route("/savedOrUnsavedAccomodation/:id")
   .put(isAuthenticated, user.savedOrUnsavedAccomodation);
+// Saved and Unsaved Meal
+router.route('/savedOrUnsavedMeal/:id').put(isAuthenticated, user.savedOrUnsavedMeal)
+
+
+
 
 //get
 router.route("/userProfile").get(isAuthenticated, user.getUserProfile);
+// Saved Accomodation
 router
   .route("/savedAccomodations")
   .get(isAuthenticated, user.getSavedAccomodations);
 router.route("/getCook").get(isAuthenticated, user.getCooks);
-
+// Saved Meal
+router.route('/savedMeals').get(isAuthenticated, user.getSavedMeals)
 
 // ✅ Coupon for the Cooks
 // get
