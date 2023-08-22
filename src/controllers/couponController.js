@@ -10,7 +10,7 @@ const Coupon = require("../models/Coupon/coupon");
 const createCoupon = async (req, res) => {
   // #swagger.tags = ['coupon']
   try {
-    const { couponTitle, discount, couponCode, expiryDate } = req.body;
+    const { discount, couponCode, expiryDate } = req.body;
 
     const currentUser = req.user._id;
     const isCoupon = await Coupon.findOne({
@@ -34,7 +34,6 @@ const createCoupon = async (req, res) => {
     }
 
     const newCoupon = await Coupon.create({
-      couponTitle,
       discount: Number(discount) / 100,
       couponCode,
       createdBy: currentUser,

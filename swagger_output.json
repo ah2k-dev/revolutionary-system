@@ -1225,9 +1225,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "couponTitle": {
-                  "example": "any"
-                },
                 "discount": {
                   "example": "any"
                 },

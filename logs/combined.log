@@ -3128,3 +3128,78 @@
 {"date":"2023-08-22T19:39:07.831Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
 {"date":"2023-08-22T19:39:07.847Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
 {"date":"2023-08-22T19:39:07.863Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:00.747Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:08.107Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:08.178Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:08.212Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:08.244Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:08.270Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.016Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.047Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.078Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.114Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.145Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.178Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.211Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.244Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.277Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.294Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.310Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.329Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.345Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.377Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.394Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:09.431Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.349Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.376Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.562Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.596Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.626Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.677Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.694Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.727Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.743Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.777Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.793Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.809Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.828Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.860Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.876Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.894Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.931Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.962Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.978Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:10.996Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:11.027Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:11.043Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:11.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:11.077Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:11.096Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:46:24.487Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:48:30.317Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:18.183Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:30.751Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:34.231Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506911000000048.jpg"}
+{"date":"2023-08-22T19:49:34.248Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:34.360Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:34.382Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:49:37.710Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/http://192.168.100.13:8001/uploads/16927263506901000000049.jpg"}
+{"date":"2023-08-22T19:52:28.999Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-22T19:52:29.005Z","level":"error","message":"Please provide email and password","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-22T19:52:30.324Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-22T19:52:30.326Z","level":"error","message":"Please provide email and password","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-22T19:53:07.509Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-22T19:53:12.167Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-22T19:53:53.278Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:53:57.615Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:53:58.025Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon"}
+{"date":"2023-08-22T19:54:02.213Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:54:02.630Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon"}
+{"date":"2023-08-22T19:54:03.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:54:03.971Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon"}
+{"date":"2023-08-22T19:54:05.251Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:54:05.701Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon"}
+{"date":"2023-08-22T19:54:11.525Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-22T19:54:11.949Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon"}
+{"date":"2023-08-22T19:54:16.654Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
