@@ -2916,3 +2916,9 @@
 {"date":"2023-08-22T15:12:42.148Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
 {"date":"2023-08-22T15:13:42.704Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
 {"date":"2023-08-22T15:16:40.542Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-22T15:28:43.341Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-22T15:28:43.381Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-22T15:28:43.390Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-22T15:28:43.399Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-22T15:28:43.401Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-22T15:28:44.338Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
