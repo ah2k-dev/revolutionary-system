@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const user = require("../controllers/userController.js");
+const user = require('../controllers/userController')
 const isAuthenticated = require("../middleware/auth");
 const { authorizedCook, authorizedHost } = require("../middleware/role.js");
 

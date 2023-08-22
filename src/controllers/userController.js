@@ -187,7 +187,7 @@ const savedOrUnsavedAccomodation = async (req, res) => {
 
       // if saved => remove id from user model and mark as unsaved
       if (user.savedAccomodation.includes(accomodation.id)) {
-        const index = user.savedAccomodation.indexOf(currentUser);
+        const index = user.savedAccomodation.indexOf(accomodation.id);
         user.savedAccomodation.splice(index, 1);
         await user.save();
         return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
@@ -336,16 +336,17 @@ const savedOrUnsavedMeal = async (req, res) => {
     if (req.user.role === "user") {
       const meal = await Meal.findById(req.params.id);
       const user = await User.findById(currentUser);
+      console.log(meal);
 
       if (!meal) {
         return ErrorHandler("Meal does not exist", 400, req, res);
       }
 
       if(user.savedMeal.includes(meal.id)){
-        const index = user.savedMeal.indexOf(currentUser)
+        const index = user.savedMeal.indexOf(meal.id)
         user.savedMeal.splice(index,1)
         await user.save()
-        return SuccessHandler("UnSaved Meal Successfully", 200, res)
+        return SuccessHandler("UnSaved Meal with Successfully", 200, res)
       }
       else{
         user.savedMeal.push(meal.id)
