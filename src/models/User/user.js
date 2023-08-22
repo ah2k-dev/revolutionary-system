@@ -98,7 +98,7 @@ const userSchema = new Schema({
 
   // Shop Related Fields
   shopName: { type: String, required: true, unique: true },
-  cookDesc: { type: String, required: true },
+  cookDesc: { type: String },
   shopBanner: {
     type: String,
     default:
