@@ -9,7 +9,7 @@ const bookNewAccomm = async (req, res) => {
   const currentUser = req.user._id;
   try {
     const accomodationId = req.params.id;
-    const { startDate, endDate, subTotal } = req.body;
+    const { startDate, endDate, checkIn, checkOut, subTotal, capacity } = req.body;
 
     if (req.user.role === "user") {
       const currentAccommodation = await Accomodation.findById(accomodationId);
@@ -24,7 +24,6 @@ const bookNewAccomm = async (req, res) => {
       if (isBooked) {
         return ErrorHandler("Already Booked", 400, req, res);
       }
-      // isBooked.accomodationsId.includes(accodID)
 
       const newBooking = await bookAccomm.create({
         user: currentUser,
@@ -33,6 +32,9 @@ const bookNewAccomm = async (req, res) => {
           startDate,
           endDate,
         },
+        checkIn,
+        checkOut,
+        capacity,
         subTotal,
       });
 
