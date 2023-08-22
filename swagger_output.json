@@ -642,6 +642,9 @@
                 },
                 "coordinates": {
                   "example": "any"
+                },
+                "date": {
+                  "example": "any"
                 }
               }
             }
@@ -879,7 +882,16 @@
                 "endDate": {
                   "example": "any"
                 },
+                "checkIn": {
+                  "example": "any"
+                },
+                "checkOut": {
+                  "example": "any"
+                },
                 "subTotal": {
+                  "example": "any"
+                },
+                "capacity": {
                   "example": "any"
                 }
               }
@@ -1151,6 +1163,12 @@
                 },
                 "subTotal": {
                   "example": "any"
+                },
+                "couponCode": {
+                  "example": "any"
+                },
+                "tip": {
+                  "example": "any"
                 }
               }
             }
@@ -1189,19 +1207,13 @@
         }
       }
     },
-    "/meal/createCoupon/{id}": {
+    "/coupon/createCoupon": {
       "post": {
         "tags": [
-          "meal"
+          "coupon"
         ],
         "description": "",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "authorization",
             "in": "header",
@@ -1216,9 +1228,6 @@
                 "couponTitle": {
                   "example": "any"
                 },
-                "maxCoupon": {
-                  "example": "any"
-                },
                 "discount": {
                   "example": "any"
                 },
@@ -1226,6 +1235,44 @@
                   "example": "any"
                 },
                 "expiryDate": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/coupon/verifyCoupon": {
+      "post": {
+        "tags": [
+          "coupon"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "couponCode": {
+                  "example": "any"
+                },
+                "createdBy": {
                   "example": "any"
                 }
               }

@@ -14,14 +14,16 @@ const orderMealSchema = new Schema(
         price: { type: Number, required: true },
       },
     ],
+    couponUsed: { type: String },
 
     subTotal: { type: Number, required: true },
     totalAmount: { type: Number, default: 0 },
+    tip: { type: Number, default: 0 },
 
     status: {
       type: String,
-      enum: ["current", "previous", "cancelled"],
-      default: "current",
+      enum: ["pending", "approved", "cancelled", "rejected"],
+      default: "pending",
     },
 
     orderDate: { type: Date, default: Date.now },

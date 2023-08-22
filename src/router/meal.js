@@ -25,10 +25,4 @@ router.route("/orderMeal").post(isAuthenticated, meal.orderTheMeal);
 //get user ordered meals
 router.route("/userOrderedMeals").get(isAuthenticated, meal.getOrderedMeal);
 
-
-
-// ✅ Coupon for the Meal
-//post
-router.route("/createCoupon/:id").post(isAuthenticated, authorizedCook, meal.createCoupon);
-
 module.exports = router;
