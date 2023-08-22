@@ -2961,3 +2961,5 @@
 {"date":"2023-08-22T17:46:18.784Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16927263506901000000049.jpg"}
 {"date":"2023-08-22T17:46:52.615Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-08-22T17:46:53.622Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-22T18:13:32.561Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-22T18:13:40.271Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
