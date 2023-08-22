@@ -13,5 +13,4 @@ router.use("/booking", bookAccomm);
 router.use("/meal", meal);
 router.use("/coupon", coupon);
 
-
 module.exports = router;
