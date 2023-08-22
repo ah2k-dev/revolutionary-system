@@ -2669,3 +2669,115 @@
 {"date":"2023-08-21T05:30:13.425Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-21T05:34:36.129Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-21T05:37:17.916Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-21T15:29:45.051Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-21T15:29:45.101Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-21T15:29:45.117Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-21T15:29:45.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-21T15:29:45.126Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-21T15:29:46.205Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-21T15:37:37.851Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-21T15:37:37.853Z","level":"error","message":"Please provide email and password","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-21T15:37:37.938Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-21T15:37:37.939Z","level":"error","message":"Please provide email and password","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-21T16:08:45.055Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-21T16:10:47.207Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:15:00.223Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:16:24.177Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:16:30.675Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:19:38.901Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:19:42.136Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:21:58.735Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:22:08.711Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:22:11.432Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:22:45.482Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:23:08.012Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:24:10.292Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:25:43.431Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:26:26.132Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:26:31.686Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:26:34.311Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:26:58.633Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:27:51.473Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:28:42.785Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:29:17.848Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:31:58.260Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T16:32:52.746Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:16:42.568Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-21T17:20:33.092Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:24:01.751Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:25:46.712Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:31:43.582Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:36:33.076Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:36:36.317Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:36:46.838Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:37:51.461Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:38:10.554Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:44:03.796Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:44:21.025Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:45:04.950Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:45:07.660Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:45:57.426Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:46:04.152Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:46:42.168Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:46:50.656Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T17:49:58.570Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:49:59.281Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:50:38.907Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:50:39.594Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:51:43.650Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:51:44.345Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:52:11.027Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:52:11.700Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:52:14.917Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:52:15.580Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:58:18.630Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:58:19.090Z","level":"error","message":"Expiry date should be in future","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:58:36.273Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:58:36.703Z","level":"error","message":"Coupon must contain number and text","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:58:45.259Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:59:43.237Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T17:59:43.867Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:00:06.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:00:07.611Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:00:10.367Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:00:11.078Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:00:59.910Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:01:00.533Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:01:02.953Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:01:03.596Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:08:30.186Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:08:30.870Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:08:33.560Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:08:34.223Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:18:49.403Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:18:50.095Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:18:53.208Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:18:53.853Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:08.481Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:09.162Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:28.559Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:30.462Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:41.418Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:24:46.042Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:25:24.582Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:25:29.187Z","level":"error","message":"Parameter \"filter\" to find() must be an object, got Umer133","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:29:16.739Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:29:20.930Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:32:05.726Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:32:06.706Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:32:54.813Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:32:55.769Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:37:59.327Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/cookCoupons"}
+{"date":"2023-08-21T18:37:59.557Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/cookCoupons"}
+{"date":"2023-08-21T18:38:17.441Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/cookCoupons"}
+{"date":"2023-08-21T18:38:56.946Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/cookCoupons"}
+{"date":"2023-08-21T18:39:18.847Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/cookCoupons"}
+{"date":"2023-08-21T18:39:53.864Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:39:54.540Z","level":"error","message":"Coupon already exist","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:40:10.840Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:40:11.749Z","level":"error","message":"E11000 duplicate key error collection: rev-backend.coupons index: couponTitle_1 dup key: { couponTitle: \"Happy diwali Special\" }","method":"POST","service":"user-service","url":"/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T18:44:27.774Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/createCoupon/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-21T19:55:50.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T19:55:50.962Z","level":"error","message":"Cannot populate path `accommodationsId` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-21T19:56:08.589Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-21T19:58:13.157Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}

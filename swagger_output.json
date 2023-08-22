@@ -485,6 +485,29 @@
         }
       }
     },
+    "/user/cookCoupons": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/accomodation/newAccomodation": {
       "post": {
         "tags": [
@@ -1096,6 +1119,59 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/createCoupon/{id}": {
+      "post": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "couponTitle": {
+                  "example": "any"
+                },
+                "maxCoupon": {
+                  "example": "any"
+                },
+                "discount": {
+                  "example": "any"
+                },
+                "couponCode": {
+                  "example": "any"
+                },
+                "expiryDate": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {

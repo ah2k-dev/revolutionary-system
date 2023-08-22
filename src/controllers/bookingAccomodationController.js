@@ -18,10 +18,6 @@ const bookNewAccomm = async (req, res) => {
         return ErrorHandler("Accommodation Does not exist", 400, req, res);
       }
 
-      // let stripeChargesInPercent = 0.3
-      // let stripeChargesAmount = stripeChargesInPercent*100
-      // let totalAmount = (stripeChargesAmount)+  subTotal
-
       const isBooked = await bookAccomm.findOne({
         accomodationsId: accomodationId,
       });
@@ -60,11 +56,12 @@ const getUserBookings = async (req, res) => {
   // #swagger.tags = ['booking']
   try {
     if (req.user.role === "user") {
-      const bookings = await bookAccomm.find({ user: currentUser });
+      const bookings = await bookAccomm.find({ user: currentUser }).populate('accomodationsId')
       console.log(bookings);
-      //   if (!bookings) {
-      //     return ErrorHandler("No Such Booking exist", 400, req, res);
-      //   }
+        if (!bookings) {
+          return ErrorHandler("No Such Booking exist", 400, req, res);
+        }
+
 
       return SuccessHandler(
         { success: true, message: "Booking Fetched successfully", bookings },
