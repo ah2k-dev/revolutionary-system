@@ -35,14 +35,16 @@ const updatePersonalInfo = async (req, res) => {
 
     // let avatarFileName = null;
     // let coverImgFileName = null;
+    console.log(req.files)
     if (req.files) {
       const { avatar, coverImg } = req.files;
       if (avatar) {
         // It should be image
-        if (!avatar.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image file", 400, req, res);
-        }
+        // if (!avatar.mimetype.startsWith("image")) {
+        //   return ErrorHandler("Please upload an image file", 400, req, res);
+        // }
         previousAvatarFileName = `${Date.now()}${avatar.name}`;
+        console.log(previousAvatarFileName)
         avatar.mv(
           path.join(__dirname, `../../uploads/${previousAvatarFileName}`),
           (err) => {
@@ -54,9 +56,9 @@ const updatePersonalInfo = async (req, res) => {
       }
       if (coverImg) {
         // It should be image
-        if (!coverImg.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image file", 400, req, res);
-        }
+        // if (!coverImg.mimetype.startsWith("image")) {
+        //   return ErrorHandler("Please upload an image file", 400, req, res);
+        // }
 
         previousCoverImgFileName = `${Date.now()}${coverImg.name}`;
         // Cover Img
