@@ -69,6 +69,12 @@
                 },
                 "shopName": {
                   "example": "any"
+                },
+                "shopBanner": {
+                  "example": "any"
+                },
+                "shopDesc": {
+                  "example": "any"
                 }
               }
             }
@@ -416,6 +422,35 @@
         }
       }
     },
+    "/user/savedOrUnsavedMeal/{id}": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/user/userProfile": {
       "get": {
         "tags": [
@@ -463,6 +498,29 @@
       }
     },
     "/user/getCook": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/savedMeals": {
       "get": {
         "tags": [
           "user"

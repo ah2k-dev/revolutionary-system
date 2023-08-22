@@ -2915,3 +2915,4 @@
 {"date":"2023-08-22T15:12:17.551Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
 {"date":"2023-08-22T15:12:42.148Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
 {"date":"2023-08-22T15:13:42.704Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-22T15:16:40.542Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
