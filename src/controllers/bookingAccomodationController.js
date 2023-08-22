@@ -27,11 +27,13 @@ const bookNewAccomm = async (req, res) => {
 
       const newBooking = await bookAccomm.create({
         user: currentUser,
-        accomodationsId: [accomodationId],
-        bookingDate: {
-          startDate,
-          endDate,
-        },
+        accomodationsId: accomodationId,
+        // bookingDate: {
+        //   startDate,
+        //   endDate,
+        // },
+        startDate,
+        endDate,
         checkIn,
         checkOut,
         capacity,

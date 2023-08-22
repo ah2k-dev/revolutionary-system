@@ -3,6 +3,7 @@ const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
+const bookingAccomodation = require("../models/Accomodation/bookingAccomodation");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
@@ -140,12 +141,34 @@ const getAllAccomodations = async (req, res) => {
           }
         : {};
 
-    console.log(locationFilter);
+    let unAvailableAccommodations = [];
+
+    if (req.body.date && req.body.date > 0) {
+      const bookings = await bookingAccomodation.find({
+        startDate: {
+          $gte: req.body.date[0],
+        },
+        endDate: {
+          $lte: req.body.date[1],
+        },
+      });
+
+      unAvailableAccommodations = bookings.map((val, ind) => {
+        return val.accomodationsId;
+      });
+    }
+
+    const availabilityFilter = unAvailableAccommodations.length > 0 ? {
+      _id: {
+        $nin: unAvailableAccommodations,
+      }
+    } : {};
 
     const getAccomodations = await Accomodation.find({
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
+      ...availabilityFilter
     }).populate("reviewsId");
 
     const totalAccomodation = getAccomodations.length;

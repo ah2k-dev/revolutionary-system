@@ -16,12 +16,22 @@ const bookingAccomodationSchema = new Schema(
       default: "current",
     },
 
-    bookingDate: [
-      {
-        startDate: { type: Date, required: true },
-        endDate: { type: Date, required: true },
-      },
-    ],
+    // bookingDate: [
+    //   {
+    //     startDate: { type: Date, required: true },
+    //     endDate: { type: Date, required: true },
+    //   },
+    // ],
+
+    startDate: {
+      type: Date,
+      required: true
+    },
+
+    endDate: {
+      type: Date,
+      required: true
+    },
 
     checkIn: { type: String, required: true  },
     checkOut: { type: String, required: true },
