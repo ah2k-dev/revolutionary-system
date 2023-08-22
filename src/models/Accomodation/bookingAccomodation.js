@@ -7,9 +7,9 @@ const validator = require("validator");
 const bookingAccomodationSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    accomodationsId: [
+    accomodationsId: 
       { type: Schema.Types.ObjectId, ref: "Accomodation", required: true },
-    ],
+    
     status: {
       type: String,
       enum: ["current", "previous", "cancelled"],
