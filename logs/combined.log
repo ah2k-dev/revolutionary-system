@@ -3351,3 +3351,16 @@
 {"date":"2023-08-23T16:19:29.554Z","level":"error","message":"{\"errors\":[\"You must include which players, segments, or tags you wish to send this notification to.\"]}","method":"POST","service":"user-service","url":"/send"}
 {"date":"2023-08-23T16:20:02.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
 {"date":"2023-08-23T16:20:03.131Z","level":"error","message":"res.status is not a function","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-08-23T19:53:54.057Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T19:58:57.355Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T19:58:57.559Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T19:59:36.539Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T19:59:36.735Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T19:59:55.700Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T19:59:55.895Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:01:00.259Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T20:01:00.457Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:01:34.229Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T20:01:37.424Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:02:10.008Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-23T20:02:10.220Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}

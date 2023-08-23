@@ -4,15 +4,29 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const bookingAccomodation = require("../models/Accomodation/bookingAccomodation");
+const Meal = require("../models/Meal/meal");
+const meal = require("../models/Meal/meal");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    const { title, desc, latitude, longitude, capacity, services, price } =
-      req.body;
+    // const { title, desc, latitude, longitude, capacity, services, price } =
+    //   req.body;
+
+    const {
+      title,
+      desc,
+      latitude,
+      longitude,
+      capacity,
+      services,
+      price,
+      meals,
+    } = req.body;
 
     const currentUser = req.user._id;
+
     const isAccomodationsExist = await Accomodation.findOne({
       title,
       createdBy: currentUser,
@@ -21,6 +35,14 @@ const createAccomodations = async (req, res) => {
     if (isAccomodationsExist) {
       return ErrorHandler("Accomodation already exist", 400, req, res);
     }
+    const createdMeals = await meal.insertMany(
+      meals.map((val) => {
+        return {
+          ...val,
+          mealType: "accomodation",
+        };
+      })
+    );
 
     const newAccomodations = await Accomodation.create({
       title,
@@ -33,6 +55,7 @@ const createAccomodations = async (req, res) => {
       capacity: Number(capacity),
       services,
       createdBy: currentUser,
+      meals: createdMeals.map((val) => val._id),
     });
 
     await newAccomodations.save();
@@ -54,6 +77,26 @@ const updateAccomodations = async (req, res) => {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
     console.log(req.body);
     const currentUser = req.user._id;
+    // const updatedAccomodation = await Accomodation.findByIdAndUpdate(
+    //   req.params.id,
+    //   {
+    //     title,
+    //     desc,
+    //     location: {
+    //       type: "Point",
+    //       coordinates: [longitude, latitude],
+    //     },
+
+    //     capacity,
+    //     services,
+    //     createdBy: currentUser,
+    //   },
+    //   {
+    //     new: true,
+    //     runValidators: true,
+    //   }
+    // );
+
     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
@@ -93,7 +136,7 @@ const deleteAccomodations = async (req, res) => {
   // TODO: image array
   try {
     console.log(req.body);
-    const updatedAccomodation = await Accomodation.findByIdAndUpdate(
+    const deleteAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
         $set: {
@@ -102,7 +145,7 @@ const deleteAccomodations = async (req, res) => {
       }
     );
 
-    if (!updatedAccomodation) {
+    if (!deleteAccomodation) {
       return ErrorHandler("Accomodation does not exist", 400, req, res);
     }
 
@@ -146,7 +189,7 @@ const getAllAccomodations = async (req, res) => {
     if (req.body.date && req.body.date > 0) {
       const bookings = await bookingAccomodation.find({
         startDate: {
-          $gte: req.body.date[0],
+          $in: req.body.date[0],
         },
         endDate: {
           $lte: req.body.date[1],
@@ -172,7 +215,9 @@ const getAllAccomodations = async (req, res) => {
       ...capacityFilter,
       ...locationFilter,
       ...availabilityFilter,
-    }).populate("reviewsId");
+    })
+      .populate("reviewsId")
+      .populate("meals");
 
     const totalAccomodation = getAccomodations.length;
 

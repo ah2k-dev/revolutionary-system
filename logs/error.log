@@ -1026,3 +1026,9 @@
 {"date":"2023-08-23T14:45:17.387Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T16:19:29.554Z","level":"error","message":"{\"errors\":[\"You must include which players, segments, or tags you wish to send this notification to.\"]}","method":"POST","service":"user-service","url":"/send"}
 {"date":"2023-08-23T16:20:03.131Z","level":"error","message":"res.status is not a function","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-08-23T19:58:57.559Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T19:59:36.735Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T19:59:55.895Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:01:00.457Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:01:37.424Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-23T20:02:10.220Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}

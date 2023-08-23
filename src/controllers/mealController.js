@@ -53,7 +53,7 @@ const createMeal = async (req, res) => {
 
 const getMeals = async (req, res) => {
   // #swagger.tags = ['meal']
-  const {cook} = req.body
+  const { cook } = req.body;
   try {
     // const { minPrice } = req.query;
     // const { maxPrice } = req.query;
@@ -165,7 +165,9 @@ const orderTheMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   const currentUser = req.user._id;
   try {
-    const { meals, subTotal, couponCode, tip, couponId } = req.body;
+    const { meals, subTotal, couponCode, tip } = req.body;
+    console.log(req.body);
+    console.log(currentUser);
 
     // const order = await OrderMeal.findById();
     // : JSON.parse(meals)
@@ -179,7 +181,7 @@ const orderTheMeal = async (req, res) => {
     });
 
     await order.save();
-    console.log(couponCode);
+
     if (couponCode) {
       await Coupon.findOneAndUpdate(
         {
@@ -190,11 +192,6 @@ const orderTheMeal = async (req, res) => {
         }
       );
     }
-
-    //   await Coupon.findByIdAndUpdate(couponId, {
-    //     $push: { user: currentUser },
-    //   });
-    // }
 
     return SuccessHandler(
       { message: "Meal's Order Created successfully", order },
@@ -212,7 +209,8 @@ const getOrderedMeal = async (req, res) => {
   const currentUser = req.user._id;
   try {
     const userMeals = await OrderMeal.find({ user: currentUser }).populate(
-      "meals.meal", "dishName spiceStatus price cook"
+      "meals.meal",
+      "dishName spiceStatus price cook"
     );
     // console.log(userMeals.meals);
 
@@ -224,29 +222,24 @@ const getOrderedMeal = async (req, res) => {
     // })
     // console.log(cookID);
 
+    // const cookID = userMeals.map(orderMeal => {
+    //   orderMeal.meals.map(meal => {
+    //     const { cook } = meal.meal;
+    //     // cookDetailsArray.push(cook);
+    //     return cook
+    //   });
+    // });
 
-// const cookID = userMeals.map(orderMeal => {
-//   orderMeal.meals.map(meal => {
-//     const { cook } = meal.meal;
-//     // cookDetailsArray.push(cook);
-//     return cook
-//   });
-// });
-
-// console.log(cookID);
+    // console.log(cookID);
 
     // const userMeals = await OrderMeal.find({ user: currentUser }).populate({
     //   path: "meals.meal",
     //   populate: {
     //     path: "cook",
-    //     model: "User", 
-    //     select: "name email shopName shopBanner", 
+    //     model: "User",
+    //     select: "name email shopName shopBanner",
     //   },
     // });
-  
-
-
-
 
     return SuccessHandler(
       { message: "Fetched user ordered meals successfully", userMeals },

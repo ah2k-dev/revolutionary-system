@@ -93,17 +93,21 @@ const register = async (req, res) => {
 
     // for cook
     if (role === "cook") {
-      const { latitude, longitude, shopName,shopBanner, shopDesc } = req.body;
-      if (!(latitude || longitude || shopName || shopDesc ||shopBanner)) {
-        
+      const { latitude, longitude, shopName, shopBanner, shopDesc } = req.body;
+      if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
         if (req.file) {
-          const { shopBanner} = req.file;
-    
-          let bannerImg = null
+          const { shopBanner } = req.file;
+
+          let bannerImg = "";
           if (shopBanner) {
             // It should be image
             if (!shopBanner.mimetype.startsWith("image")) {
-              return ErrorHandler("Please upload an Banner Image for shop", 400, req, res);
+              return ErrorHandler(
+                "Please upload an Banner Image for shop",
+                400,
+                req,
+                res
+              );
             }
             bannerImg = `${Date.now()}${shopBanner.name}`;
             shopBanner.mv(
@@ -114,7 +118,8 @@ const register = async (req, res) => {
                 }
               }
             );
-          }}
+          }
+        }
 
         return ErrorHandler(
           "Latitude, Longitude or Shop name is missing",

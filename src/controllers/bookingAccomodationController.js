@@ -9,8 +9,15 @@ const bookNewAccomm = async (req, res) => {
   const currentUser = req.user._id;
   try {
     const accomodationId = req.params.id;
-    const { startDate, endDate, checkIn, checkOut, subTotal, capacity, phoneNumber } =
-      req.body;
+    const {
+      startDate,
+      endDate,
+      checkIn,
+      checkOut,
+      subTotal,
+      capacity,
+      selectedMeals,
+    } = req.body;
 
     const currentAccommodation = await Accomodation.findById(accomodationId);
 
@@ -18,6 +25,23 @@ const bookNewAccomm = async (req, res) => {
       return ErrorHandler("Accommodation Does not exist", 400, req, res);
     }
 
+    const bookings = await bookAccomm.find({
+      accomodationsId: accomodationId,
+      startDate: {
+        $gte: req.body.startDate,
+      },
+      endDate: {
+        $lte: req.body.endDate,
+      },
+    });
+    if (bookings.length > 0) {
+      return ErrorHandler(
+        { success: false, message: "Accomodation already book" },
+        400,
+        req,
+        res
+      );
+    }
     const isBooked = await bookAccomm.findOne({
       accomodationsId: accomodationId,
     });
@@ -32,13 +56,13 @@ const bookNewAccomm = async (req, res) => {
       //   startDate,
       //   endDate,
       // },
-      phoneNumber,
       startDate,
       endDate,
       checkIn,
       checkOut,
       capacity,
       subTotal,
+      selectedMeals: selectedMeals,
     });
 
     await newBooking.save();
@@ -59,7 +83,8 @@ const getUserBookings = async (req, res) => {
   try {
     const bookings = await bookAccomm
       .find({ user: currentUser })
-      .populate("accomodationsId");
+      .populate("accomodationsId")
+      .populate("selectedMeals");
     console.log(bookings);
     if (!bookings) {
       return ErrorHandler("No Such Booking exist", 400, req, res);

@@ -6,6 +6,14 @@ dotenv.config({ path: ".././src/config/config.env" });
 const mealSchema = new Schema(
   {
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+    // reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+
+    // new fields
+    mealType: {
+      type: String,
+      enum: ["cook", "accomodation"],
+      default: "cook",
+    },
 
     cook: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String, required: true },
@@ -24,7 +32,7 @@ const mealSchema = new Schema(
     gram: { type: Number, required: true },
     calories: { type: Number, required: true },
 
-    maxServingCapacity: { type: Number, required: true },
+    maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
   },
