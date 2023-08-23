@@ -1021,3 +1021,4 @@
 {"date":"2023-08-23T14:04:32.707Z","level":"error","message":"Cannot read properties of undefined (reading 'meal')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
 {"date":"2023-08-23T14:12:41.703Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T14:13:58.603Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:22:27.397Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}

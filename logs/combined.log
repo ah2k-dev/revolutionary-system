@@ -3288,3 +3288,7 @@
 {"date":"2023-08-23T14:13:58.603Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T14:14:39.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
 {"date":"2023-08-23T14:17:39.314Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64dfbd3aa9c1578d24097b37"}
+{"date":"2023-08-23T14:22:14.213Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e07c5f5407cfb7ce0c02f3"}
+{"date":"2023-08-23T14:22:26.796Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:22:27.397Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:23:03.865Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
