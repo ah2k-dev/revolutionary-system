@@ -885,12 +885,6 @@
                 "endDate": {
                   "example": "any"
                 },
-                "checkIn": {
-                  "example": "any"
-                },
-                "checkOut": {
-                  "example": "any"
-                },
                 "subTotal": {
                   "example": "any"
                 },
