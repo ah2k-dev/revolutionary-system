@@ -604,6 +604,9 @@
                 },
                 "price": {
                   "example": "any"
+                },
+                "meals": {
+                  "example": "any"
                 }
               }
             }
@@ -893,6 +896,9 @@
                 },
                 "capacity": {
                   "example": "any"
+                },
+                "selectedMeals": {
+                  "example": "any"
                 }
               }
             }
@@ -1168,9 +1174,6 @@
                   "example": "any"
                 },
                 "tip": {
-                  "example": "any"
-                },
-                "couponId": {
                   "example": "any"
                 }
               }
