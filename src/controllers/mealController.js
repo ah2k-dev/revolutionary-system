@@ -53,6 +53,7 @@ const createMeal = async (req, res) => {
 
 const getMeals = async (req, res) => {
   // #swagger.tags = ['meal']
+  const {cook} = req.body
   try {
     // const { minPrice } = req.query;
     // const { maxPrice } = req.query;
@@ -110,6 +111,7 @@ const getMeals = async (req, res) => {
       : {};
 
     const meals = await Meal.find({
+      cook,
       isActive: true,
       ...dishFilter,
       ...priceFilter,
@@ -212,6 +214,17 @@ const getOrderedMeal = async (req, res) => {
     const userMeals = await OrderMeal.find({ user: currentUser }).populate(
       "meals.meal"
     );
+    // const userMeals = await OrderMeal.find({ user: currentUser }).populate({
+    //   path: 'meals.meal',
+    //   populate: {
+    //     path: 'cook', // Assuming "cook" is the reference to the user
+    //     model: User,  // Use the correct User model reference
+    //   },
+    // });
+
+
+
+
     return SuccessHandler(
       { message: "Fetched user ordered meals successfully", userMeals },
       200,
