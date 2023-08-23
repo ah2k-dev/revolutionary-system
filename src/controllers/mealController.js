@@ -212,15 +212,38 @@ const getOrderedMeal = async (req, res) => {
   const currentUser = req.user._id;
   try {
     const userMeals = await OrderMeal.find({ user: currentUser }).populate(
-      "meals.meal"
+      "meals.meal", "dishName spiceStatus price cook"
     );
+    // console.log(userMeals.meals);
+
+    // const cookID = userMeals.map((orders)=>{
+    //   orders.meals.map((meal)=>{
+    //     const {cook} = meal.meal
+    //     return cook
+    //   })
+    // })
+    // console.log(cookID);
+
+
+// const cookID = userMeals.map(orderMeal => {
+//   orderMeal.meals.map(meal => {
+//     const { cook } = meal.meal;
+//     // cookDetailsArray.push(cook);
+//     return cook
+//   });
+// });
+
+// console.log(cookID);
+
     // const userMeals = await OrderMeal.find({ user: currentUser }).populate({
-    //   path: 'meals.meal',
+    //   path: "meals.meal",
     //   populate: {
-    //     path: 'cook', // Assuming "cook" is the reference to the user
-    //     model: User,  // Use the correct User model reference
+    //     path: "cook",
+    //     model: "User", 
+    //     select: "name email shopName shopBanner", 
     //   },
     // });
+  
 
 
 

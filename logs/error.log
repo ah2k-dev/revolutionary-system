@@ -1017,3 +1017,7 @@
 {"date":"2023-08-23T13:05:59.368Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
 {"date":"2023-08-23T13:06:01.792Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
 {"date":"2023-08-23T13:08:03.895Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:23:12.737Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T14:04:32.707Z","level":"error","message":"Cannot read properties of undefined (reading 'meal')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T14:12:41.703Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:13:58.603Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
