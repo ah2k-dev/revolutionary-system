@@ -3313,3 +3313,41 @@
 {"date":"2023-08-23T14:44:49.222Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
 {"date":"2023-08-23T14:45:16.754Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
 {"date":"2023-08-23T14:45:17.387Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:58:33.653Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:58:51.731Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:59:31.048Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:59:56.212Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:02:01.797Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:02:24.580Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:02:24.585Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:02:44.402Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:03:06.748Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:03:59.647Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:04:17.197Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:04:32.770Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:04:47.489Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:05:02.185Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:05:29.621Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:05:41.158Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:05:54.927Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:06:04.995Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:06:20.724Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:06:34.777Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:06:34.787Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:09:12.574Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:09:16.169Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:10:46.389Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:11:48.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:20:24.342Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:40:09.343Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T15:55:22.368Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e07c5f5407cfb7ce0c02f3"}
+{"date":"2023-08-23T15:55:25.365Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64dfbd3aa9c1578d24097b37"}
+{"date":"2023-08-23T16:07:36.530Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64dfbd3aa9c1578d24097b37"}
+{"date":"2023-08-23T16:07:38.583Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64dfbd3aa9c1578d24097b37"}
+{"date":"2023-08-23T16:16:42.203Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-08-23T16:18:03.357Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-08-23T16:18:46.228Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-08-23T16:19:29.060Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-08-23T16:19:29.554Z","level":"error","message":"{\"errors\":[\"You must include which players, segments, or tags you wish to send this notification to.\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-08-23T16:20:02.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-08-23T16:20:03.131Z","level":"error","message":"res.status is not a function","method":"POST","service":"user-service","url":"/send"}
