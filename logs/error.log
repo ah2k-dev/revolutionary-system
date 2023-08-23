@@ -1007,3 +1007,22 @@
 {"date":"2023-08-23T07:49:39.977Z","level":"error","message":"Role: user is not allowed to access resource","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T07:49:44.388Z","level":"error","message":"Role: user is not allowed to access resource","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T07:52:38.682Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/orderMeal"}
+{"date":"2023-08-23T12:57:59.104Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T12:58:43.739Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T12:58:45.817Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T12:59:44.541Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:01:41.144Z","level":"error","message":"Schema hasn't been registered for model \"users\".\nUse mongoose.model(name, schema)","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:01:54.725Z","level":"error","message":"Schema hasn't been registered for model \"user\".\nUse mongoose.model(name, schema)","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:02:07.769Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:05:59.368Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:06:01.792Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:08:03.895Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T13:23:12.737Z","level":"error","message":"User is not defined","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T14:04:32.707Z","level":"error","message":"Cannot read properties of undefined (reading 'meal')","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-23T14:12:41.703Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:13:58.603Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:22:27.397Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:43:48.151Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:45:17.387Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T16:19:29.554Z","level":"error","message":"{\"errors\":[\"You must include which players, segments, or tags you wish to send this notification to.\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-08-23T16:20:03.131Z","level":"error","message":"res.status is not a function","method":"POST","service":"user-service","url":"/send"}
