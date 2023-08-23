@@ -4,7 +4,7 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const Accomodation = require("../models/Accomodation/accomodation");
 const Coupon = require("../models/Coupon/coupon");
-const Meal =  require('../models/Meal/meal')
+const Meal = require("../models/Meal/meal");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -35,7 +35,7 @@ const updatePersonalInfo = async (req, res) => {
 
     // let avatarFileName = null;
     // let coverImgFileName = null;
-    console.log(req.files)
+    console.log(req.files);
     if (req.files) {
       const { avatar, coverImg } = req.files;
       if (avatar) {
@@ -44,7 +44,7 @@ const updatePersonalInfo = async (req, res) => {
         //   return ErrorHandler("Please upload an image file", 400, req, res);
         // }
         previousAvatarFileName = `${Date.now()}${avatar.name}`;
-        console.log(previousAvatarFileName)
+        console.log(previousAvatarFileName);
         avatar.mv(
           path.join(__dirname, `../../uploads/${previousAvatarFileName}`),
           (err) => {
@@ -177,32 +177,25 @@ const savedOrUnsavedAccomodation = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    if (req.user.role === "user") {
-      const accomodation = await Accomodation.findById(req.params.id);
-      const user = await User.findById(currentUser);
-      console.log("user: ", user);
-      console.log("accommodation: ", accomodation);
+    const accomodation = await Accomodation.findById(req.params.id);
+    const user = await User.findById(currentUser);
+    console.log("user: ", user);
+    console.log("accommodation: ", accomodation);
 
-      if (!accomodation) {
-        return ErrorHandler("Accommodation does not exist", 400, req, res);
-      }
-
-      // if saved => remove id from user model and mark as unsaved
-      if (user.savedAccomodation.includes(accomodation.id)) {
-        const index = user.savedAccomodation.indexOf(accomodation.id);
-        user.savedAccomodation.splice(index, 1);
-        await user.save();
-        return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
-      } else {
-        user.savedAccomodation.push(accomodation.id);
-        await user.save();
-        return SuccessHandler("Saved Accomodation", 200, res);
-      }
+    if (!accomodation) {
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
     }
 
-    // if not user.role ==='user'
-    else {
-      return ErrorHandler("Unauthorized User", 500, req, res);
+    // if saved => remove id from user model and mark as unsaved
+    if (user.savedAccomodation.includes(accomodation.id)) {
+      const index = user.savedAccomodation.indexOf(accomodation.id);
+      user.savedAccomodation.splice(index, 1);
+      await user.save();
+      return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
+    } else {
+      user.savedAccomodation.push(accomodation.id);
+      await user.save();
+      return SuccessHandler("Saved Accomodation", 200, res);
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
@@ -214,34 +207,23 @@ const getSavedAccomodations = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    if (req.user.role === "user") {
-      const user = await User.findById(currentUser).populate(
-        "savedAccomodation"
-      );
+    const user = await User.findById(currentUser).populate("savedAccomodation");
 
-      let sAccomodations = user.savedAccomodation;
+    let sAccomodations = user.savedAccomodation;
 
-      // const accomodation = await Accomodation.findById(req.params.id)
-      // console.log("user: ", user);
-      // console.log("accommodation: ", accomodation);
+    // const accomodation = await Accomodation.findById(req.params.id)
+    // console.log("user: ", user);
+    // console.log("accommodation: ", accomodation);
 
-      if (!sAccomodations) {
-        return ErrorHandler(
-          "Saved Accommodation does not exist",
-          400,
-          req,
-          res
-        );
-      }
-
-      return SuccessHandler(
-        { message: "Fetched Saved Accomodation", sAccomodations },
-        200,
-        res
-      );
-    } else {
-      return ErrorHandler("Unauthorized User", 400, req, res);
+    if (!sAccomodations) {
+      return ErrorHandler("Saved Accommodation does not exist", 400, req, res);
     }
+
+    return SuccessHandler(
+      { message: "Fetched Saved Accomodation", sAccomodations },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -298,11 +280,8 @@ const getCooks = async (req, res) => {
   }
 };
 
-
-
-
 // get all coupons for cook
-//Get Coupons 
+//Get Coupons
 const getCouponsForCook = async (req, res) => {
   // #swagger.tags = ['user']
   try {
@@ -310,11 +289,10 @@ const getCouponsForCook = async (req, res) => {
     const coupons = await Coupon.find({
       createdBy: currentUser,
     });
-  
-      if (!coupons) {
-        return ErrorHandler("Coupons not found", 404, req, res);
-      }
 
+    if (!coupons) {
+      return ErrorHandler("Coupons not found", 404, req, res);
+    }
 
     return SuccessHandler(
       { success: true, message: "Coupon Fetched successfully", coupons },
@@ -326,87 +304,55 @@ const getCouponsForCook = async (req, res) => {
   }
 };
 
-
-
-
-
 // Saved or Unsaved Meal
 const savedOrUnsavedMeal = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    if (req.user.role === "user") {
-      const meal = await Meal.findById(req.params.id);
-      const user = await User.findById(currentUser);
-      console.log(meal);
+    const meal = await Meal.findById(req.params.id);
+    const user = await User.findById(currentUser);
+    console.log(meal);
 
-      if (!meal) {
-        return ErrorHandler("Meal does not exist", 400, req, res);
-      }
-
-      if(user.savedMeal.includes(meal.id)){
-        const index = user.savedMeal.indexOf(meal.id)
-        user.savedMeal.splice(index,1)
-        await user.save()
-        return SuccessHandler("UnSaved Meal with Successfully", 200, res)
-      }
-      else{
-        user.savedMeal.push(meal.id)
-        await user.save()
-        return SuccessHandler("Saved Meal", 200, res)
-      }
-
-
+    if (!meal) {
+      return ErrorHandler("Meal does not exist", 400, req, res);
     }
 
-    // if not user.role ==='user'
-    else {
-      return ErrorHandler("Unauthorized User", 500, req, res);
+    if (user.savedMeal.includes(meal.id)) {
+      const index = user.savedMeal.indexOf(meal.id);
+      user.savedMeal.splice(index, 1);
+      await user.save();
+      return SuccessHandler("UnSaved Meal with Successfully", 200, res);
+    } else {
+      user.savedMeal.push(meal.id);
+      await user.save();
+      return SuccessHandler("Saved Meal", 200, res);
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
 
 // get Saved Meals
 const getSavedMeals = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    if (req.user.role === "user") {
-      const user = await User.findById(currentUser).populate(
-        "savedMeal"
-      );
+    const user = await User.findById(currentUser).populate("savedMeal");
 
-      let savedMeals = user.savedAccomodation;
-      if (!savedMeals) {
-        return ErrorHandler(
-          "Saved Meal does not exist",
-          404,
-          req,
-          res
-        );
-      }
-
-      return SuccessHandler(
-        { message: "Fetched Saved Meal", savedMeals },
-        200,
-        res
-      );
-    } else {
-      return ErrorHandler("Unauthorized User", 401, req, res);
+    let savedMeals = user.savedAccomodation;
+    if (!savedMeals) {
+      return ErrorHandler("Saved Meal does not exist", 404, req, res);
     }
+
+    return SuccessHandler(
+      { message: "Fetched Saved Meal", savedMeals },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-
-
-
 
 module.exports = {
   updateUser,

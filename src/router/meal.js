@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const meal = require("../controllers/mealController");
 const isAuthenticated = require("../middleware/auth");
-const { authorizedCook } = require("../middleware/role");
+const { authorizedCook, authorizedUser } = require("../middleware/role");
 
 //✅ ➡Meals
 //post
@@ -13,16 +13,26 @@ router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 // ✅Reviews
 
 //post
-router.route("/addReview/:id").post(isAuthenticated, meal.addReviews);
+router
+  .route("/addReview/:id")
+  .post(isAuthenticated, authorizedUser, meal.addReviews);
 //get
-router.route("/reviews/:id").get(isAuthenticated, meal.getReviews);
+router
+  .route("/reviews/:id")
+  .get(isAuthenticated, authorizedUser, meal.getReviews);
 // delete
-router.route("/delReview/:id").delete(isAuthenticated, meal.deleteReview);
+router
+  .route("/delReview/:id")
+  .delete(isAuthenticated, authorizedUser, meal.deleteReview);
 
 // ✅ ➡order the Meal
 //post
-router.route("/orderMeal").post(isAuthenticated, meal.orderTheMeal);
+router
+  .route("/orderMeal")
+  .post(isAuthenticated, authorizedUser, meal.orderTheMeal);
 //get user ordered meals
-router.route("/userOrderedMeals").get(isAuthenticated, meal.getOrderedMeal);
+router
+  .route("/userOrderedMeals")
+  .get(isAuthenticated, authorizedUser, meal.getOrderedMeal);
 
 module.exports = router;

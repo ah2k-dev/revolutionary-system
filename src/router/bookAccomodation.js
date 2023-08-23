@@ -1,11 +1,16 @@
 const router = require("express").Router();
 const bookAccomm = require("../controllers/bookingAccomodationController");
 const isAuthenticated = require("../middleware/auth");
+const { authorizedUser } = require("../middleware/role");
 
 //post
-router.route("/new/:id").post(isAuthenticated, bookAccomm.bookNewAccomm);
+router
+  .route("/new/:id")
+  .post(isAuthenticated, authorizedUser, bookAccomm.bookNewAccomm);
 
 //get
-router.route("/userBookings").get(isAuthenticated, bookAccomm.getUserBookings);
+router
+  .route("/userBookings")
+  .get(isAuthenticated, authorizedUser, bookAccomm.getUserBookings);
 
 module.exports = router;

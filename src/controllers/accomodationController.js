@@ -158,17 +158,20 @@ const getAllAccomodations = async (req, res) => {
       });
     }
 
-    const availabilityFilter = unAvailableAccommodations.length > 0 ? {
-      _id: {
-        $nin: unAvailableAccommodations,
-      }
-    } : {};
+    const availabilityFilter =
+      unAvailableAccommodations.length > 0
+        ? {
+            _id: {
+              $nin: unAvailableAccommodations,
+            },
+          }
+        : {};
 
     const getAccomodations = await Accomodation.find({
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
-      ...availabilityFilter
+      ...availabilityFilter,
     }).populate("reviewsId");
 
     const totalAccomodation = getAccomodations.length;
@@ -202,58 +205,54 @@ const addReview = async (req, res) => {
     const accomodationId = req.params.id;
     const { rating, comment } = req.body;
 
-    if (req.user.role === "user") {
-      const accomodation = await Accomodation.findById(accomodationId);
+    const accomodation = await Accomodation.findById(accomodationId);
 
-      if (!accomodation) {
-        return ErrorHandler("The Accomodation doesn't exist", 400, req, res);
-      }
+    if (!accomodation) {
+      return ErrorHandler("The Accomodation doesn't exist", 400, req, res);
+    }
 
-      // Check if a review with the same comment already exists
-      const existingReview = await Review.findOne({
+    // Check if a review with the same comment already exists
+    const existingReview = await Review.findOne({
+      user: currentUser,
+      accomodation: accomodationId,
+      comment,
+    });
+
+    if (existingReview) {
+      // update existing review
+      existingReview.rating = rating;
+      existingReview.comment = comment;
+      await existingReview.save();
+
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Review Updated successfully",
+          review: existingReview,
+        },
+        200,
+        res
+      );
+    } else {
+      // create a new review
+      const review = await Review.create({
+        rating,
+        comment,
         user: currentUser,
         accomodation: accomodationId,
-        comment,
       });
 
-      if (existingReview) {
-        // update existing review
-        existingReview.rating = rating;
-        existingReview.comment = comment;
-        await existingReview.save();
+      await review.save();
 
-        return SuccessHandler(
-          {
-            success: true,
-            message: "Review Updated successfully",
-            review: existingReview,
-          },
-          200,
-          res
-        );
-      } else {
-        // create a new review
-        const review = await Review.create({
-          rating,
-          comment,
-          user: currentUser,
-          accomodation: accomodationId,
-        });
+      await Accomodation.findByIdAndUpdate(accomodationId, {
+        $push: { reviewsId: review._id },
+      });
 
-        await review.save();
-
-        await Accomodation.findByIdAndUpdate(accomodationId, {
-          $push: { reviewsId: review._id },
-        });
-
-        return SuccessHandler(
-          { success: true, message: "Review Added successfully", review },
-          200,
-          res
-        );
-      }
-    } else {
-      return ErrorHandler("Unauthorized User", 400, req, res);
+      return SuccessHandler(
+        { success: true, message: "Review Added successfully", review },
+        200,
+        res
+      );
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
@@ -265,36 +264,32 @@ const getReviews = async (req, res) => {
   // #swagger.tags = ['accomodation']
   try {
     const accomodationId = req.params.id;
-    if (req.user.role === "user") {
-      const accomodation = await Accomodation.findById(accomodationId).populate(
-        "reviewsId"
-      );
-      if (!accomodation) {
-        return res.status(404).json({ message: "Accomodation not found" });
-      }
-
-      const reviews = accomodation.reviewsId;
-
-      let totalRating = 0;
-      for (let rev of reviews) {
-        totalRating += rev.rating;
-      }
-
-      const avgRating = (totalRating / reviews.length).toFixed(1);
-
-      return SuccessHandler(
-        {
-          success: true,
-          message: "Fetched Reviews successfully",
-          avgRating,
-          reviews,
-        },
-        200,
-        res
-      );
-    } else {
-      return ErrorHandler("Unauthorized User", 400, req, res);
+    const accomodation = await Accomodation.findById(accomodationId).populate(
+      "reviewsId"
+    );
+    if (!accomodation) {
+      return res.status(404).json({ message: "Accomodation not found" });
     }
+
+    const reviews = accomodation.reviewsId;
+
+    let totalRating = 0;
+    for (let rev of reviews) {
+      totalRating += rev.rating;
+    }
+
+    const avgRating = (totalRating / reviews.length).toFixed(1);
+
+    return SuccessHandler(
+      {
+        success: true,
+        message: "Fetched Reviews successfully",
+        avgRating,
+        reviews,
+      },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -306,34 +301,30 @@ const deleteReview = async (req, res) => {
   try {
     const { reviewId } = req.query;
     const accomodationId = req.params.id;
-    if (req.user.role === "user") {
-      // console.log(reviewId);
-      const review = await Review.findByIdAndDelete({
-        _id: reviewId,
-      });
-      console.log(review);
+    // console.log(reviewId);
+    const review = await Review.findByIdAndDelete({
+      _id: reviewId,
+    });
+    console.log(review);
 
-      if (!review) {
-        return ErrorHandler(
-          { success: false, message: "Review not found or unauthorized" },
-          404,
-          req,
-          res
-        );
-      }
-
-      await Accomodation.findByIdAndUpdate(accomodationId, {
-        $pull: { reviewsId: reviewId },
-      });
-
-      return SuccessHandler(
-        { success: true, message: "Review has been Deleted" },
-        200,
+    if (!review) {
+      return ErrorHandler(
+        { success: false, message: "Review not found or unauthorized" },
+        404,
+        req,
         res
       );
-    } else {
-      return ErrorHandler("Unauthorized User", 400, req, res);
     }
+
+    await Accomodation.findByIdAndUpdate(accomodationId, {
+      $pull: { reviewsId: reviewId },
+    });
+
+    return SuccessHandler(
+      { success: true, message: "Review has been Deleted" },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
