@@ -14,7 +14,8 @@ const orderMealSchema = new Schema(
         price: { type: Number, required: true },
       },
     ],
-    couponUsed: { type: String },
+    coupon: { type: Schema.Types.ObjectId, ref: "Coupon" },
+    usedCoupon: { type: String },
 
     subTotal: { type: Number, required: true },
     totalAmount: { type: Number, default: 0 },

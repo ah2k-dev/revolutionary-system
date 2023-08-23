@@ -2,7 +2,7 @@ const ErrorHandler = require("../utils/ErrorHandler");
 
 const authorizedUser = (req, res, next) => {
   // if not of 'host'
-  if (req.user.role !== "host") {
+  if (req.user.role !== "user") {
     return ErrorHandler(
       `Role: ${req.user.role} is not allowed to access resource`,
       400,

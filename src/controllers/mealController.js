@@ -163,30 +163,36 @@ const orderTheMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   const currentUser = req.user._id;
   try {
-    const { meals, subTotal, couponCode, tip } = req.body;
+    const { meals, subTotal, couponCode, tip, couponId } = req.body;
 
     // const order = await OrderMeal.findById();
-
+    // : JSON.parse(meals)
     const order = await OrderMeal.create({
       user: currentUser,
-      meals: JSON.parse(meals),
+      coupon: couponId,
+      meals: meals,
       subTotal: subTotal,
-      couponUsed: couponCode,
+      usedCoupon: couponCode,
       tip: tip,
     });
 
     await order.save();
-
+    console.log(couponCode);
     if (couponCode) {
       await Coupon.findOneAndUpdate(
         {
           couponCode: couponCode,
         },
         {
-          user: { $push: currentUser },
+          $push: { user: currentUser },
         }
       );
     }
+
+    //   await Coupon.findByIdAndUpdate(couponId, {
+    //     $push: { user: currentUser },
+    //   });
+    // }
 
     return SuccessHandler(
       { message: "Meal's Order Created successfully", order },
