@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const accomodation = require("../controllers/accomodationController");
 const isAuthenticated = require("../middleware/auth");
-const { authorizedHost } = require("../middleware/role");
+const { authorizedHost, authorizedUser } = require("../middleware/role");
 
 //✅Accomodations
 
@@ -25,12 +25,16 @@ router
 // ✅Reviews
 
 //post
-router.route("/addReview/:id").post(isAuthenticated, accomodation.addReview);
+router
+  .route("/addReview/:id")
+  .post(isAuthenticated, authorizedUser, accomodation.addReview);
 //get
-router.route("/reviews/:id").get(isAuthenticated, accomodation.getReviews);
+router
+  .route("/reviews/:id")
+  .get(isAuthenticated, authorizedUser, accomodation.getReviews);
 // delete
 router
   .route("/delReview/:id")
-  .delete(isAuthenticated, accomodation.deleteReview);
+  .delete(isAuthenticated, authorizedUser, accomodation.deleteReview);
 
 module.exports = router;
