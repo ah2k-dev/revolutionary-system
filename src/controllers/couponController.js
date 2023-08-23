@@ -1,9 +1,5 @@
-const Meal = require("../models/Meal/meal");
-const OrderMeal = require("../models/Meal/orderMeal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
-const path = require("path");
-const Review = require("../models/Reviews/review");
 const Coupon = require("../models/Coupon/coupon");
 
 //Create Coupon
@@ -19,7 +15,12 @@ const createCoupon = async (req, res) => {
     });
 
     if (isCoupon) {
-      return ErrorHandler("Coupon already exist", 400, req, res);
+      return ErrorHandler(
+        "Coupon already exist, try to add with other coupoun code",
+        400,
+        req,
+        res
+      );
     }
 
     if (new Date(expiryDate) <= new Date()) {
@@ -58,6 +59,18 @@ const verifyCoupon = async (req, res) => {
   try {
     const { couponCode, createdBy } = req.body;
     const currentUser = req.user._id;
+    const currentDate = new Date();
+    const couponExpiry = await Coupon.findOne({
+      couponCode,
+      createdBy,
+    });
+    if (couponExpiry) {
+      if (couponExpiry.expiryDate < currentDate) {
+        couponExpiry.isActive = false;
+        return ErrorHandler("Coupon is expired.", 400, req, res);
+      }
+    }
+
     const coupon = await Coupon.findOne({
       couponCode,
       isActive: true,
