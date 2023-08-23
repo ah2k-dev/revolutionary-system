@@ -9,7 +9,7 @@ const bookNewAccomm = async (req, res) => {
   const currentUser = req.user._id;
   try {
     const accomodationId = req.params.id;
-    const { startDate, endDate, checkIn, checkOut, subTotal, capacity } =
+    const { startDate, endDate, checkIn, checkOut, subTotal, capacity, phoneNumber } =
       req.body;
 
     const currentAccommodation = await Accomodation.findById(accomodationId);
@@ -32,6 +32,7 @@ const bookNewAccomm = async (req, res) => {
       //   startDate,
       //   endDate,
       // },
+      phoneNumber,
       startDate,
       endDate,
       checkIn,

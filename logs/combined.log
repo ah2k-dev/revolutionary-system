@@ -3292,3 +3292,24 @@
 {"date":"2023-08-23T14:22:26.796Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
 {"date":"2023-08-23T14:22:27.397Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
 {"date":"2023-08-23T14:23:03.865Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:33:46.038Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-23T14:33:46.104Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-23T14:33:46.119Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-23T14:33:46.122Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-23T14:33:46.124Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-23T14:33:47.512Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-23T14:37:52.271Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:38:09.817Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:38:21.499Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:39:13.387Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-23T14:40:03.606Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-23T14:40:25.710Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-23T14:40:43.207Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:41:01.154Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:43:47.515Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:43:48.151Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-23T14:44:06.802Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:44:18.424Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:44:49.222Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-23T14:45:16.754Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-23T14:45:17.387Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
