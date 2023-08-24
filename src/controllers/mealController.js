@@ -208,9 +208,18 @@ const getOrderedMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   const currentUser = req.user._id;
   try {
-    const userMeals = await OrderMeal.find({ user: currentUser }).populate(
-      "meals.meal",
-      "dishName spiceStatus price cook"
+    // const userMeals = await OrderMeal.find({ user: currentUser }).populate(
+    //   "meals.meal",
+    //   "dishName spiceStatus price cook images"
+    // );
+    const userMeals = await OrderMeal.find({ user: currentUser }).populate({
+
+      path: "meals.meal",
+      select: "_id dishName price images spiceStatus",
+      populate: {
+        
+      }
+    }
     );
     // console.log(userMeals.meals);
 

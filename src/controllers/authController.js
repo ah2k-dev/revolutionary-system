@@ -92,13 +92,14 @@ const register = async (req, res) => {
     };
 
     // for cook
+    let bannerImg = null
     if (role === "cook") {
       const { latitude, longitude, shopName, shopBanner, shopDesc } = req.body;
       if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
         if (req.file) {
           const { shopBanner } = req.file;
 
-          let bannerImg = "";
+          
           if (shopBanner) {
             // It should be image
             if (!shopBanner.mimetype.startsWith("image")) {

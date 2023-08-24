@@ -309,6 +309,69 @@ const getCouponsForCook = async (req, res) => {
 };
 
 // Saved or Unsaved Meal
+const savedOrUnsavedMeal = async (req, res) => {
+  // #swagger.tags = ['user']
+  try {
+    // console.log(req.user.savedMeal, req.user._id);
+    let exUser = req.user
+    console.log(exUser.savedMeal)
+    let exSavedMeals = req.user.savedMeal  || []
+    if(exSavedMeals.includes(req.params.id)){
+      exSavedMeals = exSavedMeals.filter((val)=> val != req.params.id)
+    } else {
+      exSavedMeals.push(req.params.id)
+    }
+
+    req.user.savedMeal = exSavedMeals
+    await req.user.save()
+    return SuccessHandler({ message: "Saved Meal" }, 200, res);
+
+    // return SuccessHandler
+    // const currentUser = req.user._id;
+    // const meal = await Meal.findById(req.params.id);
+    // const user = await User.findById(currentUser);
+    // // console.log(meal);
+
+    // if (!meal) {
+    //   return ErrorHandler("Meal does not exist", 400, req, res);
+    // }
+    
+    // if (user.savedMeal) {
+      
+    //   if (user.savedMeal.includes(meal.id)) {
+    //     const index = user.savedMeal.indexOf(meal.id);
+    //     user.savedMeal.splice(index, 1);
+    //     await user.save();
+    //     return SuccessHandler(
+    //       { message: "UnSaved Meal with Successfully" },
+    //       200,
+    //       res
+    //       );
+    //     }
+    // } else if(!(user.savedMeal.includes(meal.id))) {
+    //   user.savedMeal.push(meal.id);
+    //   await user.save();
+    //   return SuccessHandler({ message: "Saved Meal" }, 200, res);
+    // }
+    // const userSavedMeals = await user.savedMeals.map((meal)=>{
+    //   return meal;
+
+    // })
+    // console.log(userSavedMeals);
+
+    // return SuccessHandler({ message: "Saved Meal" }, 200, res);
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+
+
+
+
+ 
+
+
 // const savedOrUnsavedMeal = async (req, res) => {
 //   // #swagger.tags = ['user']
 //   try {
@@ -320,23 +383,33 @@ const getCouponsForCook = async (req, res) => {
 //     if (!meal) {
 //       return ErrorHandler("Meal does not exist", 400, req, res);
 //     }
-//     if (user.savedMeal) {
-      
-//       if (user.savedMeal.includes(meal.id)) {
-//         const index = user.savedMeal.indexOf(meal.id);
-//         user.savedMeal.splice(index, 1);
-//         await user.save();
-//         return SuccessHandler(
-//           { message: "UnSaved Meal with Successfully" },
-//           200,
-//           res
-//           );
-//         }
+    
+//     // Ensure user.savedMeal is defined as an array
+//     // if (!user.savedMeal) {
+//     //   user.savedMeal = [];
+//     // }
+
+//     if (user.savedMeal.includes(meal.id)) {
+//       const index = user.savedMeal.indexOf(meal.id);
+//       user.savedMeal.splice(index, 1);
+//       await user.save();
+//       console.log("UnSaved Meal");
+//       return SuccessHandler(
+//         { message: "UnSaved Meal Successfully" },
+//         200,
+//         res
+//       );
 //     } else {
-//       // user.savedMeal.push(meal.id);
-//       // await user.save();
+//       // Debug: Print user.savedMeal before the push operation
+//       console.log("Before Push:", user.savedMeal);
+
+//       // Use the $push operator to add the meal ID
 //       await User.updateOne({ _id: currentUser }, { $push: { savedMeal: meal.id } });
 
+//       // Debug: Print user.savedMeal after the push operation
+//       console.log("After Push:", user.savedMeal);
+
+//       console.log("Saved Meal");
 //       return SuccessHandler({ message: "Saved Meal" }, 200, res);
 //     }
 //   } catch (error) {
@@ -344,50 +417,6 @@ const getCouponsForCook = async (req, res) => {
 //   }
 // };
 
-const savedOrUnsavedMeal = async (req, res) => {
-  // #swagger.tags = ['user']
-  try {
-    const currentUser = req.user._id;
-    const meal = await Meal.findById(req.params.id);
-    const user = await User.findById(currentUser);
-    console.log(meal);
-
-    if (!meal) {
-      return ErrorHandler("Meal does not exist", 400, req, res);
-    }
-    
-    // Ensure user.savedMeal is defined as an array
-    if (!user.savedMeal) {
-      user.savedMeal = [];
-    }
-
-    if (user.savedMeal.includes(meal.id)) {
-      const index = user.savedMeal.indexOf(meal.id);
-      user.savedMeal.splice(index, 1);
-      await user.save();
-      console.log("UnSaved Meal");
-      return SuccessHandler(
-        { message: "UnSaved Meal Successfully" },
-        200,
-        res
-      );
-    } else {
-      // Debug: Print user.savedMeal before the push operation
-      console.log("Before Push:", user.savedMeal);
-
-      // Use the $push operator to add the meal ID
-      await User.updateOne({ _id: currentUser }, { $push: { savedMeal: meal.id } });
-
-      // Debug: Print user.savedMeal after the push operation
-      console.log("After Push:", user.savedMeal);
-
-      console.log("Saved Meal");
-      return SuccessHandler({ message: "Saved Meal" }, 200, res);
-    }
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
 
 
 
