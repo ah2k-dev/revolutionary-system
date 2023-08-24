@@ -278,10 +278,32 @@ const addReviews = async (req, res) => {
       comment,
     });
 
+    const reviews = theMeal.reviewsId;
+
+    let totalRating = 0;
+    for (let rev of reviews) {
+      totalRating += rev.rating;
+    }
+
+    const avgRating = (totalRating / reviews.length).toFixed(1);
+
     if (existingReview) {
       existingReview.rating = Number(rating);
       existingReview.comment = comment;
       await existingReview.save();
+
+      const reviews = theMeal.reviewsId;
+
+      let totalRating = 0;
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+      await Meal.findByIdAndUpdate(mealId, {
+        $push: { reviewsId: reviews._id },
+        rating: avgRating,
+      });
       return SuccessHandler(
         {
           success: true,
@@ -301,6 +323,7 @@ const addReviews = async (req, res) => {
       await review.save();
       await Meal.findByIdAndUpdate(mealId, {
         $push: { reviewsId: review._id },
+        rating: avgRating,
       });
       return SuccessHandler(
         { success: true, message: "Review added successfully", review },
@@ -314,7 +337,6 @@ const addReviews = async (req, res) => {
 };
 
 const getReviews = async (req, res) => {
-  const currentUser = req.user._id;
   // #swagger.tags = ['meal']
   try {
     const mealId = req.params.id;
@@ -323,16 +345,10 @@ const getReviews = async (req, res) => {
       return ErrorHandler("The Meal doesn't exist", 400, req, res);
     }
     const reviews = meal.reviewsId;
-    let totalRating = 0;
-    for (let rev of reviews) {
-      totalRating += rev.rating;
-    }
-    const avgRating = (totalRating / reviews.length).toFixed(1);
     return SuccessHandler(
       {
         success: true,
         message: "Fetched Reviews successfully",
-        avgRating,
         reviews,
       },
       200,

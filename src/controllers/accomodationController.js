@@ -263,12 +263,29 @@ const addReview = async (req, res) => {
       comment,
     });
 
+    const reviews = accomodation.reviewsId;
+
+    let totalRating = 0;
+    for (let rev of reviews) {
+      totalRating += rev.rating;
+    }
+
+    const avgRating = (totalRating / reviews.length).toFixed(1);
+
     if (existingReview) {
       // update existing review
       existingReview.rating = rating;
       existingReview.comment = comment;
       await existingReview.save();
 
+      for (let rev of reviews) {
+        totalRating += rev.rating;
+      }
+
+      const avgRating = (totalRating / reviews.length).toFixed(1);
+      await Accomodation.findByIdAndUpdate(accomodationId, {
+        rating: avgRating,
+      });
       return SuccessHandler(
         {
           success: true,
@@ -291,6 +308,7 @@ const addReview = async (req, res) => {
 
       await Accomodation.findByIdAndUpdate(accomodationId, {
         $push: { reviewsId: review._id },
+        rating: avgRating,
       });
 
       return SuccessHandler(
