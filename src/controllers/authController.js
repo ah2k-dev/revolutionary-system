@@ -10,7 +10,7 @@ const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
     const { firstName, lastName, email, password, country, role } = req.body;
-console.log(req.body);
+    console.log(req.body);
     if (firstName.length < 1 || lastName.length < 1) {
       return ErrorHandler(
         "Please, ensure names have at least 2 characters.",
@@ -89,37 +89,40 @@ console.log(req.body);
       avatar: avatarFileName || null,
       coverImg: coverImgfileName || null,
       role,
+      location: {
+        type: "Point",
+        coordinates: [0, 0],
+      },
     };
 
     // for cook
     if (role === "cook") {
       console.log("Cook block");
-      let bannerImg = null
+      let bannerImg = null;
       const { latitude, longitude, shopName, shopDesc } = req.body;
       // if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
-        if (req.files) {
-          const { shopBanner } = req.files;
+      if (req.files) {
+        const { shopBanner } = req.files;
 
-          
-          if (shopBanner) {
-            // It should be image
-            if (!shopBanner.mimetype.startsWith("image")) {
-              return ErrorHandler(
-                "Please upload an Banner Image for shop",
-                400,
-                req,
-                res
-              );
-            }
-            bannerImg = `${Date.now()}${shopBanner.name}`;
-            shopBanner.mv(
-              path.join(__dirname, `../../uploads/${bannerImg}`),
-              (err) => {
-                if (err) {
-                  return ErrorHandler(err.message, 400, req, res);
-                }
-              }
+        if (shopBanner) {
+          // It should be image
+          if (!shopBanner.mimetype.startsWith("image")) {
+            return ErrorHandler(
+              "Please upload an Banner Image for shop",
+              400,
+              req,
+              res
             );
+          }
+          bannerImg = `${Date.now()}${shopBanner.name}`;
+          shopBanner.mv(
+            path.join(__dirname, `../../uploads/${bannerImg}`),
+            (err) => {
+              if (err) {
+                return ErrorHandler(err.message, 400, req, res);
+              }
+            }
+          );
           // }
         }
 
@@ -143,7 +146,7 @@ console.log(req.body);
         },
       };
     }
-console.log(newUserFields)
+    console.log(newUserFields);
     // saved user
     const newUser = await User.create(newUserFields);
     newUser.save();

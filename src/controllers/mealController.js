@@ -213,16 +213,14 @@ const getOrderedMeal = async (req, res) => {
     //   "dishName spiceStatus price cook images"
     // );
     const userMeals = await OrderMeal.find({ user: currentUser }).populate({
-
       path: "meals.meal",
-      select: "_id dishName price images spiceStatus",
+      select: "_id dishName price images spiceStatus maxServingCapacity",
       populate: {
         path: "cook",
         model: "User",
-        select: "shopName shopBanner username email"
-      }
-    }
-    );
+        select: "shopName shopBanner username email",
+      },
+    });
     // console.log(userMeals.meals);
 
     // const cookID = userMeals.map((orders)=>{
