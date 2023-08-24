@@ -1032,3 +1032,7 @@
 {"date":"2023-08-23T20:01:00.457Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
 {"date":"2023-08-23T20:01:37.424Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
 {"date":"2023-08-23T20:02:10.220Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T07:36:25.046Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-24T07:36:44.393Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-24T07:36:46.426Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-24T07:37:21.795Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
