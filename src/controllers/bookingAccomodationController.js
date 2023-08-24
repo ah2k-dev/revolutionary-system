@@ -36,7 +36,7 @@ const bookNewAccomm = async (req, res) => {
     });
     if (bookings.length > 0) {
       return ErrorHandler(
-        { success: false, message: "Accomodation already book" },
+        { success: false, message: "Accommodation already book" },
         400,
         req,
         res

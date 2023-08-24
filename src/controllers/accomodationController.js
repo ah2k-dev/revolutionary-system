@@ -33,7 +33,7 @@ const createAccomodations = async (req, res) => {
     });
 
     if (isAccomodationsExist) {
-      return ErrorHandler("Accomodation already exist", 400, req, res);
+      return ErrorHandler("Accommodation already exist", 400, req, res);
     }
     const createdMeals = await meal.insertMany(
       meals.map((val) => {
@@ -118,7 +118,7 @@ const updateAccomodations = async (req, res) => {
     );
 
     if (!updatedAccomodation) {
-      return ErrorHandler("Accomodation does not exist", 400, req, res);
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
     }
 
     return SuccessHandler(
@@ -146,7 +146,7 @@ const deleteAccomodations = async (req, res) => {
     );
 
     if (!deleteAccomodation) {
-      return ErrorHandler("Accomodation does not exist", 400, req, res);
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
     }
 
     return SuccessHandler(
@@ -222,7 +222,7 @@ const getAllAccomodations = async (req, res) => {
     const totalAccomodation = getAccomodations.length;
 
     if (!getAccomodations) {
-      return ErrorHandler("Accomodation does not exist", 400, req, res);
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
     }
 
     return SuccessHandler(
@@ -253,7 +253,7 @@ const addReview = async (req, res) => {
     const accomodation = await Accomodation.findById(accomodationId);
 
     if (!accomodation) {
-      return ErrorHandler("The Accomodation doesn't exist", 400, req, res);
+      return ErrorHandler("The Accommodation doesn't exist", 400, req, res);
     }
 
     // Check if a review with the same comment already exists
@@ -313,7 +313,7 @@ const getReviews = async (req, res) => {
       "reviewsId"
     );
     if (!accomodation) {
-      return res.status(404).json({ message: "Accomodation not found" });
+      return res.status(404).json({ message: "Accommodation not found" });
     }
 
     const reviews = accomodation.reviewsId;

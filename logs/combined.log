@@ -3379,3 +3379,209 @@
 {"date":"2023-08-24T09:57:03.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-08-24T09:57:03.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-08-24T09:57:04.046Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-24T13:18:50.952Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T13:19:15.171Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T13:19:15.174Z","level":"error","message":"Cannot read properties of undefined (reading 'length')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T13:21:34.507Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:21:59.721Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:22:01.474Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:26:44.441Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:26:45.120Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:27:21.524Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:27:22.158Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:30:58.374Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:30:59.073Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:31:35.735Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:31:36.395Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:32:01.055Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:32:01.734Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:11.251Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:11.936Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:13.072Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:13.713Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:34:42.739Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:10.899Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64d7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:11.125Z","level":"error","message":"Cast to ObjectId failed for value \"64d7fbea5666e5a7a1b69bc\" (type string) at path \"_id\" for model \"Meal\"","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64d7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:15.369Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:18.505Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:38:07.112Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:59:34.062Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T14:05:09.550Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-24T14:05:10.891Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-24T14:05:34.757Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-24T14:05:50.716Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:22:23.006Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:22:23.212Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-24T14:22:25.842Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:22:26.045Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-24T14:22:51.415Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:25:01.302Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:25:16.231Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:26:16.659Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:28:33.931Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-24T14:28:34.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-24T14:28:34.042Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-24T14:28:34.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-24T14:28:34.053Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-24T14:28:34.945Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-24T14:30:25.754Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:31:50.360Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:31:50.826Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:32:43.903Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:32:44.352Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:34:09.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:34:09.987Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:35:51.458Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:35:51.912Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:36:45.340Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T15:02:20.373Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T15:02:20.400Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T15:02:23.960Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T15:02:23.970Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T15:03:03.418Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T15:03:03.661Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T15:03:04.592Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T15:03:04.830Z","level":"error","message":"bannerImg is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T15:03:45.746Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T15:18:21.071Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-24T15:18:21.194Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-24T15:18:21.205Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-24T15:18:21.208Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-24T15:18:21.214Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-24T15:18:56.078Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:19:14.185Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T15:19:26.678Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:19:26.932Z","level":"error","message":"Cast to Number failed for value \"any\" (type string) at path \"capacity\" for model \"Accomodation\"","method":"POST","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-24T15:19:51.878Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:19:52.102Z","level":"error","message":"Cast to Number failed for value \"any\" (type string) at path \"capacity\" for model \"Accomodation\"","method":"POST","service":"user-service","url":"/getAccomodations"}
+{"date":"2023-08-24T15:20:16.439Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:21:45.590Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:22:38.524Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:24:51.652Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:26:47.322Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-24T15:26:48.648Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-24T15:27:03.623Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-24T15:27:20.502Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T15:30:05.744Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T15:31:44.006Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T15:38:38.096Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:39:06.801Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T15:39:17.929Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-24T15:46:50.228Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T15:54:00.339Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T15:54:04.807Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T15:58:40.266Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T15:58:43.985Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:02:35.820Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:02:36.542Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:02:38.869Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:02:39.572Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:02:59.401Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:03:01.340Z","level":"error","message":"Cannot read properties of undefined (reading 'contains')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:04:12.710Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:04:15.725Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:05:28.415Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:05:29.129Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:05:55.646Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:05:56.307Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:08:53.358Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:08:53.987Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:14:42.985Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:14:46.970Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:16:46.731Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:16:47.635Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:21:56.577Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:21:57.279Z","level":"error","message":"Cannot read properties of undefined (reading 'indexOf')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:25:14.782Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:25:15.482Z","level":"error","message":"user.savedMeals is not a function","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:25:18.224Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:25:18.898Z","level":"error","message":"user.savedMeals is not a function","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:26:20.646Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:26:21.320Z","level":"error","message":"Cannot read properties of undefined (reading 'map')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:27:25.058Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:27:33.595Z","level":"error","message":"Cannot read properties of undefined (reading 'map')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:28:06.208Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:28:06.881Z","level":"error","message":"Cannot read properties of undefined (reading 'map')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:28:43.460Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:28:47.429Z","level":"error","message":"Cannot read properties of undefined (reading 'map')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:33:16.058Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:33:18.586Z","level":"error","message":"Cannot read properties of undefined (reading 'indexOf')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:36:09.723Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:36:16.303Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:38:05.308Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:38:05.996Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:28.841Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:29.106Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:32.513Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:32.741Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:45.212Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:45:45.440Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:46:54.911Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
+{"date":"2023-08-24T16:47:59.414Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:49:04.360Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:49:39.505Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:51:12.598Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:51:40.175Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:52:17.113Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:53:49.823Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T16:54:52.832Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:01:34.975Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-24T17:01:35.193Z","level":"error","message":"Role: cook is not allowed to access resource","method":"POST","service":"user-service","url":"/orderMeal"}
+{"date":"2023-08-24T17:01:44.617Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T17:01:58.677Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-24T17:01:58.900Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/orderMeal"}
+{"date":"2023-08-24T17:02:19.294Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-24T17:05:00.601Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:05:04.801Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:08:25.679Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:09:15.984Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:11:49.212Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:13:28.914Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:16:28.960Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:17:14.163Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:19:11.511Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:20:59.076Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:22:22.093Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:23:15.168Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:23:15.704Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:04.495Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:24:04.710Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:06.029Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:24:06.252Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:10.035Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:24:10.250Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:49.185Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:24:51.760Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:25:59.695Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:27:47.398Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:29:27.627Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:29:28.077Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:29:42.591Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:30:52.575Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:33:50.482Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:35:49.585Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:36:07.941Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-24T17:40:23.093Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T17:40:23.491Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-24T17:40:42.085Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-24T17:40:43.671Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-24T17:40:54.153Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-24T17:40:54.367Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-24T17:40:59.192Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-24T17:43:43.676Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:43:44.113Z","level":"error","message":"Can't extract geo keys: { _id: ObjectId('64e663d2cd6392181ac991ba'), firstName: \"Umer\", lastName: \"Memon\", username: \"firstNamec9eba6b0-41ee-11ee-a509-f7a4db28a9f7\", email: \"user@gmail.com\", password: \"$2a$10$XjDfBDTT0nHqSbisi6L4/eBcqMzEcJ/pWSXHD7nvVh.GgNngnWA/u\", role: \"user\", createdAt: new Date(1692819928653), emailVerified: true, isActive: true, avatar: \"1692820434074avatar-3637561_640.webp\", coverImg: \"1692820434074user-154199_640.webp\", country: \"PK\", savedAccomodation: [], provider: \"local\", __v: 1, emailVerificationToken: null, emailVerificationTokenExpires: null, location: { type: \"Point\" }, savedMeal: [ ObjectId('64e7777e6d5d926933b56c91') ], shopBanner: \"https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg\" }  Point must be an array or object","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:52:14.469Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:52:14.943Z","level":"error","message":"Can't extract geo keys: { _id: ObjectId('64e663d2cd6392181ac991ba'), firstName: \"Umer\", lastName: \"Memon\", username: \"firstNamec9eba6b0-41ee-11ee-a509-f7a4db28a9f7\", email: \"user@gmail.com\", password: \"$2a$10$XjDfBDTT0nHqSbisi6L4/eBcqMzEcJ/pWSXHD7nvVh.GgNngnWA/u\", role: \"user\", createdAt: new Date(1692819928653), emailVerified: true, isActive: true, avatar: \"1692820434074avatar-3637561_640.webp\", coverImg: \"1692820434074user-154199_640.webp\", country: \"PK\", savedAccomodation: [], provider: \"local\", __v: 1, emailVerificationToken: null, emailVerificationTokenExpires: null, location: { coordinates: [], type: \"Point\" }, savedMeal: [ ObjectId('64e7777e6d5d926933b56c91') ], shopBanner: \"https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg\" }  Point must only contain numeric elements","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:55:05.602Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T17:57:38.174Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T17:58:38.863Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T18:09:12.796Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T18:09:14.063Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T18:09:17.622Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T18:10:03.997Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T18:10:47.016Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T18:10:47.439Z","level":"error","message":"Can't extract geo keys: { _id: ObjectId('64e663d2cd6392181ac991ba'), firstName: \"Umer\", lastName: \"Memon\", username: \"firstNamec9eba6b0-41ee-11ee-a509-f7a4db28a9f7\", email: \"user@gmail.com\", password: \"$2a$10$XjDfBDTT0nHqSbisi6L4/eBcqMzEcJ/pWSXHD7nvVh.GgNngnWA/u\", role: \"user\", createdAt: new Date(1692819928653), emailVerified: true, isActive: true, avatar: \"1692820434074avatar-3637561_640.webp\", coverImg: \"1692820434074user-154199_640.webp\", country: \"PK\", savedAccomodation: [], provider: \"local\", __v: 2, emailVerificationToken: null, emailVerificationTokenExpires: null, savedMeal: [], location: { type: \"Point\" } }  Point must be an array or object","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T18:12:11.036Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T18:13:25.467Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T18:13:39.121Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-24T18:13:50.776Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}

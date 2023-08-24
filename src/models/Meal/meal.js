@@ -15,9 +15,9 @@ const mealSchema = new Schema(
     },
 
     cook: { type: Schema.Types.ObjectId, ref: "User" },
-    dishName: { type: String, required: true },
-    desc: { type: String, required: true },
-    price: { type: Number, required: true },
+    dishName: { type: String, },
+    desc: { type: String,  },
+    price: { type: Number,  },
     images: {
       type: [String],
       default:
@@ -28,12 +28,13 @@ const mealSchema = new Schema(
       enum: ["High", "Medium", "Low"],
       default: "Medium",
     },
-    gram: { type: Number, required: true },
-    calories: { type: Number, required: true },
+    gram: { type: Number,  },
+    calories: { type: Number, },
 
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
+    rating: {type: Number, default: 0}
   },
   { timestamps: true }
 );
