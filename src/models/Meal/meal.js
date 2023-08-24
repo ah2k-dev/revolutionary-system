@@ -6,7 +6,6 @@ dotenv.config({ path: ".././src/config/config.env" });
 const mealSchema = new Schema(
   {
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
-    // reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
     // new fields
     mealType: {
