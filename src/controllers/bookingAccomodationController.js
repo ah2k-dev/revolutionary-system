@@ -52,10 +52,6 @@ const bookNewAccomm = async (req, res) => {
     const newBooking = await bookAccomm.create({
       user: currentUser,
       accomodationsId: accomodationId,
-      // bookingDate: {
-      //   startDate,
-      //   endDate,
-      // },
       startDate,
       endDate,
       // checkIn,
@@ -85,7 +81,6 @@ const getUserBookings = async (req, res) => {
       .find({ user: currentUser })
       .populate("accomodationsId")
       .populate("selectedMeals");
-    console.log(bookings);
     if (!bookings) {
       return ErrorHandler("No Such Booking exist", 400, req, res);
     }

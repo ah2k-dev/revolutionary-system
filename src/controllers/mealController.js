@@ -165,7 +165,7 @@ const orderTheMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   const currentUser = req.user._id;
   try {
-    const { meals, subTotal, couponCode, tip } = req.body;
+    const { meals, subTotal, couponCode, tip, couponId } = req.body;
     console.log(req.body);
     console.log(currentUser);
 
@@ -174,7 +174,7 @@ const orderTheMeal = async (req, res) => {
     const order = await OrderMeal.create({
       user: currentUser,
       coupon: couponId,
-      meals: meals,
+      meals: JSON.parse(meals),
       subTotal: subTotal,
       usedCoupon: couponCode,
       tip: tip,

@@ -36,8 +36,8 @@ const bookingAccomodationSchema = new Schema(
       required: true,
     },
 
-    checkIn: { type: String, required: true },
-    checkOut: { type: String, required: true },
+    // checkIn: { type: String, required: true },
+    // checkOut: { type: String, required: true },
     capacity: { type: Number, required: true },
 
     stripeCharges: { type: Number, default: 0 },
