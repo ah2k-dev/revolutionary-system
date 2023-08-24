@@ -3379,3 +3379,58 @@
 {"date":"2023-08-24T09:57:03.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-08-24T09:57:03.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-08-24T09:57:04.046Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-24T13:18:50.952Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T13:19:15.171Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T13:19:15.174Z","level":"error","message":"Cannot read properties of undefined (reading 'length')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T13:21:34.507Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:21:59.721Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:22:01.474Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:26:44.441Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:26:45.120Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:27:21.524Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:27:22.158Z","level":"error","message":"Cannot read properties of undefined (reading 'push')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:30:58.374Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:30:59.073Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:31:35.735Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:31:36.395Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:32:01.055Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:32:01.734Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:11.251Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:11.936Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:13.072Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:33:13.713Z","level":"error","message":"Cannot populate path `savedMeal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:34:42.739Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:10.899Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64d7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:11.125Z","level":"error","message":"Cast to ObjectId failed for value \"64d7fbea5666e5a7a1b69bc\" (type string) at path \"_id\" for model \"Meal\"","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64d7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:15.369Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:36:18.505Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:38:07.112Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64df7fbea5666e5a7a1b69bc"}
+{"date":"2023-08-24T13:59:34.062Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-08-24T14:05:09.550Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-24T14:05:10.891Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-24T14:05:34.757Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-24T14:05:50.716Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:22:23.006Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:22:23.212Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-24T14:22:25.842Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:22:26.045Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-24T14:22:51.415Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:25:01.302Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:25:16.231Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:26:16.659Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-24T14:28:33.931Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-24T14:28:34.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-24T14:28:34.042Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-24T14:28:34.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-24T14:28:34.053Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-24T14:28:34.945Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-24T14:30:25.754Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-24T14:31:50.360Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:31:50.826Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:32:43.903Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:32:44.352Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:34:09.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:34:09.987Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:35:51.458Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
+{"date":"2023-08-24T14:35:51.912Z","level":"error","message":"Meal validation failed: calories: Path `calories` is required., gram: Path `gram` is required., price: Path `price` is required., desc: Path `desc` is required., dishName: Path `dishName` is required.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-24T14:36:45.340Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/newAccomodation"}
