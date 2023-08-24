@@ -1086,3 +1086,9 @@
 {"date":"2023-08-24T16:45:45.440Z","level":"error","message":"Cannot read properties of undefined (reading 'includes')","method":"PUT","service":"user-service","url":"/savedOrUnsavedMeal/64e777e06d5d926933b56c95"}
 {"date":"2023-08-24T17:01:35.193Z","level":"error","message":"Role: cook is not allowed to access resource","method":"POST","service":"user-service","url":"/orderMeal"}
 {"date":"2023-08-24T17:01:58.900Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/orderMeal"}
+{"date":"2023-08-24T17:23:15.704Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:04.710Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:06.252Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:10.250Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:24:51.760Z","level":"error","message":"Latitude, Longitude or Shop name is missing","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-24T17:29:28.077Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}

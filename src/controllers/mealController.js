@@ -217,7 +217,9 @@ const getOrderedMeal = async (req, res) => {
       path: "meals.meal",
       select: "_id dishName price images spiceStatus",
       populate: {
-        
+        path: "cook",
+        model: "User",
+        select: "shopName shopBanner username email"
       }
     }
     );

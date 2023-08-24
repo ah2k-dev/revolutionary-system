@@ -10,7 +10,7 @@ const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
     const { firstName, lastName, email, password, country, role } = req.body;
-
+console.log(req.body);
     if (firstName.length < 1 || lastName.length < 1) {
       return ErrorHandler(
         "Please, ensure names have at least 2 characters.",
@@ -92,12 +92,13 @@ const register = async (req, res) => {
     };
 
     // for cook
-    let bannerImg = null
     if (role === "cook") {
-      const { latitude, longitude, shopName, shopBanner, shopDesc } = req.body;
-      if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
-        if (req.file) {
-          const { shopBanner } = req.file;
+      console.log("Cook block");
+      let bannerImg = null
+      const { latitude, longitude, shopName, shopDesc } = req.body;
+      // if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
+        if (req.files) {
+          const { shopBanner } = req.files;
 
           
           if (shopBanner) {
@@ -119,18 +120,18 @@ const register = async (req, res) => {
                 }
               }
             );
-          }
+          // }
         }
 
-        return ErrorHandler(
-          "Latitude, Longitude or Shop name is missing",
-          400,
-          req,
-          res
-        );
+        // return ErrorHandler(
+        //   "Latitude, Longitude or Shop name is missing",
+        //   400,
+        //   req,
+        //   res
+        // );
       }
-      let parselatitude = Number(latitude);
-      let parselongitude = Number(longitude);
+      // let parselatitude = Number(latitude);
+      // let parselongitude = Number(longitude);
       newUserFields = {
         ...newUserFields,
         shopName,
@@ -138,11 +139,11 @@ const register = async (req, res) => {
         shopBanner: bannerImg,
         location: {
           type: "Point",
-          coordinates: [parselongitude, parselatitude],
+          coordinates: [longitude, latitude],
         },
       };
     }
-
+console.log(newUserFields)
     // saved user
     const newUser = await User.create(newUserFields);
     newUser.save();

@@ -81,35 +81,53 @@ const userSchema = new Schema({
     default: "local",
     enum: ["google", "facebook", "local"],
   },
+
+  location: {
+    type: { type: String, default: "Point" },
+    coordinates: [Number],
+  },
+  // Shop Related Fields
+  shopName: { type: String, unique: true },
+  shopDesc: { type: String },
+  shopBanner: {
+    type: String,
+    default:
+      "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
+  },
+  shopRating: { type: Number },
+  savedAccomodation: [{ type: Schema.Types.ObjectId, ref: "Accomodation" }],
+
+  savedMeal: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
 });
 
 // Only add the location field if the role is "cook"
-if (userSchema.role === "cook") {
-  userSchema.add({
-    location: {
-      type: { type: String, default: "Point" },
-      coordinates: [Number],
-    },
-    // Shop Related Fields
-    shopName: { type: String, unique: true },
-    shopDesc: { type: String },
-    shopBanner: {
-      type: String,
-      default:
-        "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
-    },
-    shopRating: { type: Number },
-  });
-}
+// if (userSchema.role === "cook") {
+//   userSchema.add({
+//     location: {
+//       type: { type: String, default: "Point" },
+//       coordinates: [Number],
+//     },
+//     // Shop Related Fields
+//     shopName: { type: String, unique: true },
+//     shopDesc: { type: String },
+//     shopBanner: {
+//       type: String,
+//       default:
+//         "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
+//     },
+//     shopRating: { type: Number },
+//   });
+//   console.log("I am in Cook Schema");
+// }
 
 // favourite meals and accomodations if the role is "user"
-if (userSchema.role === "user") {
-  userSchema.add({
-    savedAccomodation: [{ type: Schema.Types.ObjectId, ref: "Accomodation" }],
+// if (userSchema.role === "user") {
+//   userSchema.add({
+//     savedAccomodation: [{ type: Schema.Types.ObjectId, ref: "Accomodation" }],
 
-    savedMeal: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
-  });
-}
+//     savedMeal: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
+//   });
+// }
 
 userSchema.index({ location: "2dsphere" });
 //hash password before saving
