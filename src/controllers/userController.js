@@ -191,11 +191,15 @@ const savedOrUnsavedAccomodation = async (req, res) => {
       const index = user.savedAccomodation.indexOf(accomodation.id);
       user.savedAccomodation.splice(index, 1);
       await user.save();
-      return SuccessHandler("UnSaved Accomodation Successfully", 200, res);
+      return SuccessHandler(
+        { message: "UnSaved Accomodation Successfully" },
+        200,
+        res
+      );
     } else {
       user.savedAccomodation.push(accomodation.id);
       await user.save();
-      return SuccessHandler("Saved Accomodation", 200, res);
+      return SuccessHandler({ message: "Saved Accomodation" }, 200, res);
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
@@ -295,7 +299,7 @@ const getCouponsForCook = async (req, res) => {
     }
 
     return SuccessHandler(
-      { success: true, message: "Coupon Fetched successfully", coupons },
+      { message: "Coupon Fetched successfully", coupons },
       200,
       res
     );
@@ -321,11 +325,15 @@ const savedOrUnsavedMeal = async (req, res) => {
       const index = user.savedMeal.indexOf(meal.id);
       user.savedMeal.splice(index, 1);
       await user.save();
-      return SuccessHandler("UnSaved Meal with Successfully", 200, res);
+      return SuccessHandler(
+        { message: "UnSaved Meal with Successfully" },
+        200,
+        res
+      );
     } else {
       user.savedMeal.push(meal.id);
       await user.save();
-      return SuccessHandler("Saved Meal", 200, res);
+      return SuccessHandler({ message: "Saved Meal" }, 200, res);
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
