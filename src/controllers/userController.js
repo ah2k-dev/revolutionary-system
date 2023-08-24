@@ -5,6 +5,7 @@ const path = require("path");
 const Accomodation = require("../models/Accomodation/accomodation");
 const Coupon = require("../models/Coupon/coupon");
 const Meal = require("../models/Meal/meal");
+const user = require("../models/User/user");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -173,7 +174,7 @@ const updateUser = async (req, res) => {
 };
 
 // Saved or Unsaved Accomodation
-const savedOrUnsavedAccomodation = async (req, res) => {
+async function savedOrUnsavedAccomodation(req, res) {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
@@ -204,7 +205,7 @@ const savedOrUnsavedAccomodation = async (req, res) => {
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
-};
+}
 
 // get Saved Accomodations
 const getSavedAccomodations = async (req, res) => {
@@ -313,17 +314,17 @@ const savedOrUnsavedMeal = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     // console.log(req.user.savedMeal, req.user._id);
-    let exUser = req.user
-    console.log(exUser.savedMeal)
-    let exSavedMeals = req.user.savedMeal  || []
-    if(exSavedMeals.includes(req.params.id)){
-      exSavedMeals = exSavedMeals.filter((val)=> val != req.params.id)
+    let exUser = req.user;
+    console.log(exUser.savedMeal);
+    let exSavedMeals = req.user.savedMeal || [];
+    if (exSavedMeals.includes(req.params.id)) {
+      exSavedMeals = exSavedMeals.filter((val) => val != req.params.id);
     } else {
-      exSavedMeals.push(req.params.id)
+      exSavedMeals.push(req.params.id);
     }
 
-    req.user.savedMeal = exSavedMeals
-    await req.user.save()
+    req.user.savedMeal = exSavedMeals;
+    await req.user.save();
     return SuccessHandler({ message: "Saved Meal" }, 200, res);
 
     // return SuccessHandler
@@ -335,9 +336,9 @@ const savedOrUnsavedMeal = async (req, res) => {
     // if (!meal) {
     //   return ErrorHandler("Meal does not exist", 400, req, res);
     // }
-    
+
     // if (user.savedMeal) {
-      
+
     //   if (user.savedMeal.includes(meal.id)) {
     //     const index = user.savedMeal.indexOf(meal.id);
     //     user.savedMeal.splice(index, 1);
@@ -365,13 +366,6 @@ const savedOrUnsavedMeal = async (req, res) => {
   }
 };
 
-
-
-
-
- 
-
-
 // const savedOrUnsavedMeal = async (req, res) => {
 //   // #swagger.tags = ['user']
 //   try {
@@ -383,7 +377,7 @@ const savedOrUnsavedMeal = async (req, res) => {
 //     if (!meal) {
 //       return ErrorHandler("Meal does not exist", 400, req, res);
 //     }
-    
+
 //     // Ensure user.savedMeal is defined as an array
 //     // if (!user.savedMeal) {
 //     //   user.savedMeal = [];
@@ -417,9 +411,6 @@ const savedOrUnsavedMeal = async (req, res) => {
 //   }
 // };
 
-
-
-
 // get Saved Meals
 const getSavedMeals = async (req, res) => {
   // #swagger.tags = ['user']
@@ -427,7 +418,7 @@ const getSavedMeals = async (req, res) => {
     const currentUser = req.user._id;
     const user = await User.findById(currentUser).populate("savedMeal");
 
-    let savedMeals = user.savedAccomodation;
+    let savedMeals = user.savedMeal;
     if (!savedMeals) {
       return ErrorHandler("Saved Meal does not exist", 404, req, res);
     }
@@ -442,6 +433,52 @@ const getSavedMeals = async (req, res) => {
   }
 };
 
+const savedOrUnsavedCook = async (req, res) => {
+  const currentUser = req.user._id;
+
+  try {
+    const cook = await User.findById(req.params.id);
+    if (!cook) {
+      ErrorHandler("Cook doesn't exist", 400, req, res);
+    }
+
+    if (cook.savedCook.includes(cook.id)) {
+      const index = cook.savedCook.indexOf(cook.id);
+      cook.savedCook(index, 1);
+      await cook.save();
+      return SuccessHandler({ message: "Favourite Cook Discarded" }, 200, res);
+    } else {
+      cook.savedCook.push(cook.id);
+      await cook.save();
+      return SuccessHandler(
+        { message: "Cook Added to Favourite Successfully" },
+        200,
+        res
+      );
+    }
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getSavedCook = async (req, res) => {
+  try {
+    const currentUser = req.user._id;
+    const cook = await User.findById(currentUser).populate("savedCook");
+    let favouriteCooks = cook.savedCook;
+    if (!favouriteCooks) {
+      return ErrorHandler("Favourite Cook does not exist", 404, req, res);
+    }
+    SuccessHandler(
+      { message: "Favourite Cook fetch Successfully", favouriteCooks },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   updateUser,
   getUserProfile,
@@ -452,4 +489,6 @@ module.exports = {
   getCouponsForCook,
   savedOrUnsavedMeal,
   getSavedMeals,
+  savedOrUnsavedCook,
+  getSavedCook,
 };

@@ -35,4 +35,10 @@ router
   .route("/cookCoupons")
   .get(isAuthenticated, authorizedCook, user.getCouponsForCook);
 
+// ✅ Saved Cook
+router
+  .route("/savedOrUnsavedCook/:id")
+  .put(isAuthenticated, user.savedOrUnsavedCook);
+router.route("/savedCook").get(isAuthenticated, user.getSavedCook);
+
 module.exports = router;
