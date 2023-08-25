@@ -1,8 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: ".././src/config/config.env" });
 const bookAccomm = require("../models/Accomodation/bookingAccomodation");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const Accomodation = require("../models/Accomodation/accomodation");
 const path = require("path");
+const stripe = require("stripe")(process.env.SECRET_KEY);
 
 //Book a new Accomm
 const bookNewAccomm = async (req, res) => {
@@ -17,6 +20,7 @@ const bookNewAccomm = async (req, res) => {
       subTotal,
       capacity,
       selectedMeals,
+      stripeToken,
     } = req.body;
 
     const currentAccommodation = await Accomodation.findById(accomodationId);
@@ -48,26 +52,40 @@ const bookNewAccomm = async (req, res) => {
     if (isBooked) {
       return ErrorHandler("Already Booked", 400, req, res);
     }
-
-    const newBooking = await bookAccomm.create({
-      user: currentUser,
-      accomodationsId: accomodationId,
-      startDate,
-      endDate,
-      // checkIn,
-      // checkOut,
-      capacity,
-      subTotal,
-      selectedMeals: selectedMeals,
+    const charge = await stripe.charges.create({
+      amount: subTotal * 100,
+      currency: "usd",
+      source: stripeToken,
+      description: accomodationId,
     });
 
-    await newBooking.save();
+    if (!charge) {
+      return ErrorHandler("Payment Failed", 400, req, res);
+    } else {
+      const newBooking = await bookAccomm.create({
+        user: currentUser,
+        accomodationsId: accomodationId,
+        startDate,
+        endDate,
+        // checkIn,
+        // checkOut,
+        capacity,
+        subTotal,
+        selectedMeals: selectedMeals,
+      });
 
-    return SuccessHandler(
-      { success: true, message: "Booking Added successfully", newBooking },
-      200,
-      res
-    );
+      await newBooking.save();
+
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Payment Successful and Booking Added",
+          newBooking,
+        },
+        200,
+        res
+      );
+    }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
