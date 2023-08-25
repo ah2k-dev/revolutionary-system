@@ -58,7 +58,7 @@ const verifyCoupon = async (req, res) => {
   // #swagger.tags = ['coupon']
   try {
     const { couponCode, createdBy } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     const currentUser = req.user._id;
     const currentDate = new Date();
     const couponExpiry = await Coupon.findOne({

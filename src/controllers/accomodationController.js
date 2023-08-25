@@ -75,7 +75,6 @@ const updateAccomodations = async (req, res) => {
   // TODO: image array
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
-    console.log(req.body);
     const currentUser = req.user._id;
     // const updatedAccomodation = await Accomodation.findByIdAndUpdate(
     //   req.params.id,
@@ -135,7 +134,6 @@ const deleteAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    console.log(req.body);
     const deleteAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
@@ -272,9 +270,8 @@ const addReview = async (req, res) => {
       const accomodationReview = await Review.find({
         accomodation: accomodationId,
       });
-      console.log(accomodationReview);
+      // console.log(accomodationReview);
       let allRating = accomodationReview.map((accRating) => accRating.rating);
-      console.log(allRating);
       let totalRating = allRating.reduce(
         (acc, currentRating) => acc + currentRating,
         0
@@ -306,9 +303,9 @@ const addReview = async (req, res) => {
     const accomodationReview = await Review.find({
       accomodation: accomodationId,
     });
-    console.log(accomodationReview);
+    // console.log(accomodationReview);
     let allRating = accomodationReview.map((accRating) => accRating.rating);
-    console.log(allRating);
+    // console.log(allRating);
     let totalRating = allRating.reduce(
       (acc, currentRating) => acc + currentRating,
       0
@@ -376,7 +373,6 @@ const deleteReview = async (req, res) => {
     const review = await Review.findByIdAndDelete({
       _id: reviewId,
     });
-    console.log(review);
 
     if (!review) {
       return ErrorHandler(

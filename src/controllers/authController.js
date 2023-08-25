@@ -97,7 +97,7 @@ const register = async (req, res) => {
 
     // for cook
     if (role === "cook") {
-      console.log("Cook block");
+      // console.log("Cook block");
       let bannerImg = null;
       const { latitude, longitude, shopName, shopDesc } = req.body;
       // if (!(latitude || longitude || shopName || shopDesc || shopBanner)) {
@@ -146,7 +146,7 @@ const register = async (req, res) => {
         },
       };
     }
-    console.log(newUserFields);
+    // console.log(newUserFields);
     // saved user
     const newUser = await User.create(newUserFields);
     newUser.save();
@@ -229,7 +229,6 @@ const login = async (req, res) => {
       return ErrorHandler("Please provide email and password", 400, req, res);
     }
     const user = await User.findOne({ email }).select("+password");
-    console.log(user);
     if (!user) {
       return ErrorHandler("Please, provide correct credentials", 400, req, res);
     }
@@ -366,9 +365,8 @@ const updatePersonalInfo = async (req, res) => {
     const { firstName, lastName } = req.body;
     // Get the previous avatar filename
     const checkUser = await User.findById(req.user._id);
-    console.log(checkUser);
     const previousAvatarFileName = checkUser.avatar;
-    console.log(previousAvatarFileName);
+    // console.log(previousAvatarFileName);
 
     let avatarFileName = null;
     if (req.files) {
@@ -379,7 +377,6 @@ const updatePersonalInfo = async (req, res) => {
           __dirname,
           `../../uploads/${previousAvatarFileName}`
         );
-        console.log(previousAvatarPath);
 
         fs.unlink(previousAvatarPath, (err) => {
           if (err) {
@@ -441,8 +438,6 @@ const googleAuth = async (req, res) => {
   try {
     const { email, firstName, lastName, profilePic, phoneNumber, role } =
       req.body;
-
-    console.log(req.body);
 
     const exUser = await User.findOne({ email });
     if (exUser && exUser.provider === "google") {
