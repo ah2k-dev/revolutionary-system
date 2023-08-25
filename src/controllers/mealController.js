@@ -358,7 +358,6 @@ const getReviews = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
 const deleteReview = async (req, res) => {
   // #swagger.tags = ['meal']
   try {
