@@ -1115,3 +1115,11 @@
 {"date":"2023-08-25T12:44:36.565Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
 {"date":"2023-08-25T12:45:22.775Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
 {"date":"2023-08-25T12:55:12.733Z","level":"error","message":"Accomodation is not defined","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
+{"date":"2023-08-25T14:22:51.472Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/cookCoupons"}
+{"date":"2023-08-25T14:23:15.515Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/cookCoupons"}
+{"date":"2023-08-25T15:42:58.920Z","level":"error","message":"rating is not defined","method":"GET","service":"user-service","url":"/getCook"}
+{"date":"2023-08-25T16:24:47.497Z","level":"error","message":"Cannot access 'avgRating' before initialization","method":"GET","service":"user-service","url":"/getCook"}
+{"date":"2023-08-25T16:53:54.339Z","level":"error","message":"Parameter \"filter\" to findOne() must be an object, got 64e777e06d5d926933b56c95","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
+{"date":"2023-08-25T17:07:48.349Z","level":"error","message":"$in needs an array","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
+{"date":"2023-08-25T17:25:27.218Z","level":"error","message":"User is not defined","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
+{"date":"2023-08-25T17:26:51.821Z","level":"error","message":"User is not defined","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}

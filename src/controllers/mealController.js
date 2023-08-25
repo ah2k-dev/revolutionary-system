@@ -1,4 +1,5 @@
 const Meal = require("../models/Meal/meal");
+const User = require("../models/User/user");
 const OrderMeal = require("../models/Meal/orderMeal");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
@@ -269,44 +270,43 @@ const addReviews = async (req, res) => {
     if (!theMeal) {
       return ErrorHandler("The Meal doesn't exist", 400, req, res);
     }
+    // const existingReview = await Review.findOne({
+    //   user: currentUser,
+    //   meal: mealId,
+    //   comment,
+    // });
 
-    const existingReview = await Review.findOne({
-      user: currentUser,
-      meal: mealId,
-      comment,
-    });
+    // if (existingReview) {
+    //   existingReview.rating = Number(rating);
+    //   existingReview.comment = comment;
+    //   await existingReview.save();
 
-    if (existingReview) {
-      existingReview.rating = Number(rating);
-      existingReview.comment = comment;
-      await existingReview.save();
+    //   const mealReviews = await Review.find({
+    //     meal: mealId,
+    //   });
+    //   // console.log(mealReviews);
+    //   let allRating = mealReviews.map((mRating) => mRating.rating);
+    //   // console.log(allRating);
+    //   let totalRating = allRating.reduce(
+    //     (acc, currentRating) => acc + currentRating,
+    //     0
+    //   );
+    //   const avgRating = totalRating / mealReviews.length;
 
-      const mealReviews = await Review.find({
-        meal: mealId,
-      });
-      // console.log(mealReviews);
-      let allRating = mealReviews.map((mRating) => mRating.rating);
-      // console.log(allRating);
-      let totalRating = allRating.reduce(
-        (acc, currentRating) => acc + currentRating,
-        0
-      );
-      const avgRating = totalRating / mealReviews.length;
+    //   await Meal.findByIdAndUpdate(mealId, {
+    //     rating: avgRating,
+    //   });
 
-      await Meal.findByIdAndUpdate(mealId, {
-        rating: avgRating,
-      });
-
-      return SuccessHandler(
-        {
-          success: true,
-          message: "Review Updated successfully",
-          review: existingReview,
-        },
-        200,
-        res
-      );
-    }
+    //   return SuccessHandler(
+    //     {
+    //       success: true,
+    //       message: "Review Updated successfully",
+    //       review: existingReview,
+    //     },
+    //     200,
+    //     res
+    //   );
+    // }
     const review = await Review.create({
       rating: Number(rating),
       comment,
@@ -319,7 +319,6 @@ const addReviews = async (req, res) => {
       meal: mealId,
     });
     let allRating = mealReviews.map((accRating) => accRating.rating);
-    // console.log(allRating);
     let totalRating = allRating.reduce(
       (acc, currentRating) => acc + currentRating,
       0
@@ -331,7 +330,27 @@ const addReviews = async (req, res) => {
       rating: avgRating,
     });
 
+    const gettingCookId = await Meal.findOne({ _id: mealId });
+    const cookId = gettingCookId.cook;
+    // console.log(cookId);
+
+    const avgRatings = await Meal.aggregate([
+      {
+        $match: { cook: cookId, rating: { $ne: 0 } },
+      },
+      {
+        $group: { _id: "$cook", avgRatingg: { $avg: "$rating" } },
+      },
+    ]);
+    const [{ _id, avgRatingg }] = avgRatings;
+    console.log(_id);
+    console.log(avgRatingg);
+    await User.findByIdAndUpdate(_id, {
+      shopRating: avgRatingg,
+    });
+
     return SuccessHandler(
+      // { success: true, message: "Review added successfully" },
       { success: true, message: "Review added successfully", review },
       200,
       res

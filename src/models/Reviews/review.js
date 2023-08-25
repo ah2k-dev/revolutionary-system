@@ -17,8 +17,8 @@ const reviewsSchema = new Schema(
       required: true,
       validate: {
         validator: (value) =>
-          validator.isFloat(String(value), { min: 0, max: 5 }),
-        message: "Ratings must be between 0 and 5.",
+          validator.isFloat(String(value), { min: 1, max: 5 }),
+        message: "Ratings must be between 1 and 5.",
       },
     },
     comment: { type: String, required: true },

@@ -76,25 +76,6 @@ const updateAccomodations = async (req, res) => {
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
     const currentUser = req.user._id;
-    // const updatedAccomodation = await Accomodation.findByIdAndUpdate(
-    //   req.params.id,
-    //   {
-    //     title,
-    //     desc,
-    //     location: {
-    //       type: "Point",
-    //       coordinates: [longitude, latitude],
-    //     },
-
-    //     capacity,
-    //     services,
-    //     createdBy: currentUser,
-    //   },
-    //   {
-    //     new: true,
-    //     runValidators: true,
-    //   }
-    // );
 
     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
