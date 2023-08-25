@@ -98,7 +98,7 @@ const userSchema = new Schema({
   savedAccomodation: [{ type: Schema.Types.ObjectId, ref: "Accomodation" }],
 
   savedMeal: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
-  savedCook: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  savedCooks: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 // Only add the location field if the role is "cook"

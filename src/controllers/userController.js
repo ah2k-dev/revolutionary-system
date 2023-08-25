@@ -438,18 +438,19 @@ const savedOrUnsavedCook = async (req, res) => {
 
   try {
     const cook = await User.findById(req.params.id);
+    const user = await User.findById(currentUser);
     if (!cook) {
       ErrorHandler("Cook doesn't exist", 400, req, res);
     }
 
-    if (cook.savedCook.includes(cook.id)) {
-      const index = cook.savedCook.indexOf(cook.id);
-      cook.savedCook(index, 1);
-      await cook.save();
+    if (user.savedCooks.includes(cook.id)) {
+      const index = user.savedCooks.indexOf(cook.id);
+      user.savedCooks.splice(index, 1);
+      await user.save();
       return SuccessHandler({ message: "Favourite Cook Discarded" }, 200, res);
     } else {
-      cook.savedCook.push(cook.id);
-      await cook.save();
+      user.savedCooks.push(cook.id);
+      await user.save();
       return SuccessHandler(
         { message: "Cook Added to Favourite Successfully" },
         200,
@@ -464,8 +465,8 @@ const savedOrUnsavedCook = async (req, res) => {
 const getSavedCook = async (req, res) => {
   try {
     const currentUser = req.user._id;
-    const cook = await User.findById(currentUser).populate("savedCook");
-    let favouriteCooks = cook.savedCook;
+    const cook = await User.findById(currentUser).populate("savedCooks");
+    let favouriteCooks = cook.savedCooks;
     if (!favouriteCooks) {
       return ErrorHandler("Favourite Cook does not exist", 404, req, res);
     }

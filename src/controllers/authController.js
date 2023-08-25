@@ -241,8 +241,14 @@ const login = async (req, res) => {
       return ErrorHandler("Email not verified", 400, req, res);
     }
     jwtToken = user.getJWTToken();
+
     return SuccessHandler(
-      { success: true, message: "Logged in successfully", jwtToken, user },
+      {
+        success: true,
+        message: "Logged in successfully",
+        jwtToken,
+        user,
+      },
       200,
       res
     );
