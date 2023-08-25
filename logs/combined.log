@@ -3631,3 +3631,23 @@
 {"date":"2023-08-25T06:20:49.269Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedCook/64e771556cca90fada9c0a75"}
 {"date":"2023-08-25T06:21:00.478Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedCook/64e771556cca90fada9c0a75"}
 {"date":"2023-08-25T06:22:09.277Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-25T06:32:26.728Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:32:28.494Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type string) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:34:53.703Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:37:40.396Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:39:08.673Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:42:29.454Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:47:09.583Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:47:59.806Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:56:18.212Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:57:21.285Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:57:22.675Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type string) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:57:47.922Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:57:50.484Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:58:48.109Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:58:49.433Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:58:52.392Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:58:53.992Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T06:59:19.815Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T07:00:07.651Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64e76b0040628c572a901c2a"}
+{"date":"2023-08-25T07:00:09.358Z","level":"error","message":"Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/addReview/64e76b0040628c572a901c2a"}

@@ -264,14 +264,10 @@ const addReview = async (req, res) => {
     });
 
     const reviews = accomodation.reviewsId;
+    console.log(reviews);
 
+    let avgRating = 0;
     let totalRating = 0;
-    for (let rev of reviews) {
-      totalRating += rev.rating;
-    }
-
-    const avgRating = (totalRating / reviews.length).toFixed(1);
-
     if (existingReview) {
       // update existing review
       existingReview.rating = rating;
@@ -282,7 +278,7 @@ const addReview = async (req, res) => {
         totalRating += rev.rating;
       }
 
-      const avgRating = (totalRating / reviews.length).toFixed(1);
+      const avgRating = totalRating / reviews.length;
       await Accomodation.findByIdAndUpdate(accomodationId, {
         rating: avgRating,
       });
@@ -296,6 +292,17 @@ const addReview = async (req, res) => {
         res
       );
     } else {
+      totalRating = 0;
+
+      if (reviews.length < 1) {
+        avgRating = rating;
+      } else {
+        for (let rev of reviews) {
+          totalRating += rev.rating;
+        }
+        avgRating = totalRating / reviews.length;
+      }
+      console.log(avgRating);
       // create a new review
       const review = await Review.create({
         rating,
