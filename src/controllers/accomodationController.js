@@ -310,7 +310,6 @@ const addReview = async (req, res) => {
         user: currentUser,
         accomodation: accomodationId,
       });
-
       await review.save();
 
       await Accomodation.findByIdAndUpdate(accomodationId, {

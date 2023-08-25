@@ -73,7 +73,7 @@ const register = async (req, res) => {
       }
     }
 
-    let uniqueUserName = `firstName${uuid.v1()}`;
+    let uniqueUserName = `${firstName}${uuid.v1()}`;
     const user = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
