@@ -75,7 +75,6 @@ const updateAccomodations = async (req, res) => {
   // TODO: image array
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
-    console.log(req.body);
     const currentUser = req.user._id;
     // const updatedAccomodation = await Accomodation.findByIdAndUpdate(
     //   req.params.id,
@@ -135,7 +134,6 @@ const deleteAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
   // TODO: image array
   try {
-    console.log(req.body);
     const deleteAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
       {
@@ -263,25 +261,27 @@ const addReview = async (req, res) => {
       comment,
     });
 
-    const reviews = accomodation.reviewsId;
-    console.log(reviews);
-
-    let avgRating = 0;
-    let totalRating = 0;
     if (existingReview) {
       // update existing review
       existingReview.rating = rating;
       existingReview.comment = comment;
       await existingReview.save();
 
-      for (let rev of reviews) {
-        totalRating += rev.rating;
-      }
+      const accomodationReview = await Review.find({
+        accomodation: accomodationId,
+      });
+      // console.log(accomodationReview);
+      let allRating = accomodationReview.map((accRating) => accRating.rating);
+      let totalRating = allRating.reduce(
+        (acc, currentRating) => acc + currentRating,
+        0
+      );
+      const avgRating = totalRating / accomodationReview.length;
 
-      const avgRating = totalRating / reviews.length;
       await Accomodation.findByIdAndUpdate(accomodationId, {
         rating: avgRating,
       });
+
       return SuccessHandler(
         {
           success: true,
@@ -291,38 +291,37 @@ const addReview = async (req, res) => {
         200,
         res
       );
-    } else {
-      totalRating = 0;
-
-      if (reviews.length < 1) {
-        avgRating = rating;
-      } else {
-        for (let rev of reviews) {
-          totalRating += rev.rating;
-        }
-        avgRating = totalRating / reviews.length;
-      }
-      console.log(avgRating);
-      // create a new review
-      const review = await Review.create({
-        rating,
-        comment,
-        user: currentUser,
-        accomodation: accomodationId,
-      });
-      await review.save();
-
-      await Accomodation.findByIdAndUpdate(accomodationId, {
-        $push: { reviewsId: review._id },
-        rating: avgRating,
-      });
-
-      return SuccessHandler(
-        { success: true, message: "Review Added successfully", review },
-        200,
-        res
-      );
     }
+    // create a new review
+    const review = await Review.create({
+      rating,
+      comment,
+      user: currentUser,
+      accomodation: accomodationId,
+    });
+    await review.save();
+    const accomodationReview = await Review.find({
+      accomodation: accomodationId,
+    });
+    // console.log(accomodationReview);
+    let allRating = accomodationReview.map((accRating) => accRating.rating);
+    // console.log(allRating);
+    let totalRating = allRating.reduce(
+      (acc, currentRating) => acc + currentRating,
+      0
+    );
+    const avgRating = totalRating / accomodationReview.length;
+
+    await Accomodation.findByIdAndUpdate(accomodationId, {
+      $push: { reviewsId: review._id },
+      rating: avgRating,
+    });
+
+    return SuccessHandler(
+      { success: true, message: "Review Added successfully", review },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -374,7 +373,6 @@ const deleteReview = async (req, res) => {
     const review = await Review.findByIdAndDelete({
       _id: reviewId,
     });
-    console.log(review);
 
     if (!review) {
       return ErrorHandler(
