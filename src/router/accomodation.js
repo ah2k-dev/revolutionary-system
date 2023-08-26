@@ -20,7 +20,6 @@ router
 router
   .route("/deleteAccomodation/:id")
   .delete(isAuthenticated, authorizedHost, accomodation.deleteAccomodations);
-//get
 
 // ✅Reviews
 

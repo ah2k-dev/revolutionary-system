@@ -4528,3 +4528,17 @@
 {"date":"2023-08-26T12:13:42.870Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
 {"date":"2023-08-26T12:14:10.248Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-08-26T12:14:36.442Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-08-26T12:56:38.877Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-26T12:56:54.825Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T12:56:58.916Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T12:57:02.628Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodation"}
+{"date":"2023-08-26T12:57:20.499Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T12:59:15.289Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T12:59:48.394Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-26T12:59:55.594Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T12:59:55.823Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/accommodations"}
+{"date":"2023-08-26T13:00:03.545Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-26T13:00:28.861Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T13:00:31.731Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T13:00:33.221Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T13:01:36.710Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}

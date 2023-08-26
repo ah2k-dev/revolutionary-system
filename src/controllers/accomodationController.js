@@ -9,7 +9,6 @@ const meal = require("../models/Meal/meal");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
-  // TODO: image array
   try {
     // const { title, desc, latitude, longitude, capacity, services, price } =
     //   req.body;
