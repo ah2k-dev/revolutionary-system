@@ -10,7 +10,6 @@ const Coupon = require("../models/Coupon/coupon");
 //Create Meal
 const createMeal = async (req, res) => {
   // #swagger.tags = ['meal']
-  // TODO: image array
   try {
     const { dishName, desc, price, gram, calories, maxServingCapacity } =
       req.body;
@@ -69,6 +68,69 @@ const createMeal = async (req, res) => {
 
     return SuccessHandler(
       { message: "Meal Added successfully", newMeal },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+//Update Meal
+const updateMeal = async (req, res) => {
+  // #swagger.tags = ['meal']
+  const cookId = req.user._id;
+  try {
+    const { dishName, desc, price, gram, calories, maxServingCapacity } =
+      req.body;
+    let mealAddedBy = "";
+    if (req.user.role === "host") {
+      mealAddedBy = "host";
+    } else {
+      mealAddedBy = "cook";
+    }
+
+    let imagesFileName = [];
+    const { images } = req.files;
+    if (images) {
+      for (const img of images) {
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image", 500, req, res);
+        }
+        let imgFile = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFile);
+        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
+
+    const updatedMeal = await Meal.findByIdAndUpdate(
+      req.params.id,
+      {
+        dishName,
+        desc,
+        price,
+        gram,
+        calories,
+        maxServingCapacity,
+        mealType: mealAddedBy,
+        images: imagesFileName,
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+
+    if (!updatedMeal) {
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { success: true, message: "Updated Meal successfully", updatedMeal },
       200,
       res
     );
@@ -156,6 +218,29 @@ const getMeals = async (req, res) => {
 
     return SuccessHandler(
       { message: "Meal Added successfully", mealsCount, meals },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const deleteMeals = async (req, res) => {
+  // #swagger.tags = ['meal']
+  try {
+    const deleteMeal = await Meal.findByIdAndUpdate(req.params.id, {
+      $set: {
+        isActive: false,
+      },
+    });
+
+    if (!deleteMeal) {
+      return ErrorHandler("Meal does not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { success: true, message: "Meal Deleted successfully" },
       200,
       res
     );
@@ -442,6 +527,8 @@ const deleteReview = async (req, res) => {
 module.exports = {
   createMeal,
   getMeals,
+  updateMeal,
+  deleteMeals,
   getMealsByCookId,
   orderTheMeal,
   getOrderedMeal,

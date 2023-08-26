@@ -4542,3 +4542,11 @@
 {"date":"2023-08-26T13:00:31.731Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
 {"date":"2023-08-26T13:00:33.221Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
 {"date":"2023-08-26T13:01:36.710Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-26T13:51:41.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-08-26T13:51:41.163Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-26T13:51:41.172Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-26T13:51:41.177Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-26T13:51:41.181Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-26T13:51:41.995Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-08-26T13:52:05.826Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-26T13:52:24.775Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
