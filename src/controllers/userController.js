@@ -6,6 +6,7 @@ const Accomodation = require("../models/Accomodation/accomodation");
 const Coupon = require("../models/Coupon/coupon");
 const Meal = require("../models/Meal/meal");
 const user = require("../models/User/user");
+const Review = require("../models/Reviews/review");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -263,6 +264,29 @@ const getCooks = async (req, res) => {
       ...cookShopFilter,
       ...locationFilter,
     });
+    // console.log(getCook);
+    let allCookId = getCook.map((id) => id._id);
+    console.log(allCookId);
+    // const meals = await Meal.find({ cook: { $in: allCookId } }).populate({
+    //   path: "cook",
+    //   select: "rating",
+    // });
+    // const avgRatings = await Meal.aggregate([
+    //   {
+    //     $match: { cook: { $in: allCookId } },
+    //   },
+    //   {
+    //     $group: { _id: "$cook", avgRating: { $avg: "$rating" } },
+    //   },
+    // ]);
+    // console.log(avgRatings);
+
+    // for (const { _id, avgRating } of avgRatings) {
+    //   await User.findByIdAndUpdate(allCookId:_id ,{
+    //     shopRating: avgRating
+    //   })
+    // }
+
     const cookCount = getCook.length;
 
     if (!getCook) {
