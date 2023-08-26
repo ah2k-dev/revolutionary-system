@@ -14,6 +14,12 @@ const createMeal = async (req, res) => {
   try {
     const { dishName, desc, price, gram, calories, maxServingCapacity } =
       req.body;
+    let mealAddedBy = "";
+    if (req.user.role === "host") {
+      mealAddedBy = "host";
+    } else {
+      mealAddedBy = "cook";
+    }
 
     const cookId = req.user._id;
     const isMealExist = await Meal.findOne({
@@ -30,6 +36,25 @@ const createMeal = async (req, res) => {
       );
     }
 
+    let imagesFileName = [];
+    const { images } = req.files;
+    if (images) {
+      for (let img of images) {
+        // It should be image
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image file", 400, req, res);
+        }
+
+        let imgFileName = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFileName);
+        img.mv(path.join(__dirname, `../../uploads/${imgFileName}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
+
     const newMeal = await Meal.create({
       cook: cookId,
       dishName,
@@ -38,6 +63,8 @@ const createMeal = async (req, res) => {
       gram,
       calories,
       maxServingCapacity,
+      mealType: mealAddedBy,
+      images: imagesFileName,
     });
 
     return SuccessHandler(

@@ -23,8 +23,6 @@ const accomodationSchema = new Schema(
     services: { type: [String] },
     images: {
       type: [String],
-      default:
-        "https://images.pexels.com/photos/1697076/pexels-photo-1697076.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
