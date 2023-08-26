@@ -4277,3 +4277,8 @@
 {"date":"2023-08-25T19:57:29.028Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
 {"date":"2023-08-25T19:58:36.337Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-08-25T20:01:45.816Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/createCoupon"}
+{"date":"2023-08-25T20:09:50.256Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-08-25T20:09:50.263Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-08-25T20:09:50.273Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-08-25T20:09:50.276Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-08-25T20:09:51.418Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
