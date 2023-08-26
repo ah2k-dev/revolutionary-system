@@ -20,7 +20,7 @@ const bookNewAccomm = async (req, res) => {
       subTotal,
       capacity,
       selectedMeals,
-      stripeToken,
+      // stripeToken,
     } = req.body;
 
     const currentAccommodation = await Accomodation.findById(accomodationId);
@@ -52,40 +52,41 @@ const bookNewAccomm = async (req, res) => {
     if (isBooked) {
       return ErrorHandler("Already Booked", 400, req, res);
     }
-    const charge = await stripe.charges.create({
-      amount: subTotal * 100,
-      currency: "usd",
-      source: stripeToken,
-      description: accomodationId,
+    // const charge = await stripe.charges.create({
+    //   amount: subTotal * 100,
+    //   currency: "usd",
+    //   source: stripeToken,
+    //   description: accomodationId,
+    // });
+
+    // if (!charge) {
+    //   return ErrorHandler("Payment Failed", 400, req, res);
+    // }
+    // else {
+    const newBooking = await bookAccomm.create({
+      user: currentUser,
+      accomodationsId: accomodationId,
+      startDate,
+      endDate,
+      // checkIn,
+      // checkOut,
+      capacity,
+      subTotal,
+      selectedMeals: selectedMeals,
     });
 
-    if (!charge) {
-      return ErrorHandler("Payment Failed", 400, req, res);
-    } else {
-      const newBooking = await bookAccomm.create({
-        user: currentUser,
-        accomodationsId: accomodationId,
-        startDate,
-        endDate,
-        // checkIn,
-        // checkOut,
-        capacity,
-        subTotal,
-        selectedMeals: selectedMeals,
-      });
+    await newBooking.save();
 
-      await newBooking.save();
-
-      return SuccessHandler(
-        {
-          success: true,
-          message: "Payment Successful and Booking Added",
-          newBooking,
-        },
-        200,
-        res
-      );
-    }
+    return SuccessHandler(
+      {
+        success: true,
+        message: "Payment Successful and Booking Added",
+        newBooking,
+      },
+      200,
+      res
+    );
+    // }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
