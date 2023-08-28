@@ -64,12 +64,6 @@
                 "username": {
                   "example": "any"
                 },
-                "avatar": {
-                  "example": "any"
-                },
-                "coverImg": {
-                  "example": "any"
-                },
                 "location": {
                   "example": "any"
                 }

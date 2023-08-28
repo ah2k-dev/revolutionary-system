@@ -25,13 +25,16 @@ app.use(
     limits: { fileSize: 1024 * 1024 },
   })
 ), // 1 MB
-  app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+  app.use(
+    "/rev-be/uploads",
+    express.static(path.join(__dirname, "../uploads"))
+  );
 // router index
-app.use("/", router);
+app.use("/rev-be", router);
 // api doc
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use("/rev-be/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-app.get("/", (req, res) => {
+app.get("/rev-be", (req, res) => {
   res.send("BE-boilerplate v1.1");
 });
 
