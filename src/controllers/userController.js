@@ -211,7 +211,14 @@ const getSavedAccomodations = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    const user = await User.findById(currentUser).populate("savedAccomodation");
+    // const user = await User.findById(currentUser).populate("savedAccomodation");
+    // .populate("meals");
+    const user = await User.findById(currentUser).populate({
+      path: "savedAccomodation",
+      populate: {
+        path: "meals",
+      },
+    });
 
     let sAccomodations = user.savedAccomodation;
 

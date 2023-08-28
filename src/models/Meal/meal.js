@@ -10,31 +10,31 @@ const mealSchema = new Schema(
     // new fields
     mealType: {
       type: String,
-      enum: ["cook", "accomodation"],
+      enum: ["cook", "host"],
       default: "cook",
     },
 
     cook: { type: Schema.Types.ObjectId, ref: "User" },
-    dishName: { type: String, },
-    desc: { type: String,  },
-    price: { type: Number,  },
+    dishName: { type: String },
+    desc: { type: String },
+    price: { type: Number },
     images: {
       type: [String],
-      default:
-        "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
+      // default:
+      //   "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
     spiceStatus: {
       type: String,
       enum: ["High", "Medium", "Low"],
       default: "Medium",
     },
-    gram: { type: Number,  },
-    calories: { type: Number, },
+    gram: { type: Number },
+    calories: { type: Number },
 
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
-    rating: {type: Number, default: 0}
+    rating: { type: Number, default: 0 },
   },
   { timestamps: true }
 );

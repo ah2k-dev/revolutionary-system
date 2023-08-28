@@ -9,7 +9,6 @@ const meal = require("../models/Meal/meal");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
-  // TODO: image array
   try {
     // const { title, desc, latitude, longitude, capacity, services, price } =
     //   req.body;
@@ -43,6 +42,22 @@ const createAccomodations = async (req, res) => {
         };
       })
     );
+    let imagesFileName = [];
+    const { images } = req.files;
+    if (images) {
+      for (const img of images) {
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image", 500, req, res);
+        }
+        let imgFile = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFile);
+        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
 
     const newAccomodations = await Accomodation.create({
       title,
@@ -56,6 +71,7 @@ const createAccomodations = async (req, res) => {
       services,
       createdBy: currentUser,
       meals: createdMeals.map((val) => val._id),
+      images: imagesFileName,
     });
 
     await newAccomodations.save();
@@ -72,10 +88,26 @@ const createAccomodations = async (req, res) => {
 
 const updateAccomodations = async (req, res) => {
   // #swagger.tags = ['accomodation']
-  // TODO: image array
   try {
     const { title, desc, latitude, longitude, capacity, services } = req.body;
     const currentUser = req.user._id;
+
+    let imagesFileName = [];
+    const { images } = req.files;
+    if (images) {
+      for (const img of images) {
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image", 500, req, res);
+        }
+        let imgFile = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFile);
+        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
 
     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
       req.params.id,
@@ -90,6 +122,7 @@ const updateAccomodations = async (req, res) => {
         capacity,
         services,
         createdBy: currentUser,
+        images: imagesFileName,
       },
       {
         new: true,

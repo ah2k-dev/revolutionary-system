@@ -1123,3 +1123,22 @@
 {"date":"2023-08-25T17:07:48.349Z","level":"error","message":"$in needs an array","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
 {"date":"2023-08-25T17:25:27.218Z","level":"error","message":"User is not defined","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
 {"date":"2023-08-25T17:26:51.821Z","level":"error","message":"User is not defined","method":"POST","service":"user-service","url":"/addReview/64e777e06d5d926933b56c95"}
+{"date":"2023-08-26T11:25:02.026Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-26T11:25:42.633Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-26T11:26:10.354Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-08-26T11:43:53.795Z","level":"error","message":"Cannot read properties of undefined (reading 'startsWith')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T11:53:11.317Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T11:54:20.165Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T11:54:22.464Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T11:59:49.127Z","level":"error","message":"Assignment to constant variable.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:00:33.712Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:00:52.416Z","level":"error","message":"Assignment to constant variable.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:01:24.644Z","level":"error","message":"Assignment to constant variable.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:07:19.977Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:07:41.688Z","level":"error","message":"Assignment to constant variable.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:11:27.113Z","level":"error","message":"imagesArray is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:12:21.188Z","level":"error","message":"Please upload an image file","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-26T12:59:55.823Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/accommodations"}
+{"date":"2023-08-28T12:33:07.194Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-28T12:44:01.257Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-28T12:44:04.880Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
