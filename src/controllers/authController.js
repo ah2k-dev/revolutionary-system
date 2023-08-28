@@ -33,12 +33,30 @@ const register = async (req, res) => {
       );
     }
 
-    let avatarFileName = null;
-    let coverImgfileName = null;
+    let uniqueUserName = `${firstName}${uuid.v1()}`;
+    const user = await User.findOne({ email });
+    if (user) {
+      return ErrorHandler("User already exists", 400, req, res);
+    }
+
+    let newUserFields = {
+      firstName,
+      lastName,
+      email,
+      password,
+      country,
+      username: uniqueUserName,
+      role,
+      location: {
+        type: "Point",
+        coordinates: [0, 0],
+      },
+    };
 
     if (req.files) {
       const { avatar, coverImg } = req.files;
-
+      let avatarFileName = null;
+      let coverImgfileName = null;
       if (avatar) {
         // It should be image
         if (!avatar.mimetype.startsWith("image")) {
@@ -71,29 +89,12 @@ const register = async (req, res) => {
           }
         );
       }
+      newUserFields = {
+        ...newUserFields,
+        avatar: avatarFileName,
+        coverImg: coverImgfileName,
+      };
     }
-
-    let uniqueUserName = `${firstName}${uuid.v1()}`;
-    const user = await User.findOne({ email });
-    if (user) {
-      return ErrorHandler("User already exists", 400, req, res);
-    }
-
-    let newUserFields = {
-      firstName,
-      lastName,
-      email,
-      password,
-      country,
-      username: uniqueUserName,
-      avatar: avatarFileName || null,
-      coverImg: coverImgfileName || null,
-      role,
-      location: {
-        type: "Point",
-        coordinates: [0, 0],
-      },
-    };
 
     // for cook
     if (role === "cook") {

@@ -71,9 +71,14 @@ const userSchema = new Schema({
   avatar: {
     type: String,
 
-    default: "local",
+    default:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KehZ0Xz2eEw6uQZDN7YcxdzRfLNfyDs-Hg&usqp=CAU",
   },
-  coverImg: { type: String, default: "local" },
+  coverImg: {
+    type: String,
+    default:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KehZ0Xz2eEw6uQZDN7YcxdzRfLNfyDs-Hg&usqp=CAU",
+  },
 
   userDesc: { type: String },
   country: { type: String, requried: true },
