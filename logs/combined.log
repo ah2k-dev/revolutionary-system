@@ -4806,3 +4806,6 @@
 {"date":"2023-08-28T18:42:04.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-28T18:42:46.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
 {"date":"2023-08-28T18:42:47.021Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T19:27:18.768Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:27:36.952Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:31:27.725Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}

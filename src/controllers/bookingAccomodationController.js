@@ -23,7 +23,7 @@ const bookNewAccomm = async (req, res) => {
       selectedMeals,
       // stripeToken,
     } = req.body;
-
+    console.log(req.body);
     const currentAccommodation = await Accomodation.findById(accomodationId);
 
     if (!currentAccommodation) {
@@ -76,7 +76,7 @@ const bookNewAccomm = async (req, res) => {
       phone,
       capacity,
       subTotal,
-      selectedMeals: selectedMeals,
+      selectedMeals: JSON.parse(selectedMeals),
     });
 
     await newBooking.save();
