@@ -928,6 +928,9 @@
                 "endDate": {
                   "example": "any"
                 },
+                "phone": {
+                  "example": "any"
+                },
                 "subTotal": {
                   "example": "any"
                 },

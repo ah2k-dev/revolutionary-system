@@ -68,8 +68,12 @@ const userSchema = new Schema({
     default: true,
   },
 
-  avatar: { type: String },
-  coverImg: { type: String },
+  avatar: {
+    type: String,
+
+    default: "local",
+  },
+  coverImg: { type: String, default: "local" },
 
   userDesc: { type: String },
   country: { type: String, requried: true },
