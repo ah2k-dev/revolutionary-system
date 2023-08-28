@@ -4564,3 +4564,4 @@
 {"date":"2023-08-28T12:44:04.457Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
 {"date":"2023-08-28T12:44:04.880Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
 {"date":"2023-08-28T12:44:20.881Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T12:47:15.352Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
