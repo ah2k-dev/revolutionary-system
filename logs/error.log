@@ -1142,3 +1142,23 @@
 {"date":"2023-08-28T12:33:07.194Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
 {"date":"2023-08-28T12:44:01.257Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
 {"date":"2023-08-28T12:44:04.880Z","level":"error","message":"Cannot populate path `meals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-28T14:19:27.735Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:19:36.977Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:20:25.033Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:23:15.528Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-28T14:24:02.054Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-28T14:24:49.830Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:28:59.483Z","level":"error","message":"ENOENT: no such file or directory, open 'C:\\Users\\dotclick\\Documents\\GitHub\\revolutionary-system\\uploads\\uploads\\1693232939454-doner-kebab-6583404_640.jpg'","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:29:29.417Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:40:42.042Z","level":"error","message":"avatarFileName is not defined","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-08-28T14:50:23.598Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-28T14:51:17.928Z","level":"error","message":"ENOENT: no such file or directory, open 'C:\\Users\\dotclick\\Documents\\GitHub\\uploads\\1693234277916-doner-kebab-6583404_640.jpg'","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:52:40.730Z","level":"error","message":"ENOENT: no such file or directory, open 'C:\\Users\\dotclick\\Documents\\GitHub\\revolutionary-system\\uploads\\uploads\\1693234360705-doner-kebab-6583404_640.jpg'","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T14:54:44.788Z","level":"error","message":"ENOENT: no such file or directory, open 'C:\\Users\\dotclick\\Documents\\GitHub\\revolutionary-system\\uploads\\uploads\\1693234484769-65837.jpg'","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-08-28T15:02:13.970Z","level":"error","message":"meals.map is not a function","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:05:35.077Z","level":"error","message":"Meal validation failed: mealType: `accomodation` is not a valid enum value for path `mealType`.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:06:29.021Z","level":"error","message":"Meal validation failed: mealType: `accomodation` is not a valid enum value for path `mealType`.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:07:21.468Z","level":"error","message":"Meal validation failed: mealType: `accomodation` is not a valid enum value for path `mealType`.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:08:09.749Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:10:09.075Z","level":"error","message":"meals.map is not a function","method":"POST","service":"user-service","url":"/newAccomodation"}
+{"date":"2023-08-28T15:22:29.165Z","level":"error","message":"Cannot read properties of undefined (reading 'map')","method":"POST","service":"user-service","url":"/newAccomodation"}

@@ -38,7 +38,7 @@ const createAccomodations = async (req, res) => {
       meals.map((val) => {
         return {
           ...val,
-          mealType: "accomodation",
+          mealType: "host",
         };
       })
     );
