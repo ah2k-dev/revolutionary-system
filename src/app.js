@@ -26,7 +26,12 @@ app.use(
   })
 ), // 1 MB
   app.use(
+<<<<<<< Updated upstream
     "/rev-be/uploads",
+=======
+    // "/rev-be/uploads",
+    "/uploads",
+>>>>>>> Stashed changes
     express.static(path.join(__dirname, "../uploads"))
   );
 // router index

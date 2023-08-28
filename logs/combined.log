@@ -4806,3 +4806,54 @@
 {"date":"2023-08-28T18:42:04.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-28T18:42:46.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
 {"date":"2023-08-28T18:42:47.021Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+<<<<<<< Updated upstream
+=======
+{"date":"2023-08-28T19:27:18.768Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:27:36.952Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:31:27.725Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:44:14.632Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:47:34.144Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:48:18.742Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T19:49:10.548Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T19:49:26.470Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T19:49:46.460Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T19:50:21.415Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T19:50:33.668Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T19:50:38.592Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932522341151000000048.jpg"}
+{"date":"2023-08-28T19:50:47.844Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T19:50:48.647Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932522483131000000048.jpg"}
+{"date":"2023-08-28T19:50:50.817Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932522483131000000049.jpg"}
+{"date":"2023-08-28T19:51:45.073Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T19:51:45.493Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T19:51:45.501Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T19:51:45.513Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T19:51:45.521Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T19:51:45.529Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T19:51:45.540Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T19:52:00.680Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T19:52:03.752Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedAccomodation/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T19:52:04.694Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T19:52:14.518Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedAccomodation/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T19:52:15.452Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T19:52:40.112Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T19:52:47.616Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
+{"date":"2023-08-28T19:52:55.188Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-08-28T19:52:55.202Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-08-28T19:52:55.206Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-08-28T19:52:55.211Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-08-28T19:52:57.759Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e794f51a91ba2888b0e263"}
+{"date":"2023-08-28T19:53:00.032Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
+{"date":"2023-08-28T19:53:02.746Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedMeal/64e7777e6d5d926933b56c91"}
+{"date":"2023-08-28T19:53:03.211Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T19:53:34.699Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/coupon/verifyCoupon"}
+{"date":"2023-08-28T19:53:35.362Z","level":"error","message":"Coupon is not valid.","method":"POST","service":"user-service","url":"/verifyCoupon"}
+{"date":"2023-08-28T19:53:48.863Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/orderMeal"}
+{"date":"2023-08-28T19:53:49.659Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T19:54:16.511Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-info"}
+{"date":"2023-08-28T19:54:25.096Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T19:54:28.626Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T19:54:29.982Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524655631000000046.jpg"}
+{"date":"2023-08-28T19:54:30.346Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-08-28T19:54:42.465Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedCook/64e794f51a91ba2888b0e263"}
+{"date":"2023-08-28T19:54:43.368Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+>>>>>>> Stashed changes
