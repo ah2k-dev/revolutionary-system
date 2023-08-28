@@ -4720,3 +4720,89 @@
 {"date":"2023-08-28T16:26:19.315Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-28T16:26:22.830Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
 {"date":"2023-08-28T16:26:32.016Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T16:38:52.248Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T16:46:13.752Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T16:46:19.329Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
+{"date":"2023-08-28T16:48:05.577Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T16:48:05.628Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T16:48:05.636Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T16:48:05.719Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T16:48:05.727Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T16:48:05.734Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T16:49:21.228Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-08-28T16:49:21.249Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-08-28T16:49:21.273Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-08-28T16:49:21.299Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-08-28T16:49:22.760Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
+{"date":"2023-08-28T16:50:10.501Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T17:08:32.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T17:08:32.168Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T17:08:32.175Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T17:08:32.181Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T17:08:32.186Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T17:08:32.191Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T17:09:01.220Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T17:09:07.762Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedAccomodation/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T17:09:09.067Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T17:27:47.216Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T17:27:47.284Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T17:27:47.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T17:27:47.308Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T17:27:47.312Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T17:27:47.316Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T17:28:08.346Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T18:02:21.990Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:05:53.705Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:05:54.568Z","level":"error","message":"Already Booked","method":"POST","service":"user-service","url":"/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:06:08.999Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:06:09.878Z","level":"error","message":"Already Booked","method":"POST","service":"user-service","url":"/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:13:04.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:13:05.842Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals.0: Cast to [ObjectId] failed for value \"[\\n' +\n  `  '[{\"quantity\":1,\"total\":1000.0,\"meal\":{\"_id\":\"64e7683ddb0129b4d77657cf\",\"reviewsId\":[],\"mealType\":\"cook\",\"dishName\":\"BBQ Jackfruit Sliders\",\"desc\":\"Discover a vegan twist on classic BBQ pulled pork with these irresistible jackfruit sliders. These sliders are a mouthwatering choice for summer cookouts and gatherings, offering a delightful combination of sweet, savory, and crunchy elements.\",\"price\":1000,\"images\":[\"https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg\"],\"spiceStatus\":\"Medium\",\"gram\":200,\"calories\":100,\"maxServingCapacity\":3,\"isActive\":true,\"__v\":0,\"createdAt\":\"2023-08-24T14:25:01.805Z\",\"updatedAt\":\"2023-08-24T14:25:01.805Z\",\"rating\":0}}]'\\n` +\n  ']\" (type string) at path \"selectedMeals.0\" because of \"CastError\"","method":"POST","service":"user-service","url":"/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-28T18:14:14.706Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T18:14:15.071Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-28T18:14:31.668Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-08-28T18:14:33.028Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-08-28T18:15:11.099Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-08-28T18:15:15.661Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T18:21:42.575Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:21:46.712Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:21:54.971Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:21:55.612Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:29.145Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:29.819Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:31.694Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:32.334Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:48.855Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:22:49.505Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:23:02.453Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:23:03.096Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:23:16.693Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T18:23:55.251Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:23:56.113Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals.0: Cast to [ObjectId] failed for value \"[\\n' +\n  `  '[{\"quantity\":1,\"total\":1000.0,\"meal\":{\"_id\":\"64e7683ddb0129b4d77657cf\",\"reviewsId\":[],\"mealType\":\"cook\",\"dishName\":\"BBQ Jackfruit Sliders\",\"desc\":\"Discover a vegan twist on classic BBQ pulled pork with these irresistible jackfruit sliders. These sliders are a mouthwatering choice for summer cookouts and gatherings, offering a delightful combination of sweet, savory, and crunchy elements.\",\"price\":1000,\"images\":[\"https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg\"],\"spiceStatus\":\"Medium\",\"gram\":200,\"calories\":100,\"maxServingCapacity\":3,\"isActive\":true,\"__v\":0,\"createdAt\":\"2023-08-24T14:25:01.805Z\",\"updatedAt\":\"2023-08-24T14:25:01.805Z\",\"rating\":0}},{\"quantity\":1,\"total\":4000.0,\"meal\":{\"_id\":\"64e76982db0129b4d77657d5\",\"reviewsId\":[],\"mealType\":\"cook\",\"dishName\":\"Spicy Thai Basil Stir-Fry\",\"desc\":\"Indulge your taste buds with this fiery and aromatic stir-fry. Slices of tender chicken (or tofu for a vegetarian option) are wok-fried with vibrant bell peppers, crisp green beans, and fragrant Thai basil leaves. The dish is brought together with a bold sauce made from soy, fish sauce, garlic.\",\"price\":4000,\"images\":[\"https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg\"],\"spiceStatus\":\"Medium\",\"gram\":300,\"calories\":50,\"maxServingCapacity\":5,\"isActive\":true,\"__v\":0,\"createdAt\":\"2023-08-24T14:30:26.208Z\",\"updatedAt\":\"2023-08-24T14:30:26.208Z\",\"rating\":0}}]'\\n` +\n  ']\" (type string) at path \"selectedMeals.0\" because of \"CastError\"","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:27:24.614Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:30:34.219Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T18:30:49.247Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T18:35:39.851Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/update-personal-info"}
+{"date":"2023-08-28T18:35:41.695Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932477402701000000049.jpg"}
+{"date":"2023-08-28T18:35:41.766Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932477402691000000048.jpg"}
+{"date":"2023-08-28T18:36:09.819Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T18:36:10.234Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T18:36:10.250Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T18:36:10.260Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T18:36:10.270Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T18:36:10.280Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T18:36:10.288Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T18:36:15.417Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-08-28T18:36:15.420Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-08-28T18:36:15.421Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-08-28T18:36:15.424Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-08-28T18:41:44.652Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-28T18:41:45.106Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-28T18:41:45.115Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-28T18:41:45.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-28T18:41:45.130Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-28T18:41:45.138Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-28T18:41:45.143Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-28T18:42:04.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-28T18:42:46.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-28T18:42:47.021Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}

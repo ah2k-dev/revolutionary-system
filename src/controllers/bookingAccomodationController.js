@@ -32,6 +32,7 @@ const bookNewAccomm = async (req, res) => {
 
     const bookings = await bookAccomm.find({
       accomodationsId: accomodationId,
+      user: currentUser,
       startDate: {
         $gte: req.body.startDate,
       },
@@ -47,12 +48,13 @@ const bookNewAccomm = async (req, res) => {
         res
       );
     }
-    const isBooked = await bookAccomm.findOne({
-      accomodationsId: accomodationId,
-    });
-    if (isBooked) {
-      return ErrorHandler("Already Booked", 400, req, res);
-    }
+    // const isBooked = await bookAccomm.findOne({
+    //   accomodationsId: accomodationId,
+    // });
+    // if (isBooked) {
+    //   return ErrorHandler("Already Booked", 400, req, res);
+    // }
+
     // const charge = await stripe.charges.create({
     //   amount: subTotal * 100,
     //   currency: "usd",

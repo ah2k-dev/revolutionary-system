@@ -35,7 +35,9 @@ const mealSchema = new Schema(
 
     isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
+    // host: { type: Schema.Types.ObjectId, ref: "User" },
   },
+
   { timestamps: true }
 );
 const meal = mongoose.model("Meal", mealSchema);

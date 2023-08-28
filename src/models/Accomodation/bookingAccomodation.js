@@ -44,9 +44,14 @@ const bookingAccomodationSchema = new Schema(
     subTotal: { type: Number, default: 0 },
 
     totalAmount: { type: Number, default: 0 },
-    selectedMeals: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
+    selectedMeals: [
+      {
+        meal: { type: Schema.Types.ObjectId, ref: "Meal" },
+        quantity: { type: Number, require: true },
+        price: { type: Number, require: true },
+      },
+    ],
   },
-
   { timestamps: true }
 );
 

@@ -39,6 +39,7 @@ const createAccomodations = async (req, res) => {
         return {
           ...val,
           mealType: "host",
+          // host: req.user._id,
         };
       })
     );
