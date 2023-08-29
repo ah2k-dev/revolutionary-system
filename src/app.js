@@ -27,27 +27,16 @@ app.use(
 ), // 1 MB
   app.use(
     // "/rev-be/uploads",
-<<<<<<< HEAD
-    "/",
-=======
     "/uploads",
->>>>>>> umer/rs
     express.static(path.join(__dirname, "../uploads"))
   );
 // router index
 // app.use("/rev-be", router);
 app.use("/", router);
-<<<<<<< HEAD
-
-// api doc
-// app.use("/rev-be/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
-=======
 // api doc
 // app.use("/rev-be/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
->>>>>>> umer/rs
 // app.get("/rev-be", (req, res) => {
 //   res.send("BE-boilerplate v1.1");
 // });
