@@ -102,10 +102,20 @@ const getUserBookings = async (req, res) => {
     //     path: "selectedMeals",
     //   },
     // });
+    // const bookings = await bookAccomm
+    //   .find({ user: currentUser })
+    //   .populate("accomodationsId")
+    //   .populate("selectedMeals");
     const bookings = await bookAccomm
       .find({ user: currentUser })
       .populate("accomodationsId")
-      .populate("selectedMeals");
+      .populate({
+        path: "selectedMeals",
+        populate: {
+          path: "meal",
+          select: "dishName images",
+        },
+      });
     if (!bookings) {
       return ErrorHandler("No Such Booking exist", 400, req, res);
     }

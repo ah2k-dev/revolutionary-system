@@ -19,7 +19,7 @@ const accomodationSchema = new Schema(
       coordinates: [Number],
     },
 
-    createdBy: { type: String },
+    createdBy: { type: Schema.Types.ObjectId, ref: "User" },
     services: { type: [String] },
     images: {
       type: [String],

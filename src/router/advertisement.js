@@ -7,4 +7,7 @@ const { authorizedHost } = require("../middleware/role");
 router
   .route("/new/:id")
   .post(isAuthenticated, authorizedHost, advertisement.advertiseAccomodations);
+router
+  .route("/new/:id")
+  .post(isAuthenticated, authorizedHost, advertisement.advertiseAccomodations);
 module.exports = router;
