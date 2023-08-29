@@ -8,6 +8,6 @@ router
   .route("/new/:id")
   .post(isAuthenticated, authorizedHost, advertisement.advertiseAccomodations);
 router
-  .route("/new/:id")
-  .post(isAuthenticated, authorizedHost, advertisement.advertiseAccomodations);
+  .route("/allAds")
+  .get(isAuthenticated, advertisement.getAdvertisedAccomodations);
 module.exports = router;

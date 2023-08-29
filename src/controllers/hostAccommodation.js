@@ -9,6 +9,8 @@ const hostAccomodations = async (req, res) => {
     const accomodations = await Accomodation.find({
       isActive: true,
       currentUser,
+    }).populate({
+      path: "meals",
     });
 
     const totalAccomodation = accomodations.length;

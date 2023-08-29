@@ -1220,3 +1220,32 @@
 {"date":"2023-08-29T15:46:30.667Z","level":"error","message":"Accommodation does not exist or you are not the creator","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
 {"date":"2023-08-29T15:47:51.295Z","level":"error","message":"Your Accommodation already advertised","method":"POST","service":"user-service","url":"/new/64ee101085e5f128ae51322b"}
 {"date":"2023-08-29T15:49:09.027Z","level":"error","message":"Accommodation already book","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T15:58:10.283Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-29T16:08:15.429Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:08:15.443Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:08:15.450Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:08:16.874Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:10:47.739Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:10:47.761Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:10:47.772Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:10:47.779Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:15:19.521Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:15:19.528Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:15:19.534Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:15:19.546Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:19:38.692Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:19:38.705Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:19:38.710Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:19:38.716Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:21:46.685Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:22:34.219Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:22:59.572Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:23:01.035Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:23:23.336Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:25:08.010Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:26:12.681Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:26:42.987Z","level":"error","message":"Your Accommodation already advertised","method":"POST","service":"user-service","url":"/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-29T16:26:48.805Z","level":"error","message":"ad.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:36:13.296Z","level":"error","message":"ad.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:36:51.998Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:41:09.104Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}

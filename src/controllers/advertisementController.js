@@ -6,9 +6,9 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const advertiseAccomodations = async (req, res) => {
   const currentUser = req.user._id;
   const accomodationId = req.params.id;
-  // #swagger.tags = ['advertise']
+  const accommodationTag = "sponsored";
+  // #swagger.tags = ['ads']
   const { days, amount } = req.body;
-  //   console.log(req.body);
   try {
     // check if accommodation exist or not
     const accomodations = await Accomodation.findOne({
@@ -16,8 +16,6 @@ const advertiseAccomodations = async (req, res) => {
       createdBy: currentUser,
     });
 
-    // console.log(accomodations);
-    // console.log(accomodationId);
     if (!accomodations) {
       return ErrorHandler(
         "Accommodation does not exist or you are not the creator",
@@ -44,7 +42,6 @@ const advertiseAccomodations = async (req, res) => {
     // adding number of days to today's date
     let date = new Date();
     let adExpiryDate = date.setDate(date.getDate() + days);
-    // console.log("adExpiryDate: ", new Date(adExpiryDate));
     const advertise = await Advertisement.create({
       host: currentUser,
       accommodation: accomodationId,
@@ -52,13 +49,10 @@ const advertiseAccomodations = async (req, res) => {
       expiryDate: new Date(adExpiryDate),
       amount: amount,
     });
-    // let ad = await Advertisement.findOneAndUpdate(
-    //   { accommodation: accomodationId },
-    //   {
-    //     expiryDate: new Date(adExpiryDate),
-    //   }
-    // );
-    // console.log("ad", ad);
+
+    await Accomodation.findByIdAndUpdate(accomodationId, {
+      tag: accommodationTag,
+    });
 
     return SuccessHandler(
       {
@@ -75,10 +69,24 @@ const advertiseAccomodations = async (req, res) => {
 };
 
 const getAdvertisedAccomodations = async (req, res) => {
-  //   const currentUser = req.user._id;
-  // #swagger.tags = ['advertise']
+  const currentDate = new Date();
+  // #swagger.tags = ['ads']
   try {
-    const advertisements = await Advertisement.find().sort({ createdAt: -1 });
+    let ads = await Advertisement.updateMany(
+      {
+        expiryDate: { $lte: currentDate },
+        isActive: true,
+      },
+      { $set: { isActive: false } }
+    );
+    console.log("ads: ", ads);
+
+    const advertisements = await Advertisement.find({
+      isActive: true,
+      //   expiryDate: { $gte: currentDate },
+    }).sort({
+      createdAt: -1,
+    });
     return SuccessHandler(
       {
         success: true,

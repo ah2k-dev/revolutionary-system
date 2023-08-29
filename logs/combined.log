@@ -5049,3 +5049,128 @@
 {"date":"2023-08-29T15:49:09.027Z","level":"error","message":"Accommodation already book","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
 {"date":"2023-08-29T15:49:17.597Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
 {"date":"2023-08-29T15:49:18.833Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T15:54:22.916Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-08-29T15:54:55.358Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T15:54:55.386Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T15:54:55.391Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T15:54:55.397Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T15:54:55.403Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T15:54:55.407Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T15:56:16.503Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T15:58:10.055Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T15:58:10.283Z","level":"error","message":"Please, provide correct credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-08-29T15:58:12.304Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/ads/new/64ee155485e5f128ae51322e"}
+{"date":"2023-08-29T15:58:29.803Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T15:58:33.864Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:07:43.370Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692885574119avatar1.png"}
+{"date":"2023-08-29T16:08:14.656Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:08:15.206Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:08:15.214Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:08:15.220Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:08:15.224Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:08:15.263Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:08:15.271Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:08:15.429Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:08:15.443Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:08:15.450Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:08:16.874Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:10:46.972Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:10:47.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:10:47.528Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:10:47.538Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:10:47.545Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:10:47.549Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:10:47.552Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:10:47.739Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:10:47.761Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:10:47.772Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:10:47.779Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:12:09.240Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692885574120avatar1.png"}
+{"date":"2023-08-29T16:14:55.954Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-08-29T16:14:55.957Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-08-29T16:14:55.960Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-08-29T16:14:55.963Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-08-29T16:15:18.805Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:15:19.292Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:15:19.298Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:15:19.303Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:15:19.310Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:15:19.316Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:15:19.323Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:15:19.521Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:15:19.528Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:15:19.534Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:15:19.546Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:19:35.994Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:19:38.458Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:19:38.474Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:19:38.489Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:19:38.496Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:19:38.503Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:19:38.508Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:19:38.692Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userOrderedMeals"}
+{"date":"2023-08-29T16:19:38.705Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-08-29T16:19:38.710Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-08-29T16:19:38.716Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T16:20:26.934Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:20:36.954Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/ads/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-29T16:21:46.254Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:21:46.685Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:22:28.795Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:22:34.219Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:22:59.092Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:22:59.572Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:23:00.611Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:23:01.035Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:23:22.623Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:23:23.336Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:24:11.713Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:24:11.734Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:24:11.740Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:24:11.744Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:24:11.752Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:24:11.756Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:24:16.738Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:25:05.190Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:25:08.010Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:26:12.195Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:26:12.681Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:26:41.813Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:26:41.969Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/ads/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-29T16:26:42.987Z","level":"error","message":"Your Accommodation already advertised","method":"POST","service":"user-service","url":"/new/64ecc4c777d4f0aa1843ba49"}
+{"date":"2023-08-29T16:26:44.108Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T16:26:44.119Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T16:26:44.131Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T16:26:44.144Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T16:26:44.152Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T16:26:44.162Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T16:26:48.389Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:26:48.805Z","level":"error","message":"ad.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:27:21.278Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-08-29T16:36:12.674Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:36:13.296Z","level":"error","message":"ad.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:36:51.441Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:36:51.998Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:41:07.378Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:41:09.104Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
+{"date":"2023-08-29T16:47:12.444Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:52:20.188Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:53:24.454Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:53:51.016Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:53:54.446Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T16:54:01.238Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:54:04.121Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:54:06.236Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:54:21.002Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:54:32.356Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T16:54:35.546Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T17:09:32.019Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accomodations"}
+{"date":"2023-08-29T17:09:47.799Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accomodation"}
+{"date":"2023-08-29T17:12:11.688Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-29T17:17:18.611Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T17:19:16.707Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/ads/allAds"}
+{"date":"2023-08-29T17:24:49.077Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-29T17:27:41.959Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-29T17:28:21.949Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-08-29T17:30:09.923Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-29T17:32:58.542Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
