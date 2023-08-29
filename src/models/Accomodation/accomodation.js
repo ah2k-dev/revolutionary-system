@@ -19,13 +19,19 @@ const accomodationSchema = new Schema(
       coordinates: [Number],
     },
 
-    createdBy: { type: String },
+    createdBy: { type: Schema.Types.ObjectId, ref: "User" },
     services: { type: [String] },
     images: {
       type: [String],
     },
     isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
+    // new field added
+    tag: {
+      type: String,
+      enum: ["sponsored", "non-sponsored"],
+      default: "non-sponsored",
+    },
   },
   { timestamps: true }
 );

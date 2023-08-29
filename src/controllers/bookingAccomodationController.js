@@ -41,12 +41,7 @@ const bookNewAccomm = async (req, res) => {
       },
     });
     if (bookings.length > 0) {
-      return ErrorHandler(
-        { success: false, message: "Accommodation already book" },
-        400,
-        req,
-        res
-      );
+      return ErrorHandler("Accommodation already book", 400, req, res);
     }
     // const isBooked = await bookAccomm.findOne({
     //   accomodationsId: accomodationId,
@@ -66,6 +61,7 @@ const bookNewAccomm = async (req, res) => {
     //   return ErrorHandler("Payment Failed", 400, req, res);
     // }
     // else {
+    // JSON.parse(selectedMeals)
     const newBooking = await bookAccomm.create({
       user: currentUser,
       accomodationsId: accomodationId,
@@ -100,10 +96,26 @@ const getUserBookings = async (req, res) => {
   const currentUser = req.user._id;
   // #swagger.tags = ['booking']
   try {
+    // const bookings = await bookAccomm.find({ user: currentUser }).populate({
+    //   path: "accomodationsId",
+    //   populate: {
+    //     path: "selectedMeals",
+    //   },
+    // });
+    // const bookings = await bookAccomm
+    //   .find({ user: currentUser })
+    //   .populate("accomodationsId")
+    //   .populate("selectedMeals");
     const bookings = await bookAccomm
       .find({ user: currentUser })
       .populate("accomodationsId")
-      .populate("selectedMeals");
+      .populate({
+        path: "selectedMeals",
+        populate: {
+          path: "meal",
+          select: "dishName images",
+        },
+      });
     if (!bookings) {
       return ErrorHandler("No Such Booking exist", 400, req, res);
     }
