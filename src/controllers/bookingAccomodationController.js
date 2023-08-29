@@ -41,12 +41,7 @@ const bookNewAccomm = async (req, res) => {
       },
     });
     if (bookings.length > 0) {
-      return ErrorHandler(
-        { success: false, message: "Accommodation already book" },
-        400,
-        req,
-        res
-      );
+      return ErrorHandler("Accommodation already book", 400, req, res);
     }
     // const isBooked = await bookAccomm.findOne({
     //   accomodationsId: accomodationId,
@@ -77,7 +72,7 @@ const bookNewAccomm = async (req, res) => {
       phone,
       capacity,
       subTotal,
-      selectedMeals: selectedMeals,
+      selectedMeals: JSON.parse(selectedMeals),
     });
 
     await newBooking.save();

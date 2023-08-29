@@ -4869,3 +4869,41 @@
 {"date":"2023-08-29T06:42:08.421Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
 {"date":"2023-08-29T06:42:09.450Z","level":"error","message":"Cannot populate path `accomodationsId.selectedMeals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
 {"date":"2023-08-29T06:43:30.913Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T13:42:41.884Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:44:00.144Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:44:06.769Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:46:45.688Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T13:46:46.264Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-08-29T13:46:46.304Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-08-29T13:46:46.313Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T13:46:46.319Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-08-29T13:46:46.328Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-08-29T13:46:46.338Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-08-29T13:46:49.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-08-29T13:46:51.546Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524655631000000046.jpg"}
+{"date":"2023-08-29T13:47:03.272Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-08-29T13:47:03.275Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-08-29T13:47:03.283Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-08-29T13:47:03.288Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-08-29T13:48:33.066Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-29T13:57:11.929Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:57:12.640Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals: Cast to embedded failed for value \"[{\"meal\":\"64e7683ddb0129b4d77657cf\",\"price\":1000,\"quantity\":1}]\" (type string) at path \"selectedMeals\" because of \"ObjectParameterError\"","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:58:22.640Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:58:23.272Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals: Cast to embedded failed for value \"[{\"meal\":\"64e7683ddb0129b4d77657cf\",\"price\":1000,\"quantity\":1}]\" (type string) at path \"selectedMeals\" because of \"ObjectParameterError\"","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T13:58:49.486Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:01:23.536Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:01:24.218Z","level":"error","message":{"message":"Accommodation already book","success":false},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:03:40.401Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:03:41.070Z","level":"error","message":{"message":"Accommodation already book"},"method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:04:59.468Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:05:01.849Z","level":"error","message":"Accommodation already book","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:07:55.764Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:07:55.787Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:07:56.432Z","level":"error","message":"Accommodation already book","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:07:56.454Z","level":"error","message":"Accommodation already book","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:08:39.994Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:08:41.221Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T14:08:42.130Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
+{"date":"2023-08-29T14:10:54.960Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-08-29T14:11:33.785Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-08-29T14:11:35.129Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}

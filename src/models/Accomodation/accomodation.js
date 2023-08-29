@@ -26,6 +26,12 @@ const accomodationSchema = new Schema(
     },
     isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
+    // new field added
+    tag: {
+      type: String,
+      enum: ["sponsored", "non-sponsored"],
+      default: "non-sponsored",
+    },
   },
   { timestamps: true }
 );

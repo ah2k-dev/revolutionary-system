@@ -6,6 +6,7 @@ const bookAccomm = require("./bookAccomodation");
 const meal = require("./meal");
 const coupon = require("./coupon");
 const host = require("./host");
+const advertisement = require("./advertisement");
 // const onesignal = require('./oneSignal')
 
 router.use("/auth", auth);
@@ -15,5 +16,6 @@ router.use("/booking", bookAccomm);
 router.use("/meal", meal);
 router.use("/coupon", coupon);
 router.use("/host", host);
+router.use("/advertise", advertisement);
 // router.use("/notification", onesignal);
 module.exports = router;
