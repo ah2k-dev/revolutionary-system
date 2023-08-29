@@ -11,6 +11,7 @@ const hostAccomodations = async (req, res) => {
       currentUser,
     }).populate({
       path: "meals",
+      select: "-createdAt -updatedAt -reviewsId -isActive -mealType",
     });
 
     const totalAccomodation = accomodations.length;

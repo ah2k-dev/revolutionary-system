@@ -1425,10 +1425,10 @@
         }
       }
     },
-    "/advertise/new/{id}": {
+    "/ads/new/{id}": {
       "post": {
         "tags": [
-          "advertise"
+          "ads"
         ],
         "description": "",
         "parameters": [
@@ -1457,6 +1457,29 @@
                 }
               }
             }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ads/allAds": {
+      "get": {
+        "tags": [
+          "ads"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
           }
         ],
         "responses": {
