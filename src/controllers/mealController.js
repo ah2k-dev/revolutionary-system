@@ -44,7 +44,7 @@ const createMeal = async (req, res) => {
           return ErrorHandler("Please upload an image file", 400, req, res);
         }
 
-        let imgFileName = `/uploads/${Date.now()}-${img.name}`;
+        let imgFileName = `${Date.now()}-${img.name}`;
         imagesFileName.push(imgFileName);
         img.mv(path.join(__dirname, `../../uploads/${imgFileName}`), (err) => {
           if (err) {

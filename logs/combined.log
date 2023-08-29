@@ -4857,3 +4857,15 @@
 {"date":"2023-08-28T19:54:42.465Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedCook/64e794f51a91ba2888b0e263"}
 {"date":"2023-08-28T19:54:43.368Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
 >>>>>>> Stashed changes
+{"date":"2023-08-29T06:31:50.488Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:32:11.653Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-08-29T06:32:56.251Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:35:13.524Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:35:20.406Z","level":"error","message":"Cannot populate path `selectedMeals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T06:37:03.040Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:37:11.780Z","level":"error","message":"Cannot populate path `accomodationsId.selectedMeals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T06:41:59.516Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:42:05.376Z","level":"error","message":"Cannot populate path `accomodationsId.selectedMeals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T06:42:08.421Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-08-29T06:42:09.450Z","level":"error","message":"Cannot populate path `accomodationsId.selectedMeals` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/userBookings"}
+{"date":"2023-08-29T06:43:30.913Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}

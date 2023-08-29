@@ -66,6 +66,7 @@ const bookNewAccomm = async (req, res) => {
     //   return ErrorHandler("Payment Failed", 400, req, res);
     // }
     // else {
+    // JSON.parse(selectedMeals)
     const newBooking = await bookAccomm.create({
       user: currentUser,
       accomodationsId: accomodationId,
@@ -100,6 +101,12 @@ const getUserBookings = async (req, res) => {
   const currentUser = req.user._id;
   // #swagger.tags = ['booking']
   try {
+    // const bookings = await bookAccomm.find({ user: currentUser }).populate({
+    //   path: "accomodationsId",
+    //   populate: {
+    //     path: "selectedMeals",
+    //   },
+    // });
     const bookings = await bookAccomm
       .find({ user: currentUser })
       .populate("accomodationsId")
