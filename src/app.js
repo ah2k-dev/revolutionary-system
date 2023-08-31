@@ -43,7 +43,6 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.get("/", (req, res) => {
   res.send("BE-boilerplate v1.1");
 });
-
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
   next(new ApiError(404, "Not found"));
