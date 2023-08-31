@@ -62,6 +62,7 @@ const bookNewAccomm = async (req, res) => {
     // }
     // else {
     // JSON.parse(selectedMeals)
+    // : JSON.parse(selectedMeals)
     const newBooking = await bookAccomm.create({
       user: currentUser,
       accomodationsId: accomodationId,
@@ -72,7 +73,7 @@ const bookNewAccomm = async (req, res) => {
       phone,
       capacity,
       subTotal,
-      selectedMeals: JSON.parse(selectedMeals),
+      selectedMeals,
     });
 
     await newBooking.save();
@@ -130,7 +131,49 @@ const getUserBookings = async (req, res) => {
   }
 };
 
+const cancelBooking = async (req, res) => {
+  // #swagger.tags = ['booking']
+  try {
+    const currentUser = req.user._id;
+    const bookingId = req.params.id;
+    const booking = await bookAccomm.findOne({
+      _id: bookingId,
+      user: currentUser,
+    });
+    if (!booking) {
+      return ErrorHandler("Booking does not exist", 400, req, res);
+    }
+    // console.log(booking);
+    let created = booking.createdAt;
+    // console.log(created);
+    let dateDiff = new Date() - new Date(created);
+    // console.log(dateDiff);
+    if (dateDiff < 24 * 60 * 60 * 1000) {
+      // console.log("less than24 hour");
+      await bookAccomm.findByIdAndUpdate(bookingId, {
+        $set: { status: "cancelled" },
+      });
+    } else {
+      // console.log("greater tha 24 hour");
+      return ErrorHandler("You cann't cancel the booking", 400, req, res);
+    }
+
+    // const booking = await bookAccomm.aggregate([
+    //   {$match: {_id: bookingId,  user: currentUser}},
+    //   {$cond: {
+    //     if: {$lt : {}}
+    //   }}
+
+    // ])
+
+    SuccessHandler({ success: true, message: "" }, 200, res);
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   bookNewAccomm,
   getUserBookings,
+  cancelBooking,
 };

@@ -7,6 +7,9 @@ const { authorizedUser } = require("../middleware/role");
 router
   .route("/new/:id")
   .post(isAuthenticated, authorizedUser, bookAccomm.bookNewAccomm);
+router
+  .route("/cancel/:id")
+  .post(isAuthenticated, authorizedUser, bookAccomm.cancelBooking);
 
 //get
 router
