@@ -1250,3 +1250,11 @@
 {"date":"2023-08-29T16:36:51.998Z","level":"error","message":"Advertisement.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
 {"date":"2023-08-29T16:41:09.104Z","level":"error","message":"advertised.save is not a function","method":"GET","service":"user-service","url":"/allAds"}
 {"date":"2023-08-31T13:04:57.663Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:10:54.140Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:10:59.852Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:14:27.259Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:14:53.981Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:17:09.661Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:20:52.227Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:46:31.772Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-08-31T17:55:09.645Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee0467e58ec848dc2869ca"}

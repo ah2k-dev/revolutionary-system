@@ -155,7 +155,12 @@ const cancelBooking = async (req, res) => {
       });
     } else {
       // console.log("greater tha 24 hour");
-      return ErrorHandler("You cann't cancel the booking", 400, req, res);
+      return ErrorHandler(
+        "Booking can be cancelled within 24 hours",
+        400,
+        req,
+        res
+      );
     }
 
     // const booking = await bookAccomm.aggregate([
@@ -166,7 +171,7 @@ const cancelBooking = async (req, res) => {
 
     // ])
 
-    SuccessHandler({ success: true, message: "" }, 200, res);
+    SuccessHandler({ success: true, message: "Booking Cancelled" }, 200, res);
   } catch (error) {
     ErrorHandler(error.message, 500, req, res);
   }
