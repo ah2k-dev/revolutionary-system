@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
 const Book = require("../models/Accomodation/bookingAccomodation");
+const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const Accomodation = require("../models/Accomodation/accomodation");
@@ -188,50 +189,63 @@ const cancelBooking = async (req, res) => {
   }
 };
 
-const addReviewsOnBooking = async (req, res) => {
+const addReviews = async (req, res) => {
   const currentUser = req.user._id;
+  const bookingId = req.params.id;
 
   // #swagger.tags = ['booking']
   try {
-    // const bookings = await Book.find({ user: currentUser }).populate({
-    //   path: "accomodationsId",
-    //   populate: {
-    //     path: "selectedMeals",
-    //   },
-    // });
-    // const bookings = await Book
-    //   .find({ user: currentUser })
-    //   .populate("accomodationsId")
-    //   .populate("selectedMeals");
-
-    // update status
-    await Book.updateMany(
-      {
-        user: currentUser,
-        endDate: { $lt: new Date() },
-      },
-      {
-        $set: { status: "completed" },
-      }
-    );
-    const bookings = await Book.find({ user: currentUser })
-      .populate("accomodationsId")
-      .populate({
-        path: "selectedMeals",
-        populate: {
-          path: "meal",
-          select: "dishName images",
-        },
-      });
-    if (!bookings) {
-      return ErrorHandler("No Such Booking exist", 400, req, res);
+    const { rating, comment } = req.body;
+    const booking = await Book.findOne({
+      _id: bookingId,
+      user: currentUser,
+      status: "completed",
+    });
+    if (!booking) {
+      return ErrorHandler(
+        "No Such Booking exist or you're not the user who made the booking.",
+        400,
+        req,
+        res
+      );
     }
 
-    return SuccessHandler(
-      { success: true, message: "Booking Fetched successfully", bookings },
-      200,
-      res
+    const accommodationId = booking.accomodationsId;
+    // console.log(accommodationId);
+    // const existingReview = await Review.findOne({
+    //   user: currentUser,
+    //   accomodation: accommodationId,
+    // });
+    // if (existingReview) {
+    //   return ErrorHandler("Reviews Already added.", 400, req, res);
+    // }
+    // create a new review
+    const review = await Review.create({
+      rating,
+      comment,
+      user: currentUser,
+      accomodation: accommodationId,
+    });
+    await review.save();
+
+    const accomodationReview = await Review.find({
+      accomodation: accommodationId,
+    });
+    console.log(accomodationReview);
+    let allRating = accomodationReview.map((accRating) => accRating.rating);
+    // // console.log(allRating);
+    let totalRating = allRating.reduce(
+      (acc, currentRating) => acc + currentRating,
+      0
     );
+    const avgRating = totalRating / accomodationReview.length;
+
+    await Accomodation.findByIdAndUpdate(accommodationId, {
+      $push: { reviewsId: review._id },
+      rating: avgRating.toFixed(1),
+    });
+
+    return SuccessHandler({ message: "Review added successfully" }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -241,5 +255,5 @@ module.exports = {
   bookNewAccomm,
   getUserBookings,
   cancelBooking,
-  addReviewsOnBooking,
+  addReviews,
 };

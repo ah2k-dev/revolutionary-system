@@ -5129,3 +5129,25 @@
 {"date":"2023-09-01T15:39:01.970Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
 {"date":"2023-09-01T15:54:30.986Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
 {"date":"2023-09-01T16:02:07.910Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T16:25:39.688Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-01T16:27:48.811Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/addReview/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:27:49.294Z","level":"error","message":"The Accommodation doesn't exist","method":"POST","service":"user-service","url":"/addReview/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:29:13.934Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:29:33.664Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:29:36.135Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:30:01.046Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:31:25.323Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:36:41.734Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:37:14.006Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce9"}
+{"date":"2023-09-01T16:37:14.231Z","level":"error","message":"Cast to ObjectId failed for value \"64ee03e6d3fcd0b469cbce9\" (type string) at path \"_id\" for model \"BookingAccomodation\"","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce9"}
+{"date":"2023-09-01T16:37:18.095Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:00.367Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:01.079Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:02.268Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:02.954Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:11.592Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:12.274Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:42:21.792Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:42:22.475Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:43:27.693Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:44:02.757Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee03e6d3fcd0b469cbce95"}

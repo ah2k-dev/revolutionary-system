@@ -1264,3 +1264,10 @@
 {"date":"2023-09-01T14:30:41.424Z","level":"error","message":"Invalid $project :: caused by :: Cannot do exclusion on field accommodation.reviewsId in inclusion projection","method":"GET","service":"user-service","url":"/bookings"}
 {"date":"2023-09-01T14:33:17.985Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}
 {"date":"2023-09-01T14:49:58.406Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T16:27:49.294Z","level":"error","message":"The Accommodation doesn't exist","method":"POST","service":"user-service","url":"/addReview/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:29:36.135Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:37:14.231Z","level":"error","message":"Cast to ObjectId failed for value \"64ee03e6d3fcd0b469cbce9\" (type string) at path \"_id\" for model \"BookingAccomodation\"","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce9"}
+{"date":"2023-09-01T16:41:01.079Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:02.954Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:41:12.274Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}
+{"date":"2023-09-01T16:42:22.475Z","level":"error","message":"Reviews Already added.","method":"POST","service":"user-service","url":"/review/64ee03e6d3fcd0b469cbce95"}

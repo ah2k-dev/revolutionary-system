@@ -16,4 +16,9 @@ router
   .route("/userBookings")
   .get(isAuthenticated, authorizedUser, bookAccomm.getUserBookings);
 
+// Add reviews
+//post
+router
+  .route("/review/:id")
+  .post(isAuthenticated, authorizedUser, bookAccomm.addReviews);
 module.exports = router;
