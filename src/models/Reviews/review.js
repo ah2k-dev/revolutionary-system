@@ -9,7 +9,7 @@ const reviewsSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
     accomodation: { type: Schema.Types.ObjectId, ref: "Accomodation" },
     // below field updated
-    cook: { type: Schema.Types.ObjectId, ref: "User" },
+    order: { type: Schema.Types.ObjectId, ref: "OrderMeal" },
 
     rating: {
       type: Number,

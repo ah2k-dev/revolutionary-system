@@ -5186,3 +5186,170 @@
 {"date":"2023-09-01T18:03:27.498Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-09-01T18:03:27.501Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-09-01T18:03:28.023Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-01T18:30:07.477Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T18:30:08.769Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
+{"date":"2023-09-01T18:40:48.940Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/userOrderedMeals"}
+{"date":"2023-09-01T18:41:21.340Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:41:25.648Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:41:26.473Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:41:27.075Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:41:34.310Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:42:00.462Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:42:14.483Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:42:24.535Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:42:40.795Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T18:48:19.852Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:48:20.354Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:50:03.764Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:53:26.497Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:53:28.261Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:54:46.115Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:56:11.680Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T18:57:35.150Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accomodation/getAccomodations"}
+{"date":"2023-09-01T18:57:55.575Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-09-01T18:57:56.246Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals: Cast to embedded failed for value \"[]\" (type string) at path \"selectedMeals\" because of \"ObjectParameterError\"","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-09-01T18:58:03.410Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-09-01T18:58:04.064Z","level":"error","message":"BookingAccomodation validation failed: selectedMeals: Cast to embedded failed for value \"[]\" (type string) at path \"selectedMeals\" because of \"ObjectParameterError\"","method":"POST","service":"user-service","url":"/new/64e76b0040628c572a901c2a"}
+{"date":"2023-09-01T18:59:31.148Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:00:19.632Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:00:21.285Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:00:24.718Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64e76b0040628c572a901c2a"}
+{"date":"2023-09-01T19:00:25.878Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:00:48.550Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:00:48.581Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:00:48.589Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:00:48.596Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:00:48.658Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:00:48.693Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:00:52.174Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T19:00:52.392Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:01:26.376Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:01:26.403Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:01:26.408Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:01:26.415Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:01:26.423Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:01:26.428Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:02:57.779Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:02:57.793Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:02:57.805Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:02:57.814Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:02:57.824Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:02:57.829Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:03:19.027Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:03:19.034Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:03:19.042Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:03:19.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:03:19.056Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:03:19.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:03:26.618Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T19:04:22.368Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:04:22.826Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:04:33.381Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:04:33.830Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:04:37.418Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:04:37.875Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:05:00.070Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:05:39.869Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:05:39.876Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:05:39.882Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:05:39.889Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:05:39.899Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:05:39.906Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:05:42.608Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T19:06:05.081Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:05.527Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:14.656Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:15.087Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:19.725Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:20.160Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:39.470Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:06:40.202Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T19:07:09.482Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:07:09.908Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:07:47.107Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:07:51.202Z","level":"error","message":"No Such Booking exist or you're not the user who made the booking.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:08:57.781Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:08:58.853Z","level":"error","message":"Review validation failed: rating: Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:09:18.133Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:09:19.071Z","level":"error","message":"Review validation failed: rating: Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:10:39.232Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:10:39.759Z","level":"error","message":"Review validation failed: rating: Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:10:53.054Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:10:55.400Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:06.290Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:06.730Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:22.057Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:22.067Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:22.485Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:22.789Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:33.866Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:33.877Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:34.376Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:34.713Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:50.014Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:12:50.430Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:13:19.201Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:13:19.611Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:14:34.242Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:14:34.659Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:15:09.027Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:15:11.779Z","level":"error","message":"Review validation failed: rating: Path `rating` is required.","method":"POST","service":"user-service","url":"/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:17:07.513Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:17:32.201Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:17:42.834Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:18:31.592Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:19:16.385Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:19:27.552Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:19:50.986Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:19:54.659Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:04.811Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:07.810Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:10.688Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:31.679Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:31.693Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:20:50.885Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:28:14.479Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:28:14.489Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:28:14.499Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:28:14.505Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:28:14.513Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:28:14.526Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:33:53.689Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:41:22.029Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:42:05.938Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/review/64f234c90eab42dcd3bf4e17"}
+{"date":"2023-09-01T19:42:15.461Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:42:15.900Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field mealDetail.cook in exclusion projection","method":"POST","service":"user-service","url":"/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T19:54:43.617Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:54:43.653Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:54:43.658Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:54:43.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:54:43.670Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:54:43.676Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:54:58.574Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-09-01T19:54:58.592Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-09-01T19:54:58.596Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-09-01T19:54:58.602Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-09-01T19:55:06.103Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T19:55:06.136Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T19:55:06.147Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T19:55:06.157Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T19:55:06.162Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T19:55:06.168Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T19:55:15.478Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692889425772avatar1.png"}
+{"date":"2023-09-01T19:55:15.488Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1693232046045avatar-3637425_640.png"}
+{"date":"2023-09-01T19:55:15.492Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692901437293avatar1.png"}
+{"date":"2023-09-01T19:55:15.496Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692898549611avatar1.png"}
+{"date":"2023-09-01T19:55:17.540Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T19:59:51.020Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
+{"date":"2023-09-01T20:04:33.635Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:04:40.822Z","level":"error","message":"Review validation failed: rating: Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:04:45.984Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:04:46.476Z","level":"error","message":"Review validation failed: rating: Cast to Number failed for value \"NaN\" (type number) at path \"rating\"","method":"POST","service":"user-service","url":"/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:06:29.451Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:07:27.734Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:07:30.062Z","level":"error","message":"OrderMeal.findOne(...).map is not a function","method":"POST","service":"user-service","url":"/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:09:01.209Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:09:30.641Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
+{"date":"2023-09-01T20:09:40.526Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-01T20:09:50.822Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
+{"date":"2023-09-01T20:12:20.097Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}

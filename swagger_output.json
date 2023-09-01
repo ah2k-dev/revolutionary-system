@@ -1109,7 +1109,7 @@
         }
       }
     },
-    "/meal/addReview/{id}": {
+    "/meal/review/{id}": {
       "post": {
         "tags": [
           "meal"
@@ -1141,69 +1141,6 @@
                 }
               }
             }
-          }
-        ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/meal/reviews/{id}": {
-      "get": {
-        "tags": [
-          "meal"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/meal/delReview/{id}": {
-      "delete": {
-        "tags": [
-          "meal"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "reviewId",
-            "in": "query",
-            "type": "string"
           }
         ],
         "responses": {

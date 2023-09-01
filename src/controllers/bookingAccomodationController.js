@@ -212,7 +212,7 @@ const addReviews = async (req, res) => {
     const accommodationId = booking.accomodationsId;
 
     const review = await Review.create({
-      rating: Number(rating),
+      rating: rating,
       comment,
       user: currentUser,
       accomodation: accommodationId,

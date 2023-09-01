@@ -379,11 +379,35 @@ const addReviews = async (req, res) => {
 
   try {
     const { rating, comment } = req.body;
+    // const order = await OrderMeal.findOne({
+    //   _id: orderId,
+    //   user: currentUser,
+    //   status: "completed",
+    // });
+    // console.log(order.meals[0].meal);
     const order = await OrderMeal.findOne({
       _id: orderId,
       user: currentUser,
-      status: "approved",
+      status: "completed",
+    }).populate({
+      path: "meals.meal",
+      model: "Meal",
+      select: "cook",
     });
+    const cookId = order.meals[0].meal.cook;
+
+    // const order = await OrderMeal.findOne({
+    //   _id: orderId,
+    //   user: currentUser,
+    //   status: "completed",
+    // }).populate({
+    //   path: "meals",
+    //   select: "cook",
+    //   model: "Meal", // Replace with the actual name of the meals model
+    // });
+
+    // 'order' will contain the "cook" field from the first meal in the order
+
     if (!order) {
       return ErrorHandler(
         "No Such Order exist or you're not the user who made the Order.",
@@ -401,21 +425,21 @@ const addReviews = async (req, res) => {
     await review.save();
 
     const cookReview = await Review.find({
-      accomodation: accommodationId,
+      order: orderId,
     });
-    console.log(accomodationReview);
-    let allRating = accomodationReview.map((accRating) => accRating.rating);
-    // // console.log(allRating);
-    let totalRating = allRating.reduce(
-      (acc, currentRating) => acc + currentRating,
-      0
-    );
-    const avgRating = totalRating / accomodationReview.length;
+    // console.log(accomodationReview);
+    // let allRating = accomodationReview.map((accRating) => accRating.rating);
+    // // // console.log(allRating);
+    // let totalRating = allRating.reduce(
+    //   (acc, currentRating) => acc + currentRating,
+    //   0
+    // );
+    // const avgRating = totalRating / accomodationReview.length;
 
-    await Accomodation.findByIdAndUpdate(accommodationId, {
-      $push: { reviewsId: review._id },
-      rating: avgRating.toFixed(1),
-    });
+    // await User.findByIdAndUpdate(cookId, {
+    //   $push: { reviewsId: review._id },
+    //   rating: avgRating.toFixed(1),
+    // });
 
     // const avgRating = totalRating / accomodationReview.length;
 
@@ -443,78 +467,53 @@ const addReviews = async (req, res) => {
     // const cookId = gettingCookId.cook;
     // console.log(cookId);
 
-    const avgRatings = await Meal.aggregate([
-      {
-        $match: { cook: cookId, rating: { $ne: 0 } },
-      },
-      {
-        $group: { _id: "$cook", avgRatingg: { $avg: "$rating" } },
-      },
-    ]);
-    const [{ _id, avgRatingg }] = avgRatings;
-    console.log(_id);
-    console.log(avgRatingg);
-    await User.findByIdAndUpdate(_id, {
-      shopRating: avgRatingg,
+    // const avgRatings = await Meal.aggregate([
+    //   {
+    //     $match: { cook: cookId, rating: { $ne: 0 } },
+    //   },
+    //   {
+    //     $group: { _id: "$cook", avgRatingg: { $avg: "$rating" } },
+    //   },
+    // ]);
+    // const [{ _id, avgRatingg }] = avgRatings;
+    // console.log(_id);
+    // console.log(avgRatingg);
+    await User.findByIdAndUpdate(cookId, {
+      // shopRating: avgRating,
     });
 
-    return SuccessHandler({ message: "Review added successfully" }, 200, res);
+    return SuccessHandler(
+      { message: "Review added successfully", order },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
 
-// const getReviews = async (req, res) => {
-//   // #swagger.tags = ['meal']
-//   try {
-//     const mealId = req.params.id;
-//     const meal = await Meal.findById(mealId).populate("reviewsId");
-//     if (!meal) {
-//       return ErrorHandler("The Meal doesn't exist", 400, req, res);
-//     }
-//     const reviews = meal.reviewsId;
-//     return SuccessHandler(
-//       {
-//         success: true,
-//         message: "Fetched Reviews successfully",
-//         reviews,
-//       },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
-// const deleteReview = async (req, res) => {
-//   // #swagger.tags = ['meal']
-//   try {
-//     const { reviewId } = req.query;
-//     const mealId = req.params.id;
-
-//     const review = await Review.findByIdAndDelete({
-//       _id: reviewId,
-//     });
-//     if (!review) {
-//       return ErrorHandler(
-//         { success: false, message: "Review not found or unauthorized" },
-//         404,
-//         req,
-//         res
-//       );
-//     }
-//     await Meal.findByIdAndUpdate(mealId, {
-//       $pull: { reviewsId: reviewId },
-//     });
-//     return SuccessHandler(
-//       { success: true, message: "Review has been Deleted" },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
+const getReviews = async (req, res) => {
+  // #swagger.tags = ['meal']
+  try {
+    const { cookId } = req.params;
+    const reviews = await User.findById(cookId).populate("reviewsId");
+    if (!reviews) {
+      return ErrorHandler("The Reviews or Cook doesn't exist", 400, req, res);
+    }
+    // const reviews = cook.reviewsId;
+    return SuccessHandler(
+      {
+        success: true,
+        message: "Fetched Reviews successfully",
+        reviews,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createMeal,
@@ -525,4 +524,5 @@ module.exports = {
   orderTheMeal,
   getOrderedMeal,
   addReviews,
+  getReviews,
 };

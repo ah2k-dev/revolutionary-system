@@ -94,7 +94,7 @@ const hostBookings = async (req, res) => {
     SuccessHandler(
       {
         success: true,
-        message: "",
+        message: "Fetched Bookings",
         bookingCount,
         bookings: bookedAccommodation,
       },

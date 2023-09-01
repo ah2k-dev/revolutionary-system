@@ -16,19 +16,12 @@ router
   .route("/updateMeal")
   .put(isAuthenticated, authorizedCook, meal.updateMeal);
 // ✅Reviews
-
 //post
 router
-  .route("/addReview/:id")
+  .route("/review/:id")
   .post(isAuthenticated, authorizedUser, meal.addReviews);
 //get
-// router
-//   .route("/reviews/:id")
-//   .get(isAuthenticated, authorizedUser, meal.getReviews);
-// // delete
-// router
-//   .route("/delReview/:id")
-//   .delete(isAuthenticated, authorizedUser, meal.deleteReview);
+router.route("/reviews/:cookId").get(isAuthenticated, meal.getReviews);
 
 // ✅ ➡order the Meal
 //post

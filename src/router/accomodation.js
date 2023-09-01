@@ -28,9 +28,7 @@ router
 //   .route("/addReview/:id")
 //   .post(isAuthenticated, authorizedUser, accomodation.addReview);
 // //get
-// router
-//   .route("/reviews/:id")
-//   .get(isAuthenticated, authorizedUser, accomodation.getReviews);
+router.route("/reviews/:id").get(isAuthenticated, accomodation.getReviews);
 // // delete
 // router
 //   .route("/delReview/:id")

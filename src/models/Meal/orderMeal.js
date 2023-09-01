@@ -23,7 +23,7 @@ const orderMealSchema = new Schema(
 
     status: {
       type: String,
-      enum: ["pending", "approved", "cancelled", "rejected"],
+      enum: ["pending", "approved", "cancelled", "rejected", "completed"],
       default: "pending",
     },
 
