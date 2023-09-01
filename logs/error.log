@@ -1258,3 +1258,9 @@
 {"date":"2023-08-31T17:20:52.227Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
 {"date":"2023-08-31T17:46:31.772Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee03e6d3fcd0b469cbce95"}
 {"date":"2023-08-31T17:55:09.645Z","level":"error","message":"You cann't cancel the booking","method":"POST","service":"user-service","url":"/cancel/64ee0467e58ec848dc2869ca"}
+{"date":"2023-09-01T13:12:43.136Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/accommodations"}
+{"date":"2023-09-01T13:40:45.563Z","level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T13:40:47.151Z","level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:30:41.424Z","level":"error","message":"Invalid $project :: caused by :: Cannot do exclusion on field accommodation.reviewsId in inclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:33:17.985Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:49:58.406Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}

@@ -5055,3 +5055,66 @@
 {"date":"2023-08-31T18:05:52.739Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64f092960a3c8c7ef5690eb2"}
 {"date":"2023-08-31T18:05:53.533Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
 {"date":"2023-08-31T18:05:59.915Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T13:12:21.374Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:12:42.893Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:12:43.136Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/accommodations"}
+{"date":"2023-09-01T13:12:53.400Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-01T13:13:02.660Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:22:29.310Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:32:48.381Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:37:20.406Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:40:45.306Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:40:45.563Z","level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T13:40:46.920Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:40:47.151Z","level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T13:41:24.440Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:42:13.304Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:44:39.011Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:45:38.338Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:46:11.249Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:47:01.169Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:47:16.284Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:48:00.919Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:48:39.068Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:49:32.844Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:49:55.705Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:50:28.475Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:53:54.055Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodations"}
+{"date":"2023-09-01T13:54:05.511Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:54:38.873Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:57:57.740Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:57:59.240Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:58:22.539Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:58:26.220Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T13:59:53.899Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:02:28.179Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:03:13.731Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:03:43.335Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:03:58.847Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:06:20.375Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:06:40.118Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:06:54.773Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:09:42.476Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:19:33.498Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:20:39.916Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:27:57.071Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:30:34.891Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:30:41.424Z","level":"error","message":"Invalid $project :: caused by :: Cannot do exclusion on field accommodation.reviewsId in inclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:31:20.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:33:13.600Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:33:17.985Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:35:10.552Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:35:20.005Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:38:19.913Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:38:37.022Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:39:18.851Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:41:06.418Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:49:06.168Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:49:10.535Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:49:23.026Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:49:57.946Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:49:58.406Z","level":"error","message":"Invalid $project :: caused by :: Cannot do inclusion on field userDetails.username in exclusion projection","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-01T14:51:19.099Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:51:58.375Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:52:44.969Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T14:53:05.318Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
