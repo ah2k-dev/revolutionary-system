@@ -42,13 +42,6 @@ const hostBookings = async (req, res) => {
   // #swagger.tags = ['host']
   const host = req.user._id;
   try {
-    // const bookedAccommodation = await Booking.find()
-    //   .populate({
-    //     path: "accomodationsId",
-    //     match: { createdBy: { $eq: host } },
-    //   })
-    //   .sort({ createdAt: -1 });
-
     const bookedAccommodation = await Booking.aggregate([
       {
         $lookup: {
@@ -58,14 +51,6 @@ const hostBookings = async (req, res) => {
           as: "userDetails",
         },
       },
-
-      // {
-      //   $project: {
-      //     "userDetails.username": 1,
-      //     "userDetails.avatar": 1,
-      //     "userDetails.email": 1,
-      //   },
-      // },
 
       {
         $lookup: {

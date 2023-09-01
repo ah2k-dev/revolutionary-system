@@ -34,8 +34,8 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
-    rating: { type: Number, default: 0 },
-    // host: { type: Schema.Types.ObjectId, ref: "User" },
+    // Remove Rating
+    // rating: { type: Number, default: 0 },
   },
 
   { timestamps: true }

@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
-const bookAccomm = require("../models/Accomodation/bookingAccomodation");
+const Book = require("../models/Accomodation/bookingAccomodation");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const Accomodation = require("../models/Accomodation/accomodation");
@@ -30,7 +30,7 @@ const bookNewAccomm = async (req, res) => {
       return ErrorHandler("Accommodation Does not exist", 400, req, res);
     }
 
-    const bookings = await bookAccomm.find({
+    const bookings = await Book.find({
       accomodationsId: accomodationId,
       user: currentUser,
       startDate: {
@@ -43,7 +43,7 @@ const bookNewAccomm = async (req, res) => {
     if (bookings.length > 0) {
       return ErrorHandler("Accommodation already book", 400, req, res);
     }
-    // const isBooked = await bookAccomm.findOne({
+    // const isBooked = await Book.findOne({
     //   accomodationsId: accomodationId,
     // });
     // if (isBooked) {
@@ -63,7 +63,7 @@ const bookNewAccomm = async (req, res) => {
     // else {
     // JSON.parse(selectedMeals)
     // : JSON.parse(selectedMeals)
-    const newBooking = await bookAccomm.create({
+    const newBooking = await Book.create({
       user: currentUser,
       accomodationsId: accomodationId,
       startDate,
@@ -95,20 +95,31 @@ const bookNewAccomm = async (req, res) => {
 
 const getUserBookings = async (req, res) => {
   const currentUser = req.user._id;
+
   // #swagger.tags = ['booking']
   try {
-    // const bookings = await bookAccomm.find({ user: currentUser }).populate({
+    // const bookings = await Book.find({ user: currentUser }).populate({
     //   path: "accomodationsId",
     //   populate: {
     //     path: "selectedMeals",
     //   },
     // });
-    // const bookings = await bookAccomm
+    // const bookings = await Book
     //   .find({ user: currentUser })
     //   .populate("accomodationsId")
     //   .populate("selectedMeals");
-    const bookings = await bookAccomm
-      .find({ user: currentUser })
+
+    // update status
+    await Book.updateMany(
+      {
+        user: currentUser,
+        endDate: { $lt: new Date() },
+      },
+      {
+        $set: { status: "completed" },
+      }
+    );
+    const bookings = await Book.find({ user: currentUser })
       .populate("accomodationsId")
       .populate({
         path: "selectedMeals",
@@ -136,7 +147,7 @@ const cancelBooking = async (req, res) => {
   try {
     const currentUser = req.user._id;
     const bookingId = req.params.id;
-    const booking = await bookAccomm.findOne({
+    const booking = await Book.findOne({
       _id: bookingId,
       user: currentUser,
     });
@@ -150,7 +161,7 @@ const cancelBooking = async (req, res) => {
     // console.log(dateDiff);
     if (dateDiff < 24 * 60 * 60 * 1000) {
       // console.log("less than24 hour");
-      await bookAccomm.findByIdAndUpdate(bookingId, {
+      await Book.findByIdAndUpdate(bookingId, {
         $set: { status: "cancelled" },
       });
     } else {
@@ -163,7 +174,7 @@ const cancelBooking = async (req, res) => {
       );
     }
 
-    // const booking = await bookAccomm.aggregate([
+    // const booking = await Book.aggregate([
     //   {$match: {_id: bookingId,  user: currentUser}},
     //   {$cond: {
     //     if: {$lt : {}}
@@ -177,8 +188,58 @@ const cancelBooking = async (req, res) => {
   }
 };
 
+const addReviewsOnBooking = async (req, res) => {
+  const currentUser = req.user._id;
+
+  // #swagger.tags = ['booking']
+  try {
+    // const bookings = await Book.find({ user: currentUser }).populate({
+    //   path: "accomodationsId",
+    //   populate: {
+    //     path: "selectedMeals",
+    //   },
+    // });
+    // const bookings = await Book
+    //   .find({ user: currentUser })
+    //   .populate("accomodationsId")
+    //   .populate("selectedMeals");
+
+    // update status
+    await Book.updateMany(
+      {
+        user: currentUser,
+        endDate: { $lt: new Date() },
+      },
+      {
+        $set: { status: "completed" },
+      }
+    );
+    const bookings = await Book.find({ user: currentUser })
+      .populate("accomodationsId")
+      .populate({
+        path: "selectedMeals",
+        populate: {
+          path: "meal",
+          select: "dishName images",
+        },
+      });
+    if (!bookings) {
+      return ErrorHandler("No Such Booking exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { success: true, message: "Booking Fetched successfully", bookings },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   bookNewAccomm,
   getUserBookings,
   cancelBooking,
+  addReviewsOnBooking,
 };

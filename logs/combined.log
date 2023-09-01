@@ -5118,3 +5118,14 @@
 {"date":"2023-09-01T14:51:58.375Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
 {"date":"2023-09-01T14:52:44.969Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
 {"date":"2023-09-01T14:53:05.318Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings"}
+{"date":"2023-09-01T15:38:50.311Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-01T15:38:51.185Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-01T15:38:51.196Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-01T15:38:51.203Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T15:38:51.210Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-01T15:38:51.218Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-01T15:38:51.225Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-01T15:38:59.844Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16932524690851000000048.jpg"}
+{"date":"2023-09-01T15:39:01.970Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/16929726984691000000050.png"}
+{"date":"2023-09-01T15:54:30.986Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-01T16:02:07.910Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
