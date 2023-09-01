@@ -24,16 +24,16 @@ router
 // ✅Reviews
 
 //post
-router
-  .route("/addReview/:id")
-  .post(isAuthenticated, authorizedUser, accomodation.addReview);
-//get
-router
-  .route("/reviews/:id")
-  .get(isAuthenticated, authorizedUser, accomodation.getReviews);
-// delete
-router
-  .route("/delReview/:id")
-  .delete(isAuthenticated, authorizedUser, accomodation.deleteReview);
+// router
+//   .route("/addReview/:id")
+//   .post(isAuthenticated, authorizedUser, accomodation.addReview);
+// //get
+// router
+//   .route("/reviews/:id")
+//   .get(isAuthenticated, authorizedUser, accomodation.getReviews);
+// // delete
+// router
+//   .route("/delReview/:id")
+//   .delete(isAuthenticated, authorizedUser, accomodation.deleteReview);
 
 module.exports = router;
