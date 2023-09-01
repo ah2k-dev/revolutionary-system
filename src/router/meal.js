@@ -22,13 +22,13 @@ router
   .route("/addReview/:id")
   .post(isAuthenticated, authorizedUser, meal.addReviews);
 //get
-router
-  .route("/reviews/:id")
-  .get(isAuthenticated, authorizedUser, meal.getReviews);
-// delete
-router
-  .route("/delReview/:id")
-  .delete(isAuthenticated, authorizedUser, meal.deleteReview);
+// router
+//   .route("/reviews/:id")
+//   .get(isAuthenticated, authorizedUser, meal.getReviews);
+// // delete
+// router
+//   .route("/delReview/:id")
+//   .delete(isAuthenticated, authorizedUser, meal.deleteReview);
 
 // ✅ ➡order the Meal
 //post

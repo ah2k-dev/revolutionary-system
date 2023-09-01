@@ -190,10 +190,9 @@ const cancelBooking = async (req, res) => {
 };
 
 const addReviews = async (req, res) => {
+  // #swagger.tags = ['booking']
   const currentUser = req.user._id;
   const bookingId = req.params.id;
-
-  // #swagger.tags = ['booking']
   try {
     const { rating, comment } = req.body;
     const booking = await Book.findOne({
@@ -211,17 +210,9 @@ const addReviews = async (req, res) => {
     }
 
     const accommodationId = booking.accomodationsId;
-    // console.log(accommodationId);
-    // const existingReview = await Review.findOne({
-    //   user: currentUser,
-    //   accomodation: accommodationId,
-    // });
-    // if (existingReview) {
-    //   return ErrorHandler("Reviews Already added.", 400, req, res);
-    // }
-    // create a new review
+
     const review = await Review.create({
-      rating,
+      rating: Number(rating),
       comment,
       user: currentUser,
       accomodation: accommodationId,

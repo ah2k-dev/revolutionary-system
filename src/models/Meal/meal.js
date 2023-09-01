@@ -5,6 +5,7 @@ dotenv.config({ path: ".././src/config/config.env" });
 
 const mealSchema = new Schema(
   {
+    //❌ must remove field
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
     // new fields
