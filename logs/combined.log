@@ -5353,3 +5353,6 @@
 {"date":"2023-09-01T20:09:40.526Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
 {"date":"2023-09-01T20:09:50.822Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/mealsByCookId/64e771556cca90fada9c0a75"}
 {"date":"2023-09-01T20:12:20.097Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-02T07:32:02.936Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-02T07:33:29.088Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
+{"date":"2023-09-02T07:34:12.902Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/review/64e78d1e7d5bc11a776df877"}
