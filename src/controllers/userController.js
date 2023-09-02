@@ -273,7 +273,7 @@ const getCooks = async (req, res) => {
     });
     // console.log(getCook);
     let allCookId = getCook.map((id) => id._id);
-    console.log(allCookId);
+    // console.log(allCookId);
     // const meals = await Meal.find({ cook: { $in: allCookId } }).populate({
     //   path: "cook",
     //   select: "rating",

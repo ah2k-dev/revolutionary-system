@@ -422,8 +422,8 @@ const addReviews = async (req, res) => {
       },
     ]);
     const [{ _id, avgRating }] = Ratings;
-    console.log(_id);
-    console.log(avgRating);
+    // console.log(_id);
+    // console.log(avgRating);
     await User.findByIdAndUpdate(cookId, {
       $push: { reviewsId: _id },
       shopRating: avgRating.toFixed(1),
