@@ -22,18 +22,7 @@ router
   .delete(isAuthenticated, authorizedHost, accomodation.deleteAccomodations);
 
 // ✅Reviews
-
-//post
 router
-  .route("/addReview/:id")
-  .post(isAuthenticated, authorizedUser, accomodation.addReview);
-//get
-router
-  .route("/reviews/:id")
-  .get(isAuthenticated, authorizedUser, accomodation.getReviews);
-// delete
-router
-  .route("/delReview/:id")
-  .delete(isAuthenticated, authorizedUser, accomodation.deleteReview);
-
+  .route("/reviews/:accomodationId")
+  .get(isAuthenticated, accomodation.getReviews);
 module.exports = router;

@@ -108,6 +108,8 @@ const userSchema = new Schema({
 
   savedMeal: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
   savedCooks: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  // new field added
+  reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 });
 
 //hash password before saving

@@ -5,6 +5,7 @@ dotenv.config({ path: ".././src/config/config.env" });
 
 const mealSchema = new Schema(
   {
+    //❌ must remove field
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
     // new fields
@@ -34,8 +35,8 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
-    rating: { type: Number, default: 0 },
-    // host: { type: Schema.Types.ObjectId, ref: "User" },
+    // Remove Rating
+    // rating: { type: Number, default: 0 },
   },
 
   { timestamps: true }

@@ -7,10 +7,9 @@ const validator = require("validator");
 const reviewsSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-
     accomodation: { type: Schema.Types.ObjectId, ref: "Accomodation" },
-
-    meal: { type: Schema.Types.ObjectId, ref: "Meal" },
+    // below field updated
+    cook: { type: Schema.Types.ObjectId, ref: "User" },
 
     rating: {
       type: Number,
@@ -21,7 +20,7 @@ const reviewsSchema = new Schema(
         message: "Ratings must be between 1 and 5.",
       },
     },
-    comment: { type: String, required: true },
+    comment: { type: String },
   },
   { timestamps: true }
 );

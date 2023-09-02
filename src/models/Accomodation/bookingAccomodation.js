@@ -13,9 +13,14 @@ const bookingAccomodationSchema = new Schema(
       required: true,
     },
 
+    // status: {
+    //   type: String,
+    //   enum: ["current", "previous", "cancelled"],
+    //   default: "current",
+    // },
     status: {
       type: String,
-      enum: ["current", "previous", "cancelled"],
+      enum: ["current", "previous", "cancelled", "completed"],
       default: "current",
     },
 

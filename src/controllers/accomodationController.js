@@ -253,103 +253,19 @@ const getAllAccomodations = async (req, res) => {
   }
 };
 
-// Add a new Review
-
-const addReview = async (req, res) => {
-  const currentUser = req.user._id;
-  // #swagger.tags = ['accomodation']
-
-  try {
-    const accomodationId = req.params.id;
-    const { rating, comment } = req.body;
-
-    const accomodation = await Accomodation.findById(accomodationId);
-
-    if (!accomodation) {
-      return ErrorHandler("The Accommodation doesn't exist", 400, req, res);
-    }
-
-    // Check if a review with the same comment already exists
-    const existingReview = await Review.findOne({
-      user: currentUser,
-      accomodation: accomodationId,
-      comment,
-    });
-
-    if (existingReview) {
-      // update existing review
-      existingReview.rating = rating;
-      existingReview.comment = comment;
-      await existingReview.save();
-
-      const accomodationReview = await Review.find({
-        accomodation: accomodationId,
-      });
-      // console.log(accomodationReview);
-      let allRating = accomodationReview.map((accRating) => accRating.rating);
-      let totalRating = allRating.reduce(
-        (acc, currentRating) => acc + currentRating,
-        0
-      );
-      const avgRating = totalRating / accomodationReview.length;
-
-      await Accomodation.findByIdAndUpdate(accomodationId, {
-        rating: avgRating,
-      });
-
-      return SuccessHandler(
-        {
-          success: true,
-          message: "Review Updated successfully",
-          review: existingReview,
-        },
-        200,
-        res
-      );
-    }
-    // create a new review
-    const review = await Review.create({
-      rating,
-      comment,
-      user: currentUser,
-      accomodation: accomodationId,
-    });
-    await review.save();
-    const accomodationReview = await Review.find({
-      accomodation: accomodationId,
-    });
-    // console.log(accomodationReview);
-    let allRating = accomodationReview.map((accRating) => accRating.rating);
-    // console.log(allRating);
-    let totalRating = allRating.reduce(
-      (acc, currentRating) => acc + currentRating,
-      0
-    );
-    const avgRating = totalRating / accomodationReview.length;
-
-    await Accomodation.findByIdAndUpdate(accomodationId, {
-      $push: { reviewsId: review._id },
-      rating: avgRating,
-    });
-
-    return SuccessHandler(
-      { success: true, message: "Review Added successfully", review },
-      200,
-      res
-    );
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
-
 // Getting reviews
 const getReviews = async (req, res) => {
   // #swagger.tags = ['accomodation']
   try {
-    const accomodationId = req.params.id;
-    const accomodation = await Accomodation.findById(accomodationId).populate(
-      "reviewsId"
-    );
+    const { accomodationId } = req.params;
+    const accomodation = await Accomodation.findById(accomodationId).populate({
+      path: "reviewsId",
+      select: "-_id -updatedAt -accomodation -__v",
+      populate: {
+        path: "user",
+        select: "username email avatar",
+      },
+    });
     if (!accomodation) {
       return res.status(404).json({ message: "Accommodation not found" });
     }
@@ -378,46 +294,10 @@ const getReviews = async (req, res) => {
   }
 };
 
-// Getting reviews
-const deleteReview = async (req, res) => {
-  // #swagger.tags = ['accomodation']
-  try {
-    const { reviewId } = req.query;
-    const accomodationId = req.params.id;
-    // console.log(reviewId);
-    const review = await Review.findByIdAndDelete({
-      _id: reviewId,
-    });
-
-    if (!review) {
-      return ErrorHandler(
-        { success: false, message: "Review not found or unauthorized" },
-        404,
-        req,
-        res
-      );
-    }
-
-    await Accomodation.findByIdAndUpdate(accomodationId, {
-      $pull: { reviewsId: reviewId },
-    });
-
-    return SuccessHandler(
-      { success: true, message: "Review has been Deleted" },
-      200,
-      res
-    );
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
-
 module.exports = {
   createAccomodations,
   updateAccomodations,
   deleteAccomodations,
   getAllAccomodations,
-  addReview,
   getReviews,
-  deleteReview,
 };
