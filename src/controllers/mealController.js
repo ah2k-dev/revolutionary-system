@@ -428,12 +428,9 @@ const addReviews = async (req, res) => {
       $push: { reviewsId: _id },
       shopRating: avgRating.toFixed(1),
     });
+    // console.log(Ratings);
 
-    return SuccessHandler(
-      { message: "Review added successfully", Ratings },
-      200,
-      res
-    );
+    return SuccessHandler({ message: "Review added successfully" }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -443,14 +440,17 @@ const getReviews = async (req, res) => {
   // #swagger.tags = ['meal']
   try {
     const { cookId } = req.params;
-    const reviews = await User.findById(cookId).populate("reviewsId");
+    console.log(cookId);
+    const reviews = await User.find({ _id: cookId }).populate({
+      path: "reviewsId",
+      match: { cook: cookId }, // Match with the 'cook' field in the 'Review' model
+    });
     if (!reviews) {
       return ErrorHandler("The Reviews or Cook doesn't exist", 400, req, res);
     }
     // const reviews = cook.reviewsId;
     return SuccessHandler(
       {
-        success: true,
         message: "Fetched Reviews successfully",
         reviews,
       },

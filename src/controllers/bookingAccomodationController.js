@@ -24,7 +24,7 @@ const bookNewAccomm = async (req, res) => {
       selectedMeals,
       // stripeToken,
     } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     const currentAccommodation = await Accomodation.findById(accomodationId);
 
     if (!currentAccommodation) {
@@ -222,9 +222,9 @@ const addReviews = async (req, res) => {
     const accomodationReview = await Review.find({
       accomodation: accommodationId,
     });
-    console.log(accomodationReview);
+    // console.log(accomodationReview);
     let allRating = accomodationReview.map((accRating) => accRating.rating);
-    // // console.log(allRating);
+
     let totalRating = allRating.reduce(
       (acc, currentRating) => acc + currentRating,
       0
