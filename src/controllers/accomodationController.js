@@ -34,18 +34,21 @@ const createAccomodations = async (req, res) => {
     if (isAccomodationsExist) {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
-    const createdMeals = await meal.insertMany(
-      meals.map((val) => {
-        return {
-          ...val,
-          mealType: "host",
-          // host: req.user._id,
-        };
-      })
-    );
+    let createdMeals = [];
+    if (meals && Array.isArray(meals) && meals.length > 0) {
+      createdMeals = await meal.insertMany(
+        meals.map((val) => {
+          return {
+            ...val,
+            mealType: "host",
+            // host: req.user._id,
+          };
+        })
+      );
+    }
     let imagesFileName = [];
-    const { images } = req.files;
-    if (images) {
+    // const { images } = req.files;
+    if (req.files?.images) {
       for (const img of images) {
         if (!img.mimetype.startsWith("image")) {
           return ErrorHandler("Please upload an image", 500, req, res);

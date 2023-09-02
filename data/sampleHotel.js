@@ -75,3 +75,36 @@ const hotels = [
     capacity: 4,
   },
 ];
+
+// {
+//   $group: {
+//     _id: "$accommodationDetail.status",
+//     currentCount: {
+//       $sum: {
+//         $cond: [
+//           { $eq: ["$accommodationDetail.status", "current"] },
+//           1,
+//           0,
+//         ],
+//       },
+//     },
+//     previousCount: {
+//       $sum: {
+//         $cond: [
+//           { $eq: ["$accommodationDetail.status", "previous"] },
+//           1,
+//           0,
+//         ],
+//       },
+//     },
+//     completedCount: {
+//       $sum: {
+//         $cond: [
+//           { $eq: ["$accommodationDetail.status", "completed"] },
+//           1,
+//           0,
+//         ],
+//       },
+//     },
+//   },
+// },

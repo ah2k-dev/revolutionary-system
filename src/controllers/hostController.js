@@ -43,14 +43,14 @@ const hostBookings = async (req, res) => {
   const host = req.user._id;
   try {
     const bookedAccommodation = await Booking.aggregate([
-      {
-        $lookup: {
-          from: "users",
-          localField: "user",
-          foreignField: "_id",
-          as: "userDetails",
-        },
-      },
+      // {
+      //   $lookup: {
+      //     from: "users",
+      //     localField: "user",
+      //     foreignField: "_id",
+      //     as: "userDetails",
+      //   },
+      // },
 
       {
         $lookup: {
@@ -78,13 +78,13 @@ const hostBookings = async (req, res) => {
           "accommodation.createdBy": 0,
         },
       },
-      {
-        $project: {
-          "userDetails.username": 1,
-          "userDetails.avatar": 1,
-          "userDetails.email": 1,
-        },
-      },
+      // {
+      //   $project: {
+      //     "userDetails.username": 1,
+      //     "userDetails.avatar": 1,
+      //     "userDetails.email": 1,
+      //   },
+      // },
       {
         $sort: { createdAt: -1 },
       },
@@ -106,7 +106,62 @@ const hostBookings = async (req, res) => {
   }
 };
 
+const bookingCount = async (req, res) => {
+  // #swagger.tags = ['host']
+  const host = req.user._id;
+
+  try {
+    const bookings = await Booking.aggregate([
+      {
+        $lookup: {
+          from: "accomodations",
+          localField: "accomodationsId",
+          foreignField: "_id",
+          as: "accommodationDetail",
+        },
+      },
+      {
+        $match: {
+          "accommodationDetail.createdBy": host,
+        },
+      },
+
+      {
+        $project: {
+          status: "$accommodationDetail.status",
+        },
+      },
+
+      {
+        $group: {
+          _id: "$status",
+          currentCount: {
+            $sum: {
+              $cond: [{ $eq: ["$status", "current"] }, 1, 0],
+            },
+          },
+        },
+      },
+    ]);
+    console.log(bookings);
+    if (!bookings) {
+      return ErrorHandler("Booking does not exist", 400, req, res);
+    }
+    return SuccessHandler(
+      {
+        success: true,
+        message: "Accommodations Fetched successfully",
+        bookings,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
 module.exports = {
   hostAccomodations,
   hostBookings,
+  bookingCount,
 };

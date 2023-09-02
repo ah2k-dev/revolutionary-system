@@ -23,6 +23,8 @@ const accomodationSchema = new Schema(
     services: { type: [String] },
     images: {
       type: [String],
+      default:
+        "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
     isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
