@@ -5557,3 +5557,4 @@
 {"date":"2023-09-03T22:22:32.603Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-03T22:23:06.650Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-03T22:24:06.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:25:53.301Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}

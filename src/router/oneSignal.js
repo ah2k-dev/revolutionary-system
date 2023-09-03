@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const oneSignal = require("../controllers/OneSignal");
+const oneSignal = require("../controllers/OneSignalController");
 const isAuthenticated = require("../middleware/auth");
 const {
   authorizedCook,
