@@ -5522,3 +5522,38 @@
 {"date":"2023-09-02T14:10:45.165Z","level":"error","message":"Failed to send notification","method":"POST","service":"user-service","url":"/send"}
 {"date":"2023-09-02T14:14:41.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/push/send"}
 {"date":"2023-09-02T14:14:43.453Z","level":"error","message":"Failed to send notification","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T13:10:50.077Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:20:19.101Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-03T13:23:00.105Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:23:01.012Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e663d2cd6392181ac991ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T13:24:04.592Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:24:05.376Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e663d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T13:26:11.552Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:54:12.153Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:54:41.060Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:54:43.539Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T13:55:40.189Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:58:50.036Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T13:59:32.309Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T14:00:03.240Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T14:00:05.667Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T14:00:08.043Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notif/send"}
+{"date":"2023-09-03T14:00:08.772Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T22:03:06.764Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:03:07.167Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-03T22:03:23.471Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-03T22:03:35.810Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:04:16.860Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:06:31.894Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:12:46.134Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:12:50.131Z","level":"error","message":"$grouop is not allowed or the syntax is incorrect, see the Atlas documentation for more information","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-03T22:13:11.869Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:13:59.800Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:16:09.335Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:18:13.543Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:19:10.509Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:21:54.906Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:22:29.910Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:22:32.603Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:23:06.650Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:24:06.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}

@@ -125,19 +125,27 @@ const bookingCount = async (req, res) => {
           "accommodationDetail.createdBy": host,
         },
       },
-
-      {
-        $project: {
-          status: "$accommodationDetail.status",
-        },
-      },
-
       {
         $group: {
-          _id: "$status",
+          _id: null,
           currentCount: {
             $sum: {
               $cond: [{ $eq: ["$status", "current"] }, 1, 0],
+            },
+          },
+          completedCount: {
+            $sum: {
+              $cond: [{ $eq: ["$status", "completed"] }, 1, 0],
+            },
+          },
+          cancelledCount: {
+            $sum: {
+              $cond: [{ $eq: ["$status", "cancelled"] }, 1, 0],
+            },
+          },
+          previousCount: {
+            $sum: {
+              $cond: [{ $eq: ["$status", "previous"] }, 1, 0],
             },
           },
         },
@@ -149,8 +157,7 @@ const bookingCount = async (req, res) => {
     }
     return SuccessHandler(
       {
-        success: true,
-        message: "Accommodations Fetched successfully",
+        message: "Bookings Count Fetched successfully",
         bookings,
       },
       200,

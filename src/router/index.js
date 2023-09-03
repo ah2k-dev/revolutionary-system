@@ -8,7 +8,7 @@ const coupon = require("./coupon");
 const host = require("./host");
 const advertisement = require("./advertisement");
 const push = require("./push");
-// const onesignal = require('./oneSignal')
+const onesignal = require("./oneSignal");
 
 router.use("/auth", auth);
 router.use("/user", user);
@@ -19,5 +19,5 @@ router.use("/coupon", coupon);
 router.use("/host", host);
 router.use("/ads", advertisement);
 router.use("/push", push);
-// router.use("/notification", onesignal);
+router.use("/notif", onesignal);
 module.exports = router;

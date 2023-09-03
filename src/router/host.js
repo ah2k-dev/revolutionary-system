@@ -12,7 +12,7 @@ router
   .route("/bookings")
   .get(isAuthenticated, authorizedHost, host.hostBookings);
 router
-  .route("/booking/count")
+  .route("/bookingsCount")
   .get(isAuthenticated, authorizedHost, host.bookingCount);
 
 module.exports = router;
