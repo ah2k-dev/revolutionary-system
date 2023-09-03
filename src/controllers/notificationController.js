@@ -17,8 +17,10 @@ const sendNotification = async (req, res) => {
       contents: {
         en: "We are sending sample notification",
       },
+      // included_segments: ["umer"],
       // included_segments: ["Subscribed Users"],
-      include_player_ids: ["64e66ss3d2-cd63-9218-1ac9-91ba"],
+      // include_player_ids: ["64e6d6ss3d2-cd63-9218-1ac9-91ba"],
+      include_player_ids: ["3e6fe22d-a52b-b5b6-c338-551ce5da6919"],
       large_icon:
         "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg",
       big_picture:

@@ -5560,3 +5560,18 @@
 {"date":"2023-09-03T22:25:53.301Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-03T22:36:15.918Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
 {"date":"2023-09-03T22:36:17.083Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T22:55:42.547Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/"}
+{"date":"2023-09-03T22:55:42.721Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/favicon.ico"}
+{"date":"2023-09-03T22:57:09.645Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T22:57:10.519Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
+{"date":"2023-09-03T23:00:35.083Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:01:48.253Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:05:30.602Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:08:35.819Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:10:55.082Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:12:02.682Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:14:30.492Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:15:53.989Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:18:54.451Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:20:14.032Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T23:22:52.588Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
