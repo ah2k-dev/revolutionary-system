@@ -5558,3 +5558,5 @@
 {"date":"2023-09-03T22:23:06.650Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-03T22:24:06.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-03T22:25:53.301Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-03T22:36:15.918Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-03T22:36:17.083Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const push = require("../controllers/pushNotifController");
+const notification = require("../controllers/notificationController");
 const isAuthenticated = require("../middleware/auth");
 const {
   authorizedCook,
@@ -8,8 +8,8 @@ const {
   authorizedUser,
 } = require("../middleware/role");
 
-router.route("/send").post(isAuthenticated, push.sendNotification);
+router.route("/send").post(isAuthenticated, notification.sendNotification);
 router
   .route("/view/:notificationId")
-  .get(isAuthenticated, push.getNotification);
+  .get(isAuthenticated, notification.viewNotification);
 module.exports = router;

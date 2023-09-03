@@ -1350,3 +1350,4 @@
 {"date":"2023-09-03T14:00:08.772Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}
 {"date":"2023-09-03T22:03:07.167Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
 {"date":"2023-09-03T22:12:50.131Z","level":"error","message":"$grouop is not allowed or the syntax is incorrect, see the Atlas documentation for more information","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-03T22:36:17.083Z","level":"error","message":"{\"errors\":[\"Incorrect player_id format in include_player_ids (not a valid UUID): 64e66ss3d2-cd63-9218-1ac9-91ba\"]}","method":"POST","service":"user-service","url":"/send"}

@@ -7,8 +7,7 @@ const meal = require("./meal");
 const coupon = require("./coupon");
 const host = require("./host");
 const advertisement = require("./advertisement");
-const push = require("./push");
-const onesignal = require("./oneSignal");
+const notification = require("./notification");
 
 router.use("/auth", auth);
 router.use("/user", user);
@@ -18,6 +17,5 @@ router.use("/meal", meal);
 router.use("/coupon", coupon);
 router.use("/host", host);
 router.use("/ads", advertisement);
-router.use("/push", push);
-router.use("/notif", onesignal);
+router.use("/notification", notification);
 module.exports = router;
