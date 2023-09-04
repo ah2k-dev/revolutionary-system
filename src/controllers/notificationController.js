@@ -9,7 +9,6 @@ const oneSignalClient = new OneSignal.Client(
   process.env.ONESIGNAL_APP_ID,
   process.env.REST_API_KEY
 );
-console.log("id:", process.env.ONESIGNAL_APP_ID);
 
 // const send = cron.schedule("*/5 * * * * *", () => {
 //   console.log("I am cron job function");
@@ -76,7 +75,5 @@ const viewNotification = async (req, res) => {
     ErrorHandler("Failed to send notification", 500, req, res);
   }
 };
-
-// cron.schedule("*/10 * * * * *", sendNotification);
 
 module.exports = { sendNotification, viewNotification };
