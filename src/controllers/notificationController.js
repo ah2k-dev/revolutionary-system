@@ -3,11 +3,18 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
+const cron = require("node-cron");
+
 const oneSignalClient = new OneSignal.Client(
   process.env.ONESIGNAL_APP_ID,
   process.env.REST_API_KEY
 );
 console.log("id:", process.env.ONESIGNAL_APP_ID);
+
+// const send = cron.schedule("*/5 * * * * *", () => {
+//   console.log("I am cron job function");
+// });
+// console.log(send);
 
 const sendNotification = async (req, res) => {
   // #swagger.tags = ['notification']
@@ -20,7 +27,7 @@ const sendNotification = async (req, res) => {
         en: "We are sending sample notification",
       },
       // included_segments: ["All"],
-      // include_external_user_ids: ["64e663d2cd6392181ac991ba"],
+      include_external_user_ids: ["64e663d2cd6392181ac991ba"],
       large_icon:
         "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg",
       big_picture:
@@ -69,5 +76,7 @@ const viewNotification = async (req, res) => {
     ErrorHandler("Failed to send notification", 500, req, res);
   }
 };
+
+// cron.schedule("*/10 * * * * *", sendNotification);
 
 module.exports = { sendNotification, viewNotification };

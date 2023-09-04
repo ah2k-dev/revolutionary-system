@@ -5722,3 +5722,45 @@
 {"date":"2023-09-04T17:17:10.714Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
 {"date":"2023-09-04T17:17:13.162Z","level":"error","message":"{\"errors\":[\"app_id not found. You may be missing a Content-Type: application/json header.\"]}","method":"POST","service":"user-service","url":"/send"}
 {"date":"2023-09-04T17:17:37.327Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/notification/send"}
+{"date":"2023-09-04T17:50:00.893Z","level":"error","message":"{\"errors\":[\"You must include which players, segments, or tags you wish to send this notification to.\"]}","service":"user-service"}
+{"date":"2023-09-04T17:50:27.368Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:50:51.355Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:51:02.370Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:51:26.254Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:51:36.842Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-04T17:51:36.882Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-04T17:51:36.887Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-04T17:51:36.898Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-04T17:51:36.906Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-04T17:51:36.909Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-04T17:51:51.731Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:01.681Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:11.714Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:21.655Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:29.146Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-04T17:52:29.189Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-04T17:52:29.195Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-04T17:52:29.203Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-04T17:52:29.211Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-04T17:52:29.215Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-04T17:52:31.667Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:41.734Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:52:52.202Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:01.667Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:11.674Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:22.415Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:27.571Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-04T17:53:27.579Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-04T17:53:27.588Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-04T17:53:27.601Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-04T17:53:27.608Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-04T17:53:27.615Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-04T17:53:31.703Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:41.675Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:53:51.790Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-04T17:54:27.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/getCook"}
+{"date":"2023-09-04T17:54:27.677Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/userOrderedMeals"}
+{"date":"2023-09-04T17:54:27.684Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-04T17:54:27.689Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-04T17:54:27.694Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-04T17:54:27.699Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
