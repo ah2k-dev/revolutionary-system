@@ -8,7 +8,7 @@ const {
   authorizedUser,
 } = require("../middleware/role");
 
-router.route("/send").post(isAuthenticated, notification.sendNotification);
+router.route("/send").post(notification.sendNotification);
 router
   .route("/view/:notificationId")
   .get(isAuthenticated, notification.viewNotification);

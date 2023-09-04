@@ -4,23 +4,23 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
 const oneSignalClient = new OneSignal.Client(
-  process.env.ONE_SIGNAL_APP_ID,
-  process.env.ONE_SIGNAL_API_KEY
+  process.env.ONESIGNAL_APP_ID,
+  process.env.REST_API_KEY
 );
+console.log("id:", process.env.ONESIGNAL_APP_ID);
 
 const sendNotification = async (req, res) => {
   // #swagger.tags = ['notification']
 
   try {
     const notification = {
+      app_id: process.env.ONESIGNAL_APP_ID,
       headings: { en: "Welcome to Revolutionary App" },
       contents: {
         en: "We are sending sample notification",
       },
-      // included_segments: ["umer"],
-      // included_segments: ["Subscribed Users"],
-      // include_player_ids: ["64e6d6ss3d2-cd63-9218-1ac9-91ba"],
-      include_player_ids: ["3e6fe22d-a52b-b5b6-c338-551ce5da6919"],
+      // included_segments: ["All"],
+      // include_external_user_ids: ["64e663d2cd6392181ac991ba"],
       large_icon:
         "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg",
       big_picture:
@@ -29,8 +29,16 @@ const sendNotification = async (req, res) => {
       //      postId
       //      },
     };
+    const headers = {
+      "Content-Type": "application/json; charset=utf-8",
+      // "Content-Type": "application/json",
+      Authorization: `Basic ${process.env.REST_API_KEY}`, // Replace with your OneSignal REST API Key
+    };
     // create a notification
-    const response = await oneSignalClient.createNotification(notification);
+    const response = await oneSignalClient.createNotification(
+      notification,
+      headers
+    );
     console.log("response: ", response);
     console.log(response.body.id);
 

@@ -108,3 +108,32 @@ const hotels = [
 //     },
 //   },
 // },
+
+// /   try {
+//     var url = "https://onesignal.com/api/v1/notifications";
+//     var headers = {
+//       "Content-Type": "application/json; charset=utf-8",
+//       "Authorization":
+//           "Basic MzdiNjgxNTktYzQ3Mi00ZjFjLWI4NDYtMDU1OWU1ZThlMzI5", //from one signal auth key
+//     };
+//     var body = {
+//       "app_id": "07de94b6-8493-420f-8fc5-afc3aece3906",
+//       "contents": {"en": message},
+//       // "data": {
+//       //   "myData": "whenTapOnNotificationIfNeededToPerformTask"
+//       // }, //(optional)
+//       "include_external_user_ids": [externalUserId],
+//     };
+//     var response = await ApiServices()
+//         .postReq(endPoint: url, headers: headers, data: body);
+//     if (response.statusCode == 200) {
+//       debugPrint(
+//           "OneSignal Notification sent successfully to $externalUserId");
+//       return 1;
+//     } else {
+//       debugPrint("Error sending notification: ${response.statusCode}");
+//       return 0;
+//     }
+//   } catch (e) {
+//     debugPrint(e.toString());
+//   }
