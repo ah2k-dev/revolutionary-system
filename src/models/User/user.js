@@ -33,6 +33,7 @@ const userSchema = new Schema({
 
   phoneNumber: {
     type: String,
+    select: false,
   },
 
   role: {
