@@ -11,5 +11,8 @@ router
 router
   .route("/bookings")
   .get(isAuthenticated, authorizedHost, host.hostBookings);
+router
+  .route("/bookingsCount")
+  .get(isAuthenticated, authorizedHost, host.bookingCount);
 
 module.exports = router;

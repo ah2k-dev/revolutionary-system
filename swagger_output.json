@@ -785,6 +785,38 @@
         }
       }
     },
+    "/accomodation/reviews/{accomodationId}": {
+      "get": {
+        "tags": [
+          "accomodation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "accomodationId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/booking/new/{id}": {
       "post": {
         "description": "",
@@ -1153,6 +1185,35 @@
         }
       }
     },
+    "/meal/reviews/{cookId}": {
+      "get": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "cookId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/meal/orderMeal": {
       "post": {
         "tags": [
@@ -1348,6 +1409,29 @@
         }
       }
     },
+    "/host/bookingsCount": {
+      "get": {
+        "tags": [
+          "host"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/ads/new/{id}": {
       "post": {
         "tags": [
@@ -1399,6 +1483,48 @@
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/notification/send": {
+      "post": {
+        "tags": [
+          "notification"
+        ],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/notification/view/{notificationId}": {
+      "get": {
+        "tags": [
+          "notification"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "notificationId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "authorization",
             "in": "header",
