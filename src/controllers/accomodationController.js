@@ -15,7 +15,8 @@ const createAccomodations = async (req, res) => {
       longitude,
       capacity,
       services,
-      price,
+      dinnerPrice,
+      accommodationPrice,
       meals,
     } = req.body;
     console.log(meals);
@@ -63,7 +64,7 @@ const createAccomodations = async (req, res) => {
     const newAccomodation = await Accommodation.create({
       title,
       desc,
-      price: Number(price),
+      // price: Number(price),
       location: {
         type: "Point",
         coordinates: [longitude, latitude],
@@ -73,6 +74,8 @@ const createAccomodations = async (req, res) => {
       host: currentUser,
       images: imagesFileName,
       meals: createdMeals.map((val) => val._id),
+      accommodationPrice,
+      dinnerPrice,
     });
 
     await newAccomodation.save();

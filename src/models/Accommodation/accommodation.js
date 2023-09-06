@@ -16,7 +16,8 @@ const accommodationSchema = new Schema(
       default:
         "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
-    price: { type: Number, require: true },
+    accommodationPrice: { type: Number, require: true },
+    dinnerPrice: { type: Number, require: true },
     location: {
       type: { type: String, default: "Point" },
       coordinates: [Number],

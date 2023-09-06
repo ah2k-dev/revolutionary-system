@@ -6,7 +6,7 @@ const validator = require("validator");
 
 const bookingSchema = new Schema(
   {
-    accommodation: { type: Schema.Types.ObjectId, ref: "User" },
+    accommodation: { type: Schema.Types.ObjectId, ref: "Accommodation" },
     user: { type: Schema.Types.ObjectId, ref: "User" },
 
     status: {
@@ -14,18 +14,14 @@ const bookingSchema = new Schema(
       enum: ["booked", "previous", "cancelled", "completed"],
       default: "booked",
     },
-    startDate: {
-      type: Date,
-    },
-
-    endDate: {
-      type: Date,
-    },
+    date: { type: Date },
+    accommodationAmount: { type: Number, default: 0 },
+    dinner: { type: Number, default: 0 },
     subTotal: { type: Number },
-
     totalAmount: { type: Number },
     expiryDate: { type: Date },
     isActive: { type: Boolean, default: true },
+    accommodationSelected: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
