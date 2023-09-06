@@ -30,5 +30,5 @@ const accommodationSchema = new Schema(
   { timestamps: true }
 );
 accommodationSchema.index({ location: "2dsphere" });
-const Accommodation = mongoose.model("Accommodation", accommodationSchema);
-module.exports = Accommodation;
+const accommodation = mongoose.model("Accommodation", accommodationSchema);
+module.exports = accommodation;
