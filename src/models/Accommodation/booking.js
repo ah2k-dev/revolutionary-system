@@ -21,10 +21,9 @@ const bookingSchema = new Schema(
     endDate: {
       type: Date,
     },
-    subTotal: { type: Number, default: 0 },
+    subTotal: { type: Number },
 
-    totalAmount: { type: Number, default: 0 },
-    availableSeats: { type: Number, default: 0 },
+    totalAmount: { type: Number },
     expiryDate: { type: Date },
     isActive: { type: Boolean, default: true },
   },

@@ -24,6 +24,8 @@ const accommodationSchema = new Schema(
     capacity: { type: Number, require: true },
     services: { type: [String] },
     isActive: { type: Boolean, default: true },
+
+    availableSeats: { type: Number },
   },
   { timestamps: true }
 );
