@@ -27,9 +27,6 @@ const bookingSchema = new Schema(
     availableSeats: { type: Number, default: 0 },
     expiryDate: { type: Date },
     isActive: { type: Boolean, default: true },
-
-    rating: { type: Number, default: 0 },
-    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
   },
   { timestamps: true }
 );
