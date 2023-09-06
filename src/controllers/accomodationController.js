@@ -172,7 +172,34 @@ const getAccomodations = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+const deleteAccomodations = async (req, res) => {
+  // #swagger.tags = ['accommodation']
+  const accommodationId = req.params.id;
+  try {
+    const currentUser = req.user._id;
+    const accommodation = await Accommodation.findByIdAndUpdate(
+      accommodationId,
+      {
+        host: currentUser,
+        isActive: false,
+      }
+    );
+    await Meal.updateMany({ host: currentUser }, { $set: { isActive: false } });
 
+    if (!accommodation) {
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { message: "Accommodation Deleted successfully" },
+
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 // const updateAccomodations = async (req, res) => {
 //   // #swagger.tags = ['accomodation']
 //   try {
@@ -234,4 +261,5 @@ const getAccomodations = async (req, res) => {
 module.exports = {
   createAccomodations,
   getAccomodations,
+  deleteAccomodations,
 };

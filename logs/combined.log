@@ -5842,3 +5842,13 @@
 {"date":"2023-09-06T16:04:33.846Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
 {"date":"2023-09-06T16:05:10.324Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
 {"date":"2023-09-06T16:07:44.841Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodation/getAll"}
+{"date":"2023-09-06T17:06:17.346Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:06:21.737Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:10:55.276Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:12:32.879Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:14:22.343Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:14:45.760Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodation/getAll"}
+{"date":"2023-09-06T17:14:58.759Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:15:23.920Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:16:14.553Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
+{"date":"2023-09-06T17:17:10.936Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/accommodation/delAccommodation/64f89ea4bcb6619dfe93957b"}
