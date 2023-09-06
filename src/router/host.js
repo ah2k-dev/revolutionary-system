@@ -10,6 +10,6 @@ const {
 //✅ ➡Host
 //post
 router
-  .route("/getAll")
+  .route("/accommodation/getAll")
   .get(isAuthenticated, authorizedHost, host.getAccomodations);
 module.exports = router;

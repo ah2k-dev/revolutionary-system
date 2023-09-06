@@ -5835,3 +5835,10 @@
 {"date":"2023-09-06T15:45:03.504Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
 {"date":"2023-09-06T15:45:04.327Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-06T15:45:39.261Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-06T15:56:37.877Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T15:57:23.235Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T15:57:36.971Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T15:57:42.220Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T16:04:33.846Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T16:05:10.324Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-06T16:07:44.841Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodation/getAll"}

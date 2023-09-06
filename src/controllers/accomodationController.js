@@ -90,13 +90,22 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // Capacity filter
+    // ✅Capacity filter
     const capacityFilter = req.body.capacity
       ? {
           capacity: req.body.capacity,
         }
       : {};
-    // Location filter
+    //✅ Price Filter
+    const priceFilter = req.body.priceRange
+      ? {
+          price: {
+            $gte: Number(req.body.priceRange[0]),
+            $lte: Number(req.body.priceRange[1]),
+          },
+        }
+      : {};
+    // ✅Location filter
     const locationFilter =
       req.body.coordinates && req.body.coordinates.length == 2
         ? {
@@ -140,6 +149,7 @@ const getAccomodations = async (req, res) => {
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
+      ...priceFilter,
       // ...availabilityFilter,
     }).populate({
       path: "meals",
@@ -148,10 +158,11 @@ const getAccomodations = async (req, res) => {
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
     }
-
+    const accommodationCount = accommodations.length;
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
+        accommodationCount,
         accommodations,
       },
       200,
@@ -220,159 +231,7 @@ const getAccomodations = async (req, res) => {
 //   }
 // };
 
-// const deleteAccomodations = async (req, res) => {
-//   // #swagger.tags = ['accomodation']
-//   // TODO: image array
-//   try {
-//     const deleteAccomodation = await Accomodation.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         $set: {
-//           isActive: false,
-//         },
-//       }
-//     );
-
-//     if (!deleteAccomodation) {
-//       return ErrorHandler("Accommodation does not exist", 400, req, res);
-//     }
-
-//     return SuccessHandler(
-//       { success: true, message: "Deleted successfully" },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
-
-// const getAllAccomodations = async (req, res) => {
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const capacityFilter = req.body.capacity
-//       ? {
-//           capacity: req.body.capacity,
-//         }
-//       : {};
-
-//     // Location filter
-//     const locationFilter =
-//       req.body.coordinates && req.body.coordinates.length == 2
-//         ? {
-//             location: {
-//               $near: {
-//                 $geometry: {
-//                   type: "Point",
-//                   coordinates: req.body.coordinates,
-//                 },
-//                 $maxDistance: 10 * 1000,
-//               },
-//             },
-//           }
-//         : {};
-
-//     let unAvailableAccommodations = [];
-
-//     if (req.body.date && req.body.date > 0) {
-//       const bookings = await bookingAccomodation.find({
-//         startDate: {
-//           $in: req.body.date[0],
-//         },
-//         endDate: {
-//           $lte: req.body.date[1],
-//         },
-//       });
-
-//       unAvailableAccommodations = bookings.map((val, ind) => {
-//         return val.accomodationsId;
-//       });
-//     }
-
-//     const availabilityFilter =
-//       unAvailableAccommodations.length > 0
-//         ? {
-//             _id: {
-//               $nin: unAvailableAccommodations,
-//             },
-//           }
-//         : {};
-
-//     const getAccomodations = await Accomodation.find({
-//       isActive: true,
-//       ...capacityFilter,
-//       ...locationFilter,
-//       ...availabilityFilter,
-//     })
-//       .populate("reviewsId")
-//       .populate("meals");
-
-//     const totalAccomodation = getAccomodations.length;
-
-//     if (!getAccomodations) {
-//       return ErrorHandler("Accommodation does not exist", 400, req, res);
-//     }
-
-//     return SuccessHandler(
-//       {
-//         success: true,
-//         message: "Fetched successfully",
-//         totalAccomodation,
-//         getAccomodations,
-//       },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
-
-// Getting reviews
-// const getReviews = async (req, res) => {
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const { accomodationId } = req.params;
-//     const accomodation = await Accomodation.findById(accomodationId).populate({
-//       path: "reviewsId",
-//       select: "-_id -updatedAt -accomodation -__v",
-//       populate: {
-//         path: "user",
-//         select: "username email avatar",
-//       },
-//     });
-//     if (!accomodation) {
-//       return res.status(404).json({ message: "Accommodation not found" });
-//     }
-
-//     const reviews = accomodation.reviewsId;
-
-//     let totalRating = 0;
-//     for (let rev of reviews) {
-//       totalRating += rev.rating;
-//     }
-
-//     const avgRating = (totalRating / reviews.length).toFixed(1);
-
-//     return SuccessHandler(
-//       {
-//         success: true,
-//         message: "Fetched Reviews successfully",
-//         avgRating,
-//         reviews,
-//       },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
-
 module.exports = {
   createAccomodations,
   getAccomodations,
-  // updateAccomodations,
-  // deleteAccomodations,
-  // getReviews,
 };
