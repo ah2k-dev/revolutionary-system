@@ -41,24 +41,24 @@ const createAccomodations = async (req, res) => {
         })
       );
     }
-    console.log(createdMeals);
-    let imagesFileName = [];
-    const { images } = req.files;
-    // console.log(images);
-    if (req.files?.images) {
-      for (const img of images) {
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image", 500, req, res);
-        }
-        let imgFile = `${Date.now()}-${img.name}`;
-        imagesFileName.push(imgFile);
-        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
-          if (err) {
-            return ErrorHandler(err.message, 400, req, res);
-          }
-        });
-      }
-    }
+    // console.log(createdMeals);
+    // let imagesFileName = [];
+    // const { images } = req.files;
+    // // console.log(images);
+    // if (req.files?.images) {
+    //   for (const img of images) {
+    //     if (!img.mimetype.startsWith("image")) {
+    //       return ErrorHandler("Please upload an image", 500, req, res);
+    //     }
+    //     let imgFile = `${Date.now()}-${img.name}`;
+    //     imagesFileName.push(imgFile);
+    //     img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+    //       if (err) {
+    //         return ErrorHandler(err.message, 400, req, res);
+    //       }
+    //     });
+    //   }
+    // }
 
     const newAccomodation = await Accommodation.create({
       title,
@@ -71,7 +71,7 @@ const createAccomodations = async (req, res) => {
       capacity: Number(capacity),
       services,
       host: currentUser,
-      images: imagesFileName,
+      // images: imagesFileName,
       meals: createdMeals.map((val) => val._id),
     });
 
@@ -140,7 +140,7 @@ const getAccomodations = async (req, res) => {
       isActive: true,
       ...capacityFilter,
       ...locationFilter,
-      ...availabilityFilter,
+      // ...availabilityFilter,
     }).populate({
       path: "meals",
     });
@@ -150,7 +150,10 @@ const getAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { success: true, message: "Added successfully", accommodations },
+      {
+        message: "Accommodations fetched successfully",
+        accommodations,
+      },
       200,
       res
     );

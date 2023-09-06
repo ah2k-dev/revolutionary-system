@@ -12,4 +12,5 @@ const {
 router
   .route("/new")
   .post(isAuthenticated, authorizedHost, accommodation.createAccomodations);
+router.route("/getAll").post(isAuthenticated, accommodation.getAccomodations);
 module.exports = router;
