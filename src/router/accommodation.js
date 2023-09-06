@@ -13,4 +13,7 @@ router
   .route("/new")
   .post(isAuthenticated, authorizedHost, accommodation.createAccomodations);
 router.route("/getAll").post(isAuthenticated, accommodation.getAccomodations);
+router
+  .route("/delAccommodation/:id")
+  .delete(isAuthenticated, authorizedHost, accommodation.deleteAccomodations);
 module.exports = router;
