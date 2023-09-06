@@ -1418,3 +1418,17 @@
 {"date":"2023-09-04T17:53:31.703Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
 {"date":"2023-09-04T17:53:41.675Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
 {"date":"2023-09-04T17:53:51.790Z","level":"error","message":"Cannot read properties of undefined (reading 'status')","service":"user-service"}
+{"date":"2023-09-06T13:30:54.460Z","level":"error","message":"images is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:31:44.967Z","level":"error","message":"images is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:33:23.429Z","level":"error","message":"images is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:34:48.424Z","level":"error","message":"Accommodation validation failed: host: Path `host` is required.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:37:48.581Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:38:24.255Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:38:33.264Z","level":"error","message":"images is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:40:37.763Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T13:56:55.409Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T14:22:38.602Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T14:32:30.480Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T14:59:05.442Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-06T15:34:01.792Z","level":"error","message":"availabilityFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-06T15:45:04.327Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/new"}

@@ -1,18 +1,15 @@
 const router = require("express").Router();
 const host = require("../controllers/hostController");
 const isAuthenticated = require("../middleware/auth");
-const { authorizedHost } = require("../middleware/role");
+const {
+  authorizedCook,
+  authorizedUser,
+  authorizedHost,
+} = require("../middleware/role");
 
-//✅ Host Accommodation
-//get
+//✅ ➡Host
+//post
 router
-  .route("/accommodations")
-  .get(isAuthenticated, authorizedHost, host.hostAccomodations);
-router
-  .route("/bookings")
-  .get(isAuthenticated, authorizedHost, host.hostBookings);
-router
-  .route("/bookingsCount")
-  .get(isAuthenticated, authorizedHost, host.bookingCount);
-
+  .route("/accommodation/getAll")
+  .get(isAuthenticated, authorizedHost, host.getAccomodations);
 module.exports = router;

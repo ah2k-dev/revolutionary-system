@@ -1,0 +1,37 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const dotenv = require("dotenv");
+dotenv.config({ path: ".././src/config/config.env" });
+const validator = require("validator");
+
+const bookingSchema = new Schema(
+  {
+    accommodation: { type: Schema.Types.ObjectId, ref: "User" },
+    user: { type: Schema.Types.ObjectId, ref: "User" },
+
+    status: {
+      type: String,
+      enum: ["booked", "previous", "cancelled", "completed"],
+      default: "booked",
+    },
+    startDate: {
+      type: Date,
+    },
+
+    endDate: {
+      type: Date,
+    },
+    subTotal: { type: Number, default: 0 },
+
+    totalAmount: { type: Number, default: 0 },
+    availableSeats: { type: Number, default: 0 },
+    expiryDate: { type: Date },
+    isActive: { type: Boolean, default: true },
+
+    rating: { type: Number, default: 0 },
+    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+  },
+  { timestamps: true }
+);
+const booking = mongoose.model("Booking", bookingSchema);
+module.exports = booking;

@@ -6,7 +6,7 @@ dotenv.config({ path: ".././src/config/config.env" });
 const mealSchema = new Schema(
   {
     //❌ must remove field
-    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+    // reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
     // new fields
     mealType: {
@@ -15,14 +15,15 @@ const mealSchema = new Schema(
       default: "cook",
     },
 
-    cook: { type: Schema.Types.ObjectId, ref: "User" },
+    // cook: { type: Schema.Types.ObjectId, ref: "User" },
+    host: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String },
     desc: { type: String },
     price: { type: Number },
     images: {
       type: [String],
-      // default:
-      //   "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
+      default:
+        "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
     spiceStatus: {
       type: String,
@@ -35,8 +36,6 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
-    // Remove Rating
-    // rating: { type: Number, default: 0 },
   },
 
   { timestamps: true }
