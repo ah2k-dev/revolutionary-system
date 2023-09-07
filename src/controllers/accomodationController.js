@@ -3,8 +3,6 @@ const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const Dinner = require("../models/Accommodation/dinner");
-const dinner = require("../models/Accommodation/dinner");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
@@ -16,9 +14,9 @@ const createAccomodations = async (req, res) => {
       longitude,
       rooms,
       services,
-      // dinnerPrice,
-      price,
-      // meals,
+      roomPrice,
+      dinnerPrice,
+      dinnerCapacity,
     } = req.body;
     console.log(meals);
 
@@ -62,6 +60,7 @@ const createAccomodations = async (req, res) => {
     }
 
     const newAccomodation = await Accommodation.create({
+      host: currentUser,
       title,
       desc,
       location: {
@@ -70,17 +69,16 @@ const createAccomodations = async (req, res) => {
       },
       rooms: Number(rooms),
       services,
-      host: currentUser,
       images: imagesFileName,
-      // dinner: createdMeals.map((val) => val._id),
-      price,
+      roomPrice,
       dinnerPrice,
+      dinnerCapacity,
     });
 
     await newAccomodation.save();
 
     return SuccessHandler(
-      { success: true, message: "Added successfully", newAccomodation },
+      { message: "Added successfully", newAccomodation },
       200,
       res
     );
@@ -92,16 +90,16 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // ✅Capacity filter
-    const capacityFilter = req.body.capacity
+    // ✅ Room filter
+    const roomFilter = req.body.rooms
       ? {
-          capacity: req.body.capacity,
+          rooms: req.body.rooms,
         }
       : {};
     //✅ Price Filter
     const priceFilter = req.body.priceRange
       ? {
-          price: {
+          roomPrice: {
             $gte: Number(req.body.priceRange[0]),
             $lte: Number(req.body.priceRange[1]),
           },
@@ -149,13 +147,14 @@ const getAccomodations = async (req, res) => {
 
     const accommodations = await Accommodation.find({
       isActive: true,
-      ...capacityFilter,
+      ...roomFilter,
       ...locationFilter,
       ...priceFilter,
       // ...availabilityFilter,
-    }).populate({
-      path: "meals",
     });
+    // .populate({
+    //   path: "meals",
+    // });
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);

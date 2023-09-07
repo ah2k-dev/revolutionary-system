@@ -8,32 +8,47 @@ const createBooking = async (req, res) => {
   const currentUser = req.user._id;
   const accommodationId = req.params.id;
   try {
-    const { noOfPersons, date, accommodationSelected } = req.body;
-
+    const { startDate, endDate, roomsBooked, dinnerSeats, subTotal } = req.body;
+    // roomBook should not be greater than dinnerSeats
     const accommodation = await Accommodation.findById(accommodationId);
-    const accommodationTotal = accommodation.accommodationPrice * noOfPersons;
-    const dinnerTotal = accommodation.dinnerPrice * noOfPersons;
+    const accommodationTotal = accommodation.roomPrice * roomsBooked;
+    const dinnerTotal = accommodation.dinnerPrice * dinnerSeats;
 
     if (!accommodation) {
       return ErrorHandler("Accommodation doesn't already exist", 400, req, res);
     }
-    if (accommodation.capacity < noOfPersons) {
+    if (roomsBooked > dinnerSeats) {
+      return ErrorHandler("The Rooms shouldn't be greater than Dinner Seats");
+    }
+
+    if (accommodation.availableRoomCapacity < roomsBooked) {
       return ErrorHandler(
-        "Oops Accommodation or Dinner cann't be booked for the given date"
+        "Rooms in the accommodation are currently unavailable."
       );
+    }
+
+    if (accommodation.availableDinnerCapacity < dinnerSeats) {
+      return ErrorHandler("The dinner seating is currently unavailable.");
     }
 
     const booking = await Booking.create({
       user: currentUser,
       accommodation: accommodationId,
-      accommodationSelected,
-      noOfPersons,
-      accommodationAmount: accommodationTotal,
-      dinner: dinnerTotal,
-      date,
+      dinnerTotal: dinnerTotal,
+      accommodationTotal: accommodationTotal,
+      roomsBooked,
+      dinnerSeats,
+      startDate,
+      endDate,
+      subTotal: accommodationId + dinnerTotal,
     });
     await Accommodation.findByIdAndUpdate(accommodationId, {
-      $set: { capacity: accommodation.capacity - noOfPersons },
+      $set: {
+        availableRoomCapacity:
+          accommodation.availableRoomCapacity - roomsBooked,
+        availableDinnerCapacity:
+          accommodation.availableDinnerCapacity - dinnerSeats,
+      },
     });
 
     return SuccessHandler(

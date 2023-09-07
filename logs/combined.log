@@ -5874,3 +5874,73 @@
 {"date":"2023-09-07T13:55:32.275Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-07T13:56:16.381Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
 {"date":"2023-09-07T14:01:51.743Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T15:50:58.146Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-07T15:55:10.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:55:10.819Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:55:33.428Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:55:33.875Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:56:39.256Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:56:39.750Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:57:14.795Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:57:15.264Z","level":"error","message":"Dinner validation failed: noOfPerson: Path `noOfPerson` is required.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:57:16.947Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:57:17.978Z","level":"error","message":"Dinner validation failed: noOfPerson: Path `noOfPerson` is required.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:58:05.036Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:58:05.605Z","level":"error","message":"Dinner validation failed: noOfPerson: Path `noOfPerson` is required.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T15:58:20.798Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:58:29.415Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T15:58:29.895Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:00:39.450Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:03:43.551Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:04:44.302Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:04:48.718Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:04:49.193Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:04:57.482Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:05:45.541Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:05:46.016Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:05:48.586Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:05:49.068Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:06:47.467Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:06:49.991Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:06:50.457Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:06:55.612Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:06:56.065Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:07:31.398Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:07:31.859Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:07:33.002Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:07:33.455Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:11:32.632Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:11:52.197Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:11:52.445Z","level":"error","message":"Cast to date failed for value \"2023-09-1T15:54:49.104Z\" (type string) at path \"date\" for model \"Dinner\"","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:11:59.882Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:12:00.295Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:17:53.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:17:54.098Z","level":"error","message":"currentDate is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:18:29.067Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:18:40.867Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:18:46.859Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:23:01.441Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:25:06.384Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:25:08.038Z","level":"error","message":"dinnerDate.getDate is not a function","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:26:09.053Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:26:09.313Z","level":"error","message":"dinnerDate.getDate is not a function","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:26:33.222Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:26:33.710Z","level":"error","message":"You already have an active dinner for the same day or before.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:27:50.163Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:27:50.662Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:28:35.470Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:28:35.940Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:28:54.249Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:29:33.310Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:35:03.645Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:35:04.140Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T16:37:37.944Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T16:37:42.111Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T17:27:07.604Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T17:27:08.175Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T17:28:42.285Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/dinner/new"}
+{"date":"2023-09-07T18:18:03.411Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T18:29:09.257Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-07T18:29:49.645Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-07T18:30:10.643Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-07T18:33:14.089Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
