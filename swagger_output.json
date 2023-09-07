@@ -633,16 +633,19 @@
                 "longitude": {
                   "example": "any"
                 },
-                "capacity": {
+                "rooms": {
                   "example": "any"
                 },
                 "services": {
                   "example": "any"
                 },
-                "price": {
+                "roomPrice": {
                   "example": "any"
                 },
-                "meals": {
+                "dinnerPrice": {
+                  "example": "any"
+                },
+                "dinnerCapacity": {
                   "example": "any"
                 }
               }
@@ -677,10 +680,92 @@
             "schema": {
               "type": "object",
               "properties": {
-                "capacity": {
+                "rooms": {
+                  "example": "any"
+                },
+                "priceRange": {
                   "example": "any"
                 },
                 "coordinates": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/accommodation/delAccommodation/{id}": {
+      "delete": {
+        "tags": [
+          "accommodation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/booking/new/{id}": {
+      "post": {
+        "tags": [
+          "booking"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "startDate": {
+                  "example": "any"
+                },
+                "endDate": {
+                  "example": "any"
+                },
+                "roomsBooked": {
+                  "example": "any"
+                },
+                "dinnerSeats": {
                   "example": "any"
                 }
               }
@@ -1094,7 +1179,7 @@
         }
       }
     },
-    "/host/getAll": {
+    "/host/accommodation/getAll": {
       "get": {
         "tags": [
           "host"

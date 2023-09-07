@@ -8,7 +8,7 @@ const createBooking = async (req, res) => {
   const currentUser = req.user._id;
   const accommodationId = req.params.id;
   try {
-    const { startDate, endDate, roomsBooked, dinnerSeats, subTotal } = req.body;
+    const { startDate, endDate, roomsBooked, dinnerSeats } = req.body;
     // roomBook should not be greater than dinnerSeats
     const accommodation = await Accommodation.findById(accommodationId);
     const accommodationTotal = accommodation.roomPrice * roomsBooked;
@@ -42,12 +42,11 @@ const createBooking = async (req, res) => {
       endDate,
       subTotal: accommodationId + dinnerTotal,
     });
+
     await Accommodation.findByIdAndUpdate(accommodationId, {
       $set: {
-        availableRoomCapacity:
-          accommodation.availableRoomCapacity - roomsBooked,
-        availableDinnerCapacity:
-          accommodation.availableDinnerCapacity - dinnerSeats,
+        availableRoomCapacity: accommodation.roomCapacity - roomsBooked,
+        availableDinnerCapacity: accommodation.dinnerCapacity - dinnerSeats,
       },
     });
 
