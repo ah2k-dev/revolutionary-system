@@ -7,6 +7,7 @@ const meal = require("./meal");
 const coupon = require("./coupon");
 const host = require("./host");
 const notification = require("./notification");
+const dinner = require("./dinner");
 
 router.use("/auth", auth);
 router.use("/user", user);
@@ -16,4 +17,5 @@ router.use("/meal", meal);
 router.use("/coupon", coupon);
 router.use("/host", host);
 router.use("/notification", notification);
+router.use("/dinner", dinner);
 module.exports = router;

@@ -5861,3 +5861,16 @@
 {"date":"2023-09-06T19:17:44.549Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
 {"date":"2023-09-06T19:17:45.238Z","level":"error","message":"price is not defined","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-06T19:17:58.385Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:45:14.809Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:45:15.575Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T13:45:48.865Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:45:49.563Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is undefined.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T13:47:24.990Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:50:36.158Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:53:10.236Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:53:11.865Z","level":"error","message":"dinner.map is not a function","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T13:53:57.550Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:55:31.797Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T13:55:32.275Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-07T13:56:16.381Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-07T14:01:51.743Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}

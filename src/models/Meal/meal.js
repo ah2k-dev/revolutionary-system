@@ -36,6 +36,7 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
+    additionalInfo: { type: [String] },
   },
 
   { timestamps: true }

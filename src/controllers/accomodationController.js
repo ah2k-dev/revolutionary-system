@@ -3,7 +3,8 @@ const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const Meal = require("../models/Meal/meal");
+const Dinner = require("../models/Accommodation/dinner");
+const dinner = require("../models/Accommodation/dinner");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
@@ -13,11 +14,11 @@ const createAccomodations = async (req, res) => {
       desc,
       latitude,
       longitude,
-      capacity,
+      rooms,
       services,
-      dinnerPrice,
-      accommodationPrice,
-      meals,
+      // dinnerPrice,
+      price,
+      // meals,
     } = req.body;
     console.log(meals);
 
@@ -30,19 +31,18 @@ const createAccomodations = async (req, res) => {
     if (isAccommodationsExist) {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
-    let createdMeals = [];
-    if (meals && Array.isArray(meals) && meals.length > 0) {
-      createdMeals = await Meal.insertMany(
-        meals.map((val) => {
-          return {
-            ...val,
-            mealType: "host",
-            host: currentUser,
-          };
-        })
-      );
-    }
-    console.log(createdMeals);
+    // let createdMeals = [];
+    // if (meals && Array.isArray(meals) && meals.length > 0) {
+    //   createdMeals = await Dinner.insertMany(
+    //     meals.map((val) => {
+    //       return {
+    //         ...val,
+    //         host: currentUser,
+    //       };
+    //     })
+    //   );
+    // }
+    // console.log(createdMeals);
     let imagesFileName = [];
     const { images } = req.files;
     // console.log(images);
@@ -64,17 +64,16 @@ const createAccomodations = async (req, res) => {
     const newAccomodation = await Accommodation.create({
       title,
       desc,
-      // price: Number(price),
       location: {
         type: "Point",
         coordinates: [longitude, latitude],
       },
-      capacity: Number(capacity),
+      rooms: Number(rooms),
       services,
       host: currentUser,
       images: imagesFileName,
-      meals: createdMeals.map((val) => val._id),
-      accommodationPrice,
+      // dinner: createdMeals.map((val) => val._id),
+      price,
       dinnerPrice,
     });
 

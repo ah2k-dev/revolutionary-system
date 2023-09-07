@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const booking = require("../controllers/bookingController");
+const dinner = require("../controllers/dinnerController");
 const isAuthenticated = require("../middleware/auth");
 const {
   authorizedCook,
@@ -7,7 +7,7 @@ const {
   authorizedHost,
 } = require("../middleware/role");
 
-//✅ ➡Booking
+//✅ ➡Dinner
 //post
-router.route("/new/:id").post(isAuthenticated, booking.createBooking);
+router.route("/new").post(isAuthenticated, authorizedHost, dinner.createDinner);
 module.exports = router;
