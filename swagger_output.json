@@ -559,6 +559,9 @@
     },
     "/user/savedOrUnsavedCook/{id}": {
       "put": {
+        "tags": [
+          "user"
+        ],
         "description": "",
         "parameters": [
           {
@@ -584,6 +587,29 @@
       }
     },
     "/user/savedCook": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/bookings": {
       "get": {
         "description": "",
         "parameters": [
@@ -680,7 +706,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "rooms": {
+                "dinnerSeats": {
                   "example": "any"
                 },
                 "priceRange": {
