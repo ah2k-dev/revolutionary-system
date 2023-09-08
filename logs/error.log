@@ -1549,3 +1549,11 @@
 {"date":"2023-09-08T09:24:54.571Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-08T09:24:55.082Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-08T09:24:57.203Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-08T11:01:55.331Z","level":"error","message":"endDate.getTime is not a function","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:04:31.630Z","level":"error","message":"endDate.getTime is not a function","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:15:07.867Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:17:15.514Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:17:33.273Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:17:53.997Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:19:33.943Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:38:30.383Z","level":"error","message":"availableDinnerCapacity is not defined","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}

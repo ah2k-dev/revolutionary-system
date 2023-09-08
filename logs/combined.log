@@ -6182,3 +6182,27 @@
 {"date":"2023-09-08T10:42:52.529Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/booking"}
 {"date":"2023-09-08T10:42:53.777Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/booking"}
 {"date":"2023-09-08T10:42:58.075Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-08T11:01:54.882Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:01:55.331Z","level":"error","message":"endDate.getTime is not a function","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:04:31.115Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:04:31.630Z","level":"error","message":"endDate.getTime is not a function","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:10:46.732Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:15:07.418Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:15:07.867Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T11:15:41.559Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-08T11:17:11.015Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/cancel"}
+{"date":"2023-09-08T11:17:15.083Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel"}
+{"date":"2023-09-08T11:17:15.514Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:17:32.627Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel"}
+{"date":"2023-09-08T11:17:33.273Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:17:53.577Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel"}
+{"date":"2023-09-08T11:17:53.997Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
+{"date":"2023-09-08T11:19:03.305Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:19:24.408Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-08T11:19:33.504Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:19:33.943Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:19:40.586Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-08T11:19:46.969Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:38:29.348Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:38:30.383Z","level":"error","message":"availableDinnerCapacity is not defined","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T11:42:52.409Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}

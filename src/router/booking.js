@@ -10,4 +10,7 @@ const {
 //✅ ➡Booking
 //post
 router.route("/new/:id").post(isAuthenticated, booking.createBooking);
+router
+  .route("/cancel/:bookingId")
+  .post(isAuthenticated, booking.cancelTheBooking);
 module.exports = router;
