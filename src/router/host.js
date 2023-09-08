@@ -12,4 +12,7 @@ const {
 router
   .route("/accommodation/getAll")
   .get(isAuthenticated, authorizedHost, host.getAccomodations);
+router
+  .route("/bookingsCount")
+  .get(isAuthenticated, authorizedHost, host.getBookingsCount);
 module.exports = router;

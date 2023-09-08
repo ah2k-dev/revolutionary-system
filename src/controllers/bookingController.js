@@ -178,7 +178,7 @@ const expiredTheBooking = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-cron.schedule("*59 23 * * *", expiredTheBooking);
+cron.schedule("59 23 * * *", expiredTheBooking);
 
 module.exports = {
   createBooking,

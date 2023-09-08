@@ -6206,3 +6206,6 @@
 {"date":"2023-09-08T11:38:29.348Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
 {"date":"2023-09-08T11:38:30.383Z","level":"error","message":"availableDinnerCapacity is not defined","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
 {"date":"2023-09-08T11:42:52.409Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-08T12:14:33.339Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-08T12:17:41.649Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-08T12:17:58.130Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
