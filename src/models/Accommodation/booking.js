@@ -22,6 +22,7 @@ const bookingSchema = new Schema(
     subTotal: { type: Number },
     totalAmount: { type: Number },
     isActive: { type: Boolean, default: true },
+    noOfPerson: {type: Number}
   },
   { timestamps: true }
 );

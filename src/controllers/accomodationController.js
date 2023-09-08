@@ -67,6 +67,8 @@ const createAccomodations = async (req, res) => {
       roomPrice,
       dinnerPrice,
       dinnerCapacity,
+      availableRoomCapacity: roomCapacity,
+      availableDinnerCapacity: dinnerCapacity,
     });
 
     await newAccomodation.save();
@@ -84,12 +86,20 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // ✅ Room filter
-    const roomFilter = req.body.rooms
+    // // ✅ Room filter
+    // const roomFilter = req.body.rooms
+    //   ? {
+    //       rooms: req.body.rooms,
+    //     }
+    //   : {};
+
+    // ✅ DinnerSeat filter
+    const dinnerSeatFilter = req.body.dinnerSeats
       ? {
-          rooms: req.body.rooms,
+          availableDinnerCapacity: { $lte: req.body.dinnerSeats },
         }
       : {};
+
     //✅ Price Filter
     const priceFilter = req.body.priceRange
       ? {
@@ -124,8 +134,10 @@ const getAccomodations = async (req, res) => {
         endDate: {
           $lte: req.body.date[1],
         },
-      });
+      })
+      // .populate("accommodation");
 
+      console.log(bookings);
       unAvailableAccommodations = bookings.map((val, ind) => {
         return val.accommodation;
       });
@@ -141,11 +153,12 @@ const getAccomodations = async (req, res) => {
 
     const accommodations = await Accommodation.find({
       isActive: true,
-      ...roomFilter,
+      // ...roomFilter,
       ...locationFilter,
       ...priceFilter,
+      ...dinnerSeatFilter,
       ...availabilityFilter,
-    }).sort({status: 1});
+    }).sort({ status: 1 });
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
@@ -264,6 +277,8 @@ const updateAccommodations = async (req, res) => {
         dinnerCapacity,
         createdBy: currentUser,
         images: imagesFileName,
+        availableRoomCapacity: roomCapacity,
+        availableDinnerCapacity: dinnerCapacity,
       },
       {
         new: true,

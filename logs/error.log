@@ -1516,3 +1516,36 @@
 {"date":"2023-09-08T06:18:08.246Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
 {"date":"2023-09-08T06:19:35.044Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
 {"date":"2023-09-08T06:21:03.586Z","level":"error","message":"currentUser is not defined","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:33:46.714Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:33:51.089Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:34:32.654Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:36:10.616Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:36:53.112Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:38:34.206Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:39:12.373Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:41:53.011Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:42:32.596Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:44:11.449Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:45:01.044Z","level":"error","message":"Booking validation failed: startDate: Cast to date failed for value \"2023-09-8T19:00:00.000+00:00\" (type string) at path \"startDate\"","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:46:17.024Z","level":"error","message":"The Rooms shouldn't be greater than Dinner Seats","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:46:26.585Z","level":"error","message":"The Rooms shouldn't be greater than Dinner Seats","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:46:41.275Z","level":"error","message":"The Rooms shouldn't be greater than Dinner Seats","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:49:23.952Z","level":"error","message":"The Rooms shouldn't be greater than Dinner Seats","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:55:29.500Z","level":"error","message":"The Rooms shouldn't be greater than Dinner Seats","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:57:08.952Z","level":"error","message":"Cannot read properties of undefined (reading 'method')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:57:36.586Z","level":"error","message":"The dinner seating is currently unavailable.","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T07:59:07.492Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:03:39.293Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:08:51.626Z","level":"error","message":"Cannot read properties of null (reading 'roomPrice')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:09:29.269Z","level":"error","message":"Cannot read properties of null (reading 'roomPrice')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:10:16.397Z","level":"error","message":"Cannot read properties of null (reading 'roomPrice')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:10:40.701Z","level":"error","message":"Cannot read properties of null (reading 'roomPrice')","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:11:13.452Z","level":"error","message":"Accommodation doesn't already exist","method":"POST","service":"user-service","url":"/new/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T08:11:47.989Z","level":"error","message":"The dinner seating is currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T08:12:11.993Z","level":"error","message":"The dinner seating is currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T08:14:40.422Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T08:15:35.325Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T09:12:59.004Z","level":"error","message":"Rooms in the accommodation are currently unavailable.","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-08T09:24:54.571Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-08T09:24:55.082Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-08T09:24:57.203Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}

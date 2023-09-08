@@ -7,6 +7,7 @@ const Coupon = require("../models/Coupon/coupon");
 const Meal = require("../models/Meal/meal");
 const user = require("../models/User/user");
 const Review = require("../models/Reviews/review");
+const Booking = require("../models/Accommodation/booking");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -375,6 +376,7 @@ const getSavedMeals = async (req, res) => {
 };
 
 const savedOrUnsavedCook = async (req, res) => {
+  // #swagger.tags = ['user']
   const currentUser = req.user._id;
 
   try {
@@ -404,6 +406,7 @@ const savedOrUnsavedCook = async (req, res) => {
 };
 
 const getSavedCook = async (req, res) => {
+  // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
     const cook = await User.findById(currentUser).populate("savedCooks");
@@ -413,6 +416,25 @@ const getSavedCook = async (req, res) => {
     }
     SuccessHandler(
       { message: "Favourite Cook fetch Successfully", favouriteCooks },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getUserBookings = async (req, res) => {
+  try {
+    const currentUser = req.user._id;
+    const bookings = await Booking.find({ user: currentUser }).sort({
+      createdAt: -1,
+    });
+    if (!bookings) {
+      return ErrorHandler("Booking does not exist", 404, req, res);
+    }
+    SuccessHandler(
+      { message: "Booking fetch Successfully", bookings },
       200,
       res
     );
@@ -433,4 +455,5 @@ module.exports = {
   getSavedMeals,
   savedOrUnsavedCook,
   getSavedCook,
+  getUserBookings,
 };
