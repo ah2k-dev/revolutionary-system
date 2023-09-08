@@ -633,7 +633,7 @@
                 "longitude": {
                   "example": "any"
                 },
-                "rooms": {
+                "roomCapacity": {
                   "example": "any"
                 },
                 "services": {
@@ -687,6 +687,74 @@
                   "example": "any"
                 },
                 "coordinates": {
+                  "example": "any"
+                },
+                "date": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/accommodation/update/{id}": {
+      "put": {
+        "tags": [
+          "accomodation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "desc": {
+                  "example": "any"
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
+                },
+                "roomCapacity": {
+                  "example": "any"
+                },
+                "services": {
+                  "example": "any"
+                },
+                "roomPrice": {
+                  "example": "any"
+                },
+                "dinnerPrice": {
+                  "example": "any"
+                },
+                "dinnerCapacity": {
                   "example": "any"
                 }
               }
