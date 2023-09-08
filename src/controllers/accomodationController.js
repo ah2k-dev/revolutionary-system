@@ -1,5 +1,6 @@
 const Accommodation = require("../models/Accommodation/accommodation");
 const Review = require("../models/Reviews/review");
+const Booking = require("../models/Accommodation/booking");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
@@ -114,37 +115,37 @@ const getAccomodations = async (req, res) => {
           }
         : {};
 
-    // let unAvailableAccommodations = [];
-    // if (req.body.date && req.body.date > 0) {
-    //   const bookings = await bookingAccomodation.find({
-    //     startDate: {
-    //       $in: req.body.date[0],
-    //     },
-    //     endDate: {
-    //       $lte: req.body.date[1],
-    //     },
-    //   });
+    let unAvailableAccommodations = [];
+    if (req.body.date && req.body.date > 0) {
+      const bookings = await Booking.find({
+        startDate: {
+          $in: req.body.date[0],
+        },
+        endDate: {
+          $lte: req.body.date[1],
+        },
+      });
 
-    //   unAvailableAccommodations = bookings.map((val, ind) => {
-    //     return val.accomodationsId;
-    //   });
-    // }
-    // const availabilityFilter =
-    //   unAvailableAccommodations.length > 0
-    //     ? {
-    //         _id: {
-    //           $nin: unAvailableAccommodations,
-    //         },
-    //       }
-    //     : {};
+      unAvailableAccommodations = bookings.map((val, ind) => {
+        return val.accommodation;
+      });
+    }
+    const availabilityFilter =
+      unAvailableAccommodations.length > 0
+        ? {
+            _id: {
+              $nin: unAvailableAccommodations,
+            },
+          }
+        : {};
 
     const accommodations = await Accommodation.find({
       isActive: true,
       ...roomFilter,
       ...locationFilter,
       ...priceFilter,
-      // ...availabilityFilter,
-    });
+      ...availabilityFilter,
+    }).sort({status: 1});
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);

@@ -29,7 +29,13 @@ const accommodationSchema = new Schema(
     availableRoomCapacity: { type: Number },
 
     services: { type: [String] },
+
     isActive: { type: Boolean, default: true },
+    status: {
+      type: String,
+      enum: ["Fully Booked", "Available"],
+      default: "Available",
+    },
   },
   { timestamps: true }
 );
