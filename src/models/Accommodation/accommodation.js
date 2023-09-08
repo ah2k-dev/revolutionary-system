@@ -12,8 +12,9 @@ const accommodationSchema = new Schema(
     desc: { type: String, require: true },
     images: {
       type: [String],
-      default:
-        "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
+      require: true,
+      // default:
+      //   "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
     roomPrice: { type: Number },
     dinnerPrice: { type: Number },

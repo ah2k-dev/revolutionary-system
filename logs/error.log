@@ -1465,3 +1465,54 @@
 {"date":"2023-09-07T16:35:04.140Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-07T16:37:42.111Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-07T17:27:08.175Z","level":"error","message":"You already have an active dinner for the same day.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T04:58:31.398Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T04:59:55.936Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:02:02.594Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:02:07.793Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:02:19.632Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:03:19.183Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:03:34.731Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:03:37.287Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:04:39.321Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:05:51.384Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:08:59.830Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:11:22.731Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:11:24.001Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:11:24.921Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:11:26.218Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:12:09.264Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:12:31.811Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:12:33.158Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:12:48.330Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:13:41.964Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:13:42.940Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:13:43.279Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:15:32.438Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:15:37.777Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:16:10.685Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:16:12.093Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:16:54.680Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:17:59.877Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:20:14.283Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:22:30.573Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:24:10.076Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:24:11.363Z","level":"error","message":"meals is not defined","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:28:35.232Z","level":"error","message":"images is not iterable","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:34:52.887Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:35:34.258Z","level":"error","message":"Cannot destructure property 'images' of 'req.file' as it is undefined.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:37:06.140Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:37:40.827Z","level":"error","message":"Cannot read properties of undefined (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:39:35.125Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:40:03.478Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:40:10.308Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:40:12.092Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:41:10.729Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:42:17.427Z","level":"error","message":"Cannot read properties of null (reading 'images')","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:43:18.982Z","level":"error","message":"Please upload at least one image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T05:43:22.187Z","level":"error","message":"Please upload at least one image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-08T06:17:48.047Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T06:17:55.039Z","level":"error","message":"Cast to ObjectId failed for value \"64fab51df864c6ce8087d39\" (type string) at path \"_id\" for model \"Accommodation\"","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39"}
+{"date":"2023-09-08T06:18:00.648Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39b"}
+{"date":"2023-09-08T06:18:08.246Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T06:19:35.044Z","level":"error","message":"Accommodation not found or unauthorized","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}
+{"date":"2023-09-08T06:21:03.586Z","level":"error","message":"currentUser is not defined","method":"POST","service":"user-service","url":"/update/64fab51df864c6ce8087d39a"}

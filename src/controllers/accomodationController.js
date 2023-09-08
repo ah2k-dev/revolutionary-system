@@ -28,22 +28,28 @@ const createAccomodations = async (req, res) => {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
 
+    if (!req.files || !req.files.images || req.files.images.length === 0) {
+      return ErrorHandler("Please upload at least one image", 500, req, res);
+    }
+
     let imagesFileName = [];
+
     const { images } = req.files;
-    // console.log(images);
-    if (req.files?.images) {
-      for (const img of images) {
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image", 500, req, res);
-        }
-        let imgFile = `${Date.now()}-${img.name}`;
-        imagesFileName.push(imgFile);
-        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
-          if (err) {
-            return ErrorHandler(err.message, 400, req, res);
-          }
-        });
+
+    // Ensure `images` is an array, even if there's only one image uploaded
+    const imageArray = Array.isArray(images) ? images : [images];
+
+    for (const img of imageArray) {
+      if (!img.mimetype.startsWith("image")) {
+        return ErrorHandler("Please upload an image", 500, req, res);
       }
+      let imgFile = `${Date.now()}-${img.name}`;
+      imagesFileName.push(imgFile);
+      img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+        if (err) {
+          return ErrorHandler(err.message, 400, req, res);
+        }
+      });
     }
 
     const newAccomodation = await Accommodation.create({
@@ -185,66 +191,102 @@ const deleteAccomodations = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-// const updateAccomodations = async (req, res) => {
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const { title, desc, latitude, longitude, capacity, services } = req.body;
-//     const currentUser = req.user._id;
+const updateAccommodations = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const {
+      title,
+      desc,
+      latitude,
+      longitude,
+      roomCapacity,
+      services,
+      roomPrice,
+      dinnerPrice,
+      dinnerCapacity,
+    } = req.body;
+    const currentUser = req.user._id;
 
-//     let imagesFileName = [];
-//     const { images } = req.files;
-//     if (images) {
-//       for (const img of images) {
-//         if (!img.mimetype.startsWith("image")) {
-//           return ErrorHandler("Please upload an image", 500, req, res);
-//         }
-//         let imgFile = `${Date.now()}-${img.name}`;
-//         imagesFileName.push(imgFile);
-//         img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
-//           if (err) {
-//             return ErrorHandler(err.message, 400, req, res);
-//           }
-//         });
-//       }
-//     }
+    // just for images
+    const accommodation = await Accommodation.findOne({
+      _id: req.params.id,
+      host: currentUser,
+    });
 
-//     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         title,
-//         desc,
-//         location: {
-//           type: "Point",
-//           coordinates: [longitude, latitude],
-//         },
+    console.log("Debugging: ", accommodation);
+    if (!accommodation) {
+      return ErrorHandler(
+        "Accommodation not found or unauthorized",
+        404,
+        req,
+        res
+      );
+    }
 
-//         capacity,
-//         services,
-//         createdBy: currentUser,
-//         images: imagesFileName,
-//       },
-//       {
-//         new: true,
-//         runValidators: true,
-//       }
-//     );
+    let imagesFileName = [];
+    accommodation.images.forEach((img) => imagesFileName.push(img));
+    console.log("outerImages Array: ", imagesFileName);
+    if (req.files && req.files.images) {
+      console.log("Upload block");
+      imagesFileName = [];
+      const { images } = req.files;
 
-//     if (!updatedAccomodation) {
-//       return ErrorHandler("Accommodation does not exist", 400, req, res);
-//     }
+      // `images` is an array, if there's only one image uploaded
+      const imageArray = Array.isArray(images) ? images : [images];
+      for (const img of imageArray) {
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image", 500, req, res);
+        }
+        let imgFile = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFile);
+        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
+    const updatedAccomodation = await Accommodation.findByIdAndUpdate(
+      req.params.id,
+      {
+        title,
+        desc,
+        location: {
+          type: "Point",
+          coordinates: [longitude, latitude],
+        },
 
-//     return SuccessHandler(
-//       { success: true, message: "Updated successfully", updatedAccomodation },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
+        roomCapacity,
+        services,
+        roomPrice,
+        dinnerPrice,
+        dinnerCapacity,
+        createdBy: currentUser,
+        images: imagesFileName,
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+
+    if (!updatedAccomodation) {
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { success: true, message: "Updated successfully", updatedAccomodation },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createAccomodations,
   getAccomodations,
+  updateAccommodations,
   deleteAccomodations,
 };

@@ -14,6 +14,9 @@ router
   .post(isAuthenticated, authorizedHost, accommodation.createAccomodations);
 router.route("/getAll").post(isAuthenticated, accommodation.getAccomodations);
 router
+  .route("/update/:id")
+  .put(isAuthenticated, accommodation.updateAccommodations);
+router
   .route("/delAccommodation/:id")
   .delete(isAuthenticated, authorizedHost, accommodation.deleteAccomodations);
 module.exports = router;
