@@ -15,8 +15,7 @@ const mealSchema = new Schema(
       default: "cook",
     },
 
-    // cook: { type: Schema.Types.ObjectId, ref: "User" },
-    host: { type: Schema.Types.ObjectId, ref: "User" },
+    cook: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String },
     desc: { type: String },
     price: { type: Number },

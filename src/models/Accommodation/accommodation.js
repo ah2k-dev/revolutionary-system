@@ -7,13 +7,6 @@ const validator = require("validator");
 const accommodationSchema = new Schema(
   {
     host: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    // meals: [
-    //   {
-    //     name: { type: String },
-    //     desc: { type: String },
-    //     additionalInfo: { type: [String] },
-    //   },
-    // ],
 
     title: { type: String, require: true },
     desc: { type: String, require: true },

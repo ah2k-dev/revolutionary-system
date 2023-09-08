@@ -13,8 +13,6 @@ const getAccomodations = async (req, res) => {
     const accommodations = await Accommodation.find({
       isActive: true,
       host: currentUser,
-    }).populate({
-      path: "meals",
     });
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);

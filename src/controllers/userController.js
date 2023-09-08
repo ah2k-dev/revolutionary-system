@@ -215,9 +215,6 @@ const getSavedAccomodations = async (req, res) => {
     // .populate("meals");
     const user = await User.findById(currentUser).populate({
       path: "savedAccomodation",
-      populate: {
-        path: "meals",
-      },
     });
 
     let sAccomodations = user.savedAccomodation;

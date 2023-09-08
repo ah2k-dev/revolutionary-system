@@ -12,14 +12,12 @@ const createAccomodations = async (req, res) => {
       desc,
       latitude,
       longitude,
-      rooms,
+      roomCapacity,
       services,
       roomPrice,
       dinnerPrice,
       dinnerCapacity,
     } = req.body;
-    console.log(meals);
-
     const currentUser = req.user._id;
 
     const isAccommodationsExist = await Accommodation.findOne({
@@ -29,18 +27,7 @@ const createAccomodations = async (req, res) => {
     if (isAccommodationsExist) {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
-    // let createdMeals = [];
-    // if (meals && Array.isArray(meals) && meals.length > 0) {
-    //   createdMeals = await Dinner.insertMany(
-    //     meals.map((val) => {
-    //       return {
-    //         ...val,
-    //         host: currentUser,
-    //       };
-    //     })
-    //   );
-    // }
-    // console.log(createdMeals);
+
     let imagesFileName = [];
     const { images } = req.files;
     // console.log(images);
@@ -67,7 +54,7 @@ const createAccomodations = async (req, res) => {
         type: "Point",
         coordinates: [longitude, latitude],
       },
-      rooms: Number(rooms),
+      roomCapacity: Number(roomCapacity),
       services,
       images: imagesFileName,
       roomPrice,
@@ -152,9 +139,6 @@ const getAccomodations = async (req, res) => {
       ...priceFilter,
       // ...availabilityFilter,
     });
-    // .populate({
-    //   path: "meals",
-    // });
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
