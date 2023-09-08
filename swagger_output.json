@@ -850,10 +850,10 @@
             "schema": {
               "type": "object",
               "properties": {
-                "startDate": {
+                "endDate": {
                   "example": "any"
                 },
-                "endDate": {
+                "startDate": {
                   "example": "any"
                 },
                 "roomsBooked": {
@@ -864,6 +864,35 @@
                 }
               }
             }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/booking/cancel/{bookingId}": {
+      "post": {
+        "tags": [
+          "booking"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
           }
         ],
         "responses": {
