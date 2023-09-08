@@ -150,11 +150,25 @@ const cancelTheBooking = async (req, res) => {
 // make the booking completed when they reach their end date
 const expiredTheBooking = async (req, res) => {
   // #swagger.tags = ['booking']
-  const booking = await Booking.find({
-    isActive: true,
-  });
-  console.log(booking);
   try {
+    const currentDate = new Date();
+    // const booking = await Booking.find({
+    //   isActive: true,
+    // });
+    // booking.map((bookings) => currentDate > bookings.endDate);
+    const booking = await Booking.aggregate([
+      {
+        $match: {
+          isActive: true,
+          endDate: { $lt: currentDate },
+        },
+      },
+      {
+        $set: { status: "completed" },
+      },
+    ]);
+
+    console.log(booking);
     return SuccessHandler(
       { message: "Booking Created successfully", booking },
       200,
@@ -164,7 +178,7 @@ const expiredTheBooking = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-// cron.schedule("*59 23 * * *", expiredTheBooking)
+cron.schedule("*59 23 * * *", expiredTheBooking);
 
 module.exports = {
   createBooking,
