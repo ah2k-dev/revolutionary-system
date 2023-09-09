@@ -5,6 +5,8 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const Meal = require("../models/Meal/meal");
+const accommodation = require("../models/Accommodation/accommodation");
+const booking = require("../models/Accommodation/booking");
 
 // Host Accommodation
 const getAccomodations = async (req, res) => {
@@ -18,12 +20,10 @@ const getAccomodations = async (req, res) => {
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
     }
-    const accommodationCount = accommodations.length;
 
     return SuccessHandler(
       {
-        message: "Accommodations fetched successfully",
-        accommodationCount,
+        message: "Accommodation fetched successfully",
         accommodations,
       },
       200,
@@ -190,8 +190,37 @@ const hostEarnings = async (req, res) => {
   }
 };
 
+const getBookings = async (req, res) => {
+  // #swagger.tags = ['host']
+  try {
+    const hostAccommodations = await accommodation
+      .find({
+        host: req.user._id,
+      })
+      .distinct("_id");
+
+    const hostBookings = await booking.find({
+      accommodation: {
+        $in: hostAccommodations,
+      },
+    });
+
+    return SuccessHandler(
+      {
+        message: "Bookings fetched successfully",
+        hostBookings,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   getAccomodations,
   getBookingsCount,
   hostEarnings,
+  getBookings,
 };

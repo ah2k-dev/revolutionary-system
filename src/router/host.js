@@ -10,8 +10,11 @@ const {
 //✅ ➡Host
 //post
 router
-  .route("/accommodation/getAll")
+  .route("/accommodation")
   .get(isAuthenticated, authorizedHost, host.getAccomodations);
+router
+  .route("/bookings")
+  .get(isAuthenticated, authorizedHost, host.getBookings);
 router
   .route("/bookingsCount")
   .get(isAuthenticated, authorizedHost, host.getBookingsCount);

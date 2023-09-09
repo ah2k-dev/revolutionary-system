@@ -1557,3 +1557,5 @@
 {"date":"2023-09-08T11:17:53.997Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel"}
 {"date":"2023-09-08T11:19:33.943Z","level":"error","message":"Booking does not exist","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
 {"date":"2023-09-08T11:38:30.383Z","level":"error","message":"availableDinnerCapacity is not defined","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
+{"date":"2023-09-09T11:22:45.857Z","level":"error","message":"The field 'docs' must be an accumulator object","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-09T11:46:09.733Z","level":"error","message":"Cannot populate path `bookings` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/bookings"}
