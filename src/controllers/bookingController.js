@@ -2,33 +2,40 @@ const Accommodation = require("../models/Accommodation/accommodation");
 const Booking = require("../models/Accommodation/booking");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
-const cron = require("node-cron");
 //Create Booking
 const createBooking = async (req, res) => {
   // #swagger.tags = ['booking']
   const currentUser = req.user._id;
   const accommodationId = req.params.id;
   try {
-    const { startDate, endDate, roomsBooked, dinnerSeats } = req.body;
+    const {
+      startDate,
+      endDate,
+      roomsBooked,
+      dinnerSeats,
+      accommodationTotal,
+      dinnerTotal,
+      subTotal,
+    } = req.body;
 
     // roomBook should not be greater than dinnerSeats
     const accommodation = await Accommodation.findById(accommodationId);
     if (!accommodation) {
       return ErrorHandler("Accommodation doesn't already exist", 400, req, res);
     }
-    const eDate = new Date(Date.parse(req.body.endDate));
-    const sDate = new Date(Date.parse(req.body.startDate));
-    console.log("eDate", eDate);
+    // const eDate = new Date(Date.parse(req.body.endDate));
+    // const sDate = new Date(Date.parse(req.body.startDate));
+    // console.log("eDate", eDate);
 
-    const timeDifference = new Date(eDate.getTime() - sDate.getTime());
-    const numberOfDays = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    console.log("numberOfDays", numberOfDays);
-    console.log("timeDifference", timeDifference);
+    // const timeDifference = new Date(eDate.getTime() - sDate.getTime());
+    // const numberOfDays = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    // console.log("numberOfDays", numberOfDays);
+    // console.log("timeDifference", timeDifference);
 
-    const accommodationTotal =
-      accommodation.roomPrice * roomsBooked * numberOfDays;
-    console.log(accommodation.roomPrice);
-    const dinnerTotal = accommodation.dinnerPrice * dinnerSeats * numberOfDays;
+    // const accommodationTotal =
+    //   accommodation.roomPrice * roomsBooked * numberOfDays;
+    // console.log(accommodation.roomPrice);
+    // const dinnerTotal = accommodation.dinnerPrice * dinnerSeats * numberOfDays;
 
     // if (roomsBooked > dinnerSeats) {
     //   return ErrorHandler(
@@ -60,13 +67,13 @@ const createBooking = async (req, res) => {
     const booking = await Booking.create({
       user: currentUser,
       accommodation: accommodationId,
-      dinnerTotal: dinnerTotal,
-      accommodationTotal: accommodationTotal,
+      dinnerTotal,
+      accommodationTotal,
       roomsBooked,
       dinnerSeats,
       startDate,
       endDate,
-      subTotal: accommodationTotal + dinnerTotal,
+      subTotal,
     });
 
     await Accommodation.findByIdAndUpdate(accommodationId, {
@@ -147,41 +154,7 @@ const cancelTheBooking = async (req, res) => {
   }
 };
 
-// make the booking completed when they reach their end date
-const expiredTheBooking = async (req, res) => {
-  // #swagger.tags = ['booking']
-  try {
-    const currentDate = new Date();
-    // const booking = await Booking.find({
-    //   isActive: true,
-    // });
-    // booking.map((bookings) => currentDate > bookings.endDate);
-    const booking = await Booking.aggregate([
-      {
-        $match: {
-          isActive: true,
-          endDate: { $lt: currentDate },
-        },
-      },
-      {
-        $set: { status: "completed" },
-      },
-    ]);
-
-    console.log(booking);
-    return SuccessHandler(
-      { message: "Booking Created successfully", booking },
-      200,
-      res
-    );
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
-cron.schedule("59 23 * * *", expiredTheBooking);
-
 module.exports = {
   createBooking,
-  expiredTheBooking,
   cancelTheBooking,
 };

@@ -96,7 +96,102 @@ const getBookingsCount = async (req, res) => {
   }
 };
 
+const hostEarnings = async (req, res) => {
+  // #swagger.tags = ['host']
+  try {
+    const host = req.user._id;
+
+    const earning = await Booking.aggregate([
+      {
+        $match: {
+          status: "current",
+        },
+      },
+      {
+        $lookup: {
+          from: "accommodations",
+          localField: "accommodation",
+          foreignField: "_id",
+          as: "accommodationDetail",
+        },
+      },
+      {
+        $match: {
+          "accommodationDetail.host": host,
+        },
+      },
+      {
+        $group: {
+          _id: {
+            year: { $year: "$createdAt" },
+            month: { $month: "$createdAt" },
+          },
+          total: { $sum: "$subTotal" },
+        },
+      },
+      {
+        $project: {
+          monthName: {
+            $switch: {
+              branches: [
+                { case: { $eq: ["$_id.month", 1] }, then: "January" },
+                { case: { $eq: ["$_id.month", 2] }, then: "February" },
+                { case: { $eq: ["$_id.month", 3] }, then: "March" },
+                { case: { $eq: ["$_id.month", 4] }, then: "April" },
+                { case: { $eq: ["$_id.month", 5] }, then: "May" },
+                { case: { $eq: ["$_id.month", 6] }, then: "June" },
+                { case: { $eq: ["$_id.month", 7] }, then: "July" },
+                { case: { $eq: ["$_id.month", 8] }, then: "August" },
+                { case: { $eq: ["$_id.month", 9] }, then: "September" },
+                { case: { $eq: ["$_id.month", 10] }, then: "October" },
+                { case: { $eq: ["$_id.month", 11] }, then: "November" },
+                { case: { $eq: ["$_id.month", 12] }, then: "December" },
+              ],
+              default: "Unknown month",
+            },
+          },
+          total: 1,
+        },
+      },
+      {
+        $project: {
+          monthTotal: {
+            $concat: [
+              "subTotal in ",
+              "$monthName",
+              ": ",
+              { $toString: "$total" },
+            ],
+          },
+        },
+      },
+
+      {
+        $sort: {
+          "_id.year": 1,
+          "_id.month": 1,
+        },
+      },
+    ]);
+    if (!earning) {
+      return ErrorHandler("not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      {
+        message: "Earing Fetched successfully",
+        earning,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   getAccomodations,
   getBookingsCount,
+  hostEarnings,
 };

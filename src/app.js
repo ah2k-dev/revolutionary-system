@@ -9,7 +9,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json"); // Generated Swagger file
 const fileUpload = require("express-fileupload");
 const path = require("path");
-const formData = require("express-form-data");
+const cron = require("node-cron");
+const { completeTheBooking } = require("./functions/cronJob");
 
 // Middlewares
 app.use(express.json());
@@ -47,5 +48,8 @@ app.get("/", (req, res) => {
 app.use((req, res, next) => {
   next(new ApiError(404, "Not found"));
 });
+
+const markTheBookingCompleted = new cron("59 23 * * *", completeTheBooking);
+markTheBookingCompleted.start();
 
 module.exports = app;
