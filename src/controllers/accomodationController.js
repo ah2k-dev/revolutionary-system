@@ -61,14 +61,14 @@ const createAccomodations = async (req, res) => {
         type: "Point",
         coordinates: [longitude, latitude],
       },
-      roomCapacity: Number(roomCapacity),
+      roomCapacity,
       services,
       images: imagesFileName,
       roomPrice,
       dinnerPrice,
       dinnerCapacity,
-      availableRoomCapacity: roomCapacity,
-      availableDinnerCapacity: dinnerCapacity,
+      // availableRoomCapacity: roomCapacity,
+      // availableDinnerCapacity: dinnerCapacity,
     });
 
     await newAccomodation.save();
@@ -94,21 +94,21 @@ const getAccomodations = async (req, res) => {
     //   : {};
 
     // ✅ DinnerSeat filter
-    const dinnerSeatFilter = req.body.dinnerSeats
-      ? {
-          availableDinnerCapacity: { $lte: req.body.dinnerSeats },
-        }
-      : {};
+    // const dinnerSeatFilter = req.body.dinnerSeats
+    //   ? {
+    //       availableDinnerCapacity: { $lte: req.body.dinnerSeats },
+    //     }
+    //   : {};
 
     //✅ Price Filter
-    const priceFilter = req.body.priceRange
-      ? {
-          roomPrice: {
-            $gte: Number(req.body.priceRange[0]),
-            $lte: Number(req.body.priceRange[1]),
-          },
-        }
-      : {};
+    // const priceFilter = req.body.priceRange
+    //   ? {
+    //       roomPrice: {
+    //         $gte: Number(req.body.priceRange[0]),
+    //         $lte: Number(req.body.priceRange[1]),
+    //       },
+    //     }
+    //   : {};
     // ✅Location filter
     const locationFilter =
       req.body.coordinates && req.body.coordinates.length == 2
@@ -125,23 +125,38 @@ const getAccomodations = async (req, res) => {
           }
         : {};
 
+    console.log("Get Accommodation Block");
+    console.log("after Accommodation Block");
     let unAvailableAccommodations = [];
-    if (req.body.date && req.body.date > 0) {
+    if (req.body.date) {
+      // const bookings = await Booking.find({
+      //   startDate: {
+      //     $in: req.body.date[0],
+      //   },
+      //   endDate: {
+      //     $lte: req.body.date[1],
+      //   },
+      // });
       const bookings = await Booking.find({
-        startDate: {
-          $in: req.body.date[0],
-        },
-        endDate: {
-          $lte: req.body.date[1],
-        },
-      })
-      // .populate("accommodation");
-
-      console.log(bookings);
-      unAvailableAccommodations = bookings.map((val, ind) => {
-        return val.accommodation;
+        startDate: { $gte: req.body.date[0] },
+        endDate: { $lte: req.body.date[1] },
       });
+
+      console.log(req.body.date[0]);
+      console.log(req.body.date[1]);
+      console.log(bookings);
+      console.log(bookings.length);
+
+      // .populate("accommodation").distinct(_id);
+
+      // unAvailableAccommodations = bookings.map((val, ind) => {
+      //   return val.accommodation;
+      // });
+      // console.log(unAvailableAccommodations);
+
+      // .filter((val) => val.roomsBooked > req.body.rooms);
     }
+
     const availabilityFilter =
       unAvailableAccommodations.length > 0
         ? {
@@ -155,8 +170,8 @@ const getAccomodations = async (req, res) => {
       isActive: true,
       // ...roomFilter,
       ...locationFilter,
-      ...priceFilter,
-      ...dinnerSeatFilter,
+      // ...priceFilter,
+      // ...dinnerSeatFilter,
       ...availabilityFilter,
     }).sort({ status: 1 });
 
@@ -277,8 +292,8 @@ const updateAccommodations = async (req, res) => {
         dinnerCapacity,
         createdBy: currentUser,
         images: imagesFileName,
-        availableRoomCapacity: roomCapacity,
-        availableDinnerCapacity: dinnerCapacity,
+        // availableRoomCapacity: roomCapacity,
+        // availableDinnerCapacity: dinnerCapacity,
       },
       {
         new: true,

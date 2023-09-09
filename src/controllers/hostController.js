@@ -104,7 +104,7 @@ const hostEarnings = async (req, res) => {
     const earning = await Booking.aggregate([
       {
         $match: {
-          status: "current",
+          status: "completed",
         },
       },
       {

@@ -1559,3 +1559,8 @@
 {"date":"2023-09-08T11:38:30.383Z","level":"error","message":"availableDinnerCapacity is not defined","method":"POST","service":"user-service","url":"/cancel/64fb01375ae73ad1dae3c27e"}
 {"date":"2023-09-09T11:22:45.857Z","level":"error","message":"The field 'docs' must be an accumulator object","method":"GET","service":"user-service","url":"/bookings"}
 {"date":"2023-09-09T11:46:09.733Z","level":"error","message":"Cannot populate path `bookings` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-09T13:23:44.101Z","level":"error","message":"dinnerSeatFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-09T13:24:08.811Z","level":"error","message":"dinnerSeatFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-09T13:45:49.068Z","level":"error","message":"priceFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-09T13:47:50.198Z","level":"error","message":"priceFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-09T13:55:38.089Z","level":"error","message":"Cast to date failed for value \"{ lte: '2023-09-11T07:45:54.131+00:00' }\" (type Object) at path \"endDate\" for model \"Booking\"","method":"POST","service":"user-service","url":"/getAll"}

@@ -25,8 +25,8 @@ const accommodationSchema = new Schema(
     },
     roomCapacity: { type: Number, require: true },
     dinnerCapacity: { type: Number, require: true },
-    availableDinnerCapacity: { type: Number, },
-    availableRoomCapacity: { type: Number, },
+    // availableDinnerCapacity: { type: Number, },
+    // availableRoomCapacity: { type: Number, },
 
     services: { type: [String] },
 
