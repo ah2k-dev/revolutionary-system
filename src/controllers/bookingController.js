@@ -2,11 +2,13 @@ const Accommodation = require("../models/Accommodation/accommodation");
 const Booking = require("../models/Accommodation/booking");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
+const mongoose = require("mongoose");
 //Create Booking
 const createBooking = async (req, res) => {
   // #swagger.tags = ['booking']
   const currentUser = req.user._id;
   const accommodationId = req.params.id;
+  console.log(accommodationId);
   try {
     const {
       startDate,
@@ -46,25 +48,51 @@ const createBooking = async (req, res) => {
     //   );
     // }
 
-    if (roomsBooked > accommodation.availableRoomCapacity) {
+    const bookings = await Booking.aggregate([
+      {
+        $match: {
+          accommodation: mongoose.Types.ObjectId(accommodationId),
+          isActive: true,
+          status: "active",
+        },
+      },
+      {
+        $group: {
+          _id: "$accommodation",
+          totalBookedRoom: { $sum: "$roomsBooked" },
+          totalDinnerSeatsBook: { $sum: "$dinnerSeats" },
+        },
+      },
+    ]);
+    console.log("newBookings block", bookings);
+    const [{ totalBookedRoom, totalDinnerSeatsBook }] = bookings;
+    console.log(bookings);
+    console.log("ROOMS", totalBookedRoom);
+    console.log("SEATS", totalDinnerSeatsBook);
+    const availableDinnerSeats =
+      accommodation.dinnerCapacity - totalDinnerSeatsBook;
+    const availableRooms = accommodation.roomCapacity - totalBookedRoom;
+    console.log("availableDinnerSeats: ", availableDinnerSeats);
+    console.log("availableRooms: ", availableRooms);
+    if (roomsBooked > availableRooms) {
       return ErrorHandler(
-        "Rooms in the accommodation are currently unavailable.",
+        `Rooms in the accommodation are currently unavailable. We only have ${availableRooms} available`,
         400,
         req,
         res
       );
     }
 
-    if (dinnerSeats > accommodation.availableDinnerCapacity) {
+    if (dinnerSeats > availableDinnerSeats) {
       return ErrorHandler(
-        "The dinner seating is currently unavailable.",
+        `Rooms in the accommodation are currently unavailable. We only have ${availableDinnerSeats} available`,
         400,
         req,
         res
       );
     }
 
-    const booking = await Booking.create({
+    const newBooking = await Booking.create({
       user: currentUser,
       accommodation: accommodationId,
       dinnerTotal,
@@ -76,27 +104,27 @@ const createBooking = async (req, res) => {
       subTotal,
     });
 
-    await Accommodation.findByIdAndUpdate(accommodationId, {
-      $set: {
-        availableRoomCapacity:
-          accommodation.availableRoomCapacity - roomsBooked,
-        availableDinnerCapacity:
-          accommodation.availableDinnerCapacity - dinnerSeats,
-      },
-    });
-    const updatedAccommodation = await Accommodation.findById(accommodationId);
+    // await Accommodation.findByIdAndUpdate(accommodationId, {
+    //   $set: {
+    //     availableRoomCapacity:
+    //       accommodation.availableRoomCapacity - roomsBooked,
+    //     availableDinnerCapacity:
+    //       accommodation.availableDinnerCapacity - dinnerSeats,
+    //   },
+    // });
+    // const updatedAccommodation = await Accommodation.findById(accommodationId);
 
-    if (updatedAccommodation.availableRoomCapacity === 0) {
-      // Update the status to "Booked"
-      await Accommodation.findByIdAndUpdate(accommodationId, {
-        $set: {
-          status: "Booked",
-        },
-      });
-    }
+    // if (updatedAccommodation.availableRoomCapacity === 0) {
+    //   // Update the status to "Booked"
+    //   await Accommodation.findByIdAndUpdate(accommodationId, {
+    //     $set: {
+    //       status: "Booked",
+    //     },
+    //   });
+    // }
 
     return SuccessHandler(
-      { message: "Booking Created successfully", booking },
+      { message: "Booking Created successfully", newBooking },
       200,
       res
     );
@@ -136,12 +164,12 @@ const cancelTheBooking = async (req, res) => {
         $set: { status: "cancelled", isActive: false },
       });
 
-      await Accommodation.findByIdAndUpdate(booking.accommodation, {
-        $inc: {
-          availableDinnerCapacity: booking.dinnerSeats,
-          availableRoomCapacity: booking.roomsBooked,
-        },
-      });
+      // await Accommodation.findByIdAndUpdate(booking.accommodation, {
+      //   $inc: {
+      //     availableDinnerCapacity: booking.dinnerSeats,
+      //     availableRoomCapacity: booking.roomsBooked,
+      //   },
+      // });
 
       SuccessHandler(
         { message: "Booking fetch Successfully", booking },

@@ -10,8 +10,8 @@ const bookingSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: "User" },
     status: {
       type: String,
-      enum: ["current", "previous", "cancelled", "completed"],
-      default: "current",
+      enum: ["active", "previous", "cancelled", "completed"],
+      default: "active",
     },
     dinnerSeats: { type: Number, default: 0 },
     roomsBooked: { type: Number, default: 0 },

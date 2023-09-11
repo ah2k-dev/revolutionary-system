@@ -56,9 +56,9 @@ const getBookingsCount = async (req, res) => {
       {
         $group: {
           _id: null,
-          currentCount: {
+          activeCount: {
             $sum: {
-              $cond: [{ $eq: ["$status", "current"] }, 1, 0],
+              $cond: [{ $eq: ["$status", "active"] }, 1, 0],
             },
           },
           completedCount: {
