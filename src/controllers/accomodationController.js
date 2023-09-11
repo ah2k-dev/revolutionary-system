@@ -100,15 +100,6 @@ const getAccomodations = async (req, res) => {
     //     }
     //   : {};
 
-    //✅ Price Filter
-    // const priceFilter = req.body.priceRange
-    //   ? {
-    //       roomPrice: {
-    //         $gte: Number(req.body.priceRange[0]),
-    //         $lte: Number(req.body.priceRange[1]),
-    //       },
-    //     }
-    //   : {};
     // ✅Location filter
     const locationFilter =
       req.body.coordinates && req.body.coordinates.length == 2
@@ -137,15 +128,127 @@ const getAccomodations = async (req, res) => {
       //     $lte: req.body.date[1],
       //   },
       // });
-      const bookings = await Booking.find({
-        startDate: { $gte: req.body.date[0] },
-        endDate: { $lte: req.body.date[1] },
-      });
+      // const bookings = await Booking.find({
+      //   startDate: { $gte: new Date(req.body.date[0]) },
+      //   endDate: { $lte: new Date(req.body.date[1]) },
+      // });
+      const startDate = new Date(req.body.date[0]);
+      console.log(startDate);
+      const endDate = new Date(req.body.date[1]);
 
-      console.log(req.body.date[0]);
-      console.log(req.body.date[1]);
+      const bookings = await Booking.aggregate([
+        {
+          $match: {
+            startDate: {
+              $eq: startDate,
+            },
+            endDate: {
+              $lte: endDate,
+            },
+          },
+        },
+        {
+          $group: {
+            _id: "$accommodation",
+            totalRoomBooked: { $sum: "$roomsBooked" },
+          },
+        },
+        {
+          $lookup: {
+            from: "accommodations",
+            localField: "_id",
+            foreignField: "_id",
+            as: "accommodationData",
+          },
+        },
+        {
+          $addFields: {
+            accommodationData: { $arrayElemAt: ["$accommodationData", 0] },
+          },
+        },
+
+        {
+          $addFields: {
+            availableRooms: {
+              $subtract: [
+                "$accommodationData.roomCapacity",
+                "$totalRoomBooked",
+              ],
+            },
+          },
+        },
+
+        {
+          $match: { availableRooms: { $gte: req.body.rooms } },
+        },
+      ]);
+
+      // const bookings = await Booking.aggregate([
+      //   {
+      //     $match: {
+      //       startDate: {
+      //         $eq: {
+      //           $dateToString: {
+      //             format: "%Y-%m-%d",
+      //             date: "$startDate",
+      //             timezone: "UTC",
+      //           },
+      //         },
+      //       },
+      //       // endDate: {
+      //       //   $lte: {
+      //       //     $dateToString: {
+      //       //       format: "%Y-%m-%d",
+      //       //       date: "$endDate",
+      //       //       timezone: "UTC",
+      //       //     },
+      //       //   },
+      //       // },
+      //     },
+      //   },
+      //   {
+      //     $group: {
+      //       _id: "$accommodation",
+      //       totalRoomBooked: { $sum: "$roomsBooked" },
+      //     },
+      //   },
+      // ]);
+
       console.log(bookings);
-      console.log(bookings.length);
+
+      // const bookings = await Booking.aggregate([
+      //   {
+      //     $match: {
+      //       startDate: {
+      //         $eq: {
+      //           $dateToString: {
+      //             format: "%Y-%m-%d",
+      //             date: new Date(req.body.date[0]),
+      //           },
+      //         },
+      //       },
+      //       endDate: {
+      //         $lte: {
+      //           $dateToString: {
+      //             format: "%Y-%m-%d",
+      //             date: new Date(req.body.date[1]),
+      //           },
+      //         },
+      //       },
+      //     },
+      //   },
+      //   {
+      //     $group: {
+      //       _id: "$accommodation",
+      //       totalRoomBooked: { $sum: "$roomsBooked" },
+      //     },
+      //   },
+      // ]);
+
+      // console.log(new Date(req.body.date[0]));
+      // console.log(new Date(req.body.date[1]));
+      console.log(startDate);
+      console.log(endDate);
 
       // .populate("accommodation").distinct(_id);
 

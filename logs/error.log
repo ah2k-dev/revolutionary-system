@@ -1564,3 +1564,11 @@
 {"date":"2023-09-09T13:45:49.068Z","level":"error","message":"priceFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-09T13:47:50.198Z","level":"error","message":"priceFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-09T13:55:38.089Z","level":"error","message":"Cast to date failed for value \"{ lte: '2023-09-11T07:45:54.131+00:00' }\" (type Object) at path \"endDate\" for model \"Booking\"","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T04:33:26.889Z","level":"error","message":"Cast to date failed for value \"Invalid Date\" (type Date) at path \"endDate\" for model \"Booking\"","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T05:09:13.256Z","level":"error","message":"unknown top level operator: $match. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:22:16.429Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:22:21.358Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:24:53.692Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:24:56.419Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:34:43.948Z","level":"error","message":"unknown operator: endDate","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T06:34:46.605Z","level":"error","message":"unknown operator: endDate","method":"POST","service":"user-service","url":"/getAll"}
