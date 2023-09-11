@@ -706,16 +706,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "dinnerSeats": {
-                  "example": "any"
-                },
-                "priceRange": {
-                  "example": "any"
-                },
                 "coordinates": {
                   "example": "any"
                 },
                 "date": {
+                  "example": "any"
+                },
+                "rooms": {
                   "example": "any"
                 }
               }
@@ -826,6 +823,29 @@
         }
       }
     },
+    "/accommodation/reviews": {
+      "get": {
+        "tags": [
+          "accommodation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/booking/new/{id}": {
       "post": {
         "tags": [
@@ -850,16 +870,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "endDate": {
+                "startDate": {
                   "example": "any"
                 },
-                "startDate": {
+                "endDate": {
                   "example": "any"
                 },
                 "roomsBooked": {
                   "example": "any"
                 },
                 "dinnerSeats": {
+                  "example": "any"
+                },
+                "accommodationTotal": {
+                  "example": "any"
+                },
+                "dinnerTotal": {
+                  "example": "any"
+                },
+                "subTotal": {
                   "example": "any"
                 }
               }
@@ -893,6 +922,50 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/booking/addReview/{bookingId}": {
+      "post": {
+        "tags": [
+          "booking"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rating": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -1302,7 +1375,30 @@
         }
       }
     },
-    "/host/accommodation/getAll": {
+    "/host/accommodation": {
+      "get": {
+        "tags": [
+          "host"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/host/bookings": {
       "get": {
         "tags": [
           "host"
@@ -1326,6 +1422,29 @@
       }
     },
     "/host/bookingsCount": {
+      "get": {
+        "tags": [
+          "host"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/host/earnings": {
       "get": {
         "tags": [
           "host"
