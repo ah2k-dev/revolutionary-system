@@ -1572,3 +1572,7 @@
 {"date":"2023-09-11T06:24:56.419Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-11T06:34:43.948Z","level":"error","message":"unknown operator: endDate","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-11T06:34:46.605Z","level":"error","message":"unknown operator: endDate","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T08:01:29.220Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-11T08:10:55.963Z","level":"error","message":"availabilityFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T08:18:17.621Z","level":"error","message":"bookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T09:07:27.190Z","level":"error","message":"accommodationsWithoutBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}

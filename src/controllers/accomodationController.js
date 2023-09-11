@@ -116,149 +116,142 @@ const getAccomodations = async (req, res) => {
           }
         : {};
 
-    console.log("Get Accommodation Block");
-    console.log("after Accommodation Block");
+    // console.log("Get Accommodation Block");
+    // console.log("after Accommodation Block");
     let unAvailableAccommodations = [];
-    if (req.body.date) {
-      // const bookings = await Booking.find({
-      //   startDate: {
-      //     $in: req.body.date[0],
-      //   },
-      //   endDate: {
-      //     $lte: req.body.date[1],
-      //   },
-      // });
-      // const bookings = await Booking.find({
-      //   startDate: { $gte: new Date(req.body.date[0]) },
-      //   endDate: { $lte: new Date(req.body.date[1]) },
-      // });
-      const startDate = new Date(req.body.date[0]);
-      console.log(startDate);
-      const endDate = new Date(req.body.date[1]);
+    // if (req.body.date) {
 
-      const bookings = await Booking.aggregate([
-        {
-          $match: {
-            startDate: {
-              $eq: startDate,
-            },
-            endDate: {
-              $lte: endDate,
-            },
+    const startDate = new Date(req.body.date[0]);
+    // console.log(startDate);
+    const endDate = new Date(req.body.date[1]);
+
+
+    
+
+    const bookings = await Booking.aggregate([
+      {
+        $match: {
+          isActive: true,
+          startDate: {
+            $eq: startDate,
+          },
+          endDate: {
+            $lte: endDate,
           },
         },
-        {
-          $group: {
-            _id: "$accommodation",
-            totalRoomBooked: { $sum: "$roomsBooked" },
+      },
+      {
+        $group: {
+          _id: "$accommodation",
+          totalRoomBooked: { $sum: "$roomsBooked" },
+        },
+      },
+      {
+        $lookup: {
+          from: "accommodations",
+          localField: "_id",
+          foreignField: "_id",
+          as: "accommodationData",
+        },
+      },
+      {
+        $addFields: {
+          accommodationData: { $arrayElemAt: ["$accommodationData", 0] },
+        },
+      },
+
+      {
+        $addFields: {
+          availableRooms: {
+            $subtract: ["$accommodationData.roomCapacity", "$totalRoomBooked"],
           },
         },
-        {
-          $lookup: {
-            from: "accommodations",
-            localField: "_id",
-            foreignField: "_id",
-            as: "accommodationData",
-          },
-        },
-        {
-          $addFields: {
-            accommodationData: { $arrayElemAt: ["$accommodationData", 0] },
-          },
-        },
+      },
 
-        {
-          $addFields: {
-            availableRooms: {
-              $subtract: [
-                "$accommodationData.roomCapacity",
-                "$totalRoomBooked",
-              ],
-            },
-          },
-        },
+      {
+        $match: { availableRooms: { $gte: req.body.rooms } },
+      },
+    ]);
 
-        {
-          $match: { availableRooms: { $gte: req.body.rooms } },
-        },
-      ]);
 
-      // const bookings = await Booking.aggregate([
-      //   {
-      //     $match: {
-      //       startDate: {
-      //         $eq: {
-      //           $dateToString: {
-      //             format: "%Y-%m-%d",
-      //             date: "$startDate",
-      //             timezone: "UTC",
-      //           },
-      //         },
-      //       },
-      //       // endDate: {
-      //       //   $lte: {
-      //       //     $dateToString: {
-      //       //       format: "%Y-%m-%d",
-      //       //       date: "$endDate",
-      //       //       timezone: "UTC",
-      //       //     },
-      //       //   },
-      //       // },
-      //     },
-      //   },
-      //   {
-      //     $group: {
-      //       _id: "$accommodation",
-      //       totalRoomBooked: { $sum: "$roomsBooked" },
-      //     },
-      //   },
-      // ]);
 
-      console.log(bookings);
 
-      // const bookings = await Booking.aggregate([
-      //   {
-      //     $match: {
-      //       startDate: {
-      //         $eq: {
-      //           $dateToString: {
-      //             format: "%Y-%m-%d",
-      //             date: new Date(req.body.date[0]),
-      //           },
-      //         },
-      //       },
-      //       endDate: {
-      //         $lte: {
-      //           $dateToString: {
-      //             format: "%Y-%m-%d",
-      //             date: new Date(req.body.date[1]),
-      //           },
-      //         },
-      //       },
-      //     },
-      //   },
-      //   {
-      //     $group: {
-      //       _id: "$accommodation",
-      //       totalRoomBooked: { $sum: "$roomsBooked" },
-      //     },
-      //   },
-      // ]);
 
-      // console.log(new Date(req.body.date[0]));
-      // console.log(new Date(req.body.date[1]));
-      console.log(startDate);
-      console.log(endDate);
+    // const bookings = await Booking.aggregate([
+    //   {
+    //     $match: {
+    //       startDate: {
+    //         $eq: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: "$startDate",
+    //             timezone: "UTC",
+    //           },
+    //         },
+    //       },
+    //       // endDate: {
+    //       //   $lte: {
+    //       //     $dateToString: {
+    //       //       format: "%Y-%m-%d",
+    //       //       date: "$endDate",
+    //       //       timezone: "UTC",
+    //       //     },
+    //       //   },
+    //       // },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$accommodation",
+    //       totalRoomBooked: { $sum: "$roomsBooked" },
+    //     },
+    //   },
+    // ]);
 
-      // .populate("accommodation").distinct(_id);
+    // console.log(bookings);
 
-      // unAvailableAccommodations = bookings.map((val, ind) => {
-      //   return val.accommodation;
-      // });
-      // console.log(unAvailableAccommodations);
+    // const bookings = await Booking.aggregate([
+    //   {
+    //     $match: {
+    //       startDate: {
+    //         $eq: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: new Date(req.body.date[0]),
+    //           },
+    //         },
+    //       },
+    //       endDate: {
+    //         $lte: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: new Date(req.body.date[1]),
+    //           },
+    //         },
+    //       },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$accommodation",
+    //       totalRoomBooked: { $sum: "$roomsBooked" },
+    //     },
+    //   },
+    // ]);
 
-      // .filter((val) => val.roomsBooked > req.body.rooms);
-    }
+    // console.log(new Date(req.body.date[0]));
+    // console.log(new Date(req.body.date[1]));
+    // console.log(startDate);
+    // console.log(endDate);
+
+    // .populate("accommodation").distinct(_id);
+
+    // unAvailableAccommodations = bookings.map((val, ind) => {
+    //   return val.accommodation;
+    // });
+    // console.log(unAvailableAccommodations);
+
+    // .filter((val) => val.roomsBooked > req.body.rooms);
 
     // const availabilityFilter =
     //   unAvailableAccommodations.length > 0
@@ -269,13 +262,27 @@ const getAccomodations = async (req, res) => {
     //       }
     //     : {};
 
+    // }
+    const accommodationIdsWithBookings = bookings.map((booking) => booking._id);
+    console.log("IDS: ", accommodationIdsWithBookings);
+    const accommodationsWithoutBookings = await Accommodation.find({
+      isActive: true,
+      _id: { $nin: accommodationIdsWithBookings },
+      // roomCapacity: { $gte: req.body.rooms },
+    });
+    console.log("WITHOU BOOKINGS: ", accommodationsWithoutBookings);
+
+    // Combine the results if needed
+    // const allAccommodations = [...bookings, ...accommodationsWithoutBookings];
+    // const count = allAccommodations.length;
+    // console.log(allAccommodations);
     const accommodations = await Accommodation.find({
       isActive: true,
       // ...roomFilter,
       ...locationFilter,
       // ...priceFilter,
       // ...dinnerSeatFilter,
-      ...availabilityFilter,
+      // ...availabilityFilter,
     }).sort({ status: 1 });
 
     if (!accommodations) {
@@ -285,8 +292,11 @@ const getAccomodations = async (req, res) => {
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
-        accommodationCount,
-        accommodations,
+        // count,
+        // allAccommodations,
+        bookings,
+        // accommodationCount,
+        // accommodations,
       },
       200,
       res
@@ -307,7 +317,7 @@ const deleteAccomodations = async (req, res) => {
         isActive: false,
       }
     );
-    await Meal.updateMany({ host: currentUser }, { $set: { isActive: false } });
+    // await Meal.updateMany({ host: currentUser }, { $set: { isActive: false } });
 
     if (!accommodation) {
       return ErrorHandler("Accommodation does not exist", 400, req, res);
