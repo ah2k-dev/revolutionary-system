@@ -260,14 +260,14 @@ const getAccomodations = async (req, res) => {
       // .filter((val) => val.roomsBooked > req.body.rooms);
     }
 
-    const availabilityFilter =
-      unAvailableAccommodations.length > 0
-        ? {
-            _id: {
-              $nin: unAvailableAccommodations,
-            },
-          }
-        : {};
+    // const availabilityFilter =
+    //   unAvailableAccommodations.length > 0
+    //     ? {
+    //         _id: {
+    //           $nin: unAvailableAccommodations,
+    //         },
+    //       }
+    //     : {};
 
     const accommodations = await Accommodation.find({
       isActive: true,
