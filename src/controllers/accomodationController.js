@@ -86,13 +86,6 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // // ✅ Room filter
-    // const roomFilter = req.body.rooms
-    //   ? {
-    //       rooms: req.body.rooms,
-    //     }
-    //   : {};
-
     // ✅ DinnerSeat filter
     // const dinnerSeatFilter = req.body.dinnerSeats
     //   ? {
@@ -116,19 +109,13 @@ const getAccomodations = async (req, res) => {
           }
         : {};
 
-    // console.log("Get Accommodation Block");
-    // console.log("after Accommodation Block");
-    let unAvailableAccommodations = [];
     // if (req.body.date) {
 
     const startDate = new Date(req.body.date[0]);
     // console.log(startDate);
     const endDate = new Date(req.body.date[1]);
 
-
-    
-
-    const bookings = await Booking.aggregate([
+    const accommodationWithBookings = await Booking.aggregate([
       {
         $match: {
           isActive: true,
@@ -173,9 +160,32 @@ const getAccomodations = async (req, res) => {
       },
     ]);
 
-
-
-
+    const accommodationsWithoutBookings = await Accommodation.aggregate([
+      {
+        $lookup: {
+          from: "bookings",
+          localField: "_id",
+          foreignField: "accommodation",
+          as: "bookings",
+        },
+      },
+      {
+        $match: {
+          bookings: { $size: 0 },
+          isActive: true,
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          accommodation: "$$ROOT",
+          availableRooms: "$roomCapacity",
+        },
+      },
+      {
+        $match: { availableRooms: { $gte: req.body.rooms } },
+      },
+    ]);
 
     // const bookings = await Booking.aggregate([
     //   {
@@ -263,14 +273,14 @@ const getAccomodations = async (req, res) => {
     //     : {};
 
     // }
-    const accommodationIdsWithBookings = bookings.map((booking) => booking._id);
-    console.log("IDS: ", accommodationIdsWithBookings);
-    const accommodationsWithoutBookings = await Accommodation.find({
-      isActive: true,
-      _id: { $nin: accommodationIdsWithBookings },
-      // roomCapacity: { $gte: req.body.rooms },
-    });
-    console.log("WITHOU BOOKINGS: ", accommodationsWithoutBookings);
+    // const accommodationIdsWithBookings = bookings.map((booking) => booking._id);
+    // console.log("IDS: ", accommodationIdsWithBookings);
+    // const accommodationsWithoutBookings = await Accommodation.find({
+    //   isActive: true,
+    //   _id: { $nin: accommodationIdsWithBookings },
+    //   // roomCapacity: { $gte: req.body.rooms },
+    // });
+    // console.log("WITHOU BOOKINGS: ", accommodationsWithoutBookings);
 
     // Combine the results if needed
     // const allAccommodations = [...bookings, ...accommodationsWithoutBookings];
@@ -278,25 +288,18 @@ const getAccomodations = async (req, res) => {
     // console.log(allAccommodations);
     const accommodations = await Accommodation.find({
       isActive: true,
-      // ...roomFilter,
       ...locationFilter,
-      // ...priceFilter,
-      // ...dinnerSeatFilter,
       // ...availabilityFilter,
     }).sort({ status: 1 });
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
     }
-    const accommodationCount = accommodations.length;
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
-        // count,
-        // allAccommodations,
-        bookings,
-        // accommodationCount,
-        // accommodations,
+        accommodationWithBookings,
+        accommodationsWithoutBookings,
       },
       200,
       res
