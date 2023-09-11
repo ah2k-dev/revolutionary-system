@@ -7,7 +7,7 @@ const validator = require("validator");
 const reviewsSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    accomodation: { type: Schema.Types.ObjectId, ref: "Accomodation" },
+    accommodation: { type: Schema.Types.ObjectId, ref: "Accommodation" },
     // below field updated
     cook: { type: Schema.Types.ObjectId, ref: "User" },
 

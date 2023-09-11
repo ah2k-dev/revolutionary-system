@@ -19,4 +19,7 @@ router
 router
   .route("/delAccommodation/:id")
   .delete(isAuthenticated, authorizedHost, accommodation.deleteAccomodations);
+
+//✅ ➡ Reviews
+router.route("/reviews").get(isAuthenticated, accommodation.getReviews);
 module.exports = router;

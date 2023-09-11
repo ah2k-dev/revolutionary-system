@@ -25,8 +25,6 @@ const accommodationSchema = new Schema(
     },
     roomCapacity: { type: Number, require: true },
     dinnerCapacity: { type: Number, require: true },
-    // availableDinnerCapacity: { type: Number, },
-    // availableRoomCapacity: { type: Number, },
 
     services: { type: [String] },
 
@@ -36,6 +34,8 @@ const accommodationSchema = new Schema(
       enum: ["Booked", "Available"],
       default: "Available",
     },
+    rating: { type: Number, default: 0 },
+    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
   },
   { timestamps: true }
 );

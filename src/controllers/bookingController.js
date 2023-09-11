@@ -1,5 +1,6 @@
 const Accommodation = require("../models/Accommodation/accommodation");
 const Booking = require("../models/Accommodation/booking");
+const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const mongoose = require("mongoose");
@@ -54,6 +55,8 @@ const createBooking = async (req, res) => {
           accommodation: mongoose.Types.ObjectId(accommodationId),
           isActive: true,
           status: "active",
+          startDate: { $eq: new Date(startDate) },
+          endDate: { $lte: new Date(endDate) },
         },
       },
       {
@@ -181,8 +184,62 @@ const cancelTheBooking = async (req, res) => {
     ErrorHandler(error.message, 500, req, res);
   }
 };
+const addReviews = async (req, res) => {
+  // #swagger.tags = ['booking']
+  try {
+    const currentUser = req.user._id;
+    const bookingId = req.params.bookingId;
+
+    const { rating, comment } = req.body;
+    const booking = await Book.findOne({
+      _id: bookingId,
+      user: currentUser,
+      status: "completed",
+    });
+    if (!booking) {
+      return ErrorHandler(
+        "No Such Booking exist or you're not the user who made the booking.",
+        400,
+        req,
+        res
+      );
+    }
+    const accommodationId = booking.accommodation;
+    const review = await Review.create({
+      rating,
+      comment,
+      user: currentUser,
+      accommodation: accommodationId,
+    });
+    await review.save();
+    const accomodationReview = await Review.find({
+      accommodation: accommodationId,
+    });
+    console.log(accomodationReview);
+    let allRating = accomodationReview.map((accRating) => accRating.rating);
+    // console.log(allRating);
+    let totalRating = allRating.reduce(
+      (acc, currentRating) => acc + currentRating,
+      0
+    );
+    const avgRating = totalRating / accomodationReview.length;
+
+    await Accommodation.findByIdAndUpdate(accommodationId, {
+      $push: { reviewsId: review._id },
+      rating: avgRating.toFixed(1),
+    });
+    return SuccessHandler(
+      { message: "Reviews Added Successfully", review },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createBooking,
   cancelTheBooking,
+  addReviews,
 };

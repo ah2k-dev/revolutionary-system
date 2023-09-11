@@ -3,7 +3,6 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const dotenv = require("dotenv");
 dotenv.config({ path: ".././src/config/config.env" });
-const cron = require("node-cron");
 
 const oneSignalClient = new OneSignal.Client(
   process.env.ONESIGNAL_APP_ID,

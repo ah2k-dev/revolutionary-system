@@ -6558,3 +6558,10 @@
 {"date":"2023-09-11T15:21:55.512Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
 {"date":"2023-09-11T15:23:00.769Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
 {"date":"2023-09-11T15:23:01.434Z","level":"error","message":"Rooms in the accommodation are currently unavailable. We only have 2 available","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:41:07.838Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:41:08.566Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:42:20.831Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:42:21.546Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:42:34.773Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:42:35.439Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T15:47:11.966Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fad67895b6e671e6bd056c"}

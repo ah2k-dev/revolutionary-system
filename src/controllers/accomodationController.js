@@ -431,9 +431,30 @@ const updateAccommodations = async (req, res) => {
   }
 };
 
+const getReviews = async (req, res) => {
+  // #swagger.tags = ['accommodation']
+  const { accommodationId } = req.params;
+  try {
+    const reviews = await Review.find({
+      accommodation: accommodationId,
+    });
+    if (!reviews) {
+      return ErrorHandler("No Such Review exist.", 400, req, res);
+    }
+    return SuccessHandler(
+      { message: "Reviews Fetched Successfully", reviews },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 module.exports = {
   createAccomodations,
   getAccomodations,
   updateAccommodations,
   deleteAccomodations,
+  getReviews,
 };

@@ -16,7 +16,7 @@ const completeTheBooking = async (req, res) => {
         },
       },
       {
-        $set: { status: "completed" },
+        $set: { status: "completed", isActive: false },
       },
       //   {
       //     $project: {},
