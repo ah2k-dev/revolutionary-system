@@ -1598,3 +1598,8 @@
 {"date":"2023-09-11T15:41:08.566Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
 {"date":"2023-09-11T15:42:21.546Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
 {"date":"2023-09-11T15:42:35.439Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fad67895b6e671e6bd056c"}
+{"date":"2023-09-11T18:25:51.814Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T18:26:52.764Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T18:27:30.871Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T18:27:43.092Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-11T18:27:49.641Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}

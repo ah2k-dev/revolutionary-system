@@ -4,6 +4,7 @@ const Booking = require("../models/Accommodation/booking");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
+const moment = require("moment");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
@@ -86,13 +87,6 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // ✅ DinnerSeat filter
-    // const dinnerSeatFilter = req.body.dinnerSeats
-    //   ? {
-    //       availableDinnerCapacity: { $lte: req.body.dinnerSeats },
-    //     }
-    //   : {};
-
     // ✅Location filter
     const locationFilter =
       req.body.coordinates && req.body.coordinates.length == 2
@@ -103,7 +97,7 @@ const getAccomodations = async (req, res) => {
                   type: "Point",
                   coordinates: req.body.coordinates,
                 },
-                $maxDistance: 30 * 1000,
+                $maxDistance: 10 * 1000,
               },
             },
           }
@@ -111,26 +105,35 @@ const getAccomodations = async (req, res) => {
 
     // if (req.body.date) {
 
-    const startDate = new Date(req.body.date[0]);
-    // console.log(startDate);
-    const endDate = new Date(req.body.date[1]);
+    // const startDate = new Date(req.body.date[0]);
+    // // console.log(startDate);
+    // const endDate = new Date(req.body.date[1]);
+    // const sDate = moment(new Date(req.body.date[0]));
+    // const eDate = moment(new Date(req.body.date[1]));
+    // const startDate = moment(req.body.date[0]).startOf("day").format();
+    // const endDate = moment(req.body.date[1]).startOf("day").format();
+
+    const startDate = moment(req.body.date[0]).startOf("day").format();
+    const endDate = moment(req.body.date[1]).endOf("day").format();
+    console.log(startDate);
+    console.log(endDate);
 
     const accommodationWithBookings = await Booking.aggregate([
       {
         $match: {
-          isActive: true,
+          status: "active",
           startDate: {
-            $eq: startDate,
+            $gte: new Date(startDate),
           },
           endDate: {
-            $lte: endDate,
+            $lte: new Date(endDate),
           },
         },
       },
       {
         $group: {
           _id: "$accommodation",
-          totalRoomBooked: { $sum: "$roomsBooked" },
+          totalDinnerReserved: { $sum: "$dinnerSeats" },
         },
       },
       {
@@ -149,14 +152,17 @@ const getAccomodations = async (req, res) => {
 
       {
         $addFields: {
-          availableRooms: {
-            $subtract: ["$accommodationData.roomCapacity", "$totalRoomBooked"],
+          availableDinnerSeats: {
+            $subtract: [
+              "$accommodationData.dinnerCapacity",
+              "$totalDinnerReserved",
+            ],
           },
         },
       },
 
       {
-        $match: { availableRooms: { $gte: req.body.rooms } },
+        $match: { availableDinnerSeats: { $gte: req.body.dinnerSeats } },
       },
     ]);
 
@@ -172,21 +178,25 @@ const getAccomodations = async (req, res) => {
       {
         $match: {
           bookings: { $size: 0 },
-          isActive: true,
+          // isActive: true,
         },
       },
       {
         $project: {
           _id: 0,
           accommodation: "$$ROOT",
-          availableRooms: "$roomCapacity",
+          availableDinnerSeats: "$dinnerCapacity",
         },
       },
       {
-        $match: { availableRooms: { $gte: req.body.rooms } },
+        $match: { availableDinnerSeats: { $gte: req.body.dinnerSeats } },
       },
     ]);
 
+    const availableAccommodations = [
+      ...accommodationWithBookings,
+      ...accommodationsWithoutBookings,
+    ];
     // const bookings = await Booking.aggregate([
     //   {
     //     $match: {
@@ -298,8 +308,9 @@ const getAccomodations = async (req, res) => {
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
-        accommodationWithBookings,
-        accommodationsWithoutBookings,
+        // accommodationWithBookings,
+        // accommodationsWithoutBookings,
+        availableAccommodations,
       },
       200,
       res

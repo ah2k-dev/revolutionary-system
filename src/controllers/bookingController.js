@@ -4,6 +4,7 @@ const Review = require("../models/Reviews/review");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const mongoose = require("mongoose");
+const moment = require("moment");
 //Create Booking
 const createBooking = async (req, res) => {
   // #swagger.tags = ['booking']
@@ -40,23 +41,25 @@ const createBooking = async (req, res) => {
     // console.log(accommodation.roomPrice);
     // const dinnerTotal = accommodation.dinnerPrice * dinnerSeats * numberOfDays;
 
-    // if (roomsBooked > dinnerSeats) {
-    //   return ErrorHandler(
-    //     "The Rooms shouldn't be greater than Dinner Seats",
-    //     400,
-    //     req,
-    //     res
-    //   );
-    // }
+    if (roomsBooked > dinnerSeats) {
+      return ErrorHandler(
+        "The Rooms shouldn't be greater than Dinner Seats",
+        400,
+        req,
+        res
+      );
+    }
+
+    const sDate = moment(startDate).startOf("day").format();
+    const eDate = moment(endDate).endOf("day").format();
 
     const bookings = await Booking.aggregate([
       {
         $match: {
           accommodation: mongoose.Types.ObjectId(accommodationId),
-          isActive: true,
           status: "active",
-          startDate: { $eq: new Date(startDate) },
-          endDate: { $lte: new Date(endDate) },
+          startDate: { $gte: new Date(sDate) },
+          endDate: { $lte: new Date(eDate) },
         },
       },
       {
