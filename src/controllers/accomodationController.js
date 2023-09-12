@@ -5,6 +5,7 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
 const moment = require("moment");
+const mongoose = require("mongoose");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
@@ -68,8 +69,6 @@ const createAccomodations = async (req, res) => {
       roomPrice,
       dinnerPrice,
       dinnerCapacity,
-      // availableRoomCapacity: roomCapacity,
-      // availableDinnerCapacity: dinnerCapacity,
     });
 
     await newAccomodation.save();
@@ -103,6 +102,25 @@ const getAccomodations = async (req, res) => {
           }
         : {};
 
+    // ✅Location filter
+    // const locationFilter =
+    //   req.body.coordinates && req.body.coordinates.length == 2
+    //     ? {
+    //         location: {
+    //           $geoNear: {
+    //             near: {
+    //               type: "Point",
+    //               coordinates: req.body.coordinates,
+    //             },
+    //             distanceField: "dist.calculated",
+    //             maxDistance: 100 * 1000,
+    //             includeLocs: "dist.location",
+    //             spherical: true,
+    //           },
+    //         },
+    //       }
+    //     : {};
+
     // if (req.body.date) {
 
     // const startDate = new Date(req.body.date[0]);
@@ -117,10 +135,20 @@ const getAccomodations = async (req, res) => {
     const endDate = moment(req.body.date[1]).endOf("day").format();
     console.log(startDate);
     console.log(endDate);
+    const accommodationIds = await Accommodation.find({
+      isActive: true,
+      ...locationFilter,
+    }).distinct("_id");
+    console.log("DISTINCT", accommodationIds);
+    // let accommodationIdEx = accommodationIds.map((val) =>
+    //   mongoose.Types.ObjectId(val)
+    // );
+    // console.log(accommodationIdEx);
 
     const accommodationWithBookings = await Booking.aggregate([
       {
         $match: {
+          accommodation: { $in: accommodationIds },
           status: "active",
           startDate: {
             $gte: new Date(startDate),
@@ -166,6 +194,7 @@ const getAccomodations = async (req, res) => {
       },
     ]);
 
+    console.log("Bookings", accommodationWithBookings);
     const accommodationsWithoutBookings = await Accommodation.aggregate([
       {
         $lookup: {
@@ -178,6 +207,7 @@ const getAccomodations = async (req, res) => {
       {
         $match: {
           bookings: { $size: 0 },
+          _id: { $in: accommodationIds },
           // isActive: true,
         },
       },
@@ -197,6 +227,8 @@ const getAccomodations = async (req, res) => {
       ...accommodationWithBookings,
       ...accommodationsWithoutBookings,
     ];
+
+    // console.log(accommodationWithBookings);
     // const bookings = await Booking.aggregate([
     //   {
     //     $match: {
@@ -296,20 +328,13 @@ const getAccomodations = async (req, res) => {
     // const allAccommodations = [...bookings, ...accommodationsWithoutBookings];
     // const count = allAccommodations.length;
     // console.log(allAccommodations);
-    const accommodations = await Accommodation.find({
-      isActive: true,
-      ...locationFilter,
-      // ...availabilityFilter,
-    }).sort({ status: 1 });
 
-    if (!accommodations) {
+    if (!accommodationIds) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
     }
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
-        // accommodationWithBookings,
-        // accommodationsWithoutBookings,
         availableAccommodations,
       },
       200,
@@ -363,7 +388,6 @@ const updateAccommodations = async (req, res) => {
     } = req.body;
     const currentUser = req.user._id;
 
-    // just for images
     const accommodation = await Accommodation.findOne({
       _id: req.params.id,
       host: currentUser,

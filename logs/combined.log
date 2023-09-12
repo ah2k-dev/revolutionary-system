@@ -6614,3 +6614,174 @@
 {"date":"2023-09-11T18:36:23.236Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
 {"date":"2023-09-11T18:36:41.171Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
 {"date":"2023-09-11T18:44:30.798Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:39:47.724Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T12:39:47.844Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T12:39:47.855Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T12:39:47.858Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T12:39:47.861Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T12:39:49.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T12:49:34.242Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:50:02.111Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:50:03.000Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:50:14.051Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:50:14.810Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:50:59.500Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:51:00.271Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:54:31.570Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T12:54:32.244Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:05:20.641Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:05:46.148Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:05:53.434Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:06:08.509Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:06:08.729Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:06:10.318Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:06:10.533Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:06:16.583Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:09:55.795Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:11:25.658Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:11:35.022Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:12:16.613Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:12:44.189Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:12:55.839Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:13:21.388Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:13:32.867Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:13:38.227Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:14:06.031Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:16:31.639Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T13:16:31.651Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T13:16:31.655Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T13:16:31.659Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T13:25:26.705Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:25:27.198Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:30:53.830Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:30:54.300Z","level":"error","message":"A pipeline stage specification object must contain exactly one field.","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:34:49.992Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:34:50.488Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:35:27.260Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:35:29.427Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:36:59.480Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:36:59.963Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:42:48.362Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:42:48.646Z","level":"error","message":"Arguments must be aggregate pipeline operators","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:42:52.243Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:42:52.466Z","level":"error","message":"Arguments must be aggregate pipeline operators","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:43:04.775Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:43:06.925Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:43:28.374Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:45:08.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:45:10.173Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:45:25.975Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:46:28.100Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:47:05.185Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:48:10.930Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:48:31.339Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:48:40.278Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:49:28.461Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:49:28.926Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:49:53.907Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:49:54.388Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:26.828Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:57:27.658Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:53.744Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:57:54.003Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:55.256Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:57:55.468Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:58:52.663Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:58:55.840Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:59:44.795Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T13:59:46.131Z","level":"error","message":"coordinates is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:00:19.621Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:00:20.417Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:01:48.442Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:01:51.901Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:06:32.765Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:06:33.254Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:06:34.154Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:06:34.588Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:15:05.371Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:15:40.756Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:16:00.776Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:16:23.447Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:16:53.772Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:16:56.259Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:17:25.665Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:18:18.060Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:18:36.721Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:18:38.018Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:25:18.792Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:25:19.714Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:26:12.966Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:26:13.804Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:26:40.948Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:27:57.697Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:27:58.529Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:28:03.957Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:28:04.796Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:28:10.272Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:28:11.125Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:32:29.745Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:36:29.765Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:36:30.248Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:36:52.840Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:36:53.357Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:38:49.799Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:38:50.781Z","level":"error","message":"Argument passed in does not match the accepted types","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:39:11.579Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:39:13.642Z","level":"error","message":"Argument passed in does not match the accepted types","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:39:44.278Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:39:45.251Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:40:34.270Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:43:14.240Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:46:11.998Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:46:15.464Z","level":"error","message":"Accommodation.find(...).distinct(...).map is not a function","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:47:10.493Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:48:48.599Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:50:57.411Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:51:13.557Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:52:37.453Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:53:20.198Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:54:03.763Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:56:29.562Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:57:37.765Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:59:01.245Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T14:59:50.780Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:00:49.773Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:01:00.960Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:02:17.116Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:02:36.361Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:02:40.938Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:33:53.187Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-12T15:34:38.112Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-12T15:35:07.018Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:35:07.272Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:35:07.295Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:35:07.301Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:35:07.311Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:35:09.798Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T15:35:54.115Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-12T15:36:55.272Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:36:55.353Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:36:55.365Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:36:55.373Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:36:55.379Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:36:57.753Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T15:43:50.865Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:43:51.129Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:43:51.158Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:43:51.167Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:43:51.174Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:43:54.217Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T15:43:58.593Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:43:58.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:43:58.653Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:43:58.668Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:43:58.675Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:43:59.915Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T16:22:11.636Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-12T16:22:59.266Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-12T16:22:59.879Z","level":"error","message":"Meal validation failed: spiceStatus: `high` is not a valid enum value for path `spiceStatus`.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-12T16:23:26.611Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-12T16:46:06.451Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal"}
+{"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
+{"date":"2023-09-12T16:47:16.904Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}
+{"date":"2023-09-12T16:48:11.431Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}

@@ -1603,3 +1603,44 @@
 {"date":"2023-09-11T18:27:30.871Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-11T18:27:43.092Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-11T18:27:49.641Z","level":"error","message":"accommodationWithBookings is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:50:03.000Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:50:14.810Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:51:00.271Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T12:54:32.244Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:06:08.729Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:06:10.533Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:25:27.198Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:30:54.300Z","level":"error","message":"A pipeline stage specification object must contain exactly one field.","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:34:50.488Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:35:29.427Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:36:59.963Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:42:48.646Z","level":"error","message":"Arguments must be aggregate pipeline operators","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:42:52.466Z","level":"error","message":"Arguments must be aggregate pipeline operators","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:43:06.925Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:45:10.173Z","level":"error","message":"locationFilter is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:49:28.926Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:49:54.388Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:27.658Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:54.003Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:57:55.468Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:58:55.840Z","level":"error","message":"longitude is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T13:59:46.131Z","level":"error","message":"coordinates is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:00:20.417Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:01:51.901Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:06:33.254Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:06:34.588Z","level":"error","message":"$geoNear was not the first stage in the pipeline after optimization. Is optimization disabled or inhibited?","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:16:56.259Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:18:38.018Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:25:19.714Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:26:13.804Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:27:58.529Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:28:04.796Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:28:11.125Z","level":"error","message":"$geoNear, $near, and $nearSphere are not allowed in this context","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:36:30.248Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:36:53.357Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:38:50.781Z","level":"error","message":"Argument passed in does not match the accepted types","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:39:13.642Z","level":"error","message":"Argument passed in does not match the accepted types","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:39:45.251Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T14:46:15.464Z","level":"error","message":"Accommodation.find(...).distinct(...).map is not a function","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T16:22:59.879Z","level":"error","message":"Meal validation failed: spiceStatus: `high` is not a valid enum value for path `spiceStatus`.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
