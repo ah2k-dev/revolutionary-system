@@ -6765,3 +6765,23 @@
 {"date":"2023-09-12T15:36:55.373Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-09-12T15:36:55.379Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-09-12T15:36:57.753Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T15:43:50.865Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:43:51.129Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:43:51.158Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:43:51.167Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:43:51.174Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:43:54.217Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T15:43:58.593Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-12T15:43:58.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-12T15:43:58.653Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-12T15:43:58.668Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-12T15:43:58.675Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-12T15:43:59.915Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-12T16:22:11.636Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-12T16:22:59.266Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-12T16:22:59.879Z","level":"error","message":"Meal validation failed: spiceStatus: `high` is not a valid enum value for path `spiceStatus`.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-12T16:23:26.611Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-12T16:46:06.451Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal"}
+{"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
+{"date":"2023-09-12T16:47:16.904Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}
+{"date":"2023-09-12T16:48:11.431Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}

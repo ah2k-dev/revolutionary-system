@@ -9,11 +9,10 @@ const mealSchema = new Schema(
     // reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 
     // new fields
-    mealType: {
-      type: String,
-      enum: ["cook", "host"],
-      default: "cook",
-    },
+    // mealType: {
+    //   type: String,
+    //   default: "cook",
+    // },
 
     cook: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String },
@@ -35,7 +34,6 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
-    additionalInfo: { type: [String] },
   },
 
   { timestamps: true }

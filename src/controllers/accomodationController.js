@@ -69,8 +69,6 @@ const createAccomodations = async (req, res) => {
       roomPrice,
       dinnerPrice,
       dinnerCapacity,
-      // availableRoomCapacity: roomCapacity,
-      // availableDinnerCapacity: dinnerCapacity,
     });
 
     await newAccomodation.save();
@@ -390,7 +388,6 @@ const updateAccommodations = async (req, res) => {
     } = req.body;
     const currentUser = req.user._id;
 
-    // just for images
     const accommodation = await Accommodation.findOne({
       _id: req.params.id,
       host: currentUser,

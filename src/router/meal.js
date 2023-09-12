@@ -8,15 +8,15 @@ const { authorizedCook, authorizedUser } = require("../middleware/role");
 router.route("/new").post(isAuthenticated, meal.createMeal);
 //get
 router.route("/getMeals").get(isAuthenticated, meal.getMeals);
+router
+  .route("/updateMeal/:mealId")
+  .put(isAuthenticated, authorizedCook, meal.updateMeal);
+// cook meals
 router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 router
   .route("/delMeal")
   .delete(isAuthenticated, authorizedCook, meal.deleteMeals);
-router
-  .route("/updateMeal")
-  .put(isAuthenticated, authorizedCook, meal.updateMeal);
 // ✅Reviews
-//post
 router
   .route("/review/:id")
   .post(isAuthenticated, authorizedUser, meal.addReviews);
@@ -24,10 +24,7 @@ router
 router.route("/reviews/:cookId").get(isAuthenticated, meal.getReviews);
 
 // ✅ ➡order the Meal
-//post
-router
-  .route("/orderMeal")
-  .post(isAuthenticated, authorizedUser, meal.orderTheMeal);
+router.route("/order").post(isAuthenticated, authorizedUser, meal.orderTheMeal);
 //get user ordered meals
 router
   .route("/userOrderedMeals")

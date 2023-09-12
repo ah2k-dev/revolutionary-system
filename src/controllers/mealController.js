@@ -11,14 +11,15 @@ const Coupon = require("../models/Coupon/coupon");
 const createMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   try {
-    const { dishName, desc, price, gram, calories, maxServingCapacity } =
-      req.body;
-    let mealAddedBy = "";
-    if (req.user.role === "host") {
-      mealAddedBy = "host";
-    } else {
-      mealAddedBy = "cook";
-    }
+    const {
+      dishName,
+      desc,
+      price,
+      gram,
+      calories,
+      maxServingCapacity,
+      spiceStatus,
+    } = req.body;
 
     const cookId = req.user._id;
     const isMealExist = await Meal.findOne({
@@ -35,23 +36,27 @@ const createMeal = async (req, res) => {
       );
     }
 
+    if (!req.files || !req.files.images || req.files.images.length === 0) {
+      return ErrorHandler("Please upload at least one image", 500, req, res);
+    }
+
     let imagesFileName = [];
     const { images } = req.files;
-    if (images) {
-      for (let img of images) {
-        // It should be image
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image file", 400, req, res);
-        }
+    const imageArray = Array.isArray(images) ? images : [images];
 
-        let imgFileName = `${Date.now()}-${img.name}`;
-        imagesFileName.push(imgFileName);
-        img.mv(path.join(__dirname, `../../uploads/${imgFileName}`), (err) => {
-          if (err) {
-            return ErrorHandler(err.message, 400, req, res);
-          }
-        });
+    for (let img of imageArray) {
+      // It should be image
+      if (!img.mimetype.startsWith("image")) {
+        return ErrorHandler("Please upload an image file", 400, req, res);
       }
+
+      let imgFile = `${Date.now()}-${img.name}`;
+      imagesFileName.push(imgFile);
+      img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+        if (err) {
+          return ErrorHandler(err.message, 400, req, res);
+        }
+      });
     }
 
     const newMeal = await Meal.create({
@@ -62,7 +67,7 @@ const createMeal = async (req, res) => {
       gram,
       calories,
       maxServingCapacity,
-      mealType: mealAddedBy,
+      spiceStatus,
       images: imagesFileName,
     });
 
@@ -80,20 +85,37 @@ const createMeal = async (req, res) => {
 const updateMeal = async (req, res) => {
   // #swagger.tags = ['meal']
   const cookId = req.user._id;
+  const { mealId } = req.params;
+
   try {
-    const { dishName, desc, price, gram, calories, maxServingCapacity } =
-      req.body;
-    let mealAddedBy = "";
-    if (req.user.role === "host") {
-      mealAddedBy = "host";
-    } else {
-      mealAddedBy = "cook";
+    const {
+      dishName,
+      desc,
+      price,
+      gram,
+      calories,
+      spiceStatus,
+      maxServingCapacity,
+    } = req.body;
+    const meal = await Meal.findOne({
+      _id: mealId,
+      cook: cookId,
+    });
+
+    if (!meal) {
+      return ErrorHandler("Meal not found or unauthorized", 404, req, res);
     }
 
     let imagesFileName = [];
-    const { images } = req.files;
-    if (images) {
-      for (const img of images) {
+    meal.images.forEach((img) => imagesFileName.push(img));
+    if (req.files && req.files.images) {
+      // console.log("Upload block");
+      imagesFileName = [];
+      const { images } = req.files;
+
+      // `images` is an array, if there's only one image uploaded
+      const imageArray = Array.isArray(images) ? images : [images];
+      for (const img of imageArray) {
         if (!img.mimetype.startsWith("image")) {
           return ErrorHandler("Please upload an image", 500, req, res);
         }
@@ -108,15 +130,15 @@ const updateMeal = async (req, res) => {
     }
 
     const updatedMeal = await Meal.findByIdAndUpdate(
-      req.params.id,
+      mealId,
       {
         dishName,
         desc,
         price,
         gram,
         calories,
+        spiceStatus,
         maxServingCapacity,
-        mealType: mealAddedBy,
         images: imagesFileName,
       },
       {

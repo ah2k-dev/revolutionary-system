@@ -1642,3 +1642,5 @@
 {"date":"2023-09-12T14:39:13.642Z","level":"error","message":"Argument passed in does not match the accepted types","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-12T14:39:45.251Z","level":"error","message":"accommodations is not defined","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-12T14:46:15.464Z","level":"error","message":"Accommodation.find(...).distinct(...).map is not a function","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-12T16:22:59.879Z","level":"error","message":"Meal validation failed: spiceStatus: `high` is not a valid enum value for path `spiceStatus`.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
