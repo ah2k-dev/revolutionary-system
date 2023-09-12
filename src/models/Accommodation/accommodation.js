@@ -7,23 +7,35 @@ const validator = require("validator");
 const accommodationSchema = new Schema(
   {
     host: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    meals: [{ type: Schema.Types.ObjectId, ref: "Meal" }],
 
     title: { type: String, require: true },
     desc: { type: String, require: true },
     images: {
       type: [String],
-      default:
-        "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
+      require: true,
+      // default:
+      //   "https://img.freepik.com/free-photo/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.jpg?size=626&ext=jpg",
     },
-    price: { type: Number, require: true },
+    roomPrice: { type: Number },
+    dinnerPrice: { type: Number },
+
     location: {
       type: { type: String, default: "Point" },
       coordinates: [Number],
     },
-    capacity: { type: Number, require: true },
+    roomCapacity: { type: Number, require: true },
+    dinnerCapacity: { type: Number, require: true },
+
     services: { type: [String] },
+
     isActive: { type: Boolean, default: true },
+    status: {
+      type: String,
+      enum: ["Booked", "Available"],
+      default: "Available",
+    },
+    rating: { type: Number, default: 0 },
+    reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
   },
   { timestamps: true }
 );

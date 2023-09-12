@@ -2,11 +2,12 @@ const User = require("../models/User/user");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const Accomodation = require("../models/Accommodation/accommodation");
+const Accommodation = require("../models/Accommodation/accommodation");
 const Coupon = require("../models/Coupon/coupon");
 const Meal = require("../models/Meal/meal");
 const user = require("../models/User/user");
 const Review = require("../models/Reviews/review");
+const Booking = require("../models/Accommodation/booking");
 
 // get Current user
 const getUserProfile = async (req, res) => {
@@ -174,12 +175,12 @@ const updateUser = async (req, res) => {
   }
 };
 
-// Saved or Unsaved Accomodation
-async function savedOrUnsavedAccomodation(req, res) {
+// Saved or Unsaved Accommodation
+const savedOrUnsavedAccomodation = async (req, res) => {
   // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
-    const accomodation = await Accomodation.findById(req.params.id);
+    const accomodation = await Accommodation.findById(req.params.id);
     const user = await User.findById(currentUser);
 
     if (!accomodation) {
@@ -192,19 +193,19 @@ async function savedOrUnsavedAccomodation(req, res) {
       user.savedAccomodation.splice(index, 1);
       await user.save();
       return SuccessHandler(
-        { message: "UnSaved Accomodation Successfully" },
+        { message: "UnSaved Accommodation Successfully" },
         200,
         res
       );
     } else {
       user.savedAccomodation.push(accomodation.id);
       await user.save();
-      return SuccessHandler({ message: "Saved Accomodation" }, 200, res);
+      return SuccessHandler({ message: "Saved Accommodation" }, 200, res);
     }
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
-}
+};
 
 // get Saved Accomodations
 const getSavedAccomodations = async (req, res) => {
@@ -215,9 +216,6 @@ const getSavedAccomodations = async (req, res) => {
     // .populate("meals");
     const user = await User.findById(currentUser).populate({
       path: "savedAccomodation",
-      populate: {
-        path: "meals",
-      },
     });
 
     let sAccomodations = user.savedAccomodation;
@@ -378,6 +376,7 @@ const getSavedMeals = async (req, res) => {
 };
 
 const savedOrUnsavedCook = async (req, res) => {
+  // #swagger.tags = ['user']
   const currentUser = req.user._id;
 
   try {
@@ -407,6 +406,7 @@ const savedOrUnsavedCook = async (req, res) => {
 };
 
 const getSavedCook = async (req, res) => {
+  // #swagger.tags = ['user']
   try {
     const currentUser = req.user._id;
     const cook = await User.findById(currentUser).populate("savedCooks");
@@ -416,6 +416,25 @@ const getSavedCook = async (req, res) => {
     }
     SuccessHandler(
       { message: "Favourite Cook fetch Successfully", favouriteCooks },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getUserBookings = async (req, res) => {
+  try {
+    const currentUser = req.user._id;
+    const bookings = await Booking.find({ user: currentUser }).sort({
+      createdAt: -1,
+    });
+    if (!bookings) {
+      return ErrorHandler("Booking does not exist", 404, req, res);
+    }
+    SuccessHandler(
+      { message: "Booking fetch Successfully", bookings },
       200,
       res
     );
@@ -436,4 +455,5 @@ module.exports = {
   getSavedMeals,
   savedOrUnsavedCook,
   getSavedCook,
+  getUserBookings,
 };

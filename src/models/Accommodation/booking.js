@@ -6,27 +6,23 @@ const validator = require("validator");
 
 const bookingSchema = new Schema(
   {
-    accommodation: { type: Schema.Types.ObjectId, ref: "User" },
+    accommodation: { type: Schema.Types.ObjectId, ref: "Accommodation" },
     user: { type: Schema.Types.ObjectId, ref: "User" },
-
     status: {
       type: String,
-      enum: ["booked", "previous", "cancelled", "completed"],
-      default: "booked",
+      enum: ["active", "previous", "cancelled", "completed"],
+      default: "active",
     },
-    startDate: {
-      type: Date,
-    },
-
-    endDate: {
-      type: Date,
-    },
-    subTotal: { type: Number, default: 0 },
-
-    totalAmount: { type: Number, default: 0 },
-    availableSeats: { type: Number, default: 0 },
-    expiryDate: { type: Date },
-    isActive: { type: Boolean, default: true },
+    dinnerSeats: { type: Number, default: 0 },
+    roomsBooked: { type: Number, default: 0 },
+    accommodationTotal: { type: Number, default: 0 },
+    dinnerTotal: { type: Number, default: 0 },
+    startDate: { type: Date },
+    endDate: { type: Date },
+    subTotal: { type: Number },
+    totalAmount: { type: Number },
+    // it must require
+    phoneNo: { type: String },
   },
   { timestamps: true }
 );

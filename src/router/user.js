@@ -40,5 +40,6 @@ router
   .route("/savedOrUnsavedCook/:id")
   .put(isAuthenticated, user.savedOrUnsavedCook);
 router.route("/savedCook").get(isAuthenticated, user.getSavedCook);
+router.route("/bookings").get(isAuthenticated, user.getUserBookings);
 
 module.exports = router;

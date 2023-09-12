@@ -15,8 +15,7 @@ const mealSchema = new Schema(
       default: "cook",
     },
 
-    // cook: { type: Schema.Types.ObjectId, ref: "User" },
-    host: { type: Schema.Types.ObjectId, ref: "User" },
+    cook: { type: Schema.Types.ObjectId, ref: "User" },
     dishName: { type: String },
     desc: { type: String },
     price: { type: Number },
@@ -36,6 +35,7 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
+    additionalInfo: { type: [String] },
   },
 
   { timestamps: true }

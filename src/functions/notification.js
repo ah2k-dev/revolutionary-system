@@ -9,23 +9,16 @@ const oneSignalClient = new OneSignal.Client(
   process.env.REST_API_KEY
 );
 
-// const send = cron.schedule("*/5 * * * * *", () => {
-//   console.log("I am cron job function");
-// });
-// console.log(send);
-
-const sendNotification = async (req, res) => {
-  // #swagger.tags = ['notification']
-
+const sendNotification = async (headingContent, contentMessage, userId) => {
   try {
     const notification = {
       app_id: process.env.ONESIGNAL_APP_ID,
-      headings: { en: "Welcome to Revolutionary App" },
+      headings: { en: headingContent },
       contents: {
-        en: "We are sending sample notification",
+        en: contentMessage,
       },
       // included_segments: ["All"],
-      include_external_user_ids: ["64e663d2cd6392181ac991ba"],
+      include_external_user_ids: [userId],
       large_icon:
         "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg",
       big_picture:
@@ -36,16 +29,15 @@ const sendNotification = async (req, res) => {
     };
     const headers = {
       "Content-Type": "application/json; charset=utf-8",
-      // "Content-Type": "application/json",
-      Authorization: `Basic ${process.env.REST_API_KEY}`, // Replace with your OneSignal REST API Key
+      Authorization: `Basic ${process.env.REST_API_KEY}`,
     };
     // create a notification
     const response = await oneSignalClient.createNotification(
       notification,
       headers
     );
-    console.log("response: ", response);
-    console.log(response.body.id);
+    // console.log("response: ", response);
+    // console.log(response.body.id);
 
     SuccessHandler(
       { message: "Notification Send Successfuly", response },
@@ -57,22 +49,4 @@ const sendNotification = async (req, res) => {
   }
 };
 
-const viewNotification = async (req, res) => {
-  // #swagger.tags = ['notification']
-  try {
-    const notificationId = req.params.notificationId;
-    const response = await client.getNotification(
-      process.env.ONESIGNAL_APP_ID,
-      notificationId
-    );
-    SuccessHandler(
-      { message: "Notification retrieved successfully", response },
-      200,
-      res
-    );
-  } catch (error) {
-    ErrorHandler("Failed to send notification", 500, req, res);
-  }
-};
-
-module.exports = { sendNotification, viewNotification };
+module.exports = { sendNotification };

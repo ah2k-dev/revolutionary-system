@@ -1,9 +1,10 @@
 const Accommodation = require("../models/Accommodation/accommodation");
 const Review = require("../models/Reviews/review");
+const Booking = require("../models/Accommodation/booking");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const path = require("path");
-const Meal = require("../models/Meal/meal");
+const moment = require("moment");
 //Create Accomodations
 const createAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
@@ -13,13 +14,12 @@ const createAccomodations = async (req, res) => {
       desc,
       latitude,
       longitude,
-      capacity,
+      roomCapacity,
       services,
-      price,
-      meals,
+      roomPrice,
+      dinnerPrice,
+      dinnerCapacity,
     } = req.body;
-    console.log(meals);
-
     const currentUser = req.user._id;
 
     const isAccommodationsExist = await Accommodation.findOne({
@@ -29,56 +29,53 @@ const createAccomodations = async (req, res) => {
     if (isAccommodationsExist) {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
-    let createdMeals = [];
-    if (meals && Array.isArray(meals) && meals.length > 0) {
-      createdMeals = await Meal.insertMany(
-        meals.map((val) => {
-          return {
-            ...val,
-            mealType: "host",
-            host: currentUser,
-          };
-        })
-      );
+
+    if (!req.files || !req.files.images || req.files.images.length === 0) {
+      return ErrorHandler("Please upload at least one image", 500, req, res);
     }
-    console.log(createdMeals);
+
     let imagesFileName = [];
+
     const { images } = req.files;
-    // console.log(images);
-    if (req.files?.images) {
-      for (const img of images) {
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image", 500, req, res);
-        }
-        let imgFile = `${Date.now()}-${img.name}`;
-        imagesFileName.push(imgFile);
-        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
-          if (err) {
-            return ErrorHandler(err.message, 400, req, res);
-          }
-        });
+
+    // Ensure `images` is an array, even if there's only one image uploaded
+    const imageArray = Array.isArray(images) ? images : [images];
+
+    for (const img of imageArray) {
+      if (!img.mimetype.startsWith("image")) {
+        return ErrorHandler("Please upload an image", 500, req, res);
       }
+      let imgFile = `${Date.now()}-${img.name}`;
+      imagesFileName.push(imgFile);
+      img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+        if (err) {
+          return ErrorHandler(err.message, 400, req, res);
+        }
+      });
     }
 
     const newAccomodation = await Accommodation.create({
+      host: currentUser,
       title,
       desc,
-      price: Number(price),
       location: {
         type: "Point",
         coordinates: [longitude, latitude],
       },
-      capacity: Number(capacity),
+      roomCapacity,
       services,
-      host: currentUser,
       images: imagesFileName,
-      meals: createdMeals.map((val) => val._id),
+      roomPrice,
+      dinnerPrice,
+      dinnerCapacity,
+      // availableRoomCapacity: roomCapacity,
+      // availableDinnerCapacity: dinnerCapacity,
     });
 
     await newAccomodation.save();
 
     return SuccessHandler(
-      { success: true, message: "Added successfully", newAccomodation },
+      { message: "Added successfully", newAccomodation },
       200,
       res
     );
@@ -90,21 +87,6 @@ const createAccomodations = async (req, res) => {
 const getAccomodations = async (req, res) => {
   // #swagger.tags = ['accommodation']
   try {
-    // ✅Capacity filter
-    const capacityFilter = req.body.capacity
-      ? {
-          capacity: req.body.capacity,
-        }
-      : {};
-    //✅ Price Filter
-    const priceFilter = req.body.priceRange
-      ? {
-          price: {
-            $gte: Number(req.body.priceRange[0]),
-            $lte: Number(req.body.priceRange[1]),
-          },
-        }
-      : {};
     // ✅Location filter
     const locationFilter =
       req.body.coordinates && req.body.coordinates.length == 2
@@ -115,27 +97,182 @@ const getAccomodations = async (req, res) => {
                   type: "Point",
                   coordinates: req.body.coordinates,
                 },
-                $maxDistance: 30 * 1000,
+                $maxDistance: 10 * 1000,
               },
             },
           }
         : {};
 
-    // let unAvailableAccommodations = [];
-    // if (req.body.date && req.body.date > 0) {
-    //   const bookings = await bookingAccomodation.find({
-    //     startDate: {
-    //       $in: req.body.date[0],
-    //     },
-    //     endDate: {
-    //       $lte: req.body.date[1],
-    //     },
-    //   });
+    // if (req.body.date) {
 
-    //   unAvailableAccommodations = bookings.map((val, ind) => {
-    //     return val.accomodationsId;
-    //   });
-    // }
+    // const startDate = new Date(req.body.date[0]);
+    // // console.log(startDate);
+    // const endDate = new Date(req.body.date[1]);
+    // const sDate = moment(new Date(req.body.date[0]));
+    // const eDate = moment(new Date(req.body.date[1]));
+    // const startDate = moment(req.body.date[0]).startOf("day").format();
+    // const endDate = moment(req.body.date[1]).startOf("day").format();
+
+    const startDate = moment(req.body.date[0]).startOf("day").format();
+    const endDate = moment(req.body.date[1]).endOf("day").format();
+    console.log(startDate);
+    console.log(endDate);
+
+    const accommodationWithBookings = await Booking.aggregate([
+      {
+        $match: {
+          status: "active",
+          startDate: {
+            $gte: new Date(startDate),
+          },
+          endDate: {
+            $lte: new Date(endDate),
+          },
+        },
+      },
+      {
+        $group: {
+          _id: "$accommodation",
+          totalDinnerReserved: { $sum: "$dinnerSeats" },
+        },
+      },
+      {
+        $lookup: {
+          from: "accommodations",
+          localField: "_id",
+          foreignField: "_id",
+          as: "accommodationData",
+        },
+      },
+      {
+        $addFields: {
+          accommodationData: { $arrayElemAt: ["$accommodationData", 0] },
+        },
+      },
+
+      {
+        $addFields: {
+          availableDinnerSeats: {
+            $subtract: [
+              "$accommodationData.dinnerCapacity",
+              "$totalDinnerReserved",
+            ],
+          },
+        },
+      },
+
+      {
+        $match: { availableDinnerSeats: { $gte: req.body.dinnerSeats } },
+      },
+    ]);
+
+    const accommodationsWithoutBookings = await Accommodation.aggregate([
+      {
+        $lookup: {
+          from: "bookings",
+          localField: "_id",
+          foreignField: "accommodation",
+          as: "bookings",
+        },
+      },
+      {
+        $match: {
+          bookings: { $size: 0 },
+          // isActive: true,
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          accommodation: "$$ROOT",
+          availableDinnerSeats: "$dinnerCapacity",
+        },
+      },
+      {
+        $match: { availableDinnerSeats: { $gte: req.body.dinnerSeats } },
+      },
+    ]);
+
+    const availableAccommodations = [
+      ...accommodationWithBookings,
+      ...accommodationsWithoutBookings,
+    ];
+    // const bookings = await Booking.aggregate([
+    //   {
+    //     $match: {
+    //       startDate: {
+    //         $eq: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: "$startDate",
+    //             timezone: "UTC",
+    //           },
+    //         },
+    //       },
+    //       // endDate: {
+    //       //   $lte: {
+    //       //     $dateToString: {
+    //       //       format: "%Y-%m-%d",
+    //       //       date: "$endDate",
+    //       //       timezone: "UTC",
+    //       //     },
+    //       //   },
+    //       // },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$accommodation",
+    //       totalRoomBooked: { $sum: "$roomsBooked" },
+    //     },
+    //   },
+    // ]);
+
+    // console.log(bookings);
+
+    // const bookings = await Booking.aggregate([
+    //   {
+    //     $match: {
+    //       startDate: {
+    //         $eq: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: new Date(req.body.date[0]),
+    //           },
+    //         },
+    //       },
+    //       endDate: {
+    //         $lte: {
+    //           $dateToString: {
+    //             format: "%Y-%m-%d",
+    //             date: new Date(req.body.date[1]),
+    //           },
+    //         },
+    //       },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$accommodation",
+    //       totalRoomBooked: { $sum: "$roomsBooked" },
+    //     },
+    //   },
+    // ]);
+
+    // console.log(new Date(req.body.date[0]));
+    // console.log(new Date(req.body.date[1]));
+    // console.log(startDate);
+    // console.log(endDate);
+
+    // .populate("accommodation").distinct(_id);
+
+    // unAvailableAccommodations = bookings.map((val, ind) => {
+    //   return val.accommodation;
+    // });
+    // console.log(unAvailableAccommodations);
+
+    // .filter((val) => val.roomsBooked > req.body.rooms);
+
     // const availabilityFilter =
     //   unAvailableAccommodations.length > 0
     //     ? {
@@ -145,25 +282,35 @@ const getAccomodations = async (req, res) => {
     //       }
     //     : {};
 
+    // }
+    // const accommodationIdsWithBookings = bookings.map((booking) => booking._id);
+    // console.log("IDS: ", accommodationIdsWithBookings);
+    // const accommodationsWithoutBookings = await Accommodation.find({
+    //   isActive: true,
+    //   _id: { $nin: accommodationIdsWithBookings },
+    //   // roomCapacity: { $gte: req.body.rooms },
+    // });
+    // console.log("WITHOU BOOKINGS: ", accommodationsWithoutBookings);
+
+    // Combine the results if needed
+    // const allAccommodations = [...bookings, ...accommodationsWithoutBookings];
+    // const count = allAccommodations.length;
+    // console.log(allAccommodations);
     const accommodations = await Accommodation.find({
       isActive: true,
-      ...capacityFilter,
       ...locationFilter,
-      ...priceFilter,
       // ...availabilityFilter,
-    }).populate({
-      path: "meals",
-    });
+    }).sort({ status: 1 });
 
     if (!accommodations) {
       return ErrorHandler("Accommodation doesn't exist", 400, req, res);
     }
-    const accommodationCount = accommodations.length;
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
-        accommodationCount,
-        accommodations,
+        // accommodationWithBookings,
+        // accommodationsWithoutBookings,
+        availableAccommodations,
       },
       200,
       res
@@ -184,7 +331,7 @@ const deleteAccomodations = async (req, res) => {
         isActive: false,
       }
     );
-    await Meal.updateMany({ host: currentUser }, { $set: { isActive: false } });
+    // await Meal.updateMany({ host: currentUser }, { $set: { isActive: false } });
 
     if (!accommodation) {
       return ErrorHandler("Accommodation does not exist", 400, req, res);
@@ -200,66 +347,125 @@ const deleteAccomodations = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-// const updateAccomodations = async (req, res) => {
-//   // #swagger.tags = ['accomodation']
-//   try {
-//     const { title, desc, latitude, longitude, capacity, services } = req.body;
-//     const currentUser = req.user._id;
+const updateAccommodations = async (req, res) => {
+  // #swagger.tags = ['accomodation']
+  try {
+    const {
+      title,
+      desc,
+      latitude,
+      longitude,
+      roomCapacity,
+      services,
+      roomPrice,
+      dinnerPrice,
+      dinnerCapacity,
+    } = req.body;
+    const currentUser = req.user._id;
 
-//     let imagesFileName = [];
-//     const { images } = req.files;
-//     if (images) {
-//       for (const img of images) {
-//         if (!img.mimetype.startsWith("image")) {
-//           return ErrorHandler("Please upload an image", 500, req, res);
-//         }
-//         let imgFile = `${Date.now()}-${img.name}`;
-//         imagesFileName.push(imgFile);
-//         img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
-//           if (err) {
-//             return ErrorHandler(err.message, 400, req, res);
-//           }
-//         });
-//       }
-//     }
+    // just for images
+    const accommodation = await Accommodation.findOne({
+      _id: req.params.id,
+      host: currentUser,
+    });
 
-//     const updatedAccomodation = await Accomodation.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         title,
-//         desc,
-//         location: {
-//           type: "Point",
-//           coordinates: [longitude, latitude],
-//         },
+    console.log("Debugging: ", accommodation);
+    if (!accommodation) {
+      return ErrorHandler(
+        "Accommodation not found or unauthorized",
+        404,
+        req,
+        res
+      );
+    }
 
-//         capacity,
-//         services,
-//         createdBy: currentUser,
-//         images: imagesFileName,
-//       },
-//       {
-//         new: true,
-//         runValidators: true,
-//       }
-//     );
+    let imagesFileName = [];
+    accommodation.images.forEach((img) => imagesFileName.push(img));
+    console.log("outerImages Array: ", imagesFileName);
+    if (req.files && req.files.images) {
+      console.log("Upload block");
+      imagesFileName = [];
+      const { images } = req.files;
 
-//     if (!updatedAccomodation) {
-//       return ErrorHandler("Accommodation does not exist", 400, req, res);
-//     }
+      // `images` is an array, if there's only one image uploaded
+      const imageArray = Array.isArray(images) ? images : [images];
+      for (const img of imageArray) {
+        if (!img.mimetype.startsWith("image")) {
+          return ErrorHandler("Please upload an image", 500, req, res);
+        }
+        let imgFile = `${Date.now()}-${img.name}`;
+        imagesFileName.push(imgFile);
+        img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
+          if (err) {
+            return ErrorHandler(err.message, 400, req, res);
+          }
+        });
+      }
+    }
+    const updatedAccomodation = await Accommodation.findByIdAndUpdate(
+      req.params.id,
+      {
+        title,
+        desc,
+        location: {
+          type: "Point",
+          coordinates: [longitude, latitude],
+        },
 
-//     return SuccessHandler(
-//       { success: true, message: "Updated successfully", updatedAccomodation },
-//       200,
-//       res
-//     );
-//   } catch (error) {
-//     return ErrorHandler(error.message, 500, req, res);
-//   }
-// };
+        roomCapacity,
+        services,
+        roomPrice,
+        dinnerPrice,
+        dinnerCapacity,
+        createdBy: currentUser,
+        images: imagesFileName,
+        // availableRoomCapacity: roomCapacity,
+        // availableDinnerCapacity: dinnerCapacity,
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+
+    if (!updatedAccomodation) {
+      return ErrorHandler("Accommodation does not exist", 400, req, res);
+    }
+
+    return SuccessHandler(
+      { success: true, message: "Updated successfully", updatedAccomodation },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const getReviews = async (req, res) => {
+  // #swagger.tags = ['accommodation']
+  const { accommodationId } = req.params;
+  try {
+    const reviews = await Review.find({
+      accommodation: accommodationId,
+    });
+    if (!reviews) {
+      return ErrorHandler("No Such Review exist.", 400, req, res);
+    }
+    return SuccessHandler(
+      { message: "Reviews Fetched Successfully", reviews },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
 
 module.exports = {
   createAccomodations,
   getAccomodations,
+  updateAccommodations,
   deleteAccomodations,
+  getReviews,
 };
