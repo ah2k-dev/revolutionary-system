@@ -1417,7 +1417,7 @@
       }
     },
     "/host/bookings": {
-      "get": {
+      "post": {
         "tags": [
           "host"
         ],
@@ -1426,6 +1426,11 @@
           {
             "name": "authorization",
             "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
             "type": "string"
           }
         ],

@@ -199,11 +199,6 @@ const getBookings = async (req, res) => {
       })
       .distinct("_id");
 
-    // const statusFilter = req.body.status
-    //   ? {
-    //       status: { $regex: req.body.status, $options: "i" },
-    //     }
-    //   : {};
     let statusFilter = {};
 
     if (req.query.status === "active") {
@@ -212,14 +207,17 @@ const getBookings = async (req, res) => {
       statusFilter = { status: { $in: ["completed", "cancelled"] } };
     }
 
-    // const statusParam = req.body.status;
-    const hostBookings = await booking.find({
-      accommodation: {
-        $in: hostAccommodations,
-      },
-      // statusParam,
-      ...statusFilter,
-    });
+    const hostBookings = await booking
+      .find({
+        accommodation: {
+          $in: hostAccommodations,
+        },
+        ...statusFilter,
+      })
+      .populate({
+        path: "user",
+        select: "email username avatar",
+      });
     // const hostBookings = await booking.aggregate([
     //   {
     //     $match: {
