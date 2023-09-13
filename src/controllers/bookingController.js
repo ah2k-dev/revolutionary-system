@@ -200,7 +200,7 @@ const addReviews = async (req, res) => {
     const bookingId = req.params.bookingId;
 
     const { rating, comment } = req.body;
-    const booking = await Book.findOne({
+    const booking = await Booking.findOne({
       _id: bookingId,
       user: currentUser,
       status: "completed",
@@ -232,6 +232,9 @@ const addReviews = async (req, res) => {
       0
     );
     const avgRating = totalRating / accomodationReview.length;
+    // console.log("totalRating: ", totalRating);
+    // console.log("avgRating: ", avgRating);
+    // console.log("review._id: ", review._id);
 
     await Accommodation.findByIdAndUpdate(accommodationId, {
       $push: { reviewsId: review._id },

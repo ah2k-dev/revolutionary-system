@@ -6895,3 +6895,18 @@
 {"date":"2023-09-13T13:18:10.659Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fc661abdd6042a77392b85"}
 {"date":"2023-09-13T13:18:19.605Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
 {"date":"2023-09-13T13:19:40.407Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:33:46.590Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-13T13:33:46.661Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-13T13:33:46.669Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-13T13:33:46.678Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-13T13:33:46.681Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-13T13:33:47.359Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-13T13:36:00.266Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:36:00.486Z","level":"error","message":"Book is not defined","method":"POST","service":"user-service","url":"/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:37:35.230Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:40:41.052Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:41:44.973Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:42:07.053Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:43:44.869Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:44:06.046Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:46:57.074Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
