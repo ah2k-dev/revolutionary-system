@@ -6785,3 +6785,26 @@
 {"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
 {"date":"2023-09-12T16:47:16.904Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}
 {"date":"2023-09-12T16:48:11.431Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/6500907f0be5d0df4a01362a"}
+{"date":"2023-09-13T05:46:51.402Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-13T05:47:22.143Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-13T05:47:22.222Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-13T05:47:22.245Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-13T05:47:22.252Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-13T05:47:22.255Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-13T05:47:23.330Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-13T05:49:26.347Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:49:58.544Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:53:17.644Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-13T05:53:45.856Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-13T05:56:06.439Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:58:57.151Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:58:57.450Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T05:59:10.212Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:59:21.851Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:59:22.207Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T05:59:42.142Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T05:59:42.485Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T05:59:52.143Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T06:04:00.247Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T06:11:51.404Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-13T06:11:59.905Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}

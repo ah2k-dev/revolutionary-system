@@ -162,6 +162,7 @@ const getAccomodations = async (req, res) => {
         $group: {
           _id: "$accommodation",
           totalDinnerReserved: { $sum: "$dinnerSeats" },
+          totalRoomBooked: { $sum: "$roomsBooked" },
         },
       },
       {
@@ -185,6 +186,9 @@ const getAccomodations = async (req, res) => {
               "$accommodationData.dinnerCapacity",
               "$totalDinnerReserved",
             ],
+          },
+          availableRooms: {
+            $subtract: ["$accommodationData.roomCapacity", "$totalRoomBooked"],
           },
         },
       },
@@ -216,6 +220,7 @@ const getAccomodations = async (req, res) => {
           _id: 0,
           accommodation: "$$ROOT",
           availableDinnerSeats: "$dinnerCapacity",
+          availableRooms: "$roomCapacity",
         },
       },
       {
