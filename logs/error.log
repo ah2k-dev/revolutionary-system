@@ -1644,3 +1644,34 @@
 {"date":"2023-09-12T14:46:15.464Z","level":"error","message":"Accommodation.find(...).distinct(...).map is not a function","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-12T16:22:59.879Z","level":"error","message":"Meal validation failed: spiceStatus: `high` is not a valid enum value for path `spiceStatus`.","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-12T16:46:06.945Z","level":"error","message":"Meal not found or unauthorized","method":"PUT","service":"user-service","url":"/updateMeal"}
+{"date":"2023-09-13T05:58:57.450Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T05:59:22.207Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T05:59:42.485Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T12:39:29.736Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:40:22.177Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:43:16.990Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:45:06.520Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:45:45.808Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:49:23.249Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:50:20.468Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:50:56.744Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:52:51.680Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:53:20.996Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:54:22.994Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:56:18.401Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:58:07.015Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:02:11.744Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:04:34.329Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:06:00.991Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:18:19.605Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:36:00.486Z","level":"error","message":"Book is not defined","method":"POST","service":"user-service","url":"/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T14:00:25.996Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:01.803Z","level":"error","message":"Cannot populate path `Users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:17.278Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:19.095Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:02:12.320Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:16:47.819Z","level":"error","message":"_id is not defined","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-13T14:41:01.741Z","level":"error","message":"statusParam is not defined","method":"POST","service":"user-service","url":"/bookings"}
+{"date":"2023-09-13T16:07:56.130Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T16:07:58.880Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T16:21:40.183Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}

@@ -162,6 +162,7 @@ const getAccomodations = async (req, res) => {
         $group: {
           _id: "$accommodation",
           totalDinnerReserved: { $sum: "$dinnerSeats" },
+          totalRoomBooked: { $sum: "$roomsBooked" },
         },
       },
       {
@@ -186,6 +187,9 @@ const getAccomodations = async (req, res) => {
               "$totalDinnerReserved",
             ],
           },
+          availableRooms: {
+            $subtract: ["$accommodationData.roomCapacity", "$totalRoomBooked"],
+          },
         },
       },
 
@@ -196,6 +200,13 @@ const getAccomodations = async (req, res) => {
 
     console.log("Bookings", accommodationWithBookings);
     const accommodationsWithoutBookings = await Accommodation.aggregate([
+      // {
+      //   $group: {
+      //     _id: "$_id",
+      //     totalDinnerReserved: { $sum: "$dinnerSeats" },
+      //     totalRoomBooked: { $sum: "$roomsBooked" },
+      //   },
+      // },
       {
         $lookup: {
           from: "bookings",
@@ -211,11 +222,19 @@ const getAccomodations = async (req, res) => {
           // isActive: true,
         },
       },
+
       {
         $project: {
           _id: 0,
-          accommodation: "$$ROOT",
+          accommodationData: "$$ROOT",
           availableDinnerSeats: "$dinnerCapacity",
+          availableRooms: "$roomCapacity",
+        },
+      },
+      {
+        $addFields: {
+          totalDinnerReserved: 0,
+          totalRoomBooked: 0,
         },
       },
       {
@@ -223,6 +242,8 @@ const getAccomodations = async (req, res) => {
       },
     ]);
 
+    // const [{ accommodationData }] = accommodationWithBookings;
+    // const [{ accommodationData }] = accommodationsWithoutBookings;
     const availableAccommodations = [
       ...accommodationWithBookings,
       ...accommodationsWithoutBookings,
@@ -472,7 +493,13 @@ const getReviews = async (req, res) => {
   try {
     const reviews = await Review.find({
       accommodation: accommodationId,
-    });
+    })
+      .select({ comment: 1, rating: 1, user: 1, createdAt: 1, _id: 0 })
+      .populate({
+        path: "user",
+        select: "username firstName email avatar",
+      });
+    // .select("+comment +rating +user +createdAt");
     if (!reviews) {
       return ErrorHandler("No Such Review exist.", 400, req, res);
     }

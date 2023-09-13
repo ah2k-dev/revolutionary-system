@@ -179,7 +179,7 @@ const hostEarnings = async (req, res) => {
 
     return SuccessHandler(
       {
-        message: "Earing Fetched successfully",
+        message: "Earning Fetched successfully",
         earning,
       },
       200,
@@ -199,11 +199,51 @@ const getBookings = async (req, res) => {
       })
       .distinct("_id");
 
-    const hostBookings = await booking.find({
-      accommodation: {
-        $in: hostAccommodations,
-      },
-    });
+    let statusFilter = {};
+
+    if (req.query.status === "active") {
+      statusFilter = { status: "active" };
+    } else if (req.query.status === "previous") {
+      statusFilter = { status: { $in: ["completed", "cancelled"] } };
+    }
+
+    const hostBookings = await booking
+      .find({
+        accommodation: {
+          $in: hostAccommodations,
+        },
+        ...statusFilter,
+      })
+      .populate({
+        path: "user",
+        select: "email username avatar",
+      });
+    // const hostBookings = await booking.aggregate([
+    //   {
+    //     $match: {
+    //       accommodation: { $in: hostAccommodations }, // Match the accommodation criteria
+    //       status: {
+    //         $regex: new RegExp(statusParam, "i"), // Use RegExp to create the regular expression for status
+    //       },
+    //     },
+    //   },
+    // ]);
+    // .sort({ status: 1 });
+    // const hostBookings = await booking.aggregate([
+    //   {
+    //     $match: {
+    //       accommodation: {
+    //         $in: hostAccommodations,
+    //       },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$status",
+    //       bookings: { $push: "$$ROOT" },
+    //     },
+    //   },
+    // ]);
 
     return SuccessHandler(
       {
