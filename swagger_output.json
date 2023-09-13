@@ -1417,7 +1417,7 @@
       }
     },
     "/host/bookings": {
-      "post": {
+      "get": {
         "tags": [
           "host"
         ],

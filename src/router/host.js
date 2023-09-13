@@ -14,7 +14,7 @@ router
   .get(isAuthenticated, authorizedHost, host.getAccomodations);
 router
   .route("/bookings")
-  .post(isAuthenticated, authorizedHost, host.getBookings);
+  .get(isAuthenticated, authorizedHost, host.getBookings);
 router
   .route("/bookingsCount")
   .get(isAuthenticated, authorizedHost, host.getBookingsCount);

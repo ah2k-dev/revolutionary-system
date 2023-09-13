@@ -6963,3 +6963,7 @@
 {"date":"2023-09-13T15:37:02.044Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
 {"date":"2023-09-13T15:38:53.356Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
 {"date":"2023-09-13T15:39:26.103Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
+{"date":"2023-09-13T15:44:08.258Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
+{"date":"2023-09-13T15:44:10.005Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
+{"date":"2023-09-13T15:44:13.185Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings?status=previous"}
+{"date":"2023-09-13T15:44:24.922Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings?status=previous"}
