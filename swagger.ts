@@ -1,8 +1,8 @@
 const swaggerAutogen = require("swagger-autogen")();
 const doc = {
   info: {
-    title: "Cloudfront",
-    description: "Cloudfront api endpoints",
+    title: "Logistics",
+    description: "Logistics api endpoints",
     version: "1.0.0",
   },
   host: "localhost:8001",

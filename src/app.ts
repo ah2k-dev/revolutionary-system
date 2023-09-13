@@ -1,6 +1,7 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+
+import express, { Request, Response,NextFunction } from 'express';
+import cors from "cors";
+import bodyParser from "body-parser";
 const ApiError = require("./utils/ApiError");
 const app = express();
 const router = require("./router");
@@ -21,13 +22,13 @@ app.use("/", router);
 // api doc
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-app.get("/", (req, res) => {
-  res.send("BE-boilerplate v1.1");
+app.get("/", (req:Request, res:Response):void => {
+  res.send("BE-logistic v1.1");
 });
 
 // send back a 404 error for any unknown api request
-app.use((req, res, next) => {
+app.use((req:Request, res:Response, next:NextFunction) => {
   next(new ApiError(404, "Not found"));
 });
 
-module.exports = app;
+export default app;
