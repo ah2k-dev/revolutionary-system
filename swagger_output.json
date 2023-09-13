@@ -823,13 +823,19 @@
         }
       }
     },
-    "/accommodation/reviews": {
+    "/accommodation/reviews/{accommodationId}": {
       "get": {
         "tags": [
           "accommodation"
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "accommodationId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "authorization",
             "in": "header",
@@ -1013,6 +1019,9 @@
                 },
                 "maxServingCapacity": {
                   "example": "any"
+                },
+                "spiceStatus": {
+                  "example": "any"
                 }
               }
             }
@@ -1039,6 +1048,65 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/meal/updateMeal/{mealId}": {
+      "put": {
+        "tags": [
+          "meal"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "mealId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dishName": {
+                  "example": "any"
+                },
+                "desc": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "gram": {
+                  "example": "any"
+                },
+                "calories": {
+                  "example": "any"
+                },
+                "spiceStatus": {
+                  "example": "any"
+                },
+                "maxServingCapacity": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -1091,56 +1159,6 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
-          }
-        ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/meal/updateMeal": {
-      "put": {
-        "tags": [
-          "meal"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "dishName": {
-                  "example": "any"
-                },
-                "desc": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                },
-                "gram": {
-                  "example": "any"
-                },
-                "calories": {
-                  "example": "any"
-                },
-                "maxServingCapacity": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
@@ -1226,7 +1244,7 @@
         }
       }
     },
-    "/meal/orderMeal": {
+    "/meal/order": {
       "post": {
         "tags": [
           "meal"

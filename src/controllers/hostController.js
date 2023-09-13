@@ -179,7 +179,7 @@ const hostEarnings = async (req, res) => {
 
     return SuccessHandler(
       {
-        message: "Earing Fetched successfully",
+        message: "Earning Fetched successfully",
         earning,
       },
       200,

@@ -1647,3 +1647,20 @@
 {"date":"2023-09-13T05:58:57.450Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-13T05:59:22.207Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-13T05:59:42.485Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T12:39:29.736Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:40:22.177Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:43:16.990Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:45:06.520Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:45:45.808Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:49:23.249Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:50:20.468Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:50:56.744Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:52:51.680Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:53:20.996Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:54:22.994Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:56:18.401Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T12:58:07.015Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:02:11.744Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:04:34.329Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:06:00.991Z","level":"error","message":"newBooking is not defined","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:18:19.605Z","level":"error","message":"Cannot read properties of undefined (reading 'totalBookedRoom')","method":"POST","service":"user-service","url":"/new/64fc661abdd6042a77392b85"}

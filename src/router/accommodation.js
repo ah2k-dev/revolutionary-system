@@ -21,5 +21,7 @@ router
   .delete(isAuthenticated, authorizedHost, accommodation.deleteAccomodations);
 
 //✅ ➡ Reviews
-router.route("/reviews").get(isAuthenticated, accommodation.getReviews);
+router
+  .route("/reviews/:accommodationId")
+  .get(isAuthenticated, accommodation.getReviews);
 module.exports = router;

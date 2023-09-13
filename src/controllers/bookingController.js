@@ -53,6 +53,10 @@ const createBooking = async (req, res) => {
     const sDate = moment(startDate).startOf("day").format();
     const eDate = moment(endDate).endOf("day").format();
 
+    // const bookings = await Booking.find({
+    //   accommodation: accommodationId,
+    // });
+    // console.log("bookings", bookings);
     const bookings = await Booking.aggregate([
       {
         $match: {
@@ -70,32 +74,34 @@ const createBooking = async (req, res) => {
         },
       },
     ]);
-    console.log("newBookings block", bookings);
-    const [{ totalBookedRoom, totalDinnerSeatsBook }] = bookings;
-    console.log(bookings);
-    console.log("ROOMS", totalBookedRoom);
-    console.log("SEATS", totalDinnerSeatsBook);
-    const availableDinnerSeats =
-      accommodation.dinnerCapacity - totalDinnerSeatsBook;
-    const availableRooms = accommodation.roomCapacity - totalBookedRoom;
-    console.log("availableDinnerSeats: ", availableDinnerSeats);
-    console.log("availableRooms: ", availableRooms);
-    if (roomsBooked > availableRooms) {
-      return ErrorHandler(
-        `Rooms in the accommodation are currently unavailable. We only have ${availableRooms} available`,
-        400,
-        req,
-        res
-      );
-    }
+    // console.log("newBookings block", bookings);
+    // console.log(bookings);
+    // console.log("ROOMS", totalBookedRoom);
+    // console.log("SEATS", totalDinnerSeatsBook);
+    if (bookings.length > 0) {
+      const [{ totalBookedRoom, totalDinnerSeatsBook }] = bookings;
+      const availableDinnerSeats =
+        accommodation.dinnerCapacity - totalDinnerSeatsBook;
+      const availableRooms = accommodation.roomCapacity - totalBookedRoom;
+      // console.log("availableDinnerSeats: ", availableDinnerSeats);
+      // console.log("availableRooms: ", availableRooms);
+      if (roomsBooked > availableRooms) {
+        return ErrorHandler(
+          `Rooms in the accommodation are currently unavailable. We only have ${availableRooms} available`,
+          400,
+          req,
+          res
+        );
+      }
 
-    if (dinnerSeats > availableDinnerSeats) {
-      return ErrorHandler(
-        `Rooms in the accommodation are currently unavailable. We only have ${availableDinnerSeats} available`,
-        400,
-        req,
-        res
-      );
+      if (dinnerSeats > availableDinnerSeats) {
+        return ErrorHandler(
+          `Rooms in the accommodation are currently unavailable. We only have ${availableDinnerSeats} available`,
+          400,
+          req,
+          res
+        );
+      }
     }
 
     const newBooking = await Booking.create({
@@ -105,8 +111,8 @@ const createBooking = async (req, res) => {
       accommodationTotal,
       roomsBooked,
       dinnerSeats,
-      startDate,
-      endDate,
+      startDate: new Date(sDate),
+      endDate: new Date(eDate),
       subTotal,
     });
 
