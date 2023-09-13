@@ -6910,3 +6910,22 @@
 {"date":"2023-09-13T13:43:44.869Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
 {"date":"2023-09-13T13:44:06.046Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
 {"date":"2023-09-13T13:46:57.074Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/booking/addReview/6501b6ed181c04941c26042b"}
+{"date":"2023-09-13T13:52:40.371Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:55:23.040Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:55:29.326Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:57:25.333Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:57:55.609Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T13:59:43.041Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:00:23.005Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:00:25.996Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:00.257Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:01.803Z","level":"error","message":"Cannot populate path `Users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:16.802Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:17.278Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:18.663Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:01:19.095Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:02:10.518Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:02:12.320Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:02:25.812Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:03:09.498Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:05:35.368Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/accommodation/reviews/64fc661abdd6042a77392b85"}

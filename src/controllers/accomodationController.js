@@ -477,7 +477,13 @@ const getReviews = async (req, res) => {
   try {
     const reviews = await Review.find({
       accommodation: accommodationId,
-    });
+    })
+      .select({ comment: 1, rating: 1, user: 1, createdAt: 1, _id: 0 })
+      .populate({
+        path: "user",
+        select: "username firstName email avatar",
+      });
+    // .select("+comment +rating +user +createdAt");
     if (!reviews) {
       return ErrorHandler("No Such Review exist.", 400, req, res);
     }
