@@ -199,11 +199,53 @@ const getBookings = async (req, res) => {
       })
       .distinct("_id");
 
+    // const statusFilter = req.body.status
+    //   ? {
+    //       status: { $regex: req.body.status, $options: "i" },
+    //     }
+    //   : {};
+    let statusFilter = {};
+
+    if (req.query.status === "active") {
+      statusFilter = { status: "active" };
+    } else if (req.query.status === "previous") {
+      statusFilter = { status: { $in: ["completed", "cancelled"] } };
+    }
+
+    // const statusParam = req.body.status;
     const hostBookings = await booking.find({
       accommodation: {
         $in: hostAccommodations,
       },
+      // statusParam,
+      ...statusFilter,
     });
+    // const hostBookings = await booking.aggregate([
+    //   {
+    //     $match: {
+    //       accommodation: { $in: hostAccommodations }, // Match the accommodation criteria
+    //       status: {
+    //         $regex: new RegExp(statusParam, "i"), // Use RegExp to create the regular expression for status
+    //       },
+    //     },
+    //   },
+    // ]);
+    // .sort({ status: 1 });
+    // const hostBookings = await booking.aggregate([
+    //   {
+    //     $match: {
+    //       accommodation: {
+    //         $in: hostAccommodations,
+    //       },
+    //     },
+    //   },
+    //   {
+    //     $group: {
+    //       _id: "$status",
+    //       bookings: { $push: "$$ROOT" },
+    //     },
+    //   },
+    // ]);
 
     return SuccessHandler(
       {

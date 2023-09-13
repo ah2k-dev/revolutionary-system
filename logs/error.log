@@ -1670,3 +1670,5 @@
 {"date":"2023-09-13T14:01:17.278Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
 {"date":"2023-09-13T14:01:19.095Z","level":"error","message":"Cannot populate path `User` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
 {"date":"2023-09-13T14:02:12.320Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/reviews/64fc661abdd6042a77392b85"}
+{"date":"2023-09-13T14:16:47.819Z","level":"error","message":"_id is not defined","method":"GET","service":"user-service","url":"/bookings"}
+{"date":"2023-09-13T14:41:01.741Z","level":"error","message":"statusParam is not defined","method":"POST","service":"user-service","url":"/bookings"}
