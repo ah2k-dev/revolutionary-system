@@ -6967,3 +6967,23 @@
 {"date":"2023-09-13T15:44:10.005Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/host/bookings?status=previous"}
 {"date":"2023-09-13T15:44:13.185Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings?status=previous"}
 {"date":"2023-09-13T15:44:24.922Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookings?status=previous"}
+{"date":"2023-09-13T15:49:35.842Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T15:58:40.544Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:03:24.694Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:06:13.146Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:06:56.558Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:07:55.397Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:07:56.130Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T16:07:58.213Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:07:58.880Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T16:08:22.444Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:09:45.625Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:11:27.481Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:14:16.385Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:15:26.072Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:19:33.898Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:20:50.436Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:21:39.482Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:21:40.183Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-13T16:22:11.502Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}
+{"date":"2023-09-13T16:24:13.126Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/getAll"}

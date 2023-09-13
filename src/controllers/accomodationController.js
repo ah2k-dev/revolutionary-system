@@ -200,6 +200,13 @@ const getAccomodations = async (req, res) => {
 
     console.log("Bookings", accommodationWithBookings);
     const accommodationsWithoutBookings = await Accommodation.aggregate([
+      // {
+      //   $group: {
+      //     _id: "$_id",
+      //     totalDinnerReserved: { $sum: "$dinnerSeats" },
+      //     totalRoomBooked: { $sum: "$roomsBooked" },
+      //   },
+      // },
       {
         $lookup: {
           from: "bookings",
@@ -215,12 +222,19 @@ const getAccomodations = async (req, res) => {
           // isActive: true,
         },
       },
+
       {
         $project: {
           _id: 0,
-          accommodation: "$$ROOT",
+          accommodationData: "$$ROOT",
           availableDinnerSeats: "$dinnerCapacity",
           availableRooms: "$roomCapacity",
+        },
+      },
+      {
+        $addFields: {
+          totalDinnerReserved: 0,
+          totalRoomBooked: 0,
         },
       },
       {
@@ -228,6 +242,8 @@ const getAccomodations = async (req, res) => {
       },
     ]);
 
+    // const [{ accommodationData }] = accommodationWithBookings;
+    // const [{ accommodationData }] = accommodationsWithoutBookings;
     const availableAccommodations = [
       ...accommodationWithBookings,
       ...accommodationsWithoutBookings,
