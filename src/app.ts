@@ -7,8 +7,7 @@ const app = express();
 const router = require("./router");
 const loggerMiddleware = require("./middleware/loggerMiddleware");
 const swaggerUi = require("swagger-ui-express");
-const swaggerFile = require("../swagger_output.json"); // Generated Swagger file
-
+const swaggerFile = require("../swagger_output.json");
 // Middlewares
 app.use(express.json());
 app.use(cors());
