@@ -3,11 +3,11 @@ import express, { Request, Response,NextFunction } from 'express';
 import cors from "cors";
 import bodyParser from "body-parser";
 import router from "./router";
-const ApiError = require("./utils/ApiError");
 const app = express();
+import swaggerUi from 'swagger-ui-express'
+import swaggerFile from "../swagger_output.json";
+const ApiError = require("./utils/ApiError");
 const loggerMiddleware = require("./middleware/loggerMiddleware");
-const swaggerUi = require("swagger-ui-express");
-const swaggerFile = require("../swagger_output.json");
 // Middlewares
 app.use(express.json());
 app.use(cors());
@@ -26,7 +26,7 @@ app.get("/", (req:Request, res:Response):void => {
 });
 
 // send back a 404 error for any unknown api request
-app.use((req:Request, res:Response, next) => {
+app.use((req:Request, res:Response, next:NextFunction) => {
   next(new ApiError(404, "Not found"));
 });
 

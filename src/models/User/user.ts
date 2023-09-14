@@ -42,8 +42,8 @@ const userSchema = new Schema<UserDocument>({
   },
   role: {
     type: String,
-    enum: ["user", "admin"],
-    default: "user",
+    enum: ["supplier", "dropshipper"],
+    default: "supplier",
   },
   emailVerified: {
     type: Boolean,
