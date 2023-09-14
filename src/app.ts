@@ -26,7 +26,7 @@ app.get("/", (req:Request, res:Response):void => {
 });
 
 // send back a 404 error for any unknown api request
-app.use((req:Request, res:Response, next:NextFunction) => {
+app.use((req:Request, res:Response, next) => {
   next(new ApiError(404, "Not found"));
 });
 

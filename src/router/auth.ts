@@ -2,6 +2,8 @@
 import * as express from "express";
 const router = express.Router();
 const auth = require("../controllers/authController");
+// const auth = require("../controllers/authController");
+// import {} from '../controllers/authController'
 const isAuthenticated = require("../middleware/auth");
 
 //get

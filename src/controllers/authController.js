@@ -1,9 +1,9 @@
-const User = require("../models/User/user");
+import User from "../models/User/user";
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 //register
-const register = async (req, res) => {
+export const register = async (req, res) => {
   // #swagger.tags = ['auth']
   try {
     const { name, email, password } = req.body;
@@ -36,7 +36,7 @@ const register = async (req, res) => {
 };
 
 //request email verification token
-const requestEmailToken = async (req, res) => {
+export const requestEmailToken = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -64,7 +64,7 @@ const requestEmailToken = async (req, res) => {
 };
 
 //verify email token
-const verifyEmail = async (req, res) => {
+export const verifyEmail = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -94,7 +94,7 @@ const verifyEmail = async (req, res) => {
 };
 
 //login
-const login = async (req, res) => {
+export const login = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -118,7 +118,7 @@ const login = async (req, res) => {
 };
 
 //logout
-const logout = async (req, res) => {
+export const logout = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -130,7 +130,7 @@ const logout = async (req, res) => {
 };
 
 //forgot password
-const forgotPassword = async (req, res) => {
+export const forgotPassword = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -154,7 +154,7 @@ const forgotPassword = async (req, res) => {
 };
 
 //reset password
-const resetPassword = async (req, res) => {
+export const resetPassword = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -180,7 +180,7 @@ const resetPassword = async (req, res) => {
 };
 
 //update password
-const updatePassword = async (req, res) => {
+export const updatePassword = async (req, res) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -219,13 +219,13 @@ const updatePassword = async (req, res) => {
   }
 };
 
-module.exports = {
-  register,
-  requestEmailToken,
-  verifyEmail,
-  login,
-  logout,
-  forgotPassword,
-  resetPassword,
-  updatePassword,
-};
+// module.exports = {
+//   register,
+//   requestEmailToken,
+//   verifyEmail,
+//   login,
+//   logout,
+//   forgotPassword,
+//   resetPassword,
+//   updatePassword,
+// };

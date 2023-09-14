@@ -1,6 +1,6 @@
-const jwt = require("jsonwebtoken");
-const User = require("../models/User/user");
-const dotenv = require("dotenv");
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+import User from "../models/User/user";
 
 dotenv.config({ path: ".././src/config/config.env" });
 
@@ -18,4 +18,4 @@ const isAuthenticated = async (req, res, next) => {
   }
 };
 
-module.exports = isAuthenticated;
+export default isAuthenticated;
