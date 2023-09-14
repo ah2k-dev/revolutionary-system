@@ -1,12 +1,21 @@
-import User from "../models/User/user";
-const sendMail = require("../utils/sendMail");
-const SuccessHandler = require("../utils/SuccessHandler");
-const ErrorHandler = require("../utils/ErrorHandler");
+import  { Request, Response,NextFunction } from 'express';
+import User,{UserDocument} from "../models/User/user";
+import SuccessHandler from "../utils/SuccessHandler"
+import sendMail from '../utils/sendMail'
+import ErrorHandler from '../utils/ErrorHandler'
+import {RegisterUserRequest,VerifyEmailRequest} from '../types/controller/authController'
+declare global {
+  namespace Express {
+    interface Request {
+      user?: any; // Define the 'user' property on the 'Request' object
+    }
+  }
+}
 //register
-export const register = async (req, res) => {
+export const register = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, phone, role }:RegisterUserRequest = req.body;
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -19,7 +28,7 @@ export const register = async (req, res) => {
         res
       );
     }
-    const user = await User.findOne({ email });
+    const user:UserDocument | null = await User.findOne({ email });
     if (user) {
       return ErrorHandler("User already exists", 400, req, res);
     }
@@ -27,6 +36,8 @@ export const register = async (req, res) => {
       name,
       email,
       password,
+      phone,
+      role,
     });
     newUser.save();
     return SuccessHandler("User created successfully", 200, res);
@@ -36,22 +47,22 @@ export const register = async (req, res) => {
 };
 
 //request email verification token
-export const requestEmailToken = async (req, res) => {
+export const requestEmailToken = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
-    const { email } = req.body;
-    const user = await User.findOne({ email });
+    const { email }: { email: string } = req.body;
+    const user:UserDocument | null = await User.findOne({ email });
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
-    const emailVerificationToken = Math.floor(100000 + Math.random() * 900000);
-    const emailVerificationTokenExpires = new Date(Date.now() + 10 * 60 * 1000);
+    const emailVerificationToken :number = Math.floor(100000 + Math.random() * 900000);
+    const emailVerificationTokenExpires:Date = new Date(Date.now() + 10 * 60 * 1000);
     user.emailVerificationToken = emailVerificationToken;
     user.emailVerificationTokenExpires = emailVerificationTokenExpires;
     await user.save();
-    const message = `Your email verification token is ${emailVerificationToken} and it expires in 10 minutes`;
-    const subject = `Email verification token`;
+    const message:string = `Your email verification token is ${emailVerificationToken} and it expires in 10 minutes`;
+    const subject: string = `Email verification token`;
     await sendMail(email, subject, message);
     return SuccessHandler(
       `Email verification token sent to ${email}`,
@@ -64,28 +75,25 @@ export const requestEmailToken = async (req, res) => {
 };
 
 //verify email token
-export const verifyEmail = async (req, res) => {
+export const verifyEmail = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
 
   try {
-    const { email, emailVerificationToken } = req.body;
-    const user = await User.findOne({ email });
+    const { email, emailVerificationToken }:VerifyEmailRequest = req.body;
+    const user:UserDocument | null = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "User does not exist",
-      });
+      return ErrorHandler("User does not exist", 400, req, res);
     }
     if (
       user.emailVerificationToken !== emailVerificationToken ||
-      user.emailVerificationTokenExpires < Date.now()
+      (user.emailVerificationTokenExpires && user.emailVerificationTokenExpires < Date.now())
     ) {
       return ErrorHandler("Invalid token", 400, req, res);
     }
     user.emailVerified = true;
     user.emailVerificationToken = null;
     user.emailVerificationTokenExpires = null;
-    jwtToken = user.getJWTToken();
+    let jwtToken:string = user.getJWTToken();
     await user.save();
     return SuccessHandler("Email verified successfully", 200, res);
   } catch (error) {
@@ -94,14 +102,14 @@ export const verifyEmail = async (req, res) => {
 };
 
 //login
-export const login = async (req, res) => {
+export const login = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email }).select("+password");
+    const user:UserDocument | null = await User.findOne({ email }).select("+password");
     if (!user) {
-      return ErrorHandler("User does not exist", req, 400, res);
+      return ErrorHandler("User does not exist", 400, req, res);
     }
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
@@ -110,7 +118,7 @@ export const login = async (req, res) => {
     if (!user.emailVerified) {
       return ErrorHandler("Email not verified", 400, req, res);
     }
-    jwtToken = user.getJWTToken();
+    let jwtToken: string = user.getJWTToken();
     return SuccessHandler("Logged in successfully", 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
@@ -118,7 +126,7 @@ export const login = async (req, res) => {
 };
 
 //logout
-export const logout = async (req, res) => {
+export const logout = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -130,12 +138,12 @@ export const logout = async (req, res) => {
 };
 
 //forgot password
-export const forgotPassword = async (req, res) => {
+export const forgotPassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
     const { email } = req.body;
-    const user = await User.findOne({ email });
+    const user:UserDocument | null = await User.findOne({ email });
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
@@ -154,12 +162,12 @@ export const forgotPassword = async (req, res) => {
 };
 
 //reset password
-export const resetPassword = async (req, res) => {
+export const resetPassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
     const { email, passwordResetToken, password } = req.body;
-    const user = await User.findOne({ email }).select("+password");
+    const user:UserDocument | null = await User.findOne({ email }).select("+password");
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
@@ -180,9 +188,8 @@ export const resetPassword = async (req, res) => {
 };
 
 //update password
-export const updatePassword = async (req, res) => {
+export const updatePassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
-
   try {
     const { currentPassword, newPassword } = req.body;
     if (
@@ -197,13 +204,14 @@ export const updatePassword = async (req, res) => {
         res
       );
     }
-    const user = await User.findById(req.user.id).select("+password");
+    const user:UserDocument | null = await User.findById(req.user._id).select("+password");
     const isMatch = await user.comparePassword(currentPassword);
     if (!isMatch) {
       return ErrorHandler("Invalid credentials", 400, req, res);
     }
     const samePasswords = await user.comparePassword(newPassword);
     if (samePasswords) {
+
       return ErrorHandler(
         "New password cannot be same as old password",
         400,
@@ -219,13 +227,3 @@ export const updatePassword = async (req, res) => {
   }
 };
 
-// module.exports = {
-//   register,
-//   requestEmailToken,
-//   verifyEmail,
-//   login,
-//   logout,
-//   forgotPassword,
-//   resetPassword,
-//   updatePassword,
-// };

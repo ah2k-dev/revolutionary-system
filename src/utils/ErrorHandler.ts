@@ -1,5 +1,7 @@
+import {Request, Response} from "express"
 const logger = require("../functions/logger");
-const ErrorHandler = (message, statusCode, req, res) => {
+
+const ErrorHandler = (message:string, statusCode:number, req:Request, res:Response) => {
   logger.error({
     method: req.method,
     url: req.url,
@@ -12,4 +14,4 @@ const ErrorHandler = (message, statusCode, req, res) => {
   });
 };
 
-module.exports = ErrorHandler;
+export default ErrorHandler

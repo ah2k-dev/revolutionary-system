@@ -10,6 +10,7 @@ export interface UserDocument extends Document {
   email: string;
   password: string;
   role: string;
+  phone: string;
   emailVerified: boolean;
   emailVerificationToken: number | null;
   emailVerificationTokenExpires: Date | null;

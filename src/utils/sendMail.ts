@@ -1,10 +1,11 @@
-const nodemailer = require("nodemailer");
-const dotenv = require("dotenv");
-const sendgridTransport = require("nodemailer-sendgrid-transport");
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 dotenv.config({ path: "./src/config/config.env" });
+// import sendgridTransport from "nodemailer-sendgrid-transport";
+const sendgridTransport = require("nodemailer-sendgrid-transport")
 const { createTransport } = nodemailer;
 
-const sendMail = async (email, subject, text) => {
+const sendMail = async (email:string, subject:string, text:string): Promise<void> => {
   const transport = createTransport(
     sendgridTransport({
       auth: {
@@ -20,4 +21,4 @@ const sendMail = async (email, subject, text) => {
   });
 };
 
-module.exports = sendMail;
+export default sendMail;
