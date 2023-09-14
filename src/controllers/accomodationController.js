@@ -356,6 +356,7 @@ const getAccomodations = async (req, res) => {
     return SuccessHandler(
       {
         message: "Accommodations fetched successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads`,
         availableAccommodations,
       },
       200,
@@ -478,7 +479,7 @@ const updateAccommodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { success: true, message: "Updated successfully", updatedAccomodation },
+      { message: "Updated successfully", updatedAccomodation },
       200,
       res
     );
@@ -504,7 +505,11 @@ const getReviews = async (req, res) => {
       return ErrorHandler("No Such Review exist.", 400, req, res);
     }
     return SuccessHandler(
-      { message: "Reviews Fetched Successfully", reviews },
+      {
+        message: "Reviews Fetched Successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads`,
+        reviews,
+      },
       200,
       res
     );

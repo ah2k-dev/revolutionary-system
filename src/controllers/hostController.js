@@ -24,6 +24,7 @@ const getAccomodations = async (req, res) => {
     return SuccessHandler(
       {
         message: "Accommodation fetched successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
         accommodations,
       },
       200,
@@ -248,6 +249,7 @@ const getBookings = async (req, res) => {
     return SuccessHandler(
       {
         message: "Bookings fetched successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
         hostBookings,
       },
       200,

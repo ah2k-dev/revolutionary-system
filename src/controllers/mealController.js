@@ -239,7 +239,12 @@ const getMeals = async (req, res) => {
     const mealsCount = meals.length;
 
     return SuccessHandler(
-      { message: "Meal Added successfully", mealsCount, meals },
+      {
+        message: "Meal Added successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        mealsCount,
+        meals,
+      },
       200,
       res
     );
@@ -261,11 +266,7 @@ const deleteMeals = async (req, res) => {
       return ErrorHandler("Meal does not exist", 400, req, res);
     }
 
-    return SuccessHandler(
-      { success: true, message: "Meal Deleted successfully" },
-      200,
-      res
-    );
+    return SuccessHandler({ message: "Meal Deleted successfully" }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -286,7 +287,12 @@ const getMealsByCookId = async (req, res) => {
     }
     const totalMeals = meals.length;
     return SuccessHandler(
-      { message: "Fetched Cook Meals successfully", totalMeals, meals },
+      {
+        message: "Fetched Cook Meals successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        totalMeals,
+        meals,
+      },
       200,
       res
     );

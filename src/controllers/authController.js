@@ -244,8 +244,8 @@ const login = async (req, res) => {
 
     return SuccessHandler(
       {
-        success: true,
         message: "Logged in successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
         jwtToken,
         user,
       },

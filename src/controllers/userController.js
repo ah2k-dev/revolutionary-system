@@ -17,7 +17,15 @@ const getUserProfile = async (req, res) => {
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);
     }
-    return SuccessHandler({ message: "Profile Updated", user }, 200, res);
+    return SuccessHandler(
+      {
+        message: "Profile Updated",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        user,
+      },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -225,7 +233,11 @@ const getSavedAccomodations = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Fetched Saved Accomodation", sAccomodations },
+      {
+        message: "Fetched Saved Accomodation",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        sAccomodations,
+      },
       200,
       res
     );
@@ -270,7 +282,7 @@ const getCooks = async (req, res) => {
       ...locationFilter,
     });
     // console.log(getCook);
-    let allCookId = getCook.map((id) => id._id);
+    // let allCookId = getCook.map((id) => id._id);
     // console.log(allCookId);
     // const meals = await Meal.find({ cook: { $in: allCookId } }).populate({
     //   path: "cook",
@@ -292,17 +304,11 @@ const getCooks = async (req, res) => {
     //   })
     // }
 
-    const cookCount = getCook.length;
-
     if (!getCook) {
       return ErrorHandler("No Cook exist", 400, req, res);
     }
 
-    return SuccessHandler(
-      { message: "Fetched Cooks", cookCount, getCook },
-      200,
-      res
-    );
+    return SuccessHandler({ message: "Fetched Cooks", getCook }, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
@@ -336,9 +342,6 @@ const getCouponsForCook = async (req, res) => {
 const savedOrUnsavedMeal = async (req, res) => {
   // #swagger.tags = ['user']
   try {
-    // console.log(req.user.savedMeal, req.user._id);
-    let exUser = req.user;
-    // console.log(exUser.savedMeal);
     let exSavedMeals = req.user.savedMeal || [];
     if (exSavedMeals.includes(req.params.id)) {
       exSavedMeals = exSavedMeals.filter((val) => val != req.params.id);
@@ -366,7 +369,11 @@ const getSavedMeals = async (req, res) => {
     }
 
     return SuccessHandler(
-      { message: "Fetched Saved Meal", savedMeals },
+      {
+        message: "Fetched Saved Meal",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        savedMeals,
+      },
       200,
       res
     );
@@ -394,11 +401,7 @@ const savedOrUnsavedCook = async (req, res) => {
     } else {
       user.savedCooks.push(cook.id);
       await user.save();
-      return SuccessHandler(
-        { message: "Cook Added to Favourite Successfully" },
-        200,
-        res
-      );
+      return SuccessHandler({ message: "Cook Added to Favourites" }, 200, res);
     }
   } catch (error) {
     ErrorHandler(error.message, 500, req, res);
@@ -415,7 +418,11 @@ const getSavedCook = async (req, res) => {
       return ErrorHandler("Favourite Cook does not exist", 404, req, res);
     }
     SuccessHandler(
-      { message: "Favourite Cook fetch Successfully", favouriteCooks },
+      {
+        message: "Favourite Cook fetch Successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        favouriteCooks,
+      },
       200,
       res
     );
@@ -434,7 +441,11 @@ const getUserBookings = async (req, res) => {
       return ErrorHandler("Booking does not exist", 404, req, res);
     }
     SuccessHandler(
-      { message: "Booking fetch Successfully", bookings },
+      {
+        message: "Booking fetch Successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
+        bookings,
+      },
       200,
       res
     );
