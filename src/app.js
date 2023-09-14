@@ -28,7 +28,7 @@ app.use(
   })
 ), // 1 MB
   app.use(
-    "/rev-be/upsloads",
+    "/rev-be/uploads",
     // "/uploads",
     express.static(path.join(__dirname, "../uploads"))
   );
