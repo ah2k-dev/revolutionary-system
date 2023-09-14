@@ -7,7 +7,7 @@ import {RegisterUserRequest,VerifyEmailRequest} from '../types/controller/authCo
 declare global {
   namespace Express {
     interface Request {
-      user?: any; // Define the 'user' property on the 'Request' object
+      user?: any; 
     }
   }
 }
@@ -86,7 +86,7 @@ export const verifyEmail = async (req:Request, res:Response)=> {
     }
     if (
       user.emailVerificationToken !== emailVerificationToken ||
-      (user.emailVerificationTokenExpires && user.emailVerificationTokenExpires < Date.now())
+      (user.emailVerificationTokenExpires && user.emailVerificationTokenExpires < new Date())
     ) {
       return ErrorHandler("Invalid token", 400, req, res);
     }
@@ -173,7 +173,7 @@ export const resetPassword = async (req:Request, res:Response) => {
     }
     if (
       user.passwordResetToken !== passwordResetToken ||
-      user.passwordResetTokenExpires < Date.now()
+      (user.passwordResetTokenExpires) < new Date()
     ) {
       return ErrorHandler("Invalid token", 400, req, res);
     }

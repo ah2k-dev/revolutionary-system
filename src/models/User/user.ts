@@ -15,7 +15,7 @@ export interface UserDocument extends Document {
   emailVerificationToken: number | null;
   emailVerificationTokenExpires: Date | null;
   passwordResetToken: number | null;
-  passwordResetTokenExpires: Date | null;
+  passwordResetTokenExpires: Date;
   lastLogin: Date | null;
   isActive: boolean;
   getJWTToken(): string;
