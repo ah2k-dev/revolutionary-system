@@ -2,9 +2,9 @@
 import express, { Request, Response,NextFunction } from 'express';
 import cors from "cors";
 import bodyParser from "body-parser";
+import router from "./router";
 const ApiError = require("./utils/ApiError");
 const app = express();
-const router = require("./router");
 const loggerMiddleware = require("./middleware/loggerMiddleware");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json");

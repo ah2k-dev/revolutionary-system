@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+// import mongoose from "mongoose";
+// import { Schema } from "mongoose";
 const Schema = mongoose.Schema;
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
