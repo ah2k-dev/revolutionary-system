@@ -1,6 +1,5 @@
-
-import * as express from "express";
-const router = express.Router();
+import { Router } from "express";
+const router: Router = Router();
 import isAuthenticated from "../middleware/auth";
 import {register, login, requestEmailToken, verifyEmail, forgotPassword,resetPassword, updatePassword, logout} from '../controllers/authController'
 

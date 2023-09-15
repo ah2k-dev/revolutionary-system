@@ -1,5 +1,6 @@
-import express from "express";
+import express,{ Application, Express } from 'express';
 import dotenv from "dotenv";
+import app from './app';
 import connectDB from "./config/db";
 import http from "http";
 import {addUser, removeUser} from './functions/socketFunctions'
@@ -8,13 +9,11 @@ dotenv.config({ path: "./src/config/config.env" }); // Load env vars
 
 // Global vars
 let io: Server;
-const onlineUsers: string[] = [];
 
-// Create Express app
-const app = express();
 
 // Server setup
-const PORT: number = parseInt(process.env.PORT || "8001");
+const PORT: string = process.env.PORT
+console.log("TYPESCRIPT");
 
 const server = http.createServer(app);
 server.listen(PORT, () => {

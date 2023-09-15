@@ -41,6 +41,10 @@ const userSchema = new Schema<UserDocument>({
     type: String,
     required: true,
   },
+  phone: {
+    type: String,
+    required: true,
+  },
   role: {
     type: String,
     enum: ["supplier", "dropshipper"],

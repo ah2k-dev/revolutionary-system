@@ -14,6 +14,8 @@ declare global {
 //register
 export const register = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
+  console.log("Hi");
+  
   try {
     const { name, email, password, phone, role } = req.body;
     if (

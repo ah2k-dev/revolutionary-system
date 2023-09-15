@@ -1,5 +1,5 @@
 
-import express, { Request, Response,NextFunction } from 'express';
+import express,{ Request, Response,NextFunction, Application, Express } from 'express';
 import cors from "cors";
 import bodyParser from "body-parser";
 import router from "./router";
@@ -7,9 +7,8 @@ import swaggerUi from 'swagger-ui-express'
 import swaggerFile from "../swagger_output.json";
 import ApiError from './utils/ApiError'
 import loggerMiddleware from './middleware/loggerMiddleware'
-const app = express();
+const app:Express = express();
 
-// const loggerMiddleware = require("./middleware/loggerMiddleware");
 // Middlewares
 app.use(express.json());
 app.use(cors());
@@ -25,7 +24,14 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get("/", (req:Request, res:Response) => {
   res.send("BE-logistic v1.1");
+  console.log("Logistics");
 });
+
+
+// app.post("/api", (req:Request, res:Response) => {
+//   console.log(req.body);
+//   return res.sendStatus(200);
+// });
 
 // send back a 404 error for any unknown api request
 app.use((req:Request, res:Response, next:NextFunction) => {
