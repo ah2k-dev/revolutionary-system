@@ -1,6 +1,6 @@
 import  { Request, Response } from 'express';
 import User from "../models/User/user";
-import { UserDocument } from '../types/models/user.types';
+import { UserDocument } from '../types/models/User/user.types';
 import SuccessHandler from "../utils/SuccessHandler"
 import sendMail from '../utils/sendMail'
 import ErrorHandler from '../utils/ErrorHandler'

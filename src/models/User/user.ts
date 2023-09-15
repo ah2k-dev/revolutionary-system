@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import validator from "validator";
 dotenv.config({ path: ".././src/config/config.env" });
-import {UserDocument} from '../../types/models/user.types'
+import {UserDocument} from '../../types/models/User/user.types'
 
 
 const userSchema = new Schema<UserDocument>({
