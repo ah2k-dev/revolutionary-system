@@ -3,7 +3,7 @@ import User,{UserDocument} from "../models/User/user";
 import SuccessHandler from "../utils/SuccessHandler"
 import sendMail from '../utils/sendMail'
 import ErrorHandler from '../utils/ErrorHandler'
-import {RegisterUserRequest,VerifyEmailRequest} from '../types/controller/authController'
+import {RegisterUserRequest,VerifyEmailRequest,UpdatePasswordRequest} from '../types/controller/authController'
 declare global {
   namespace Express {
     interface Request {
@@ -12,12 +12,12 @@ declare global {
   }
 }
 //register
-export const register = async (req:Request, res:Response)=> {
+ const register = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
   console.log("Hi");
   
   try {
-    const { name, email, password, phone, role } = req.body;
+    const { name, email, password, phone, role }:RegisterUserRequest = req.body;
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -49,7 +49,7 @@ export const register = async (req:Request, res:Response)=> {
 };
 
 //request email verification token
-export const requestEmailToken = async (req:Request, res:Response) => {
+ const requestEmailToken = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -77,7 +77,7 @@ export const requestEmailToken = async (req:Request, res:Response) => {
 };
 
 //verify email token
-export const verifyEmail = async (req:Request, res:Response)=> {
+ const verifyEmail = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
 
   try {
@@ -104,7 +104,7 @@ export const verifyEmail = async (req:Request, res:Response)=> {
 };
 
 //login
-export const login = async (req:Request, res:Response) => {
+ const login = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -121,14 +121,22 @@ export const login = async (req:Request, res:Response) => {
       return ErrorHandler("Email not verified", 400, req, res);
     }
     let jwtToken: string = user.getJWTToken();
-    return SuccessHandler("Logged in successfully", 200, res);
+    return SuccessHandler(
+      {
+        message: "Logged in successfully",
+        jwtToken,
+        user,
+      },
+      200,
+      res
+    );
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
 
 //logout
-export const logout = async (req:Request, res:Response) => {
+ const logout = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -140,7 +148,7 @@ export const logout = async (req:Request, res:Response) => {
 };
 
 //forgot password
-export const forgotPassword = async (req:Request, res:Response) => {
+ const forgotPassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -164,7 +172,7 @@ export const forgotPassword = async (req:Request, res:Response) => {
 };
 
 //reset password
-export const resetPassword = async (req:Request, res:Response) => {
+ const resetPassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
 
   try {
@@ -190,10 +198,10 @@ export const resetPassword = async (req:Request, res:Response) => {
 };
 
 //update password
-export const updatePassword = async (req:Request, res:Response) => {
+const updatePassword = async (req:Request, res:Response) => {
   // #swagger.tags = ['auth']
   try {
-    const { currentPassword, newPassword } = req.body;
+    const { currentPassword, newPassword }: UpdatePasswordRequest = req.body;
     if (
       !newPassword.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -229,3 +237,13 @@ export const updatePassword = async (req:Request, res:Response) => {
   }
 };
 
+export {
+register,
+login,
+logout,
+forgotPassword,
+updatePassword,
+resetPassword,
+verifyEmail,
+requestEmailToken
+}

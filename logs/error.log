@@ -1,0 +1,5 @@
+{"date":"2023-09-15T17:18:45.382Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-15T17:20:41.444Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-15T17:21:40.901Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-15T17:47:13.990Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-15T17:48:49.752Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}

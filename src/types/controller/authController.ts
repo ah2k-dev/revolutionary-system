@@ -6,6 +6,12 @@ export interface RegisterUserRequest{
     role: string;
 }
 
+export interface UpdatePasswordRequest{
+    currentPassword: string;
+    newPassword: string;
+
+}
+
 export interface VerifyEmailRequest{
     email: string;
     emailVerificationToken: number;

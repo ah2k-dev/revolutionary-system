@@ -112,3 +112,28 @@
 {"date":"2023-09-15T17:18:33.510Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
 {"date":"2023-09-15T17:18:45.145Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
 {"date":"2023-09-15T17:18:45.382Z","level":"error","message":"User already exists","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-15T17:20:40.920Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:20:41.444Z","level":"error","message":"Email not verified","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-15T17:21:39.396Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-15T17:21:40.901Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-15T17:22:21.327Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-15T17:22:42.685Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:22:45.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:25:58.696Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:46:00.816Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:46:22.223Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:46:24.284Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:46:28.188Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:46:32.048Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:46:33.326Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:46:34.872Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:47:04.013Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:47:13.550Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:47:13.990Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-15T17:47:19.192Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:48:35.848Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:48:38.011Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:48:49.341Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-15T17:48:49.752Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-15T17:49:12.360Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
+{"date":"2023-09-15T17:49:20.112Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
