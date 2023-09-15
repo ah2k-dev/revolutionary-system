@@ -2,8 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db";
 import http from "http";
+import {addUser, removeUser} from './functions/socketFunctions'
 import { Server, Socket } from "socket.io";
-
 dotenv.config({ path: "./src/config/config.env" }); // Load env vars
 
 // Global vars
@@ -47,15 +47,3 @@ io.on("connection", (socket: Socket) => {
   });
 });
 
-function addUser(userId: string, socketId: string) {
-  onlineUsers.push(userId);
-  // Add your logic here for handling user addition
-}
-
-function removeUser(socketId: string) {
-  const index = onlineUsers.findIndex((userId) => userId === socketId);
-  if (index !== -1) {
-    onlineUsers.splice(index, 1);
-    // Add your logic here for handling user removal
-  }
-}

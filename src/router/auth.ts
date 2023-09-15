@@ -1,21 +1,19 @@
 
 import * as express from "express";
 const router = express.Router();
-const auth = require("../controllers/authController");
-// const auth = require("../controllers/authController");
-// import {} from '../controllers/authController'
-const isAuthenticated = require("../middleware/auth");
+import isAuthenticated from "../middleware/auth";
+import {register, login, requestEmailToken, verifyEmail, forgotPassword,resetPassword, updatePassword, logout} from '../controllers/authController'
 
 //get
-router.route("/logout").get(auth.logout);
+router.route("/logout").get(logout);
 //post
-router.route("/register").post(auth.register);
-router.route("/login").post(auth.login);
-router.route("/requestEmailToken").post(auth.requestEmailToken);
-router.route("/verifyEmail").post(auth.verifyEmail);
-router.route("/forgotPassword").post(auth.forgotPassword);
+router.route("/register").post(register);
+router.route("/login").post(login);
+router.route("/requestEmailToken").post(requestEmailToken);
+router.route("/verifyEmail").post(verifyEmail);
+router.route("/forgotPassword").post(forgotPassword);
 //put
-router.route("/resetPassword").put(auth.resetPassword);
-router.route("/updatePassword").put(isAuthenticated, auth.updatePassword);
+router.route("/resetPassword").put(resetPassword);
+router.route("/updatePassword").put(isAuthenticated, updatePassword);
 
 export default router;

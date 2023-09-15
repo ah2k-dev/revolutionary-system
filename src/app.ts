@@ -3,11 +3,13 @@ import express, { Request, Response,NextFunction } from 'express';
 import cors from "cors";
 import bodyParser from "body-parser";
 import router from "./router";
-const app = express();
 import swaggerUi from 'swagger-ui-express'
 import swaggerFile from "../swagger_output.json";
-const ApiError = require("./utils/ApiError");
-const loggerMiddleware = require("./middleware/loggerMiddleware");
+import ApiError from './utils/ApiError'
+import loggerMiddleware from './middleware/loggerMiddleware'
+const app = express();
+
+// const loggerMiddleware = require("./middleware/loggerMiddleware");
 // Middlewares
 app.use(express.json());
 app.use(cors());
@@ -21,7 +23,7 @@ app.use("/", router);
 // api doc
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-app.get("/", (req:Request, res:Response):void => {
+app.get("/", (req:Request, res:Response) => {
   res.send("BE-logistic v1.1");
 });
 
