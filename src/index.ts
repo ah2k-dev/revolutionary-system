@@ -13,7 +13,6 @@ let io: Server;
 
 // Server setup
 const PORT: string = process.env.PORT
-console.log("TYPESCRIPT");
 
 const server = http.createServer(app);
 server.listen(PORT, () => {

@@ -1,20 +1,20 @@
-import  { Request, Response,NextFunction } from 'express';
-import User,{UserDocument} from "../models/User/user";
+import  { Request, Response } from 'express';
+import User from "../models/User/user";
+import { UserDocument } from '../types/models/user.types';
 import SuccessHandler from "../utils/SuccessHandler"
 import sendMail from '../utils/sendMail'
 import ErrorHandler from '../utils/ErrorHandler'
-import {RegisterUserRequest,VerifyEmailRequest,UpdatePasswordRequest} from '../types/controller/authController'
+import {RegisterUserRequest,VerifyEmailRequest,UpdatePasswordRequest,ResetPasswordRequest} from '../types/controller/authController.types'
 declare global {
   namespace Express {
     interface Request {
-      user?: any; 
+      user?: UserDocument; 
     }
   }
 }
 //register
  const register = async (req:Request, res:Response)=> {
   // #swagger.tags = ['auth']
-  console.log("Hi");
   
   try {
     const { name, email, password, phone, role }:RegisterUserRequest = req.body;
@@ -176,7 +176,7 @@ declare global {
   // #swagger.tags = ['auth']
 
   try {
-    const { email, passwordResetToken, password } = req.body;
+    const { email, passwordResetToken, password }:ResetPasswordRequest = req.body;
     const user:UserDocument | null = await User.findOne({ email }).select("+password");
     if (!user) {
       return ErrorHandler("User does not exist", 400, req, res);

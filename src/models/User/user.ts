@@ -1,26 +1,11 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import validator from "validator";
 dotenv.config({ path: ".././src/config/config.env" });
+import {UserDocument} from '../../types/models/user.types'
 
-export interface UserDocument extends Document {
-  name: string;
-  email: string;
-  password: string;
-  role: string;
-  phone: string;
-  emailVerified: boolean;
-  emailVerificationToken: number | null;
-  emailVerificationTokenExpires: Date | null;
-  passwordResetToken: number | null;
-  passwordResetTokenExpires: Date;
-  lastLogin: Date | null;
-  isActive: boolean;
-  getJWTToken(): string;
-  comparePassword(enteredPassword: string): Promise<boolean>;
-}
 
 const userSchema = new Schema<UserDocument>({
   name: {
@@ -85,7 +70,7 @@ userSchema.pre("save", async function (this: UserDocument, next) {
 
 // JWT Token
 userSchema.methods.getJWTToken = function (this: UserDocument) {
-  return jwt.sign({ _id: this._id }, process.env.JWT_SECRET || "");
+  return jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
 };
 
 // Compare password

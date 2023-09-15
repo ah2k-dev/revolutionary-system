@@ -1,5 +1,5 @@
 
-import express,{ Request, Response,NextFunction, Application, Express } from 'express';
+import express,{ Request, Response,NextFunction, Express } from 'express';
 import cors from "cors";
 import bodyParser from "body-parser";
 import router from "./router";
@@ -24,14 +24,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get("/", (req:Request, res:Response) => {
   res.send("BE-logistic v1.1");
-  console.log("Logistics");
 });
-
-
-// app.post("/api", (req:Request, res:Response) => {
-//   console.log(req.body);
-//   return res.sendStatus(200);
-// });
 
 // send back a 404 error for any unknown api request
 app.use((req:Request, res:Response, next:NextFunction) => {

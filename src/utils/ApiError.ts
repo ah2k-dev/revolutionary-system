@@ -1,4 +1,3 @@
-// import {} from "express";
 class ApiError extends Error {
   public statusCode: number;
   public isOperational: boolean;

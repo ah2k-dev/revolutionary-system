@@ -5,7 +5,7 @@ dotenv.config({ path: "./src/config/config.env" });
 const sendgridTransport = require("nodemailer-sendgrid-transport")
 const { createTransport } = nodemailer;
 
-const sendMail = async (email:string, subject:string, text:string): Promise<void> => {
+const sendMail = async (email:string, subject:string, text:string) => {
   const transport = createTransport(
     sendgridTransport({
       auth: {
