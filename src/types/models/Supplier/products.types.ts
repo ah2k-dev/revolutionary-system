@@ -15,4 +15,5 @@ export interface ProductDocument extends Document {
   size: number[];
   sku: string;
   ratings: number;
+  isActive: boolean
   }

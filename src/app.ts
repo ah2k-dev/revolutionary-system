@@ -16,6 +16,19 @@ app.options("*", cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(loggerMiddleware);
+console.log("TYPESCRIPT");
+import slugify from 'slugify';
+const title = "SAMSUNG Galaxy Buds 2 Pro True Wireless Bluetooth Earbuds w/ Noise Cancelling, Hi-Fi Sound, 360 Audio, Comfort Ear Fit, HD Voice, Conversation Mode, IPX7 Water Resistant, US Version, Graphite";
+
+const slug = slugify(title, {
+  replacement: '-',      
+  lower: true,           
+  strict: false,       
+  trim: true,            
+  remove: /[^a-zA-Z0-9\s]/g,
+});
+console.log(slug);
+
 
 // router index
 app.use("/", router);
