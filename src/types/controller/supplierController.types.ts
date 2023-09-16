@@ -1,4 +1,4 @@
-export interface SupplierProfileCreateRequest{
+export interface SupplierProfileRequest{
     profilePic:string
     dob: Date;
     country: string;

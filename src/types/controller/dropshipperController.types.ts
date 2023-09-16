@@ -1,4 +1,4 @@
-export interface DSProfileCreateRequest {
+export interface DSProfileRequest {
     profilePic:string
     dob: Date;
     country: string;
