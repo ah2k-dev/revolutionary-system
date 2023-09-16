@@ -8,7 +8,11 @@ import {UserDocument} from '../../types/models/User/user.types'
 
 
 const userSchema = new Schema<UserDocument>({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },

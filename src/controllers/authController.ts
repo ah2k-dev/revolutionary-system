@@ -17,7 +17,7 @@ declare global {
   // #swagger.tags = ['auth']
   
   try {
-    const { name, email, password, phone, role }:RegisterUserRequest = req.body;
+    const { firstName, lastName,email, password, phone, role }:RegisterUserRequest = req.body;
     if (
       !password.match(
         /(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$/
@@ -35,7 +35,8 @@ declare global {
       return ErrorHandler("User already exists", 400, req, res);
     }
     const newUser = await User.create({
-      name,
+      firstName,
+      lastName,
       email,
       password,
       phone,

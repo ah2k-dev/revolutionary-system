@@ -6,14 +6,7 @@ import {SupplierProfileDocument} from '../../types/models/User/supplierProfile.t
 
 const supplierProfileSchema = new Schema<SupplierProfileDocument>({
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
+
     dob: {
       type: Date,
       required: true,
