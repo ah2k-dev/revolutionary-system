@@ -1,12 +1,16 @@
 import mongoose, { Schema } from "mongoose";
 import dotenv from "dotenv";
 dotenv.config({ path: ".././src/config/config.env" });
-import {SupplierProfileDocument} from '../../types/models/User/supplierProfile.types'
+import {ProfileDocument} from '../../types/models/User/profile.types'
 
 
-const supplierProfileSchema = new Schema<SupplierProfileDocument>({
+const profileSchema = new Schema<ProfileDocument>({
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 
+    profilePic: {
+      type: String,
+      required: true,
+    },
     dob: {
       type: Date,
       required: true,
@@ -31,6 +35,6 @@ const supplierProfileSchema = new Schema<SupplierProfileDocument>({
 });
 
 
-const supplierProfile = mongoose.model<SupplierProfileDocument>("SupplierProfile", supplierProfileSchema);
+const profile = mongoose.model<ProfileDocument>("Profile", profileSchema);
 
-export default supplierProfile;
+export default profile;

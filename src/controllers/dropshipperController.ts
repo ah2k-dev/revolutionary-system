@@ -5,7 +5,7 @@ import { ProfileDocument } from '../types/models/User/profile.types';
 import { UserDocument } from '../types/models/User/user.types';
 import SuccessHandler from "../utils/SuccessHandler"
 import ErrorHandler from '../utils/ErrorHandler'
-import {SupplierProfileCreateRequest} from '../types/controller/supplierController.types'
+import {DSProfileCreateRequest} from '../types/controller/dropshipperController.types'
 declare global {
   namespace Express {
     interface Request {
@@ -26,7 +26,7 @@ const createProfile = async (req:Request, res:Response)=> {
         city,
         address,
         zipCode,
-      }:SupplierProfileCreateRequest = req.body;
+      }:DSProfileCreateRequest = req.body;
      
       const user:UserDocument | null = await User.findById(currentUser);
       if (!user) {
