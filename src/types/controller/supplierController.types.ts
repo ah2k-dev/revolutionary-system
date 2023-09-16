@@ -1,7 +1,7 @@
 export interface SupplierProfileRequest{
-    name: string;
-    email: string;
-    password: string;
-    phone: string;
-    role: string;
+    dob: Date;
+    country: string;
+    city: string;
+    address: string;
+    zipCode: number;
 }
