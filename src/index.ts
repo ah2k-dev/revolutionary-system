@@ -1,18 +1,17 @@
-import express,{ Application, Express } from 'express';
+import express, { Application, Express } from "express";
 import dotenv from "dotenv";
-import app from './app';
+import app from "./app";
 import connectDB from "./config/db";
 import http from "http";
-import {addUser, removeUser} from './functions/socketFunctions'
+import { addUser, removeUser } from "./functions/socketFunctions";
 import { Server, Socket } from "socket.io";
 dotenv.config({ path: "./src/config/config.env" }); // Load env vars
 
 // Global vars
 let io: Server;
 
-
 // Server setup
-const PORT: string = process.env.PORT
+const PORT: string = process.env.PORT || "8001";
 
 const server = http.createServer(app);
 server.listen(PORT, () => {
@@ -44,4 +43,3 @@ io.on("connection", (socket: Socket) => {
     console.log("user disconnected", socket.id);
   });
 });
-

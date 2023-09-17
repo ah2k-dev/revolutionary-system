@@ -137,3 +137,11 @@
 {"date":"2023-09-15T17:48:49.752Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
 {"date":"2023-09-15T17:49:12.360Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/auth/updatePassword"}
 {"date":"2023-09-15T17:49:20.112Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:17:38.866Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:17:39.258Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:18:29.117Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:18:29.422Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:18:30.896Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:18:31.208Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:19:26.666Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:20:14.869Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}

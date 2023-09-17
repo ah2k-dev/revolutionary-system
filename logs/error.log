@@ -3,3 +3,6 @@
 {"date":"2023-09-15T17:21:40.901Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-09-15T17:47:13.990Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
 {"date":"2023-09-15T17:48:49.752Z","level":"error","message":"Invalid credentials","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:17:39.258Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:18:29.422Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-17T18:18:31.208Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
