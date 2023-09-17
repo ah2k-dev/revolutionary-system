@@ -9,18 +9,15 @@ const storage = multer.diskStorage({
     file: Express.Multer.File,
     cb: Function
   ) {
-    cb(null, "/uploads");
+    cb(null, "uploads/");
   },
   filename: function (req: Request, file: Express.Multer.File, cb: Function) {
+    console.log(req.file);
+
     const timeStamp = Date.now();
     const uniqueSuffix = `${timeStamp}-${file.originalname}`;
     cb(null, uniqueSuffix);
   },
-});
-
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: 2 * 1024 * 1024 }, // 2MB in bytes
 });
 
 const filesAllowed: string[] = [".png", ".jpeg", ".jpg"];
@@ -33,9 +30,17 @@ const fileFilter = (req: Request, file: Express.Multer.File, cb: Function) => {
   }
 };
 
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 2 * 1024 * 1024 }, // 2MB in bytes
+  fileFilter: fileFilter,
+});
+
 const singleUpload = (fieldName: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     upload.single(fieldName)(req, res, (err: Error | string) => {
+      console.log(req.file);
+
       if (err instanceof multer.MulterError) {
         return ErrorHandler("Multer error", 400, req, res);
       } else if (err) {

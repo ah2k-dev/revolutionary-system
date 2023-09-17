@@ -145,3 +145,80 @@
 {"date":"2023-09-17T18:18:31.208Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
 {"date":"2023-09-17T18:19:26.666Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-09-17T18:20:14.869Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:30:30.273Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-17T18:30:36.076Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:31:39.520Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:32:00.239Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:32:01.233Z","level":"error","message":"Profile validation failed: profilePic: Path `profilePic` is required., address: Path `address` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:35:15.907Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:35:16.236Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:39:59.255Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:39:59.596Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:42:32.183Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:42:38.891Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:42:39.199Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:43:25.108Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:43:25.440Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:50:40.577Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:50:43.541Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:52:13.388Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:52:13.708Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:55:18.066Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:56:13.944Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:56:14.863Z","level":"error","message":"Profile already exist. Update instead of creating new","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T18:57:05.983Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T18:57:06.890Z","level":"error","message":"Profile validation failed: address: Path `address` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:02:05.252Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:02:21.526Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:02:22.444Z","level":"error","message":"Profile already exist. Update instead of creating new","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:04:18.182Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:04:29.173Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:04:30.106Z","level":"error","message":"Profile already exist. Update instead of creating new","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:04:55.111Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:04:56.039Z","level":"error","message":"Profile validation failed: address: Path `address` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:15:44.503Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:15:45.405Z","level":"error","message":"Profile validation failed: profilePic: Path `profilePic` is required., dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:17:25.613Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:17:26.594Z","level":"error","message":"Profile validation failed: profilePic: Path `profilePic` is required., dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:18:39.418Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:18:40.344Z","level":"error","message":"Profile validation failed: profilePic: Path `profilePic` is required., dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:19:46.911Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:19:48.149Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:21:02.744Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:21:03.644Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:22:02.450Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:42:52.854Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:42:53.836Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:44:42.600Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:44:43.543Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:46:17.569Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:46:18.533Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:47:11.125Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:47:12.047Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:47:50.081Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:47:50.995Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:49:44.984Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:49:46.002Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:51:42.528Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:51:55.736Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:51:56.862Z","level":"error","message":"Profile already exist. Update instead of creating new","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:55:56.490Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:55:57.784Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:58:29.252Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:58:30.445Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T19:59:53.621Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T19:59:54.710Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:01:13.802Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:01:14.761Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:01:49.784Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:01:50.775Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:03:36.673Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:03:37.678Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:04:15.782Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:04:16.778Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:04:34.256Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:04:35.194Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:05:00.685Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:05:01.686Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-17T20:06:16.722Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-17T20:06:17.657Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}

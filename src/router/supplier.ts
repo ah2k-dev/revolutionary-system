@@ -10,7 +10,7 @@ router
   .post(
     isAuthenticated,
     authorizedSupplier,
-    singleUpload("profilePic"),
+    singleUpload('profilePic'),
     supplier.createProfile
   );
 router
