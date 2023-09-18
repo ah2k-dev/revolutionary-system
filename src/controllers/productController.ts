@@ -88,7 +88,9 @@ const createProduct = async (req: Request, res: Response) => {
 //Get products
 const getProducts = async (req: Request, res: Response) => {
   // #swagger.tags = ['product']
-
+  const itemPerPage = 2;
+  const pageNo = Number(req.query.page) || 1;
+  const skipItems = (pageNo - 1) * itemPerPage;
   try {
     //✅ Price Filter
     const priceFilter =
@@ -146,7 +148,9 @@ const getProducts = async (req: Request, res: Response) => {
       ...searchProductFilter,
       ...categoryFilter,
       ...dateFilter,
-    });
+    })
+      .skip(skipItems)
+      .limit(itemPerPage);
     const productCount = products.length;
     return SuccessHandler(
       { message: "Products fetched successfully", productCount, products },
