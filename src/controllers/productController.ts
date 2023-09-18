@@ -252,7 +252,7 @@ const deleteProduct = async (req: Request, res: Response) => {
     }
 
     await Product.findOneAndUpdate(
-      { _id: productId, supplier: currentUser, isActive: true },
+      { _id: productId, supplier: currentUser },
 
       {
         $set: {
