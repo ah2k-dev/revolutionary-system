@@ -301,3 +301,37 @@
 {"date":"2023-09-18T16:13:54.505Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
 {"date":"2023-09-18T16:13:55.220Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
 {"date":"2023-09-18T16:14:46.824Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:29:38.812Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/create/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:30:15.676Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/update/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:30:40.057Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:30:41.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:31:00.438Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:31:54.519Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:31:54.762Z","level":"error","message":"Invalid Product id","method":"PUT","service":"user-service","url":"/update/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:32:04.262Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:32:04.716Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:33:34.898Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:33:35.373Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:28.889Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:29.353Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:47.162Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:47.590Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:48.818Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:49.281Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:02.135Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:02.787Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:41.341Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:41.562Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:42.494Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:42.729Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:19.308Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:19.793Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:21.384Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:21.832Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:48.776Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:49.247Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:50.197Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:50.649Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:15:50.923Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:15:51.892Z","level":"error","message":"Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'brand' has non-array type string","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:16:23.676Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/product/update/65087777dd1480f8de6e6fbe"}

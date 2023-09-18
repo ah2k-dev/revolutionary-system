@@ -61,3 +61,17 @@
 {"date":"2023-09-18T16:08:13.320Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
 {"date":"2023-09-18T16:11:36.368Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
 {"date":"2023-09-18T16:13:55.220Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:31:54.762Z","level":"error","message":"Invalid Product id","method":"PUT","service":"user-service","url":"/update/5087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:32:04.716Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:33:35.373Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:29.353Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:47.590Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T16:34:49.281Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:02.787Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:41.562Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:07:42.729Z","level":"error","message":"Something went wrong!","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:19.793Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:21.832Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:49.247Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:09:50.649Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T17:15:51.892Z","level":"error","message":"Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'brand' has non-array type string","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}

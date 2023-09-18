@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import mongoose from "mongoose";
 import User from "../models/User/user";
 import Product from "../models/Supplier/products";
 import { ProductDocument } from "../types/models/Supplier/products.types";
@@ -139,7 +140,7 @@ const getProducts = async (req: Request, res: Response) => {
           }
         : {};
 
-    const products = await Product.find({
+    const products: ProductDocument[] = await Product.find({
       isActive: true,
       ...priceFilter,
       ...searchProductFilter,
@@ -175,11 +176,17 @@ const updateProduct = async (req: Request, res: Response) => {
       size,
       sku,
     }: CreateProductRequest = req.body;
+    console.log(req.body);
+
+    if (!mongoose.isValidObjectId(productId)) {
+      return ErrorHandler("Invalid Product id", 400, req, res);
+    }
 
     const user: UserDocument | null = await User.findById(currentUser);
     if (!user) {
       return ErrorHandler("User doesn't exist", 400, req, res);
     }
+
     // create a slug from the title
     let slug = slugify(title, {
       replacement: "-",
@@ -190,7 +197,7 @@ const updateProduct = async (req: Request, res: Response) => {
     }).toString();
     // creating unique slug
 
-    const getSlug = await Product.find({
+    const getSlug: ProductDocument[] = await Product.find({
       isActive: true,
       slug: slug,
     }).select("slug");
@@ -200,24 +207,28 @@ const updateProduct = async (req: Request, res: Response) => {
       slug = `${slug}-${uniqueId}`;
     }
 
-    const images = req.file ? req.file.filename : null;
-    const product = await Product.create({
-      supplier: currentUser,
-      slug,
-      title,
-      desc,
-      brand,
-      images: [images],
-      category,
-      price,
-      quantity,
-      itemWeight,
-      size,
-      sku,
-      availableQuantity: quantity,
-    });
+    // const images = req.file ? req.file.filename : null;
+    const updatedProduct = await Product.findOneAndUpdate(
+      { _id: productId, supplier: currentUser },
+
+      {
+        $set: {
+          slug,
+          title,
+          desc,
+          brand,
+          // images: [images],
+          category,
+          price,
+          quantity,
+          itemWeight,
+          size,
+          sku,
+        },
+      }
+    );
     return SuccessHandler(
-      { message: "Product created successfully", product },
+      { message: "Product updated successfully", updatedProduct },
       200,
       res
     );
@@ -226,4 +237,4 @@ const updateProduct = async (req: Request, res: Response) => {
   }
 };
 
-export { createProduct, getProducts };
+export { createProduct, getProducts, updateProduct };
