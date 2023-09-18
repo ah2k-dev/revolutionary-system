@@ -33,26 +33,7 @@
           "auth"
         ],
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {}
       }
     },
@@ -111,28 +92,8 @@
           "auth"
         ],
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "emailVerificationToken": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "Bad Request"
-          }
-        }
+        "parameters": [],
+        "responses": {}
       }
     },
     "/auth/forgotPassword": {
@@ -164,26 +125,7 @@
           "auth"
         ],
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "passwordResetToken": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {}
       }
     },
@@ -193,10 +135,70 @@
           "auth"
         ],
         "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/dropshipper/createProfile": {
+      "post": {
+        "tags": [
+          "supplier"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/dropshipper/updateProfile": {
+      "put": {
+        "tags": [
+          "supplier"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/supplier/createProfile": {
+      "post": {
+        "tags": [
+          "supplier"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/supplier/updateProfile": {
+      "put": {
+        "tags": [
+          "supplier"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/product/create": {
+      "post": {
+        "tags": [
+          "product"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/product/get": {
+      "post": {
+        "tags": [
+          "product"
+        ],
+        "description": "",
         "parameters": [
           {
-            "name": "authorization",
-            "in": "header",
+            "name": "page",
+            "in": "query",
             "type": "string"
           },
           {
@@ -205,24 +207,57 @@
             "schema": {
               "type": "object",
               "properties": {
-                "currentPassword": {
+                "price": {
                   "example": "any"
                 },
-                "newPassword": {
+                "search": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "date": {
                   "example": "any"
                 }
               }
             }
           }
         ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        "responses": {}
+      }
+    },
+    "/product/update/{productId}": {
+      "put": {
+        "tags": [
+          "product"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
-        }
+        ],
+        "responses": {}
+      }
+    },
+    "/product/delete/{productId}": {
+      "delete": {
+        "tags": [
+          "product"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
       }
     }
   }
