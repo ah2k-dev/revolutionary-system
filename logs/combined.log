@@ -222,3 +222,82 @@
 {"date":"2023-09-17T20:05:01.686Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
 {"date":"2023-09-17T20:06:16.722Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
 {"date":"2023-09-17T20:06:17.657Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-18T13:59:00.165Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T13:59:00.525Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:13.039Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T13:59:13.267Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:47.793Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T13:59:48.019Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:49.446Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T13:59:49.675Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:00:26.050Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:00:26.376Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:01:20.609Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:01:20.874Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:01:57.136Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:01:57.593Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:06:26.234Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:06:26.748Z","level":"error","message":"Product validation failed: images: Path `images` is required.","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:07:31.000Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:08:25.904Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:08:45.564Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:08:46.004Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:08:57.938Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:39:06.368Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:40:28.715Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T14:57:52.131Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T14:57:52.375Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T14:59:30.855Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:00:25.914Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:00:52.092Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:02:13.712Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:03:26.416Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:03:52.408Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:05:50.042Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:05:53.108Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:06:45.121Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:06:47.142Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:07:24.812Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:07:39.531Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:09:33.129Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:09:33.522Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T15:11:23.120Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:12:04.574Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:13:01.404Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:13:07.783Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:13:40.706Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:15:01.640Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:15:19.329Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:15:33.065Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:15:40.699Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:17:19.801Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:17:29.526Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:17:44.004Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:42:50.858Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:43:21.424Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:43:21.911Z","level":"error","message":"Cannot do inclusion on field slug in exclusion projection","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T15:43:55.472Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:46:09.831Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:48:09.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:49:51.557Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
+{"date":"2023-09-18T15:53:59.969Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T15:54:00.455Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T15:55:03.856Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T15:58:12.821Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T15:58:13.085Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T15:58:15.506Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T15:58:15.724Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T15:58:31.710Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:03:16.222Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:03:16.923Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:04:36.810Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:04:37.532Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:06:43.325Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:06:44.045Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:08:12.607Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:08:13.320Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:11:35.638Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:11:36.368Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:13:54.505Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}
+{"date":"2023-09-18T16:13:55.220Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:14:46.824Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/create"}

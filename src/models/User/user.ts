@@ -62,7 +62,7 @@ const userSchema = new Schema<UserDocument>({
     type: Boolean,
     default: true,
   },
-});
+},{timestamps: true});
 
 // Hash password before saving
 userSchema.pre("save", async function (this: UserDocument, next) {

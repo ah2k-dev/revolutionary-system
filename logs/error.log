@@ -40,3 +40,24 @@
 {"date":"2023-09-17T20:04:35.194Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
 {"date":"2023-09-17T20:05:01.686Z","level":"error","message":"Profile validation failed: dob: Path `dob` is required., country: Path `country` is required., city: Path `city` is required., address: Path `address` is required., zipCode: Path `zipCode` is required.","method":"POST","service":"user-service","url":"/createProfile"}
 {"date":"2023-09-17T20:06:17.657Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/createProfile"}
+{"date":"2023-09-18T13:59:00.525Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:13.267Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:48.019Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T13:59:49.675Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:00:26.376Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:01:20.874Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:01:57.593Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:06:26.748Z","level":"error","message":"Product validation failed: images: Path `images` is required.","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:08:46.004Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T14:57:52.375Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T15:09:33.522Z","level":"error","message":"Cannot read properties of undefined (reading '0')","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T15:43:21.911Z","level":"error","message":"Cannot do inclusion on field slug in exclusion projection","method":"POST","service":"user-service","url":"/get"}
+{"date":"2023-09-18T15:54:00.455Z","level":"error","message":"slugify: string argument expected","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T15:58:13.085Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T15:58:15.724Z","level":"error","message":"Something went wrong!","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:03:16.923Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:04:37.532Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:06:44.045Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:08:13.320Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:11:36.368Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}
+{"date":"2023-09-18T16:13:55.220Z","level":"error","message":"Cannot read properties of undefined (reading 'slug')","method":"POST","service":"user-service","url":"/create"}

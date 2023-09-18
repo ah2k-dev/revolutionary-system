@@ -6,9 +6,7 @@ import { UserDocument } from "../types/models/User/user.types";
 import SuccessHandler from "../utils/SuccessHandler";
 import ErrorHandler from "../utils/ErrorHandler";
 import { SupplierProfileRequest } from "../types/controller/supplierController.types";
-// import { singleUpload } from "../middleware/multer";
-import { upload } from "../middleware/multer";
-import multer, { MulterError } from "multer";
+
 
 declare global {
   namespace Express {
@@ -42,38 +40,7 @@ const createProfile = async (req: Request, res: Response) => {
         res
       );
     }
-
-    let profilePic;
-    let profileImgFile;
-    // if (req.file) {
-    console.log(req.file);
-
-    // singleUpload("profilePic");
-
-    upload.single("profilePic")(req, res, (err: Error | string) => {
-      console.log("req.file");
-      console.log(req.file);
-
-      if (err instanceof multer.MulterError) {
-        return ErrorHandler(err.message, 400, req, res);
-      } else if (err) {
-        return ErrorHandler("Something went wrong!", 400, req, res);
-      }
-    });
-    profilePic = req.file ? req.file.filename : null;
-    profileImgFile = `/uploads/${profilePic}`;
-    // }
-
-    // if (req.file) {
-    //   singleUpload("profilePic")(req, res, () => {
-    //     profilePic = req.file ? req.file.filename : null;
-    //     profileImgFile = `/uploads/${profilePic}`;
-    //   });
-    // }
-
-    // console.log("profilePic: ", profilePic);
-    // console.log("profileImgFile: ", profileImgFile);
-    // const profilePic = req.file ? req.file.filename : null;
+    const profilePic = req.file ? req.file.filename : null;
     const profile = await Profile.create({
       user: currentUser,
       profilePic,

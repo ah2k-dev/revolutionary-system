@@ -1,0 +1,93 @@
+Sure, here are some example product details for 10 different products:
+
+1. **Product 1**
+   - Title: Laptop
+   - Description: High-performance laptop with the latest processor and graphics card.
+   - Brand: Dell
+   - Category: Electronics
+   - Item Weight: 2.5 kg
+   - Size: 15.6-inch
+   - SKU: DL-LAPTOP-001
+
+2. **Product 2**
+   - Title: Men's Leather Wallet
+   - Description: Genuine leather wallet with multiple card slots and a coin pocket.
+   - Brand: Fossil
+   - Category: Fashion
+   - Item Weight: 100 grams
+   - Size: 4.5 x 3.5 inches
+   - SKU: FOS-WALLET-001
+
+3. **Product 3**
+   - Title: LED Smart TV
+   - Description: 4K Ultra HD Smart TV with built-in streaming apps and voice control.
+   - Brand: Samsung
+   - Category: Electronics
+   - Item Weight: 15 kg
+   - Size: 55-inch
+   - SKU: SAM-TV-001
+
+4. **Product 4**
+   - Title: Women's Running Shoes
+   - Description: Lightweight and breathable running shoes for women.
+   - Brand: Nike
+   - Category: Sports
+   - Item Weight: 300 grams
+   - Size: US 7
+   - SKU: NIKE-SHOES-001
+
+5. **Product 5**
+   - Title: Stainless Steel Water Bottle
+   - Description: Insulated water bottle with a leak-proof design.
+   - Brand: Hydro Flask
+   - Category: Kitchen & Dining
+   - Item Weight: 500 grams
+   - Size: 32 oz
+   - SKU: HF-BOTTLE-001
+
+6. **Product 6**
+   - Title: DSLR Camera
+   - Description: Professional-grade DSLR camera with interchangeable lenses.
+   - Brand: Canon
+   - Category: Electronics
+   - Item Weight: 1.2 kg
+   - Size: Full Frame
+   - SKU: CAN-CAMERA-001
+
+7. **Product 7**
+   - Title: Men's Dress Shirt
+   - Description: Classic men's dress shirt with a slim fit design.
+   - Brand: Calvin Klein
+   - Category: Fashion
+   - Item Weight: 200 grams
+   - Size: Medium
+   - SKU: CK-SHIRT-001
+
+8. **Product 8**
+   - Title: Coffee Maker
+   - Description: Programmable coffee maker with a built-in grinder.
+   - Brand: Breville
+   - Category: Kitchen Appliances
+   - Item Weight: 4 kg
+   - Size: 12-Cup
+   - SKU: BRV-COFFEE-001
+
+9. **Product 9**
+   - Title: Bluetooth Earbuds
+   - Description: Wireless Bluetooth earbuds with noise-cancelling technology.
+   - Brand: Sony
+   - Category: Electronics
+   - Item Weight: 50 grams
+   - Size: Small
+   - SKU: SONY-EARBUDS-001
+
+10. **Product 10**
+    - Title: Yoga Mat
+    - Description: Non-slip yoga mat with a carry strap for easy transport.
+    - Brand: Gaiam
+    - Category: Sports & Fitness
+    - Item Weight: 1.5 kg
+    - Size: 6mm thickness
+    - SKU: GAIAM-YOGAMAT-001
+
+These are just sample product details, and you can customize them further based on your specific needs and the types of products you are dealing with in your application or e-commerce website.

@@ -31,7 +31,7 @@ const profileSchema = new Schema<ProfileDocument>({
     type: Number,
     required: true,
   },
-});
+},{timestamps: true});
 
 const profile = mongoose.model<ProfileDocument>("Profile", profileSchema);
 
