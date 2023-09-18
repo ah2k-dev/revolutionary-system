@@ -209,7 +209,7 @@ const updateProduct = async (req: Request, res: Response) => {
 
     // const images = req.file ? req.file.filename : null;
     const updatedProduct = await Product.findOneAndUpdate(
-      { _id: productId, supplier: currentUser },
+      { _id: productId, supplier: currentUser, isActive: true },
 
       {
         $set: {
@@ -236,5 +236,38 @@ const updateProduct = async (req: Request, res: Response) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+// Delete Product
+const deleteProduct = async (req: Request, res: Response) => {
+  // #swagger.tags = ['product']
+  const currentUser: string = req.user._id;
+  const { productId } = req.params;
+  try {
+    if (!mongoose.isValidObjectId(productId)) {
+      return ErrorHandler("Invalid Product id", 400, req, res);
+    }
 
-export { createProduct, getProducts, updateProduct };
+    const user: UserDocument | null = await User.findById(currentUser);
+    if (!user) {
+      return ErrorHandler("User doesn't exist", 400, req, res);
+    }
+
+    await Product.findOneAndUpdate(
+      { _id: productId, supplier: currentUser, isActive: true },
+
+      {
+        $set: {
+          isActive: false,
+        },
+      }
+    );
+    return SuccessHandler(
+      { message: "Product deleted successfully" },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+export { createProduct, getProducts, updateProduct, deleteProduct };

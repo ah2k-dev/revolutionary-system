@@ -16,11 +16,11 @@ router
 router
   .route("/get")
   .post(isAuthenticated, authorizedSupplier, product.getProducts);
-router.route("/update/:productId").put(
-  isAuthenticated,
-  authorizedSupplier,
-  // singleUpload("images"),
-  product.updateProduct
-);
+router
+  .route("/update/:productId")
+  .put(isAuthenticated, authorizedSupplier, product.updateProduct);
+router
+  .route("/delete/:productId")
+  .delete(isAuthenticated, authorizedSupplier, product.deleteProduct);
 
 export default router;
