@@ -4,7 +4,7 @@ export interface ProductDocument extends Document {
   supplier: mongoose.Schema.Types.ObjectId;
   title: string;
   desc: string;
-  brand: string;
+  // brand: string;
   images: string[];
   slug: string;
   category: string;
@@ -15,5 +15,5 @@ export interface ProductDocument extends Document {
   size: number[];
   sku: string;
   ratings: number;
-  isActive: boolean
-  }
+  isActive: boolean;
+}

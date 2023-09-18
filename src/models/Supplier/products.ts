@@ -1,10 +1,10 @@
 import mongoose, { Schema } from "mongoose";
 import dotenv from "dotenv";
 dotenv.config({ path: ".././src/config/config.env" });
-import {ProductDocument} from '../../types/models/Supplier/products.types'
+import { ProductDocument } from "../../types/models/Supplier/products.types";
 
-
-const productSchema = new Schema<ProductDocument>({
+const productSchema = new Schema<ProductDocument>(
+  {
     supplier: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 
     title: {
@@ -15,10 +15,10 @@ const productSchema = new Schema<ProductDocument>({
       type: String,
       required: true,
     },
-    brand: {
-      type: String,
-      required: true,
-    },
+    // brand: {
+    //   type: String,
+    //   required: true,
+    // },
     images: {
       type: [String],
       required: true,
@@ -53,7 +53,7 @@ const productSchema = new Schema<ProductDocument>({
     },
     sku: {
       type: String,
-      default: '',
+      default: "",
     },
     ratings: {
       type: Number,
@@ -63,9 +63,9 @@ const productSchema = new Schema<ProductDocument>({
       type: Boolean,
       default: true,
     },
-
-},{timestamps: true});
-
+  },
+  { timestamps: true }
+);
 
 const products = mongoose.model<ProductDocument>("Product", productSchema);
 
