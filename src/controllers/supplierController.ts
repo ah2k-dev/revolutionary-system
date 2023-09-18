@@ -96,7 +96,7 @@ const updateProfile = async (req: Request, res: Response) => {
 };
 // Profile
 const getProfile = async (req: Request, res: Response) => {
-  // #swagger.tags = ['dropshipper']
+  // #swagger.tags = ['supplier']
   try {
     const profile: ProfileDocument = await Profile.findOne({
       user: req.user._id,

@@ -159,6 +159,16 @@
         "responses": {}
       }
     },
+    "/dropshipper/profile": {
+      "get": {
+        "tags": [
+          "dropshipper"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/supplier/createProfile": {
       "post": {
         "tags": [
@@ -173,6 +183,16 @@
       "put": {
         "tags": [
           "supplier"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/supplier/profile": {
+      "get": {
+        "tags": [
+          "dropshipper"
         ],
         "description": "",
         "parameters": [],

@@ -76,3 +76,4 @@
 {"date":"2023-09-18T17:09:50.649Z","level":"error","message":"slugify: string argument expected","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
 {"date":"2023-09-18T17:15:51.892Z","level":"error","message":"Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'brand' has non-array type string","method":"PUT","service":"user-service","url":"/update/65087777dd1480f8de6e6fbe"}
 {"date":"2023-09-18T17:23:10.759Z","level":"error","message":"slugify: string argument expected","method":"DELETE","service":"user-service","url":"/delete/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T19:43:13.408Z","level":"error","message":"Role: supplier is not allowed to access resource","method":"GET","service":"user-service","url":"/profile"}
