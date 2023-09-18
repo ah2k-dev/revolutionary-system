@@ -88,12 +88,12 @@ const createProduct = async (req: Request, res: Response) => {
 //Get products
 const getProducts = async (req: Request, res: Response) => {
   // #swagger.tags = ['product']
-  const itemPerPage = 2;
-  const pageNo = Number(req.query.page) || 1;
-  const skipItems = (pageNo - 1) * itemPerPage;
+  const itemPerPage: number = 2;
+  const pageNo: number = Number(req.query.page) || 1;
+  const skipItems: number = (pageNo - 1) * itemPerPage;
   try {
     //✅ Price Filter
-    const priceFilter =
+    const priceFilter: object =
       req.body.price && req.body.price.length > 0
         ? {
             price: {
@@ -103,7 +103,7 @@ const getProducts = async (req: Request, res: Response) => {
           }
         : {};
     //✅ Search Filter
-    const searchProductFilter = req.body.search
+    const searchProductFilter: object = req.body.search
       ? {
           $or: [
             {
@@ -116,20 +116,20 @@ const getProducts = async (req: Request, res: Response) => {
         }
       : {};
     //✅ Category Filter
-    const categoryFilter = req.body.category
+    const categoryFilter: object = req.body.category
       ? {
           category: { $regex: req.body.category, $options: "i" },
         }
       : {};
     //✅ Date Filter
-    let startDate;
-    let endDate;
+    let startDate: string;
+    let endDate: string;
 
     if (req.body.date) {
       startDate = moment(req.body.date[0]).startOf("day").format();
       endDate = moment(req.body.date[1]).endOf("day").format();
     }
-    const dateFilter =
+    const dateFilter: object =
       req.body.date && req.body.date.length > 0
         ? {
             createdAt: {
@@ -151,7 +151,7 @@ const getProducts = async (req: Request, res: Response) => {
     })
       .skip(skipItems)
       .limit(itemPerPage);
-    const productCount = products.length;
+    const productCount: number = products.length;
     return SuccessHandler(
       { message: "Products fetched successfully", productCount, products },
       200,
@@ -192,7 +192,7 @@ const updateProduct = async (req: Request, res: Response) => {
     }
 
     // create a slug from the title
-    let slug = slugify(title, {
+    let slug: string = slugify(title, {
       replacement: "-",
       lower: true,
       strict: false,
@@ -212,7 +212,7 @@ const updateProduct = async (req: Request, res: Response) => {
     }
 
     // const images = req.file ? req.file.filename : null;
-    const updatedProduct = await Product.findOneAndUpdate(
+    const updatedProduct: ProductDocument = await Product.findOneAndUpdate(
       { _id: productId, supplier: currentUser, isActive: true },
 
       {

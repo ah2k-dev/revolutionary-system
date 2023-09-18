@@ -341,3 +341,7 @@
 {"date":"2023-09-18T17:23:10.244Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/product/delete/65087777dd1480f8de6e6fbe"}
 {"date":"2023-09-18T17:23:10.759Z","level":"error","message":"slugify: string argument expected","method":"DELETE","service":"user-service","url":"/delete/65087777dd1480f8de6e6fbe"}
 {"date":"2023-09-18T17:24:03.828Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/product/delete/65087777dd1480f8de6e6fbe"}
+{"date":"2023-09-18T18:45:40.681Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get?page=2"}
+{"date":"2023-09-18T18:46:55.052Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get?page=2"}
+{"date":"2023-09-18T18:47:34.406Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get?page=2"}
+{"date":"2023-09-18T18:47:47.246Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/product/get"}
