@@ -36,10 +36,6 @@ const createProduct = async (req: Request, res: Response) => {
       sku,
     }: CreateProductRequest = req.body;
 
-    const user: UserDocument | null = await User.findById(currentUser);
-    if (!user) {
-      return ErrorHandler("User doesn't exist", 400, req, res);
-    }
     // create a slug from the title
     let slug = slugify(title, {
       replacement: "-",
@@ -186,11 +182,6 @@ const updateProduct = async (req: Request, res: Response) => {
       return ErrorHandler("Invalid Product id", 400, req, res);
     }
 
-    const user: UserDocument | null = await User.findById(currentUser);
-    if (!user) {
-      return ErrorHandler("User doesn't exist", 400, req, res);
-    }
-
     // create a slug from the title
     let slug: string = slugify(title, {
       replacement: "-",
@@ -274,4 +265,29 @@ const deleteProduct = async (req: Request, res: Response) => {
   }
 };
 
-export { createProduct, getProducts, updateProduct, deleteProduct };
+// Get Single Product
+const productDetails = async (req: Request, res: Response) => {
+  // #swagger.tags = ['product']
+  const { slug } = req.params;
+  try {
+    const productDetail = await Product.findOne({
+      isActive: true,
+      slug,
+    });
+    return SuccessHandler(
+      { message: "Product Detail fetched successfully", productDetail },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+export {
+  createProduct,
+  getProducts,
+  updateProduct,
+  deleteProduct,
+  productDetails,
+};

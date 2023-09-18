@@ -22,5 +22,6 @@ router
 router
   .route("/delete/:productId")
   .delete(isAuthenticated, authorizedSupplier, product.deleteProduct);
+router.route("/details/:slug").get(isAuthenticated, product.productDetails);
 
 export default router;
