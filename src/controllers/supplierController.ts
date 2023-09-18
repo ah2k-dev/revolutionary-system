@@ -7,7 +7,6 @@ import SuccessHandler from "../utils/SuccessHandler";
 import ErrorHandler from "../utils/ErrorHandler";
 import { SupplierProfileRequest } from "../types/controller/supplierController.types";
 
-
 declare global {
   namespace Express {
     interface Request {
@@ -95,5 +94,22 @@ const updateProfile = async (req: Request, res: Response) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-
-export { createProfile, updateProfile };
+// Profile
+const getProfile = async (req: Request, res: Response) => {
+  // #swagger.tags = ['dropshipper']
+  try {
+    const profile: ProfileDocument = await Profile.findOne({
+      user: req.user._id,
+    }).populate({
+      path: "user",
+    });
+    return SuccessHandler(
+      { message: "Profile Detail fetched successfully", profile },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+export { createProfile, updateProfile, getProfile };

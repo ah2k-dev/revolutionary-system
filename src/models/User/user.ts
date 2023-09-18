@@ -4,65 +4,68 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import validator from "validator";
 dotenv.config({ path: ".././src/config/config.env" });
-import {UserDocument} from '../../types/models/User/user.types'
+import { UserDocument } from "../../types/models/User/user.types";
 
-
-const userSchema = new Schema<UserDocument>({
-  firstName: {
-    type: String,
-    required: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    validate(value: string) {
-      if (!validator.isEmail(value)) {
-        throw new Error("Invalid Email");
-      }
+const userSchema = new Schema<UserDocument>(
+  {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      validate(value: string) {
+        if (!validator.isEmail(value)) {
+          throw new Error("Invalid Email");
+        }
+      },
+    },
+    password: {
+      type: String,
+      required: true,
+      select: false,
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      enum: ["supplier", "dropshipper"],
+      default: "supplier",
+    },
+    emailVerified: {
+      type: Boolean,
+      default: false,
+    },
+    emailVerificationToken: {
+      type: Number,
+    },
+    emailVerificationTokenExpires: {
+      type: Date,
+    },
+    passwordResetToken: {
+      type: Number,
+    },
+    passwordResetTokenExpires: {
+      type: Date,
+    },
+    lastLogin: {
+      type: Date,
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
     },
   },
-  password: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  role: {
-    type: String,
-    enum: ["supplier", "dropshipper"],
-    default: "supplier",
-  },
-  emailVerified: {
-    type: Boolean,
-    default: false,
-  },
-  emailVerificationToken: {
-    type: Number,
-  },
-  emailVerificationTokenExpires: {
-    type: Date,
-  },
-  passwordResetToken: {
-    type: Number,
-  },
-  passwordResetTokenExpires: {
-    type: Date,
-  },
-  lastLogin: {
-    type: Date,
-  },
-  isActive: {
-    type: Boolean,
-    default: true,
-  },
-},{timestamps: true});
+  { timestamps: true }
+);
 
 // Hash password before saving
 userSchema.pre("save", async function (this: UserDocument, next) {

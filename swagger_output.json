@@ -142,7 +142,7 @@
     "/dropshipper/createProfile": {
       "post": {
         "tags": [
-          "supplier"
+          "dropshipper"
         ],
         "description": "",
         "parameters": [],
@@ -152,7 +152,7 @@
     "/dropshipper/updateProfile": {
       "put": {
         "tags": [
-          "supplier"
+          "dropshipper"
         ],
         "description": "",
         "parameters": [],
@@ -252,6 +252,23 @@
         "parameters": [
           {
             "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/product/details/{slug}": {
+      "get": {
+        "tags": [
+          "product"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "slug",
             "in": "path",
             "required": true,
             "type": "string"

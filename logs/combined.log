@@ -369,3 +369,19 @@
 {"date":"2023-09-18T19:04:18.254Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
 {"date":"2023-09-18T19:04:18.257Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
 {"date":"2023-09-18T19:04:18.539Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-18T19:26:56.937Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/product/details/updated-performance-laptop-5193"}
+{"date":"2023-09-18T19:27:44.354Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-18T19:27:44.632Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-18T19:27:44.664Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-18T19:27:44.669Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-18T19:27:44.674Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-18T19:27:45.238Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-18T19:30:02.159Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-18T19:30:02.233Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-18T19:30:02.237Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-18T19:30:02.248Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-18T19:30:02.252Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-18T19:30:02.771Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-18T19:42:13.532Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/supplier/profile"}
+{"date":"2023-09-18T19:43:12.883Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/dropshipper/profile"}
+{"date":"2023-09-18T19:43:13.408Z","level":"error","message":"Role: supplier is not allowed to access resource","method":"GET","service":"user-service","url":"/profile"}

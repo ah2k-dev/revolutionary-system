@@ -10,11 +10,14 @@ router
   .post(
     isAuthenticated,
     authorizedSupplier,
-    singleUpload('profilePic'),
+    singleUpload("profilePic"),
     supplier.createProfile
   );
 router
   .route("/updateProfile")
   .put(isAuthenticated, authorizedSupplier, supplier.updateProfile);
+router
+  .route("/profile")
+  .get(isAuthenticated, authorizedSupplier, supplier.getProfile);
 
 export default router;
