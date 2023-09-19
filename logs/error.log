@@ -81,3 +81,12 @@
 {"date":"2023-09-19T17:47:15.864Z","level":"error","message":"Cannot set headers after they are sent to the client","method":"POST","service":"user-service","url":"/token"}
 {"date":"2023-09-19T18:16:27.209Z","level":"error","message":"getaddrinfo ENOTFOUND e092e8","method":"POST","service":"user-service","url":"/token1?code=https://e092e8.myshopify.com/admin/oauth/authorize?client_id=c9e61d0dcdaa1f8ecc05479d5b10c461%26scope=read_products,write_products%26redirect_uri=https://chat.openai.com/c/ed950cde-2a09-48a7-a7d5-9a00f13c2cb1"}
 {"date":"2023-09-19T18:16:58.884Z","level":"error","message":"Request failed with status code 400","method":"POST","service":"user-service","url":"/token1?code=https://e092e8.myshopify.com/admin/oauth/authorize?client_id=c9e61d0dcdaa1f8ecc05479d5b10c461%26scope=read_products,write_products%26redirect_uri=https://chat.openai.com/c/ed950cde-2a09-48a7-a7d5-9a00f13c2cb1"}
+{"date":"2023-09-19T18:48:27.924Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:52:07.838Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:53:47.274Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:53:59.013Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:54:19.054Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:54:19.957Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:54:29.042Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:57:40.175Z","level":"error","message":"Response code 401 (Unauthorized)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-19T18:58:29.650Z","level":"error","message":"Response code 401 (Unauthorized)","method":"POST","service":"user-service","url":"/importProducts"}
