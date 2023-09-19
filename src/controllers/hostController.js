@@ -174,14 +174,61 @@ const hostEarnings = async (req, res) => {
         },
       },
     ]);
-    if (!earning) {
-      return ErrorHandler("not exist", 400, req, res);
-    }
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    // array of all months from 1 to 12
+    const allMonths = Array.from({ length: 12 }, (_, i) => i + 1);
+    // console.log(allMonths);
+    const earningMap = new Map(
+      earning.map((entry) => [entry._id.month, entry])
+    );
+    // Iterate through all months and add entries with zero earnings if missing
+    const result = allMonths.map((month) => {
+      const existingEntry = earningMap.get(month);
+      // console.log("existingEntry: ", existingEntry);
+      if (existingEntry) {
+        return existingEntry;
+      } else {
+        return {
+          _id: {
+            year: new Date().getFullYear(),
+            month: month,
+          },
+          monthTotal: `subTotal in ${monthNames[month - 1]}: 0`,
+        };
+      }
+    });
+    // console.log(result);
+
+    // Sort the result by year and month
+    result.sort((a, b) => {
+      if (a._id.year === b._id.year) {
+        return a._id.month - b._id.month;
+      }
+      return a._id.year - b._id.year;
+    });
+
+    // Now 'result' contains all months of the year with earnings, including zero earnings.
+
+    // console.log(result);
 
     return SuccessHandler(
       {
         message: "Earning Fetched successfully",
-        earning,
+        result,
       },
       200,
       res

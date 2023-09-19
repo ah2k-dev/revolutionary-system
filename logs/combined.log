@@ -7034,3 +7034,37 @@
 {"date":"2023-09-14T14:40:00.593Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
 {"date":"2023-09-14T14:47:29.321Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/1692885574120avatar1.png"}
 {"date":"2023-09-14T14:48:31.669Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads/1692885574120avatar1.png"}
+{"date":"2023-09-19T12:34:57.152Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:37:48.228Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:40:22.643Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:40:23.092Z","level":"error","message":"monthNames is not defined","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-19T12:42:41.909Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:44:02.902Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:50:21.252Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:55:37.109Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:56:03.518Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:57:29.640Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T12:58:27.038Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:00:25.449Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:09:22.675Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-19T13:10:21.025Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/"}
+{"date":"2023-09-19T13:10:21.332Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui.css"}
+{"date":"2023-09-19T13:10:21.362Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-init.js"}
+{"date":"2023-09-19T13:10:21.369Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-standalone-preset.js"}
+{"date":"2023-09-19T13:10:21.372Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/swagger-ui-bundle.js"}
+{"date":"2023-09-19T13:10:22.528Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/api-docs/favicon-32x32.png"}
+{"date":"2023-09-19T13:19:31.154Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-19T13:41:03.480Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:42:02.460Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:49:37.013Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:51:32.926Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:52:15.025Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:52:53.725Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:54:07.585Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:54:08.051Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-19T13:54:10.266Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:54:10.670Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-19T13:54:26.080Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T13:59:28.942Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T14:01:25.573Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-19T14:02:11.020Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}

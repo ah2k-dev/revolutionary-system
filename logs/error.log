@@ -1675,3 +1675,6 @@
 {"date":"2023-09-13T16:07:56.130Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-13T16:07:58.880Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
 {"date":"2023-09-13T16:21:40.183Z","level":"error","message":"PlanExecutor error during aggregation :: caused by :: can't $subtract int from array","method":"POST","service":"user-service","url":"/getAll"}
+{"date":"2023-09-19T12:40:23.092Z","level":"error","message":"monthNames is not defined","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-19T13:54:08.051Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-19T13:54:10.670Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}

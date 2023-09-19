@@ -25,8 +25,15 @@ const completeTheBooking = async (req, res) => {
     });
     Promise.all(
       booking.map(async (val) => {
+        // const completedBookings = await Booking.findOneAndUpdate({
+        //   $set:{status: "completed"}
+        // })
         val.status = "completed";
-        sendNotification("headingContent", "contentMessage", val.user);
+        sendNotification(
+          "Booking Completed",
+          "Please add a review for your booking and facility.",
+          val.user
+        );
         await booking.save();
       })
     )
