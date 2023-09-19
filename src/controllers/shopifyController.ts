@@ -81,18 +81,16 @@ const getShopifyProducts = async (req: Request, res: Response) => {
   }
 };
 
-const getSingleProducts = async (req: Request, res: Response) => {
+const getSingleProduct = async (req: Request, res: Response) => {
   // #swagger.tags = ['shopify']
+  const productId: number = Number(req.params.productId);
   try {
-    const products = await shopify.product.list();
-    let productCount = products.length;
-
+    const product = await shopify.product.get(productId);
     return SuccessHandler(
       {
         success: true,
-        message: "product fetched successfully",
-        productCount,
-        products,
+        message: "Single Product fetched successfully",
+        product,
       },
       200,
       res
@@ -101,4 +99,74 @@ const getSingleProducts = async (req: Request, res: Response) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
-export { importProducts, getShopifyProducts };
+const updateProduct = async (req: Request, res: Response) => {
+  // #swagger.tags = ['shopify']
+  const productId: number = Number(req.params.productId);
+  try {
+    const product = await shopify.product.get(productId);
+    if (product) {
+      const updatedProduct = await shopify.product.update(productId, {
+        title: "updated Nike Air Zoom",
+        body_html:
+          "<p>Elevate your running experience with the Nike Air Zoom Pegasus 38. Engineered to deliver both comfort and performance, these men's running shoes are the perfect choice for athletes and enthusiasts alike.</p>",
+        vendor: "DoClick",
+        product_type: "Physical",
+        images: [
+          {
+            src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+          },
+          {
+            src: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+          },
+        ],
+        variants: [
+          {
+            price: 3200,
+            inventory_quantity: 13,
+          },
+        ],
+      });
+      return SuccessHandler(
+        {
+          success: true,
+          message: "Product updated successfully",
+          updatedProduct,
+        },
+        200,
+        res
+      );
+    } else {
+      // Handle case where the product with the given ID was not found
+      return ErrorHandler("Product not found", 404, req, res);
+    }
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+const deleteProduct = async (req: Request, res: Response) => {
+  // #swagger.tags = ['shopify']
+  const productId: number = Number(req.params.productId);
+  try {
+    const product = await shopify.product.delete(productId);
+    return SuccessHandler(
+      {
+        success: true,
+        message: "Product deleted successfully",
+        product,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
+export {
+  importProducts,
+  getShopifyProducts,
+  getSingleProduct,
+  updateProduct,
+  deleteProduct,
+};

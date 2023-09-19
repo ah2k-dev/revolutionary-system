@@ -506,3 +506,9 @@
 {"date":"2023-09-19T19:01:06.219Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProducts"}
 {"date":"2023-09-19T19:05:23.024Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/getProducts"}
 {"date":"2023-09-19T19:09:40.393Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProducts"}
+{"date":"2023-09-19T19:30:48.756Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/getProducts"}
+{"date":"2023-09-19T19:31:03.112Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/product/8755450511675"}
+{"date":"2023-09-19T19:31:06.313Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/product/8755450511675"}
+{"date":"2023-09-19T19:32:55.999Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/product/8755450511675"}
+{"date":"2023-09-19T19:47:42.274Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/shopify/updateProduct/8755450511675"}
+{"date":"2023-09-19T19:48:14.146Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/shopify/updateProduct/8755450511675"}

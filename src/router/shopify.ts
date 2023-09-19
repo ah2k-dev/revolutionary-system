@@ -16,5 +16,8 @@ import * as shopify from "../controllers/shopifyController";
 //get
 router.route("/importProducts").post(shopify.importProducts);
 router.route("/getProducts").get(shopify.getShopifyProducts);
+router.route("/product/:productId").get(shopify.getSingleProduct);
+router.route("/updateProduct/:productId").put(shopify.updateProduct);
+router.route("/deleteProduct/:productId").delete(shopify.deleteProduct);
 
 export default router;
