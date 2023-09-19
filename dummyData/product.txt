@@ -91,3 +91,71 @@ Sure, here are some example product details for 10 different products:
     - SKU: GAIAM-YOGAMAT-001
 
 These are just sample product details, and you can customize them further based on your specific needs and the types of products you are dealing with in your application or e-commerce website.
+
+
+
+
+//
+import { Request, Response } from "express";
+import Profile from "../models/User/profile";
+import User from "../models/User/user";
+import { ProfileDocument } from "../types/models/User/profile.types";
+import { UserDocument } from "../types/models/User/user.types";
+import SuccessHandler from "../utils/SuccessHandler";
+import ErrorHandler from "../utils/ErrorHandler";
+import dotenv from "dotenv";
+dotenv.config({ path: ".././src/config/config.env" });
+import {
+  shopifyApi,
+  LATEST_API_VERSION,
+  ConfigParams,
+} from "@shopify/shopify-api";
+
+declare global {
+  namespace Express {
+    interface Request {
+      profile?: ProfileDocument;
+    }
+  }
+  // const shopifyConfig: ShopifyConfig = shopifyApi({
+  //   apiKey: process.env.SHOPIFY_API_KEY,
+  //   apiSecretKey: process.env.SHOPIFY_API_SECRET_KEY,
+  //   //   redirectUri: "YOUR_REDIRECT_URI",
+  //   redirectUri: "https://chat.openai.com/c/ed950cde-2a09-48a7-a7d5-9a00f13c2cb1",
+  //   scopes: ["read_products,write_products"],
+  // });
+}
+interface ShopifyConfig extends ConfigParams<ShopifyRestResources> {
+  apiKey: string;
+  apiSecretKey: string;
+  //   redirectUri: string;
+  scopes: string[];
+  hostName: string;
+  apiVersion: string;
+  isEmbeddedAppts: boolean;
+}
+
+const shopifyConfig: ShopifyConfig = shopifyApi({
+  apiKey: process.env.SHOPIFY_API_KEY,
+  apiSecretKey: process.env.SHOPIFY_API_SECRET_KEY,
+  scopes: ["read_products", "write_products"],
+  hostName: "your-shopify-hostname.com", // Replace with your actual Shopify host name
+  apiVersion: "20232-07", // Replace with your desired API version
+  isEmbeddedAppts: false, // Replace with the appropriate value
+});
+// Store access tokens associated with Shopify store URLs
+const accessTokens = new Map();
+
+// Profile
+const getProfile = async (req: Request, res: Response) => {
+  // #swagger.tags = ['shopify']
+  try {
+    const shopUrl = req.query.shop;
+    const authUrl = `https://${shopUrl}/admin/oauth/authorize?client_id=${shopifyConfig.apiKey}&scope=${shopifyConfig.scopes}&redirect_uri=${shopifyConfig.redirectUri}`;
+    res.redirect(authUrl);
+    return SuccessHandler({ message: "Redirected to shopify store" }, 200, res);
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+export { getProfile };
