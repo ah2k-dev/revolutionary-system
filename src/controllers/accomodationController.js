@@ -395,7 +395,7 @@ const deleteAccomodations = async (req, res) => {
   }
 };
 const updateAccommodations = async (req, res) => {
-  // #swagger.tags = ['accomodation']
+  // #swagger.tags = ['accommodation']
   try {
     const {
       title,
