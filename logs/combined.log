@@ -561,3 +561,8 @@
 {"date":"2023-09-20T17:00:31.081Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508615d1cb56cf97c86859c"}
 {"date":"2023-09-20T17:07:05.215Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/importProduct/all"}
 {"date":"2023-09-20T17:11:59.682Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/importProduct/remove/650b252f8c44d76d270d5738"}
+{"date":"2023-09-20T17:15:24.306Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T17:15:47.008Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-20T17:15:49.609Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-20T17:16:07.973Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-20T17:16:20.816Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}

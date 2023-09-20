@@ -9,4 +9,8 @@ export interface ProfileDocument extends Document {
   city: string;
   address: string;
   zipCode: number;
+  platform: string;
+  storeUrl: string;
+  accessToken: string;
+  apiKey: string;
 }

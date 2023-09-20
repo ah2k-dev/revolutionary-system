@@ -33,6 +33,21 @@ const profileSchema = new Schema<ProfileDocument>(
       type: Number,
       required: true,
     },
+    //added new fields
+    platform: {
+      type: String,
+      enum: ["shopify", "woocommerce"],
+      default: "shopify",
+    },
+    storeUrl: {
+      type: String,
+    },
+    accessToken: {
+      type: String,
+    },
+    apiKey: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

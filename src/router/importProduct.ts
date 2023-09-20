@@ -6,15 +6,25 @@ import * as importProduct from "../controllers/importProductController";
 //post
 router
   .route("/add/:productId")
-  .post(isAuthenticated, importProduct.importTheProduct);
+  .post(isAuthenticated, authorizedDropshipper, importProduct.importTheProduct);
 //put
 router
   .route("/update/:importProductId")
-  .put(isAuthenticated, importProduct.updateTheImportProduct);
+  .put(
+    isAuthenticated,
+    authorizedDropshipper,
+    importProduct.updateTheImportProduct
+  );
 //get
-router.route("/all").get(isAuthenticated, importProduct.getImportProducts);
+router
+  .route("/all")
+  .get(isAuthenticated, authorizedDropshipper, importProduct.getImportProducts);
 //delete
 router
   .route("/remove/:importProductId")
-  .delete(isAuthenticated, importProduct.removeTheImportProduct);
+  .delete(
+    isAuthenticated,
+    authorizedDropshipper,
+    importProduct.removeTheImportProduct
+  );
 export default router;
