@@ -43,7 +43,7 @@ const createProfile = async (req: Request, res: Response) => {
       profileImage = `${timeStamp}-${req.file.originalname}`;
     }
     const profile = await Profile.create({
-      user: currentUser,
+      dropshipper: currentUser,
       profilePic: profileImage,
       dob,
       country,
@@ -73,7 +73,7 @@ const updateProfile = async (req: Request, res: Response) => {
     if (!user) {
       return ErrorHandler("User doesn't exist", 400, req, res);
     }
-    const prvImage = await Profile.findOne({ user: currentUser });
+    const prvImage = await Profile.findOne({ dropshipper: currentUser });
     let profileImage = prvImage.profilePic;
     // const profilePic = req.file ? req.file.originalname : null;
     if (req.file || req.file.originalname) {
@@ -82,7 +82,7 @@ const updateProfile = async (req: Request, res: Response) => {
     }
     const updatedProfile = await Profile.findOneAndUpdate(
       {
-        user: currentUser,
+        dropshipper: currentUser,
       },
       {
         $set: {

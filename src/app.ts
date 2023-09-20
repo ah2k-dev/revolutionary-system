@@ -6,6 +6,8 @@ import swaggerUi from "swagger-ui-express";
 import swaggerFile from "../swagger_output.json";
 import ApiError from "./utils/ApiError";
 import loggerMiddleware from "./middleware/loggerMiddleware";
+import fileUpload from "express-fileupload";
+
 import path from "path";
 const app: Express = express();
 
@@ -30,7 +32,13 @@ const slug = slugify(title, {
 });
 console.log(slug);
 
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+// will be in near future
+app.use(
+  fileUpload({
+    limits: { fileSize: 1024 * 1024 },
+  })
+), // 1 MB
+  app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 // router index
 app.use("/", router);
 // api doc

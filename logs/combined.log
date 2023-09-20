@@ -539,3 +539,10 @@
 {"date":"2023-09-20T13:47:14.553Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
 {"date":"2023-09-20T13:56:23.545Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
 {"date":"2023-09-20T14:08:37.449Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T15:52:35.136Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T15:54:11.352Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T15:54:14.567Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T15:55:27.649Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T16:03:24.368Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T16:03:24.919Z","level":"error","message":"ImportedProduct validation failed: category: Path `category` is required.","method":"POST","service":"user-service","url":"/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T16:04:17.071Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}

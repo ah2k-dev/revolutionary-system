@@ -99,3 +99,4 @@
 {"date":"2023-09-20T12:44:40.616Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
 {"date":"2023-09-20T12:44:40.643Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
 {"date":"2023-09-20T12:45:05.579Z","level":"error","message":"User validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required.","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T16:03:24.919Z","level":"error","message":"ImportedProduct validation failed: category: Path `category` is required.","method":"POST","service":"user-service","url":"/add/6508610a1cb56cf97c868598"}

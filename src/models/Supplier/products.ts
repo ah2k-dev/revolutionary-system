@@ -48,6 +48,9 @@ const productSchema = new Schema<ProductDocument>(
       type: Number,
       default: 0,
     },
+    weightUnit: {
+      type: String,
+    },
     size: {
       type: [Number],
     },
