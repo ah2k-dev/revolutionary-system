@@ -546,3 +546,18 @@
 {"date":"2023-09-20T16:03:24.368Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
 {"date":"2023-09-20T16:03:24.919Z","level":"error","message":"ImportedProduct validation failed: category: Path `category` is required.","method":"POST","service":"user-service","url":"/add/6508610a1cb56cf97c868598"}
 {"date":"2023-09-20T16:04:17.071Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T16:48:01.949Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b1801bfe825f7c0ebab37"}
+{"date":"2023-09-20T16:51:12.284Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b1801bfe825f7c0ebab37"}
+{"date":"2023-09-20T16:54:25.256Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508610a1cb56cf97c868598"}
+{"date":"2023-09-20T16:54:52.716Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b1801bfe825f7c0ebab37"}
+{"date":"2023-09-20T16:54:53.145Z","level":"error","message":"Product not found or You do not have the required privileges to update import products","method":"PUT","service":"user-service","url":"/update/650b1801bfe825f7c0ebab37"}
+{"date":"2023-09-20T16:55:12.503Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:56:00.268Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:56:00.699Z","level":"error","message":"Supplier's Product Price: 7000 cannot be less than Selling Price: 400","method":"PUT","service":"user-service","url":"/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:56:40.992Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:56:41.421Z","level":"error","message":"Quantity: 1 should not be greater than Supplier's Product quantity: 20 ","method":"PUT","service":"user-service","url":"/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:57:48.354Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T16:59:45.039Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/importProduct/update/650b23c38e254bc283285694"}
+{"date":"2023-09-20T17:00:31.081Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/importProduct/add/6508615d1cb56cf97c86859c"}
+{"date":"2023-09-20T17:07:05.215Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/importProduct/all"}
+{"date":"2023-09-20T17:11:59.682Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/importProduct/remove/650b252f8c44d76d270d5738"}

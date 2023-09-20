@@ -52,6 +52,10 @@ const importTheProduct = async (req: Request, res: Response) => {
       weightUnit: product.weightUnit,
       size: product.size,
       sku: product.sku,
+      shippingCountry: null,
+      productTag: null,
+      collections: null,
+      variant: null,
     });
 
     return SuccessHandler(
@@ -111,10 +115,18 @@ const updateTheImportProduct = async (req: Request, res: Response) => {
         res
       );
     }
+    if (quantity > product.quantity) {
+      return ErrorHandler(
+        `Quantity: ${quantity} should not be greater than Supplier's Product quantity: ${product.quantity} `,
+        401,
+        req,
+        res
+      );
+    }
 
     const updatedProduct: ImportProductDocument =
-      await ImportProduct.findByIdAndUpdate(
-        importProductId,
+      await ImportProduct.findOneAndUpdate(
+        { _id: importProductId },
 
         {
           $set: {
@@ -148,4 +160,42 @@ const updateTheImportProduct = async (req: Request, res: Response) => {
   }
 };
 
-export { importTheProduct, updateTheImportProduct };
+const getImportProducts = async (req: Request, res: Response) => {
+  // #swagger.tags = ['importProduct']
+
+  try {
+    const importedProducts = await ImportProduct.find({
+      dropshipper: req.user._id,
+    });
+    return SuccessHandler(
+      { message: "Import Products fetched successfully", importedProducts },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+const removeTheImportProduct = async (req: Request, res: Response) => {
+  // #swagger.tags = ['importProduct']
+  const { importProductId } = req.params;
+  try {
+    await ImportProduct.findOneAndDelete({
+      dropshipper: req.user._id,
+      _id: importProductId,
+    });
+    return SuccessHandler(
+      { message: "Removed Product successfully" },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+export {
+  importTheProduct,
+  updateTheImportProduct,
+  getImportProducts,
+  removeTheImportProduct,
+};
