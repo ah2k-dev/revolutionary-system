@@ -516,3 +516,26 @@
 {"date":"2023-09-20T06:31:44.989Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
 {"date":"2023-09-20T06:34:06.965Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/webhooks"}
 {"date":"2023-09-20T06:34:08.336Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
+{"date":"2023-09-20T12:38:31.362Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-20T12:38:31.936Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-20T12:42:42.569Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:42:42.576Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:43:09.694Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:43:09.696Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:43:32.761Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:43:32.767Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:44:40.614Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:44:40.616Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:44:40.642Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:44:40.643Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:45:05.260Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:45:05.579Z","level":"error","message":"User validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required.","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:45:49.447Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-20T12:46:44.496Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-20T12:47:04.468Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T12:49:18.166Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T13:35:52.569Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-20T13:43:26.322Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T13:47:14.553Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T13:56:23.545Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}
+{"date":"2023-09-20T14:08:37.449Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/supplier/createProfile"}

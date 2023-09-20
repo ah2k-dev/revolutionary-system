@@ -23,7 +23,6 @@ const createProfile = async (req: Request, res: Response) => {
     const { dob, country, city, address, zipCode }: SupplierProfileRequest =
       req.body;
     console.log(req.body);
-    // const { profilePic }: { profilePic: File } = req.file;
     const user: UserDocument | null = await User.findById(currentUser);
     if (!user) {
       return ErrorHandler("User doesn't exist", 400, req, res);
@@ -39,10 +38,18 @@ const createProfile = async (req: Request, res: Response) => {
         res
       );
     }
-    const profilePic = req.file ? req.file.filename : null;
+    console.log("REQ.FILE: ", req.file);
+
+    let profileImage = null;
+    // const profilePic = req.file ? req.file.originalname : null;
+    if (req.file || req.file.originalname) {
+      const timeStamp = Date.now();
+      profileImage = `${timeStamp}-${req.file.originalname}`;
+    }
+
     const profile = await Profile.create({
       user: currentUser,
-      profilePic,
+      profilePic: profileImage,
       dob,
       country,
       city,
@@ -70,13 +77,21 @@ const updateProfile = async (req: Request, res: Response) => {
     if (!user) {
       return ErrorHandler("User doesn't exist", 400, req, res);
     }
+    const prvImage = await Profile.findOne({ user: currentUser });
+    let profileImage = prvImage.profilePic;
+    // const profilePic = req.file ? req.file.originalname : null;
+    if (req.file || req.file.originalname) {
+      const timeStamp = Date.now();
+      profileImage = `${timeStamp}-${req.file.originalname}`;
+    }
+
     const updatedProfile = await Profile.findOneAndUpdate(
       {
         user: currentUser,
       },
       {
         $set: {
-          // profilePic,
+          profilePic: profileImage,
           dob,
           country,
           city,

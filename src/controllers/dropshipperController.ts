@@ -19,14 +19,7 @@ const createProfile = async (req: Request, res: Response) => {
   // #swagger.tags = ['dropshipper']
   const currentUser: string = req.user._id;
   try {
-    const {
-      profilePic,
-      dob,
-      country,
-      city,
-      address,
-      zipCode,
-    }: DSProfileRequest = req.body;
+    const { dob, country, city, address, zipCode }: DSProfileRequest = req.body;
 
     const user: UserDocument | null = await User.findById(currentUser);
     if (!user) {
@@ -43,9 +36,15 @@ const createProfile = async (req: Request, res: Response) => {
         res
       );
     }
+    let profileImage = null;
+    // const profilePic = req.file ? req.file.originalname : null;
+    if (req.file || req.file.originalname) {
+      const timeStamp = Date.now();
+      profileImage = `${timeStamp}-${req.file.originalname}`;
+    }
     const profile = await Profile.create({
       user: currentUser,
-      profilePic,
+      profilePic: profileImage,
       dob,
       country,
       city,
@@ -67,18 +66,19 @@ const updateProfile = async (req: Request, res: Response) => {
   // #swagger.tags = ['dropshipper']
   const currentUser: string = req.user._id;
   try {
-    const {
-      profilePic,
-      dob,
-      country,
-      city,
-      address,
-      zipCode,
-    }: DSProfileRequest = req.body;
+    const { dob, country, city, address, zipCode }: DSProfileRequest = req.body;
 
     const user: UserDocument | null = await User.findById(currentUser);
+
     if (!user) {
       return ErrorHandler("User doesn't exist", 400, req, res);
+    }
+    const prvImage = await Profile.findOne({ user: currentUser });
+    let profileImage = prvImage.profilePic;
+    // const profilePic = req.file ? req.file.originalname : null;
+    if (req.file || req.file.originalname) {
+      const timeStamp = Date.now();
+      profileImage = `${timeStamp}-${req.file.originalname}`;
     }
     const updatedProfile = await Profile.findOneAndUpdate(
       {
@@ -86,7 +86,7 @@ const updateProfile = async (req: Request, res: Response) => {
       },
       {
         $set: {
-          profilePic,
+          profilePic: profileImage,
           dob,
           country,
           city,

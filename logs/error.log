@@ -92,3 +92,10 @@
 {"date":"2023-09-19T18:58:29.650Z","level":"error","message":"Response code 401 (Unauthorized)","method":"POST","service":"user-service","url":"/importProducts"}
 {"date":"2023-09-20T06:31:44.989Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
 {"date":"2023-09-20T06:34:08.336Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
+{"date":"2023-09-20T12:38:31.936Z","level":"error","message":"User does not exist","method":"POST","service":"user-service","url":"/login"}
+{"date":"2023-09-20T12:42:42.576Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:43:09.696Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:43:32.767Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:44:40.616Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:44:40.643Z","level":"error","message":"Cannot read properties of undefined (reading 'match')","method":"POST","service":"user-service","url":"/register"}
+{"date":"2023-09-20T12:45:05.579Z","level":"error","message":"User validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required.","method":"POST","service":"user-service","url":"/register"}

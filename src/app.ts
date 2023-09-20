@@ -13,6 +13,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 app.options("*", cors());
+app.use(bodyParser.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(loggerMiddleware);
