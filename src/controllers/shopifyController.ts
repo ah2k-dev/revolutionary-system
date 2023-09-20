@@ -68,7 +68,6 @@ const getShopifyProducts = async (req: Request, res: Response) => {
 
     return SuccessHandler(
       {
-        success: true,
         message: "product fetched successfully",
         productCount,
         products,
@@ -88,7 +87,6 @@ const getSingleProduct = async (req: Request, res: Response) => {
     const product = await shopify.product.get(productId);
     return SuccessHandler(
       {
-        success: true,
         message: "Single Product fetched successfully",
         product,
       },
@@ -128,7 +126,6 @@ const updateProduct = async (req: Request, res: Response) => {
       });
       return SuccessHandler(
         {
-          success: true,
           message: "Product updated successfully",
           updatedProduct,
         },
@@ -151,7 +148,6 @@ const deleteProduct = async (req: Request, res: Response) => {
     const product = await shopify.product.delete(productId);
     return SuccessHandler(
       {
-        success: true,
         message: "Product deleted successfully",
         product,
       },
