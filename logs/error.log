@@ -90,3 +90,5 @@
 {"date":"2023-09-19T18:54:29.042Z","level":"error","message":"Response code 402 (Payment Required)","method":"POST","service":"user-service","url":"/importProducts"}
 {"date":"2023-09-19T18:57:40.175Z","level":"error","message":"Response code 401 (Unauthorized)","method":"POST","service":"user-service","url":"/importProducts"}
 {"date":"2023-09-19T18:58:29.650Z","level":"error","message":"Response code 401 (Unauthorized)","method":"POST","service":"user-service","url":"/importProducts"}
+{"date":"2023-09-20T06:31:44.989Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
+{"date":"2023-09-20T06:34:08.336Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}

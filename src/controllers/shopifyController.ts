@@ -17,6 +17,7 @@ declare global {
 }
 const accessToken = process.env.ACCESS_TOKEN;
 
+const shop = "e092e8.myshopify.com";
 const shopify = new Shopify({
   shopName: "e092e8.myshopify.com",
   apiKey: process.env.SHOPIFY_API_KEY,
@@ -159,10 +160,27 @@ const deleteProduct = async (req: Request, res: Response) => {
   }
 };
 
+const getShopifyWebhooks = async (req: Request, res: Response) => {
+  try {
+    const webhooks = await shopify.webhook.list();
+    return SuccessHandler(
+      {
+        message: "Single Product fetched successfully",
+        webhooks,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    return ErrorHandler(error.message, 500, req, res);
+  }
+};
+
 export {
   importProducts,
   getShopifyProducts,
   getSingleProduct,
   updateProduct,
   deleteProduct,
+  getShopifyWebhooks,
 };

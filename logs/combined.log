@@ -512,3 +512,7 @@
 {"date":"2023-09-19T19:32:55.999Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/shopify/product/8755450511675"}
 {"date":"2023-09-19T19:47:42.274Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/shopify/updateProduct/8755450511675"}
 {"date":"2023-09-19T19:48:14.146Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/shopify/updateProduct/8755450511675"}
+{"date":"2023-09-20T06:31:42.816Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/webhooks"}
+{"date":"2023-09-20T06:31:44.989Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
+{"date":"2023-09-20T06:34:06.965Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/webhooks"}
+{"date":"2023-09-20T06:34:08.336Z","level":"error","message":"Response code 406 (Not Acceptable)","method":"POST","service":"user-service","url":"/webhooks"}
