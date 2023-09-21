@@ -22,7 +22,7 @@ const createAccomodations = async (req, res) => {
       dinnerCapacity,
     } = req.body;
     const currentUser = req.user._id;
-    console.log(req.files);
+    // console.log(req.files);
     const isAccommodationsExist = await Accommodation.findOne({
       host: currentUser,
     });
@@ -130,13 +130,13 @@ const getAccomodations = async (req, res) => {
 
     const startDate = moment(req.body.date[0]).startOf("day").format();
     const endDate = moment(req.body.date[1]).endOf("day").format();
-    console.log(startDate);
-    console.log(endDate);
+    // console.log(startDate);
+    // console.log(endDate);
     const accommodationIds = await Accommodation.find({
       isActive: true,
       ...locationFilter,
     }).distinct("_id");
-    console.log("DISTINCT", accommodationIds);
+    // console.log("DISTINCT", accommodationIds);
     // let accommodationIdEx = accommodationIds.map((val) =>
     //   mongoose.Types.ObjectId(val)
     // );
@@ -195,7 +195,7 @@ const getAccomodations = async (req, res) => {
       },
     ]);
 
-    console.log("Bookings", accommodationWithBookings);
+    // console.log("Bookings", accommodationWithBookings);
     const accommodationsWithoutBookings = await Accommodation.aggregate([
       // {
       //   $group: {
@@ -412,7 +412,7 @@ const updateAccommodations = async (req, res) => {
       host: currentUser,
     });
 
-    console.log("Debugging: ", accommodation);
+    // console.log("Debugging: ", accommodation);
     if (!accommodation) {
       return ErrorHandler(
         "Accommodation not found or unauthorized",
@@ -424,9 +424,9 @@ const updateAccommodations = async (req, res) => {
 
     let imagesFileName = [];
     accommodation.images.forEach((img) => imagesFileName.push(img));
-    console.log("outerImages Array: ", imagesFileName);
+    // console.log("outerImages Array: ", imagesFileName);
     if (req.files && req.files.images) {
-      console.log("Upload block");
+      // console.log("Upload block");
       imagesFileName = [];
       const { images } = req.files;
 
