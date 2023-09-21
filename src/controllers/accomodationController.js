@@ -22,7 +22,7 @@ const createAccomodations = async (req, res) => {
       dinnerCapacity,
     } = req.body;
     const currentUser = req.user._id;
-
+    console.log(req.files);
     const isAccommodationsExist = await Accommodation.findOne({
       host: currentUser,
     });
@@ -31,9 +31,9 @@ const createAccomodations = async (req, res) => {
       return ErrorHandler("Accommodation already exist", 400, req, res);
     }
 
-    if (!req.files || !req.files.images || req.files.images.length === 0) {
-      return ErrorHandler("Please upload at least one image", 500, req, res);
-    }
+    // if (!req.file) {
+    //   return ErrorHandler("Please upload at least one image", 500, req, res);
+    // }
 
     let imagesFileName = [];
 
@@ -43,9 +43,6 @@ const createAccomodations = async (req, res) => {
     const imageArray = Array.isArray(images) ? images : [images];
 
     for (const img of imageArray) {
-      if (!img.mimetype.startsWith("image")) {
-        return ErrorHandler("Please upload an image", 500, req, res);
-      }
       let imgFile = `${Date.now()}-${img.name}`;
       imagesFileName.push(imgFile);
       img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {
@@ -436,9 +433,6 @@ const updateAccommodations = async (req, res) => {
       // `images` is an array, if there's only one image uploaded
       const imageArray = Array.isArray(images) ? images : [images];
       for (const img of imageArray) {
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image", 500, req, res);
-        }
         let imgFile = `${Date.now()}-${img.name}`;
         imagesFileName.push(imgFile);
         img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {

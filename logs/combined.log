@@ -7068,3 +7068,15 @@
 {"date":"2023-09-19T13:59:28.942Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
 {"date":"2023-09-19T14:01:25.573Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
 {"date":"2023-09-19T14:02:11.020Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/earnings"}
+{"date":"2023-09-21T13:10:39.550Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:12:18.465Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:12:19.057Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:12:52.615Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:20:59.611Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:21:00.166Z","level":"error","message":"Please upload at least one image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:21:16.489Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:21:18.405Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:21:25.188Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:21:25.686Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:22:40.542Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-21T13:24:38.314Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}

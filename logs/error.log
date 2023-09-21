@@ -1678,3 +1678,7 @@
 {"date":"2023-09-19T12:40:23.092Z","level":"error","message":"monthNames is not defined","method":"GET","service":"user-service","url":"/earnings"}
 {"date":"2023-09-19T13:54:08.051Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}
 {"date":"2023-09-19T13:54:10.670Z","level":"error","message":"Cannot access 'result' before initialization","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-21T13:12:19.057Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:21:00.166Z","level":"error","message":"Please upload at least one image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:21:18.405Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-21T13:21:25.686Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
