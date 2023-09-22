@@ -7080,3 +7080,10 @@
 {"date":"2023-09-21T13:21:25.686Z","level":"error","message":"Please upload an image","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-21T13:22:40.542Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
 {"date":"2023-09-21T13:24:38.314Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/accommodation/new"}
+{"date":"2023-09-22T05:39:31.109Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-22T05:40:28.085Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-22T05:41:12.900Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/booking/userBookings"}
+{"date":"2023-09-22T05:42:05.711Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-22T05:46:30.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-22T05:46:34.164Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-22T05:47:19.098Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
