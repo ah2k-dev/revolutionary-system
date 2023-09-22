@@ -732,7 +732,7 @@
     "/accommodation/update/{id}": {
       "put": {
         "tags": [
-          "accomodation"
+          "accommodation"
         ],
         "description": "",
         "parameters": [

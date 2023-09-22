@@ -434,9 +434,15 @@ const getSavedCook = async (req, res) => {
 const getUserBookings = async (req, res) => {
   try {
     const currentUser = req.user._id;
-    const bookings = await Booking.find({ user: currentUser }).sort({
-      createdAt: -1,
-    });
+    const bookings = await Booking.find({ user: currentUser })
+      .sort({
+        createdAt: -1,
+      })
+      .populate({
+        path: "accommodation",
+        select:
+          "location images title desc host roomPrice dinnerPrice services rating",
+      });
     if (!bookings) {
       return ErrorHandler("Booking does not exist", 404, req, res);
     }

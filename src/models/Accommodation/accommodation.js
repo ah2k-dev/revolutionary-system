@@ -29,11 +29,6 @@ const accommodationSchema = new Schema(
     services: { type: [String] },
 
     isActive: { type: Boolean, default: true },
-    status: {
-      type: String,
-      enum: ["Booked", "Available"],
-      default: "Available",
-    },
     rating: { type: Number, default: 0 },
     reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
   },
