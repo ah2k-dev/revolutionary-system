@@ -7087,3 +7087,37 @@
 {"date":"2023-09-22T05:46:30.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
 {"date":"2023-09-22T05:46:34.164Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
 {"date":"2023-09-22T05:47:19.098Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/bookings"}
+{"date":"2023-09-23T12:09:43.216Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/register"}
+{"date":"2023-09-23T12:16:11.147Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-23T12:16:32.103Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:16:32.323Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:16:45.696Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:16:47.075Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:17:04.836Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:17:05.277Z","level":"error","message":"The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of ObjectId","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:17:08.746Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:17:08.960Z","level":"error","message":"Invalid token","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:17:22.068Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:17:23.290Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:17:35.236Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:17:35.674Z","level":"error","message":"The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of ObjectId","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:19:56.708Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:19:58.450Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:20:20.941Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:22:23.294Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:22:24.586Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:22:44.955Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:22:45.431Z","level":"error","message":"The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (0)","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:25:35.630Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:25:38.630Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:25:56.529Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:25:57.025Z","level":"error","message":"Wallet validation failed: balance: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"balance\", withDrawAmount: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"withDrawAmount\"","method":"POST","service":"user-service","url":"/verifyEmail"}
+{"date":"2023-09-23T12:26:52.032Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/requestEmailToken"}
+{"date":"2023-09-23T12:26:53.323Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-23T12:27:08.512Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
+{"date":"2023-09-23T12:44:54.102Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-23T12:47:56.742Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/user/savedOrUnsavedCook/64e771556cca90fada9c0a75"}
+{"date":"2023-09-23T12:54:41.763Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-09-23T12:56:31.076Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-09-23T12:57:01.962Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
+{"date":"2023-09-23T12:57:29.560Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}

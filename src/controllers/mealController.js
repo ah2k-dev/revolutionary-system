@@ -175,11 +175,11 @@ const getMeals = async (req, res) => {
 
     //✅ Price Filter
     const priceFilter =
-      req.body.maxPrice && req.body.minPrice
+      req.body.price && req.body.price.length > 0
         ? {
             price: {
-              $lte: Number(req.body.maxPrice),
-              $gte: Number(req.body.minPrice),
+              $lte: Number(req.body.price[1]),
+              $gte: Number(req.body.price[0]),
             },
           }
         : {};
@@ -223,7 +223,7 @@ const getMeals = async (req, res) => {
       : {};
 
     const meals = await Meal.find({
-      cook,
+      // cook,
       isActive: true,
       ...dishFilter,
       ...priceFilter,
@@ -240,7 +240,7 @@ const getMeals = async (req, res) => {
 
     return SuccessHandler(
       {
-        message: "Meal Added successfully",
+        message: "Meal Fetched successfully",
         baseUrl: `${process.env.BASE_URL}/uploads/`,
         mealsCount,
         meals,

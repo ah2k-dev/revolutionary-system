@@ -101,8 +101,6 @@ const userSchema = new Schema({
   shopDesc: { type: String },
   shopBanner: {
     type: String,
-    // default:
-    //   "https://img.freepik.com/free-vector/flat-design-food-sale-background_23-2149167390.jpg",
   },
   shopRating: { type: Number, default: 0 },
   savedAccomodation: [{ type: Schema.Types.ObjectId, ref: "Accommodation" }],
@@ -111,6 +109,7 @@ const userSchema = new Schema({
   savedCooks: [{ type: Schema.Types.ObjectId, ref: "User" }],
   // new field added
   reviewsId: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+  wallet: { type: Schema.Types.ObjectId, ref: "Wallet" },
 });
 
 //hash password before saving
