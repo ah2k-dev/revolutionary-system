@@ -10,6 +10,7 @@ const createCoupon = async (req, res) => {
 
     const currentUser = req.user._id;
     const isCoupon = await Coupon.findOne({
+      isActive: true,
       couponCode,
       createdBy: currentUser,
     });

@@ -1,4 +1,6 @@
 const User = require("../models/User/user");
+const Wallet = require("../models/User/wallet");
+const Encrypter = require("../utils/encrypt");
 const sendMail = require("../utils/sendMail");
 const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
@@ -151,6 +153,7 @@ const register = async (req, res) => {
     // saved user
     const newUser = await User.create(newUserFields);
     newUser.save();
+
     return SuccessHandler(`${role} created successfully`, 200, res);
   } catch (error) {
     return ErrorHandler(error.message, 500, req, res);
@@ -211,6 +214,13 @@ const verifyEmail = async (req, res) => {
     user.emailVerificationTokenExpires = null;
     jwtToken = user.getJWTToken();
     await user.save();
+    // user: Encrypter.encrypt(user._id),
+    const wallet = await Wallet.create({
+      user: user._id,
+      balance: Encrypter.encrypt("0"),
+      withDrawAmount: Encrypter.encrypt("0"),
+    });
+    console.log(wallet);
     return SuccessHandler(
       { success: true, message: "Email verified successfully" },
       200,

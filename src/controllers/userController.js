@@ -314,30 +314,6 @@ const getCooks = async (req, res) => {
   }
 };
 
-// get all coupons for cook
-//Get Coupons
-const getCouponsForCook = async (req, res) => {
-  // #swagger.tags = ['user']
-  try {
-    const currentUser = req.user._id;
-    const coupons = await Coupon.find({
-      createdBy: currentUser,
-    });
-
-    if (!coupons) {
-      return ErrorHandler("Coupons not found", 404, req, res);
-    }
-
-    return SuccessHandler(
-      { message: "Coupon Fetched successfully", coupons },
-      200,
-      res
-    );
-  } catch (error) {
-    return ErrorHandler(error.message, 500, req, res);
-  }
-};
-
 // Saved or Unsaved Meal
 const savedOrUnsavedMeal = async (req, res) => {
   // #swagger.tags = ['user']
@@ -467,7 +443,6 @@ module.exports = {
   getSavedAccomodations,
   updatePersonalInfo,
   getCooks,
-  getCouponsForCook,
   savedOrUnsavedMeal,
   getSavedMeals,
   savedOrUnsavedCook,

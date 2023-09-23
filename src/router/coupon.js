@@ -8,7 +8,9 @@ const {
   authorizedUser,
 } = require("../middleware/role");
 
-router.route("/createCoupon").post(isAuthenticated, coupon.createCoupon);
+router
+  .route("/createCoupon")
+  .post(isAuthenticated, authorizedCook, coupon.createCoupon);
 router
   .route("/verifyCoupon")
   .post(isAuthenticated, authorizedUser, coupon.verifyCoupon);
