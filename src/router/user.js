@@ -30,10 +30,6 @@ router
   .get(isAuthenticated, authorizedUser, user.getSavedMeals);
 
 // ✅ Coupon for the Cooks
-// get
-router
-  .route("/cookCoupons")
-  .get(isAuthenticated, authorizedCook, user.getCouponsForCook);
 
 // ✅ Saved Cook
 router
