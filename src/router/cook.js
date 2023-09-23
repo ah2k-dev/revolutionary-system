@@ -7,5 +7,8 @@ const { authorizedCook } = require("../middleware/role");
 //post
 router.route("/coupons").get(isAuthenticated, authorizedCook, cook.getCoupons);
 router.route("/meals").get(isAuthenticated, authorizedCook, cook.getMeals);
+router
+  .route("/pickupDate/:orderId")
+  .post(isAuthenticated, authorizedCook, cook.providePickupDate);
 
 module.exports = router;

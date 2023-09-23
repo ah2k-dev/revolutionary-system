@@ -3,6 +3,7 @@ const SuccessHandler = require("../utils/SuccessHandler");
 const ErrorHandler = require("../utils/ErrorHandler");
 const Meal = require("../models/Meal/meal");
 const Coupon = require("../models/Coupon/coupon");
+const OrderMeal = require("../models/Meal/orderMeal");
 // Cook Meals
 const getMeals = async (req, res) => {
   // #swagger.tags = ['cook']
@@ -54,23 +55,37 @@ const getCoupons = async (req, res) => {
   }
 };
 
-const orderProposal = async (req, res) => {
+const providePickupDate = async (req, res) => {
   // #swagger.tags = ['cook']
   const currentUser = req.user._id;
+  const { orderId } = req.params;
+  const { PickupDate } = req.body;
   try {
-    const meals = await Meal.find({
-      isActive: true,
-      cook: currentUser,
-    });
-    if (!meals) {
-      return ErrorHandler("Meals not found", 404, req, res);
+    if (new Date(PickupDate) <= new Date()) {
+      return ErrorHandler("Pickup Date should be in future", 400, req, res);
     }
+
+    const order = await OrderMeal.findOne({
+      _id: orderId,
+      user: currentUser,
+      status: "pending",
+    });
+    if (!order) {
+      return ErrorHandler("No Such Purchased Meal exist", 404, req, res);
+    }
+    await OrderMeal.findOneAndUpdate(
+      { _id: orderId },
+      {
+        $set: {
+          status: "approved",
+          PickupDate,
+        },
+      }
+    );
 
     return SuccessHandler(
       {
-        message: "Meals fetched successfully",
-        baseUrl: `${process.env.BASE_URL}/uploads/`,
-        meals,
+        message: `The Pickup date: ${PickupDate} is provided by cook for that purchase meals`,
       },
       200,
       res
@@ -82,4 +97,5 @@ const orderProposal = async (req, res) => {
 module.exports = {
   getMeals,
   getCoupons,
+  providePickupDate,
 };
