@@ -534,29 +534,6 @@
         }
       }
     },
-    "/user/cookCoupons": {
-      "get": {
-        "tags": [
-          "user"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
     "/user/savedOrUnsavedCook/{id}": {
       "put": {
         "tags": [
@@ -1490,32 +1467,36 @@
         }
       }
     },
-    "/notification/send": {
-      "post": {
-        "tags": [
-          "notification"
-        ],
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/notification/view/{notificationId}": {
+    "/cook/coupons": {
       "get": {
         "tags": [
-          "notification"
+          "cook"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "notificationId",
-            "in": "path",
-            "required": true,
+            "name": "authorization",
+            "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
           },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cook/meals": {
+      "get": {
+        "tags": [
+          "cook"
+        ],
+        "description": "",
+        "parameters": [
           {
             "name": "authorization",
             "in": "header",
