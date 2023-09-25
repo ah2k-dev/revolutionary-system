@@ -32,17 +32,16 @@ const sendNotification = async (headingContent, contentMessage, userId, id) => {
       Authorization: `Basic ${process.env.REST_API_KEY}`,
     };
     // create a notification
-    const response = await oneSignalClient.createNotification(
-      notification,
-      headers
-    );
-    SuccessHandler(
-      { message: "Notification Send Successfuly", response },
-      200,
-      res
-    );
+    // const response = await oneSignalClient.createNotification(
+    await oneSignalClient.createNotification(notification, headers);
+    // SuccessHandler(
+    //   { message: "Notification Send Successfuly", response },
+    //   200,
+    //   res
+    // );
   } catch (error) {
-    ErrorHandler(error.message, 500, req, res);
+    // ErrorHandler(error.message, 500, req, res);
+    console.log(error.message);
   }
 };
 

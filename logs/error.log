@@ -1716,3 +1716,11 @@
 {"date":"2023-09-25T16:03:04.837Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-25T16:21:26.054Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
 {"date":"2023-09-25T16:40:18.945Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:44:50.522Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:54:23.237Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:54:59.752Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:55:53.240Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:57:41.585Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:01:34.812Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T17:01:57.422Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}

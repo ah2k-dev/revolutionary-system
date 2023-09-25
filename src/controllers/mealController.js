@@ -112,9 +112,6 @@ const updateMeal = async (req, res) => {
       // `images` is an array, if there's only one image uploaded
       const imageArray = Array.isArray(images) ? images : [images];
       for (const img of imageArray) {
-        if (!img.mimetype.startsWith("image")) {
-          return ErrorHandler("Please upload an image", 500, req, res);
-        }
         let imgFile = `${Date.now()}-${img.name}`;
         imagesFileName.push(imgFile);
         img.mv(path.join(__dirname, `../../uploads/${imgFile}`), (err) => {

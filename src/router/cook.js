@@ -3,7 +3,7 @@ const cook = require("../controllers/cookController");
 const isAuthenticated = require("../middleware/auth");
 const { authorizedCook } = require("../middleware/role");
 
-//✅ ➡Host
+//✅ ➡Cook
 // get
 router.route("/coupons").get(isAuthenticated, authorizedCook, cook.getCoupons);
 router.route("/meals").get(isAuthenticated, authorizedCook, cook.getMeals);

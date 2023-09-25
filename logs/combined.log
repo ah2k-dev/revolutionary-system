@@ -7225,3 +7225,26 @@
 {"date":"2023-09-25T16:40:18.700Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
 {"date":"2023-09-25T16:40:18.945Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
 {"date":"2023-09-25T16:42:31.306Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:44:50.271Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:44:50.522Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:48:26.662Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:52:01.433Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:54:23.022Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:54:23.237Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:54:58.741Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:54:59.752Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:55:43.042Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:55:52.752Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:55:53.240Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:57:40.935Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:57:41.585Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:59:30.540Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:59:37.344Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:59:44.023Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:01:34.595Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T17:01:34.812Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T17:01:56.240Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:01:57.422Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:09:01.204Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T17:09:25.398Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
