@@ -19,6 +19,7 @@ const createMeal = async (req, res) => {
       calories,
       maxServingCapacity,
       spiceStatus,
+      category,
     } = req.body;
 
     const cookId = req.user._id;
@@ -36,19 +37,12 @@ const createMeal = async (req, res) => {
       );
     }
 
-    if (!req.files || !req.files.images || req.files.images.length === 0) {
-      return ErrorHandler("Please upload at least one image", 500, req, res);
-    }
-
     let imagesFileName = [];
     const { images } = req.files;
     const imageArray = Array.isArray(images) ? images : [images];
 
     for (let img of imageArray) {
       // It should be image
-      if (!img.mimetype.startsWith("image")) {
-        return ErrorHandler("Please upload an image file", 400, req, res);
-      }
 
       let imgFile = `${Date.now()}-${img.name}`;
       imagesFileName.push(imgFile);
@@ -69,6 +63,7 @@ const createMeal = async (req, res) => {
       maxServingCapacity,
       spiceStatus,
       images: imagesFileName,
+      category,
     });
 
     return SuccessHandler(
@@ -96,6 +91,7 @@ const updateMeal = async (req, res) => {
       calories,
       spiceStatus,
       maxServingCapacity,
+      category,
     } = req.body;
     const meal = await Meal.findOne({
       _id: mealId,
@@ -140,6 +136,7 @@ const updateMeal = async (req, res) => {
         spiceStatus,
         maxServingCapacity,
         images: imagesFileName,
+        category,
       },
       {
         new: true,
@@ -165,7 +162,6 @@ const updateMeal = async (req, res) => {
 
 const getMeals = async (req, res) => {
   // #swagger.tags = ['meal']
-  const { cook } = req.body;
   try {
     // const { minPrice } = req.query;
     // const { maxPrice } = req.query;
@@ -280,7 +276,7 @@ const getMealsByCookId = async (req, res) => {
     if (!meals) {
       return ErrorHandler(
         "Sorry, The Cook's Meal doesn't exist",
-        400,
+        404,
         req,
         res
       );
