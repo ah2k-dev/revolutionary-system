@@ -1694,3 +1694,4 @@
 {"date":"2023-09-23T12:25:38.630Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-09-23T12:25:57.025Z","level":"error","message":"Wallet validation failed: balance: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"balance\", withDrawAmount: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"withDrawAmount\"","method":"POST","service":"user-service","url":"/verifyEmail"}
 {"date":"2023-09-23T12:26:53.323Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-25T12:56:11.507Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}

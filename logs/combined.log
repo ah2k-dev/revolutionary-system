@@ -7123,3 +7123,8 @@
 {"date":"2023-09-23T12:57:29.560Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/getMeals"}
 {"date":"2023-09-23T13:16:20.963Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
 {"date":"2023-09-23T13:20:10.677Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/coupons"}
+{"date":"2023-09-25T12:54:44.328Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T12:56:10.927Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T12:56:11.507Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T12:57:28.020Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T13:02:58.232Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
