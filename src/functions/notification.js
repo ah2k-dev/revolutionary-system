@@ -21,8 +21,8 @@ const sendNotification = async (headingContent, contentMessage, userId, id) => {
       include_external_user_ids: [userId],
       large_icon:
         "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=626&ext=jpg",
-      big_picture:
-        "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.1865596468.1692806850&semt=ais",
+      // big_picture:
+      //   "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.1865596468.1692806850&semt=ais",
       data: {
         id: id,
       },
