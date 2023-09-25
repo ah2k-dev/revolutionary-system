@@ -310,6 +310,7 @@ const orderTheMeal = async (req, res) => {
       user: currentUser,
       coupon: couponId,
       meals: JSON.parse(meals),
+      // meals: meals,
       subTotal: subTotal,
       usedCoupon: couponCode,
       tip: tip,
@@ -349,7 +350,8 @@ const getOrderedMeal = async (req, res) => {
     // );
     const userMeals = await OrderMeal.find({ user: currentUser }).populate({
       path: "meals.meal",
-      select: "_id dishName price images spiceStatus maxServingCapacity",
+      select:
+        "_id dishName price images spiceStatus maxServingCapacity category",
       populate: {
         path: "cook",
         model: "User",

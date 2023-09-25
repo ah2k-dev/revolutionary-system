@@ -1695,3 +1695,18 @@
 {"date":"2023-09-23T12:25:57.025Z","level":"error","message":"Wallet validation failed: balance: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"balance\", withDrawAmount: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"withDrawAmount\"","method":"POST","service":"user-service","url":"/verifyEmail"}
 {"date":"2023-09-23T12:26:53.323Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-09-25T12:56:11.507Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:26:20.297Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:27:22.891Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:27:54.763Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:28:00.198Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:28:51.067Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:43:05.594Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/orders"}
+{"date":"2023-09-25T14:46:17.165Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:46:17.604Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:47:43.256Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:48:00.552Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:48:05.175Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:49:36.397Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:05:08.011Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:08:17.184Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:08:32.382Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
