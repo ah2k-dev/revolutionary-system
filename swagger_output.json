@@ -999,6 +999,9 @@
                 },
                 "spiceStatus": {
                   "example": "any"
+                },
+                "category": {
+                  "example": "any"
                 }
               }
             }
@@ -1080,6 +1083,9 @@
                   "example": "any"
                 },
                 "maxServingCapacity": {
+                  "example": "any"
+                },
+                "category": {
                   "example": "any"
                 }
               }
@@ -1501,6 +1507,121 @@
             "name": "authorization",
             "in": "header",
             "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cook/orders": {
+      "get": {
+        "tags": [
+          "cook"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cook/ordersCount": {
+      "get": {
+        "tags": [
+          "cook"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cook/earnings": {
+      "get": {
+        "tags": [
+          "cook"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/cook/pickupDate/{orderId}": {
+      "post": {
+        "tags": [
+          "cook"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "PickupDate": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {

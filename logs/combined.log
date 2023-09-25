@@ -7206,3 +7206,22 @@
 {"date":"2023-09-25T15:35:10.991Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
 {"date":"2023-09-25T15:37:31.720Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
 {"date":"2023-09-25T15:38:02.082Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:52:01.297Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T15:52:01.787Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:53:37.800Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T15:54:19.473Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:02:10.499Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:03:00.743Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:03:01.238Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:04.024Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:03:04.837Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:11.415Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:05:27.618Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:10:07.176Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-25T16:14:36.235Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/accommodation"}
+{"date":"2023-09-25T16:14:46.919Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:21:25.836Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:21:26.054Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:40:18.700Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-25T16:40:18.945Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:42:31.306Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}

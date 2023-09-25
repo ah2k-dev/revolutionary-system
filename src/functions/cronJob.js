@@ -29,12 +29,13 @@ const completeTheBooking = async (req, res) => {
         //   $set:{status: "completed"}
         // })
         val.status = "completed";
+        await val.save();
         sendNotification(
           "Booking Completed",
           "Please add a review for your booking and facility.",
-          val.user
+          val.user,
+          val._id
         );
-        await booking.save();
       })
     )
       .then((result) => {

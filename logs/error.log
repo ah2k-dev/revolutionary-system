@@ -1711,3 +1711,8 @@
 {"date":"2023-09-25T15:08:17.184Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-25T15:08:32.382Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-25T15:31:14.241Z","level":"error","message":"result is not defined","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-25T15:52:01.787Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:01.238Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:04.837Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:21:26.054Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:40:18.945Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
