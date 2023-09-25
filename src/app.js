@@ -51,8 +51,7 @@ app.use((req, res, next) => {
 });
 
 const markTheBookingAsCompleted = new cron(
-  // "59 23 * * *",
-  "* * * * * *",
+  "59 23 * * *",
   completeTheBooking,
   null,
   true,
