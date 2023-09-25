@@ -7197,3 +7197,12 @@
 {"date":"2023-09-25T15:20:16.976Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
 {"date":"2023-09-25T15:22:23.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/ordersCount"}
 {"date":"2023-09-25T15:23:19.588Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/ordersCount"}
+{"date":"2023-09-25T15:31:13.523Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:31:14.241Z","level":"error","message":"result is not defined","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-25T15:32:13.642Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:32:25.491Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:33:34.919Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:34:48.679Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:35:10.991Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:37:31.720Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-25T15:38:02.082Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}

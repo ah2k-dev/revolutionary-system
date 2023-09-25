@@ -11,6 +11,9 @@ router.route("/orders").get(isAuthenticated, authorizedCook, cook.getOrders);
 router
   .route("/ordersCount")
   .get(isAuthenticated, authorizedCook, cook.getOrdersCount);
+router
+  .route("/earnings")
+  .get(isAuthenticated, authorizedCook, cook.cookEarnings);
 //post
 router
   .route("/pickupDate/:orderId")

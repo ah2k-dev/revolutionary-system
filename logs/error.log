@@ -1710,3 +1710,4 @@
 {"date":"2023-09-25T15:05:08.011Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-25T15:08:17.184Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
 {"date":"2023-09-25T15:08:32.382Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:31:14.241Z","level":"error","message":"result is not defined","method":"GET","service":"user-service","url":"/earnings"}

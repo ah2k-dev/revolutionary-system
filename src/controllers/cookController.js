@@ -125,46 +125,6 @@ const getOrders = async (req, res) => {
 const getOrdersCount = async (req, res) => {
   // #swagger.tags = ['cook']
   try {
-    // const bookingCount = await Booking.aggregate([
-    //   {
-    //     $lookup: {
-    //       from: "accommodations",
-    //       localField: "accommodation",
-    //       foreignField: "_id",
-    //       as: "accommodationDetail",
-    //     },
-    //   },
-    //   {
-    //     $match: {
-    //       "accommodationDetail.host": host,
-    //     },
-    //   },
-    //   {
-    //     $group: {
-    //       _id: null,
-    //       activeCount: {
-    //         $sum: {
-    //           $cond: [{ $eq: ["$status", "active"] }, 1, 0],
-    //         },
-    //       },
-    //       completedCount: {
-    //         $sum: {
-    //           $cond: [{ $eq: ["$status", "completed"] }, 1, 0],
-    //         },
-    //       },
-    //       cancelledCount: {
-    //         $sum: {
-    //           $cond: [{ $eq: ["$status", "cancelled"] }, 1, 0],
-    //         },
-    //       },
-    //       previousCount: {
-    //         $sum: {
-    //           $cond: [{ $eq: ["$status", "previous"] }, 1, 0],
-    //         },
-    //       },
-    //     },
-    //   },
-    // ]);
     const meals = await Meal.find({ cook: req.user._id }).distinct("_id");
     const orders = await OrderMeal.find({
       "meals.meal": { $in: meals },
@@ -173,7 +133,6 @@ const getOrdersCount = async (req, res) => {
       {
         $match: {
           _id: { $in: orders.map((order) => order._id) },
-          // _id: { $in: orders },
         },
       },
       {
@@ -213,27 +172,15 @@ const getOrdersCount = async (req, res) => {
 const cookEarnings = async (req, res) => {
   // #swagger.tags = ['cook']
   try {
-    const cook = req.user._id;
-
-    const earning = await Booking.aggregate([
+    const meals = await Meal.find({ cook: req.user._id }).distinct("_id");
+    const earningAmount = await OrderMeal.aggregate([
       {
         $match: {
+          "meals.meal": { $in: meals },
           status: "completed",
         },
       },
-      {
-        $lookup: {
-          from: "accommodations",
-          localField: "accommodation",
-          foreignField: "_id",
-          as: "accommodationDetail",
-        },
-      },
-      {
-        $match: {
-          "accommodationDetail.host": host,
-        },
-      },
+
       {
         $group: {
           _id: {
@@ -306,10 +253,10 @@ const cookEarnings = async (req, res) => {
     const allMonths = Array.from({ length: 12 }, (_, i) => i + 1);
     // console.log(allMonths);
     const earningMap = new Map(
-      earning.map((entry) => [entry._id.month, entry])
+      earningAmount.map((entry) => [entry._id.month, entry])
     );
     // Iterate through all months and add entries with zero earnings if missing
-    const result = allMonths.map((month) => {
+    const earning = allMonths.map((month) => {
       const existingEntry = earningMap.get(month);
       // console.log("existingEntry: ", existingEntry);
       if (existingEntry) {
@@ -324,24 +271,21 @@ const cookEarnings = async (req, res) => {
         };
       }
     });
-    // console.log(result);
 
     // Sort the result by year and month
-    result.sort((a, b) => {
+    earning.sort((a, b) => {
       if (a._id.year === b._id.year) {
         return a._id.month - b._id.month;
       }
       return a._id.year - b._id.year;
     });
 
-    // Now 'result' contains all months of the year with earnings, including zero earnings.
-
-    // console.log(result);
+    // console.log(earning);
 
     return SuccessHandler(
       {
         message: "Earning Fetched successfully",
-        result,
+        earning,
       },
       200,
       res
@@ -356,4 +300,5 @@ module.exports = {
   providePickupDate,
   getOrders,
   getOrdersCount,
+  cookEarnings,
 };
