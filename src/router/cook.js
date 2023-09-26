@@ -18,5 +18,8 @@ router
 router
   .route("/pickupDate/:orderId")
   .post(isAuthenticated, authorizedCook, cook.providePickupDate);
+router
+  .route("/orderCompletion/:orderId")
+  .put(isAuthenticated, authorizedCook, cook.markTheOrderAsCompleted);
 
 module.exports = router;

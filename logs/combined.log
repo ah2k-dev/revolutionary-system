@@ -7275,3 +7275,38 @@
 {"date":"2023-09-26T13:38:21.917Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/reviews/64e771556cca90fada9c0a75"}
 {"date":"2023-09-26T13:38:42.986Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/reviews/64e771556cca90fada9c0a75"}
 {"date":"2023-09-26T13:40:26.869Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/meal/reviews/64e771556cca90fada9c0a75"}
+{"date":"2023-09-26T16:26:43.612Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-26T16:33:17.110Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T18:07:57.618Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/cook/orderCompletion/64faf67ad590e91b47d57955"}
+{"date":"2023-09-26T18:38:43.357Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/cook/orderCompletion/64faf67ad590e91b47d57955"}
+{"date":"2023-09-26T18:39:42.824Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/cook/orderCompletion/64faf67ad590e91b47d57955"}
+{"date":"2023-09-26T18:42:33.861Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T18:46:01.058Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:46:01.537Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:46:29.659Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:46:30.114Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:47:59.113Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:47:59.586Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:48:15.769Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:49:03.694Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:49:35.153Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:49:35.633Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:50:42.383Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:50:42.878Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:56:07.107Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:56:46.251Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:58:34.424Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:58:47.666Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:00:34.937Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:00:53.316Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:01:02.937Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:03:34.088Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:04:16.951Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:05:42.447Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:06:24.908Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:07:23.868Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:08:51.146Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:13:32.313Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:14:20.371Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:14:22.262Z","level":"error","message":"No such active order found","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:18:37.968Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}

@@ -1726,3 +1726,9 @@
 {"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
 {"date":"2023-09-26T12:33:17.899Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
 {"date":"2023-09-26T12:35:34.059Z","level":"error","message":"Cannot populate path `meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T18:46:01.537Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:46:30.114Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:47:59.586Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:49:35.633Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:50:42.878Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:14:22.262Z","level":"error","message":"No such active order found","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}

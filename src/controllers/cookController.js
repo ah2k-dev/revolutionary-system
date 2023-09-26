@@ -4,6 +4,7 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const Meal = require("../models/Meal/meal");
 const Coupon = require("../models/Coupon/coupon");
 const OrderMeal = require("../models/Meal/orderMeal");
+const { sendNotification } = require("../functions/notification");
 // Cook Meals
 const getMeals = async (req, res) => {
   // #swagger.tags = ['cook']
@@ -67,7 +68,6 @@ const providePickupDate = async (req, res) => {
 
     const order = await OrderMeal.findOne({
       _id: orderId,
-      user: currentUser,
       status: "pending",
     });
     if (!order) {
@@ -299,6 +299,47 @@ const cookEarnings = async (req, res) => {
     return ErrorHandler(error.message, 500, req, res);
   }
 };
+
+const markTheOrderAsCompleted = async (req, res) => {
+  // #swagger.tags = ['cook']
+  const { orderId } = req.params;
+  try {
+    const order = await OrderMeal.findOneAndUpdate(
+      {
+        _id: orderId,
+        status: "approved",
+        pickupDate: { $lt: new Date() },
+      },
+      {
+        $set: {
+          status: "completed",
+        },
+      }
+    );
+    if (!order) {
+      ErrorHandler("No such active order found", 404, req, res);
+    }
+    if (order) {
+      sendNotification(
+        "Rate Your Meal Experience",
+        "We hope you enjoyed your meal!  Please take a moment to rate your experience and leave a review.",
+        order.user,
+        orderId
+      );
+    }
+    return SuccessHandler(
+      {
+        message:
+          "Status updated, and a review request has been sent to the user.",
+        order,
+      },
+      200,
+      res
+    );
+  } catch (error) {
+    ErrorHandler(error.message, 500, req, res);
+  }
+};
 module.exports = {
   getMeals,
   getCoupons,
@@ -306,4 +347,5 @@ module.exports = {
   getOrders,
   getOrdersCount,
   cookEarnings,
+  markTheOrderAsCompleted,
 };
