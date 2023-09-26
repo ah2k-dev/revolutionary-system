@@ -25,4 +25,5 @@ export interface ImportProductDocument extends Document {
   productTag: string[];
   collections: string[];
   variant: string;
+  platform: string;
 }

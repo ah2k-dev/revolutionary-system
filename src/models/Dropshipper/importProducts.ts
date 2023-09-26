@@ -90,6 +90,12 @@ const importedProductSchema = new Schema<ImportProductDocument>(
     variant: {
       type: String,
     },
+
+    platform: {
+      type: String,
+      enum: ["shopify", "woocommerce", "none"],
+      default: "none",
+    },
   },
   { timestamps: true }
 );

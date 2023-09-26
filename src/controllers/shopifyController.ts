@@ -47,7 +47,8 @@ const importProductToShopify = async (req: Request, res: Response) => {
       tags: importProduct.productTag.join(", "),
       // collections: importProduct.collections.map((col) => ({ title: col })),
       collections: importProduct.collections.map((col) => col),
-      images: importProduct.images.map((img) => ({ src: img })),
+      // images: importProduct.images.map((img) => ({ src: img })),
+      images: importProduct.images.map((img) => img),
       // images: [
       //   {
       //     src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
@@ -59,7 +60,8 @@ const importProductToShopify = async (req: Request, res: Response) => {
       shipping_country: importProduct.shippingCountry,
       item_weight: importProduct.itemWeight,
       weight_unit: importProduct.weightUnit,
-      sizes: importProduct.size, // Assuming size is an array of size option
+      sizes: importProduct.size,
+      // image_srcs: []
 
       variants: [
         {
@@ -94,6 +96,7 @@ const importProductToShopify = async (req: Request, res: Response) => {
     // };
 
     const product = await shopify.product.create(newProduct);
+    await ImportProduct.findByIdAndUpdate(id, { platform: "shopify" });
 
     return SuccessHandler(
       { message: "Product created successfully", product },
@@ -128,9 +131,9 @@ const getShopifyProducts = async (req: Request, res: Response) => {
 
 const getSingleProduct = async (req: Request, res: Response) => {
   // #swagger.tags = ['shopify']
-  const productId: number = Number(req.params.productId);
+  const id: number = Number(req.params.id);
   try {
-    const product = await shopify.product.get(productId);
+    const product = await shopify.product.get(id);
     return SuccessHandler(
       {
         message: "Single Product fetched successfully",
@@ -145,31 +148,43 @@ const getSingleProduct = async (req: Request, res: Response) => {
 };
 const updateProduct = async (req: Request, res: Response) => {
   // #swagger.tags = ['shopify']
-  const productId: number = Number(req.params.productId);
+  const id: number = Number(req.params.id);
+  console.log(id);
+
   try {
-    const product = await shopify.product.get(productId);
+    const product = await shopify.product.get(id);
     if (product) {
-      const updatedProduct = await shopify.product.update(productId, {
-        title: "updated Nike Air Zoom",
-        body_html:
-          "<p>Elevate your running experience with the Nike Air Zoom Pegasus 38. Engineered to deliver both comfort and performance, these men's running shoes are the perfect choice for athletes and enthusiasts alike.</p>",
-        vendor: "DoClick",
-        product_type: "Physical",
-        images: [
-          {
-            src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
-          },
-          {
-            src: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
-          },
-        ],
+      const updateProductData = {
+        // Use a different variable name to avoid shadowing
+        title: product.title,
+        body_html: `<p>${product.desc}</p>`,
+        // vendor: importProduct.firstName + importProduct.lastName,
+        product_type: product.category,
+        status: product.isActive === true ? "active" : "inActive",
+        tags: product.productTag.join(", "),
+        // collections: importProduct.collections.map((col) => ({ title: col })),
+        collections: product.collections.map((col) => col),
+        // images: importProduct.images.map((img) => ({ src: img })),
+        images: product.images.map((img) => img),
+        shipping_country: product.shippingCountry,
+        item_weight: product.itemWeight,
+        weight_unit: product.weightUnit,
+        sizes: product.size,
+        // image_srcs: []
+
         variants: [
           {
-            price: 3200,
+            price: product.sellingPrice,
             inventory_quantity: 13,
+            sku: product.sku,
+            option1: product.variant,
           },
         ],
-      });
+      };
+      const updatedProduct = await shopify.product.update(
+        id,
+        updateProductData
+      );
       return SuccessHandler(
         {
           message: "Product updated successfully",

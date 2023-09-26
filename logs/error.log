@@ -104,3 +104,4 @@
 {"date":"2023-09-20T16:56:00.699Z","level":"error","message":"Supplier's Product Price: 7000 cannot be less than Selling Price: 400","method":"PUT","service":"user-service","url":"/update/650b23c38e254bc283285694"}
 {"date":"2023-09-20T16:56:41.421Z","level":"error","message":"Quantity: 1 should not be greater than Supplier's Product quantity: 20 ","method":"PUT","service":"user-service","url":"/update/650b23c38e254bc283285694"}
 {"date":"2023-09-20T17:15:49.609Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-26T16:53:20.721Z","level":"error","message":"Response code 404 (Not Found)","method":"GET","service":"user-service","url":"/product/8719309144348"}
