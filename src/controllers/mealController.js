@@ -464,10 +464,17 @@ const getReviews = async (req, res) => {
   try {
     const { cookId } = req.params;
     console.log(cookId);
-    const reviews = await User.find({ _id: cookId }).populate({
-      path: "reviewsId",
-      match: { cook: cookId }, // Match with the 'cook' field in the 'Review' model
-    });
+    const reviews = await User.find({ _id: cookId })
+      .select("username email avatar coverImg shopName shopDesc shopBanner")
+      .populate({
+        path: "reviewsId",
+        select: "user comment rating",
+        match: { cook: cookId },
+        populate: {
+          path: "user",
+          select: "username email avatar",
+        },
+      });
     if (!reviews) {
       return ErrorHandler("The Reviews or Cook doesn't exist", 400, req, res);
     }
@@ -475,6 +482,7 @@ const getReviews = async (req, res) => {
     return SuccessHandler(
       {
         message: "Fetched Reviews successfully",
+        baseUrl: `${process.env.BASE_URL}/uploads/`,
         reviews,
       },
       200,

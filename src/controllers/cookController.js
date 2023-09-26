@@ -118,7 +118,6 @@ const getOrders = async (req, res) => {
       {
         message: `Orders fetched successfully`,
         baseUrl: `${process.env.BASE_URL}/uploads/`,
-        ordersCount: orders.length,
         orders,
       },
       200,
@@ -144,17 +143,17 @@ const getOrdersCount = async (req, res) => {
       {
         $group: {
           _id: null,
-          pendingOrders: {
+          pendingCount: {
             $sum: {
               $cond: [{ $eq: ["$status", "pending"] }, 1, 0],
             },
           },
-          completedOrders: {
+          completedCount: {
             $sum: {
               $cond: [{ $eq: ["$status", "completed"] }, 1, 0],
             },
           },
-          approvedOrders: {
+          approvedCount: {
             $sum: {
               $cond: [{ $eq: ["$status", "approved"] }, 1, 0],
             },
