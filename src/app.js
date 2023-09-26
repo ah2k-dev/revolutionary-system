@@ -50,13 +50,13 @@ app.use((req, res, next) => {
   next(new ApiError(404, "Not found"));
 });
 
-const markTheBookingCompleted = new cron(
+const markTheBookingAsCompleted = new cron(
   "59 23 * * *",
   completeTheBooking,
   null,
   true,
   "America/Los_Angeles"
 );
-markTheBookingCompleted.start();
+markTheBookingAsCompleted.start();
 
 module.exports = app;

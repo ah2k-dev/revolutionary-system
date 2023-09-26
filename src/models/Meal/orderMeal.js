@@ -23,11 +23,13 @@ const orderMealSchema = new Schema(
 
     status: {
       type: String,
-      enum: ["pending", "approved", "cancelled", "rejected", "completed"],
+      // enum: ["pending", "approved", "cancelled", "rejected", "completed"],
+      enum: ["pending", "approved", "completed"],
       default: "pending",
     },
 
     orderDate: { type: Date, default: Date.now },
+    PickupDate: { type: Date },
   },
   { timestamps: true }
 );

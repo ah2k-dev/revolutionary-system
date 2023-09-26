@@ -1694,3 +1694,41 @@
 {"date":"2023-09-23T12:25:38.630Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-09-23T12:25:57.025Z","level":"error","message":"Wallet validation failed: balance: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"balance\", withDrawAmount: Cast to Number failed for value \"4f9865c32133efad45666d5c1070d664\" (type string) at path \"withDrawAmount\"","method":"POST","service":"user-service","url":"/verifyEmail"}
 {"date":"2023-09-23T12:26:53.323Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
+{"date":"2023-09-25T12:56:11.507Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:26:20.297Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:27:22.891Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:27:54.763Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:28:00.198Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:28:51.067Z","level":"error","message":"Unexpected token o in JSON at position 1","method":"POST","service":"user-service","url":"/order"}
+{"date":"2023-09-25T14:43:05.594Z","level":"error","message":"Role: user is not allowed to access resource","method":"GET","service":"user-service","url":"/orders"}
+{"date":"2023-09-25T14:46:17.165Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:46:17.604Z","level":"error","message":"Accommodation already exist","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:47:43.256Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:48:00.552Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:48:05.175Z","level":"error","message":"Role: host is not allowed to access resource","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T14:49:36.397Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:05:08.011Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:08:17.184Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:08:32.382Z","level":"error","message":"Cannot destructure property 'images' of 'req.files' as it is null.","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T15:31:14.241Z","level":"error","message":"result is not defined","method":"GET","service":"user-service","url":"/earnings"}
+{"date":"2023-09-25T15:52:01.787Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:01.238Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:03:04.837Z","level":"error","message":"Meal already exist, Please add new meals","method":"POST","service":"user-service","url":"/new"}
+{"date":"2023-09-25T16:21:26.054Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:40:18.945Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:44:50.522Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:54:23.237Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T16:54:59.752Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:55:53.240Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T16:57:41.585Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:01:34.812Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-25T17:01:57.422Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-26T12:33:17.899Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T12:35:34.059Z","level":"error","message":"Cannot populate path `meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T18:46:01.537Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:46:30.114Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:47:59.586Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:49:35.633Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T18:50:42.878Z","level":"error","message":"Cannot read properties of null (reading 'length')","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-26T19:14:22.262Z","level":"error","message":"No such active order found","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}

@@ -25,8 +25,8 @@ const mealSchema = new Schema(
     },
     spiceStatus: {
       type: String,
-      enum: ["High", "Medium", "Low"],
-      default: "Medium",
+      // enum: ["High", "Medium", "Low"],
+      // default: "Medium",
     },
     gram: { type: Number },
     calories: { type: Number },
@@ -34,6 +34,7 @@ const mealSchema = new Schema(
     maxServingCapacity: { type: Number },
 
     isActive: { type: Boolean, default: true },
+    category: { type: String, trim: true },
   },
 
   { timestamps: true }

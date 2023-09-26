@@ -5,7 +5,7 @@ const { authorizedCook, authorizedUser } = require("../middleware/role");
 
 //✅ ➡Meals
 //post
-router.route("/new").post(isAuthenticated, meal.createMeal);
+router.route("/new").post(isAuthenticated, authorizedCook, meal.createMeal);
 //get
 router.route("/getMeals").get(isAuthenticated, meal.getMeals);
 router
