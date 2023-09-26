@@ -7248,3 +7248,14 @@
 {"date":"2023-09-25T17:09:01.204Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
 {"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
 {"date":"2023-09-25T17:09:25.398Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/meal/updateMeal/651183b8e46e8848e59d7259"}
+{"date":"2023-09-26T12:31:33.560Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:33:17.205Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:33:17.899Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T12:33:31.852Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:34:37.912Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:35:33.377Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:35:34.059Z","level":"error","message":"Cannot populate path `meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T12:35:49.266Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:36:52.566Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:42:08.328Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-26T12:46:26.739Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}

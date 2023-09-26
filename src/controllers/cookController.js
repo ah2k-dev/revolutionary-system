@@ -108,11 +108,17 @@ const getOrders = async (req, res) => {
     const orders = await OrderMeal.find({
       "meals.meal": { $in: meals },
       ...statusFilter,
-    });
+    }).populate([
+      { path: "user", select: "username email avatar coverImg" },
+      { path: "meals.meal", select: "dishName desc category images" },
+    ]);
+    // .populate({ path: "user", select: "username email avatar coverImg" });
+
     return SuccessHandler(
       {
         message: `Orders fetched successfully`,
         baseUrl: `${process.env.BASE_URL}/uploads/`,
+        ordersCount: orders.length,
         orders,
       },
       200,

@@ -1724,3 +1724,5 @@
 {"date":"2023-09-25T17:01:34.812Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
 {"date":"2023-09-25T17:01:57.422Z","level":"error","message":"Please upload an image","method":"PUT","service":"user-service","url":"/updateMeal/651183b8e46e8848e59d7259"}
 {"date":"2023-09-25T17:09:01.437Z","level":"error","message":"Role: host is not allowed to access resource","method":"GET","service":"user-service","url":"/meals"}
+{"date":"2023-09-26T12:33:17.899Z","level":"error","message":"Cannot populate path `users` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
+{"date":"2023-09-26T12:35:34.059Z","level":"error","message":"Cannot populate path `meal` because it is not in your schema. Set the `strictPopulate` option to false to override.","method":"GET","service":"user-service","url":"/orders?status=active"}
