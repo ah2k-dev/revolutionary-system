@@ -11,18 +11,20 @@
 import { Router } from "express";
 const router: Router = Router();
 import isAuthenticated from "../middleware/auth";
-import { authorizedSupplier } from "../middleware/role";
+import { authorizedDropshipper } from "../middleware/role";
 import * as shopify from "../controllers/shopifyController";
 //post
-router.route("/importProducts").post(shopify.importProducts);
-router.route("/deleteProduct/:productId").post(shopify.deleteProduct);
-router.route("/webhooks").post(shopify.deleteProduct);
+router
+  .route("/importProduct/:id")
+  .post(isAuthenticated, authorizedDropshipper, shopify.importProductToShopify);
+router.route("/deleteProduct/:id").post(isAuthenticated, shopify.deleteProduct);
+router.route("/webhooks").post(isAuthenticated, shopify.deleteProduct);
 //get
 router.route("/getProducts").get(shopify.getShopifyProducts);
-router.route("/product/:productId").get(shopify.getSingleProduct);
+router.route("/product/:id").get(shopify.getSingleProduct);
 //put
-router.route("/updateProduct/:productId").put(shopify.updateProduct);
+router.route("/updateProduct/:id").put(shopify.updateProduct);
 //delete
-router.route("/deleteProduct/:productId").delete(shopify.deleteProduct);
+router.route("/deleteProduct/:id").delete(shopify.deleteProduct);
 
 export default router;

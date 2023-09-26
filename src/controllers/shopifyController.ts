@@ -1,13 +1,15 @@
+import dotenv from "dotenv";
+dotenv.config({ path: "../config/config.env" });
 import { Request, Response } from "express";
 import Profile from "../models/User/profile";
 import User from "../models/User/user";
 import { ProfileDocument } from "../types/models/User/profile.types";
-import { UserDocument } from "../types/models/User/user.types";
 import SuccessHandler from "../utils/SuccessHandler";
 import ErrorHandler from "../utils/ErrorHandler";
-import axios from "axios";
-import dotenv from "dotenv";
 import Shopify from "shopify-api-node";
+import { UserDocument } from "../types/models/User/user.types";
+import ImportProduct from "../models/Dropshipper/importProducts";
+
 declare global {
   namespace Express {
     interface Request {
@@ -15,44 +17,87 @@ declare global {
     }
   }
 }
-const accessToken = process.env.ACCESS_TOKEN;
+const accessToken = process.env.SHOPIFY_ACCESS_TOKEN;
 
-const shop = "e092e8.myshopify.com";
 const shopify = new Shopify({
-  shopName: "e092e8.myshopify.com",
+  shopName: "bcda5b.myshopify.com",
   apiKey: process.env.SHOPIFY_API_KEY,
-  password: process.env.ACCESS_TOKEN,
+  password: process.env.SHOPIFY_ACCESS_TOKEN,
 });
-//Import Products
-const importProducts = async (req: Request, res: Response) => {
+//Import Product
+const importProductToShopify = async (req: Request, res: Response) => {
   // #swagger.tags = ['shopify']
+  const currentUser = req.user._id;
+  const { id } = req.params;
+  console.log(id);
+  const importProduct = await ImportProduct.findOne({
+    _id: id,
+    dropshipper: currentUser,
+  });
+  console.log("importProduct.title: ", importProduct.title);
+
   try {
     const newProduct = {
-      title: "123 Nike Air Zoom",
-      body_html:
-        "<p>Elevate your running experience with the Nike Air Zoom Pegasus 38. Engineered to deliver both comfort and performance, these men's running shoes are the perfect choice for athletes and enthusiasts alike.</p>",
-      vendor: "DoClick",
-      product_type: "Physical",
-      images: [
-        {
-          src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
-        },
-        {
-          src: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
-        },
-      ],
+      _id: importProduct._id,
+      title: importProduct.title,
+      body_html: `<p>${importProduct.desc}</p>`,
+      // vendor: importProduct.firstName+ importProduct.lastName,
+      product_type: importProduct.category,
+      status: importProduct.isActive === true ? "active" : "inActive",
+      tags: importProduct.productTag.join(", "),
+      // collections: importProduct.collections.map((col) => ({ title: col })),
+      collections: importProduct.collections.map((col) => col),
+      images: importProduct.images.map((img) => ({ src: img })),
+      // images: [
+      //   {
+      //     src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+      //   },
+      // ],
+      shipping_country: importProduct.shippingCountry,
+      item_weight: importProduct.itemWeight,
+      weight_unit: importProduct.weightUnit,
+      sizes: importProduct.size, // Assuming size is an array of size option
+
       variants: [
         {
-          price: 3200,
+          price: importProduct.sellingPrice,
           inventory_quantity: 13,
+          sku: importProduct.sku,
+          option1: importProduct.variant,
         },
       ],
     };
 
+    // const newProduct = {
+    //   title: "123 Nike Air Zoom",
+    //   body_html:
+    //     "<p>Elevate your running experience with the Nike Air Zoom Pegasus 38. Engineered to deliver both comfort and performance, these men's running shoes are the perfect choice for athletes and enthusiasts alike.</p>",
+    //   vendor: "DoClick",
+    //   product_type: "Physical",
+    //   images: [
+    //     {
+    //       src: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+    //     },
+    //     {
+    //       src: "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+    //     },
+    //   ],
+    //   variants: [
+    //     {
+    //       price: 3200,
+    //       inventory_quantity: 13,
+    //     },
+    //   ],
+    // };
+
     const product = await shopify.product.create(newProduct);
 
     return SuccessHandler(
-      { message: "product created successfully", product },
+      { message: "Product created successfully", product },
+      // { message: "product created successfully", importProduct, newProduct },
       200,
       res
     );
@@ -177,7 +222,7 @@ const getShopifyWebhooks = async (req: Request, res: Response) => {
 };
 
 export {
-  importProducts,
+  importProductToShopify,
   getShopifyProducts,
   getSingleProduct,
   updateProduct,

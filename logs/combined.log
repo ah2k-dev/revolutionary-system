@@ -566,3 +566,16 @@
 {"date":"2023-09-20T17:15:49.609Z","level":"error","message":"The provided authorization grant is invalid, expired, or revoked","method":"POST","service":"user-service","url":"/requestEmailToken"}
 {"date":"2023-09-20T17:16:07.973Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/verifyEmail"}
 {"date":"2023-09-20T17:16:20.816Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-26T15:21:55.088Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-26T15:27:06.670Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProducts"}
+{"date":"2023-09-26T15:28:22.309Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T15:30:16.511Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/auth/login"}
+{"date":"2023-09-26T15:30:22.579Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T15:32:02.188Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:02:58.856Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:04:53.638Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:10:50.407Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:13:14.899Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:15:19.476Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:19:44.769Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/shopify/importProduct/650b23c38e254bc283285694"}
+{"date":"2023-09-26T16:20:25.217Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
