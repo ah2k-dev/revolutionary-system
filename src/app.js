@@ -9,10 +9,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("../swagger_output.json"); // Generated Swagger file
 const fileUpload = require("express-fileupload");
 const path = require("path");
-// const cron = require("node-cron");
 const cron = require("cron").CronJob;
 const { completeTheBooking } = require("./functions/cronJob");
-
 // Middlewares
 app.use(express.json());
 // app.use(bodyParser.json());
