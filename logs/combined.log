@@ -8060,3 +8060,703 @@
 {"date":"2023-09-27T20:02:02.850Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
 {"date":"2023-09-27T20:02:02.879Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
 {"date":"2023-09-27T20:02:02.893Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T12:47:54.793Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T12:48:30.138Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T12:48:30.543Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T12:48:30.601Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T12:48:30.613Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T12:48:30.621Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T12:48:30.646Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T12:48:30.657Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T12:48:30.695Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T12:48:30.707Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T12:48:30.791Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T12:48:31.009Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T12:48:31.970Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T12:59:03.568Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T12:59:03.918Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T12:59:03.944Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T12:59:03.954Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T12:59:03.964Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T12:59:03.982Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T12:59:03.998Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T12:59:04.004Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T12:59:04.047Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T12:59:04.168Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T12:59:04.210Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T12:59:05.490Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T12:59:39.956Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:03:20.249Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/"}
+{"date":"2023-09-28T13:03:20.439Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/favicon.ico"}
+{"date":"2023-09-28T13:03:23.108Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/"}
+{"date":"2023-09-28T13:04:11.643Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:04:11.956Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:04:11.971Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:04:11.980Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:04:11.987Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:04:11.997Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:04:12.009Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:04:12.022Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:04:12.031Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:04:12.170Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:04:12.228Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:04:12.234Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:04:25.755Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:05:34.083Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:05:34.514Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:05:34.536Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:05:34.550Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:05:34.561Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:05:34.566Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:05:34.569Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:05:34.576Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:05:34.579Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:05:34.740Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:05:34.786Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:05:34.792Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:17:14.294Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:17:14.613Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:17:14.624Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:17:14.635Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:17:14.641Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:17:14.646Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:17:14.651Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:17:14.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:17:14.671Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:17:14.847Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:17:14.880Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:17:14.907Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:19:50.333Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:19:50.405Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:19:50.417Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:19:50.423Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:19:50.428Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:19:50.431Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:19:50.435Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:19:50.443Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:19:50.446Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:19:50.624Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:19:50.668Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:19:50.672Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:21:36.256Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:21:36.651Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:21:36.663Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:21:36.668Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:21:36.673Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:21:36.684Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:21:36.690Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:21:36.701Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:21:36.710Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:21:36.869Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:21:36.905Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:21:36.937Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:25:09.243Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:25:09.663Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:25:09.676Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:25:09.680Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:25:09.685Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:25:09.696Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:25:09.701Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:25:09.705Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:25:09.718Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:25:09.898Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:25:09.925Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:25:09.940Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:28:59.319Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:33:47.608Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:33:48.032Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:33:48.063Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:33:48.081Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:33:48.086Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:33:48.091Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:33:48.094Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:33:48.102Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:33:48.106Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:33:48.254Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:33:48.325Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:33:48.338Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:36:12.821Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:39:49.041Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:39:49.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:39:49.124Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:39:49.127Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:39:49.132Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:39:49.136Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:39:49.140Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:39:49.148Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:39:49.151Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:39:49.328Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:39:49.351Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:39:49.372Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:51:03.023Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:51:03.642Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:51:03.661Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:51:03.670Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:51:03.678Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:51:03.686Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:51:03.691Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:51:03.697Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:51:03.700Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:51:03.862Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:51:03.905Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:51:03.916Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:52:21.620Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:52:22.069Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:52:22.081Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:52:22.087Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:52:22.095Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:52:22.107Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:52:22.113Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:52:22.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:52:22.118Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:52:22.324Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:52:22.332Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:52:22.352Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:53:19.301Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:53:20.626Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T13:56:16.293Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:56:16.633Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:56:16.651Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:56:16.662Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:56:16.673Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:56:16.680Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:56:16.683Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:56:16.687Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:56:16.690Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:56:16.850Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:56:16.893Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:56:16.913Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T13:57:18.570Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T13:57:18.644Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T13:57:18.653Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T13:57:18.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T13:57:18.676Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T13:57:18.683Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T13:57:18.689Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T13:57:18.694Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T13:57:18.697Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T13:57:18.868Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T13:57:18.900Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T13:57:18.904Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:00:54.810Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:00:55.248Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:00:55.270Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:00:55.275Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:00:55.278Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:00:55.286Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:00:55.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:00:55.295Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:00:55.297Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:00:55.452Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:00:55.505Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:00:55.518Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:03:46.608Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:03:46.680Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:03:46.691Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:03:46.702Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:03:46.705Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:03:46.711Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:03:46.717Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:03:46.721Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:03:46.725Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:03:46.907Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:03:46.930Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:03:46.947Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:05:15.142Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:05:15.541Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:05:15.552Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:05:15.558Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:05:15.562Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:05:15.568Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:05:15.576Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:05:15.580Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:05:15.599Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:05:15.771Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:05:15.812Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:05:15.832Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:07:48.935Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:07:49.327Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:07:49.345Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:07:49.353Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:07:49.362Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:07:49.370Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:07:49.374Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:07:49.387Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:07:49.391Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:07:49.544Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:07:49.611Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:07:49.614Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:09:08.292Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:09:08.709Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:09:08.721Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:09:08.732Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:09:08.735Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:09:08.739Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:09:08.742Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:09:08.749Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:09:08.752Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:09:08.939Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:09:08.967Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:09:08.977Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:14:38.650Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:14:39.282Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:14:39.289Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:14:39.299Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:14:39.302Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:14:39.304Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:14:39.310Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:14:39.315Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:14:39.335Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:14:39.511Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:14:39.522Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:14:39.538Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:16:58.429Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:16:59.088Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:16:59.113Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:16:59.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:16:59.125Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:16:59.129Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:16:59.133Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:16:59.138Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:16:59.143Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:16:59.318Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:16:59.344Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:16:59.356Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:21:06.202Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:21:06.276Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:21:06.299Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:21:06.302Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:21:06.305Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:21:06.325Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:21:06.328Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:21:06.348Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:21:06.350Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:21:06.499Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:21:06.541Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:21:06.562Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:23:14.476Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:23:14.882Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:23:14.891Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:23:14.898Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:23:14.904Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:23:14.910Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:23:14.914Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:23:14.917Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:23:14.921Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:23:15.122Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:23:15.132Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:23:15.140Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:25:19.431Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:25:19.827Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:25:19.834Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:25:19.841Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:25:19.847Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:25:19.856Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:25:19.862Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:25:19.866Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:25:19.869Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:25:20.051Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:25:20.082Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:25:20.092Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:28:56.655Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:28:57.077Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:28:57.089Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:28:57.103Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:28:57.110Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:28:57.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:28:57.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:28:57.125Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:28:57.128Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:28:57.307Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:28:57.347Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:28:57.354Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:33:44.437Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:33:44.871Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:33:44.878Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:33:44.885Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:33:44.890Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:33:44.900Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:33:44.908Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:33:44.916Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:33:44.921Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:33:45.090Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:33:45.159Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:33:45.162Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:34:57.306Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:34:57.698Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:34:57.709Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:34:57.721Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:34:57.725Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:34:57.729Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:34:57.731Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:34:57.736Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:34:57.740Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:34:57.938Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:34:57.951Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:34:57.959Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:36:18.647Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:36:19.026Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:36:19.036Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:36:19.044Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:36:19.050Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:36:19.054Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:36:19.059Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:36:19.063Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:36:19.066Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:36:19.261Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:36:19.276Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:36:19.288Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:41:32.812Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:41:33.217Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:41:33.221Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:41:33.234Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:41:33.239Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:41:33.243Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:41:33.247Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:41:33.251Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:41:33.256Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:41:33.428Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:41:33.457Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:41:33.469Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:46:24.975Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:46:25.049Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:46:25.055Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:46:25.064Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:46:25.072Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:46:25.080Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:46:25.085Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:46:25.088Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:46:25.095Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:46:25.278Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:46:25.298Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:46:25.306Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:50:01.157Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:50:01.487Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:50:01.498Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:50:01.503Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:50:01.509Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:50:01.514Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:50:01.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:50:01.523Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:50:01.549Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:50:01.722Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:50:01.736Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:50:01.742Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:56:38.307Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:56:38.399Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:56:38.411Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:56:38.416Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:56:38.424Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:56:38.427Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:56:38.431Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:56:38.435Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:56:38.438Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:56:38.621Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:56:38.646Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:56:38.653Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:57:29.130Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:57:29.631Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:57:29.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:57:29.651Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:57:29.656Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:57:29.659Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:57:29.663Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:57:29.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:57:29.671Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:57:29.865Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:57:29.883Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:57:29.896Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:58:05.725Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:58:06.103Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:58:06.105Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:58:06.108Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:58:06.112Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:58:06.116Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:58:06.119Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:58:06.123Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:58:06.127Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:58:06.319Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:58:06.331Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T14:58:06.353Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:58:42.916Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T14:58:43.313Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T14:58:43.323Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T14:58:43.328Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T14:58:43.334Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T14:58:43.343Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T14:58:43.348Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T14:58:43.352Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T14:58:43.355Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T14:58:43.538Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T14:58:43.570Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T14:58:43.577Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:02:19.666Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:02:20.040Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:02:20.049Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:02:20.052Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:02:20.056Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:02:20.061Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:02:20.065Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:02:20.069Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:02:20.072Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:02:20.269Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:02:20.288Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:02:20.294Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:07:41.416Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:07:41.513Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:07:41.524Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:07:41.538Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:07:41.542Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:07:41.576Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:07:41.579Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:07:41.582Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:07:41.587Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:07:41.737Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:07:41.787Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:07:41.808Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:11:39.035Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:11:39.501Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:11:39.543Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:11:39.548Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:11:39.553Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:11:39.559Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:11:39.563Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:11:39.567Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:11:39.571Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:11:39.773Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:11:39.790Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:11:39.794Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:15:22.978Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:15:23.274Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:15:23.284Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:15:23.291Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:15:23.297Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:15:23.304Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:15:23.354Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:15:23.364Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:15:23.366Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:15:23.511Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:15:23.575Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:15:23.586Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:27:45.611Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:27:46.057Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:27:46.152Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:27:46.160Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:27:46.168Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:27:46.173Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:27:46.178Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:27:46.181Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:27:46.186Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:27:46.386Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:27:46.410Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:27:46.430Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:30:19.130Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:30:19.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:30:19.536Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:30:19.540Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:30:19.546Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:30:19.552Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:30:19.557Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:30:19.565Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:30:19.570Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:30:19.733Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:30:19.782Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:30:19.786Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:30:54.840Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T15:30:55.221Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T15:30:55.227Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T15:30:55.233Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:30:55.244Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T15:30:55.250Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T15:30:55.257Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T15:30:55.262Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T15:30:55.266Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T15:30:55.466Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T15:30:55.478Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T15:30:55.491Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T15:31:16.225Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T15:31:39.138Z","level":"info","message":"Request received","method":"PUT","service":"user-service","url":"/cook/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-28T15:31:39.606Z","level":"error","message":"No such active order found","method":"PUT","service":"user-service","url":"/orderCompletion/64e8eac73349f57bcd3632d7"}
+{"date":"2023-09-28T16:10:21.470Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:10:21.646Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:10:21.933Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:10:21.967Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:10:22.000Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:10:22.018Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:10:22.049Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:10:22.118Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:10:22.127Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:10:22.173Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:10:22.370Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:10:23.649Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:13:50.479Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:13:50.823Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:13:50.843Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:13:50.854Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:13:50.868Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:13:50.872Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:13:50.883Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:13:50.933Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:13:50.939Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:13:51.078Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:13:51.098Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:13:52.555Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:15:23.349Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T16:16:15.273Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:16:29.314Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:21:05.076Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:21:05.558Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:21:05.587Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:21:05.592Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:21:05.602Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:21:05.656Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:21:05.667Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:21:05.671Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:21:05.676Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:21:05.807Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:21:05.881Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:21:05.905Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:23:51.975Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:23:52.296Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:23:52.309Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:23:52.319Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:23:52.325Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:23:52.331Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:23:52.338Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:23:52.346Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:23:52.386Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:23:52.522Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:23:52.564Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:23:52.579Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:27:29.388Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:27:29.460Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:27:29.470Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:27:29.474Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:27:29.479Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:27:29.505Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:27:29.516Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:27:29.522Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:27:29.527Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:27:29.688Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:27:29.736Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:27:29.749Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:32:10.982Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:32:11.414Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:32:11.421Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:32:11.429Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:32:11.451Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:32:11.459Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:32:11.467Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:32:11.472Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:32:11.476Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:32:11.639Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:32:11.699Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:32:11.724Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:36:50.039Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:36:50.108Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:36:50.118Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:36:50.129Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:36:50.145Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:36:50.151Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:36:50.158Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:36:50.167Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:36:50.180Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:36:50.324Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:36:50.377Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T16:36:50.419Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:54:25.120Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T16:54:25.525Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T16:54:25.618Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T16:54:25.623Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T16:54:25.631Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T16:54:25.636Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T16:54:25.645Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T16:54:25.650Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T16:54:25.657Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T16:54:25.889Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T16:54:25.900Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T16:54:25.919Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:11:40.079Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:11:40.477Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:11:40.488Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:11:40.496Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:11:40.500Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:11:40.507Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:11:40.512Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:11:40.519Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:11:40.529Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:11:40.709Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:11:40.741Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:11:40.750Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:12:48.732Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:13:40.056Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:13:40.453Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:13:40.462Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:13:40.470Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:13:40.477Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:13:40.483Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:13:40.497Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:13:40.504Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:13:40.507Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:13:40.678Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:13:40.733Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:13:40.741Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:15:56.649Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:15:56.652Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:15:56.655Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:15:56.659Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:15:56.665Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:15:56.670Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:15:56.678Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:15:56.683Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:15:56.694Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:15:56.937Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:15:57.254Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:15:57.263Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:19:01.283Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:19:01.729Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:19:01.747Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:19:01.754Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:19:01.764Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:19:01.773Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:19:01.782Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:19:01.785Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:19:01.788Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:19:01.959Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:19:01.994Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:19:02.624Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:22:28.083Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:23:16.581Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:23:46.587Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:23:47.031Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:23:51.622Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:24:09.421Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:24:17.126Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:27:22.912Z","level":"info","message":"Request received","method":"POST","service":"user-service","url":"/meal/new"}
+{"date":"2023-09-28T17:28:46.206Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:28:46.733Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:28:46.741Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:28:46.749Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:28:46.756Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:28:46.763Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:28:46.771Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:28:46.778Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:28:46.785Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:28:46.964Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:28:46.997Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:28:47.014Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:28:55.025Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:30:09.466Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1695720587397image_picker_9C487A1E-4F55-42AC-8851-55A47120344A-46798-00001030D88848B7.jpg"}
+{"date":"2023-09-28T17:36:13.021Z","level":"info","message":"Request received","method":"DELETE","service":"user-service","url":"/meal/delMeal/6515b7852db514e46a3b7238"}
+{"date":"2023-09-28T17:36:35.564Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/uploads//1692889425772avatar1.png"}
+{"date":"2023-09-28T17:36:35.666Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/host/bookingsCount"}
+{"date":"2023-09-28T17:36:35.673Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=previous"}
+{"date":"2023-09-28T17:36:35.679Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/earnings"}
+{"date":"2023-09-28T17:36:35.685Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/orders?status=active"}
+{"date":"2023-09-28T17:36:35.691Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedMeals"}
+{"date":"2023-09-28T17:36:35.698Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/cook/meals"}
+{"date":"2023-09-28T17:36:35.703Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedCook"}
+{"date":"2023-09-28T17:36:35.712Z","level":"info","message":"Request received","method":"GET","service":"user-service","url":"/user/savedAccomodations"}
+{"date":"2023-09-28T17:36:35.912Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:36:35.926Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:36:35.939Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
