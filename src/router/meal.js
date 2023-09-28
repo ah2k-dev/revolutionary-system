@@ -14,7 +14,7 @@ router
 // cook meals
 router.route("/mealsByCookId/:id").get(isAuthenticated, meal.getMealsByCookId);
 router
-  .route("/delMeal")
+  .route("/delMeal/:id")
   .delete(isAuthenticated, authorizedCook, meal.deleteMeals);
 // ✅Reviews
 router
