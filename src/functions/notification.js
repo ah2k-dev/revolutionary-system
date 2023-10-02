@@ -9,7 +9,13 @@ const oneSignalClient = new OneSignal.Client(
   process.env.REST_API_KEY
 );
 
-const sendNotification = async (headingContent, contentMessage, userId, id) => {
+const sendNotification = async (
+  headingContent,
+  contentMessage,
+  userId,
+  id,
+  screen
+) => {
   try {
     const notification = {
       app_id: process.env.ONESIGNAL_APP_ID,
@@ -25,6 +31,7 @@ const sendNotification = async (headingContent, contentMessage, userId, id) => {
       //   "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.1865596468.1692806850&semt=ais",
       data: {
         id: id,
+        screen: screen,
       },
     };
     const headers = {

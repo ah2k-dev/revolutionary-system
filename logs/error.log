@@ -2069,3 +2069,12 @@
 {"date":"2023-09-28T17:36:35.912Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
 {"date":"2023-09-28T17:36:35.926Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
 {"date":"2023-09-28T17:36:35.939Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:46:43.080Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:46:43.270Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:46:44.370Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:48:08.810Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:48:08.855Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}
+{"date":"2023-09-28T17:48:10.013Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:51:31.995Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/bookingsCount"}
+{"date":"2023-09-28T17:51:32.033Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedAccomodations"}
+{"date":"2023-09-28T17:51:32.047Z","level":"error","message":"Role: cook is not allowed to access resource","method":"GET","service":"user-service","url":"/savedMeals"}

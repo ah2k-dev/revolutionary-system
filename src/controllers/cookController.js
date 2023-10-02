@@ -324,7 +324,8 @@ const markTheOrderAsCompleted = async (req, res) => {
         "Rate Your Meal Experience",
         "We hope you enjoyed your meal!  Please take a moment to rate your experience and leave a review.",
         order.user,
-        orderId
+        orderId,
+        "meal"
       );
     }
     return SuccessHandler(
